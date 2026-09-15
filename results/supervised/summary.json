@@ -79,16 +79,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.506861,
-          "std": 0.012325
+          "mean": 0.508219,
+          "std": 0.013603
         },
         "pairwise_X_over_A": {
-          "mean": 0.499195,
-          "std": 0.00502
+          "mean": 0.497685,
+          "std": 0.002928
         },
         "mrr_cited": {
-          "mean": 0.838265,
-          "std": 0.005312
+          "mean": 0.840378,
+          "std": 0.006644
         },
         "ndcg": {
           "mean": 0.785485,
@@ -117,16 +117,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.49012,
-          "std": 0.006404
+          "mean": 0.490573,
+          "std": 0.006815
         },
         "pairwise_X_over_A": {
-          "mean": 0.492099,
-          "std": 0.016659
+          "mean": 0.47962,
+          "std": 0.002899
         },
         "mrr_cited": {
           "mean": 0.830616,
-          "std": 0.004684
+          "std": 0.00485
         },
         "ndcg": {
           "mean": 0.778791,
@@ -213,16 +213,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.501371,
-          "std": 0.001746
+          "mean": 0.502205,
+          "std": 0.002067
         },
         "pairwise_X_over_A": {
-          "mean": 0.481294,
-          "std": 0.012923
+          "mean": 0.491955,
+          "std": 0.011429
         },
         "mrr_cited": {
-          "mean": 0.835221,
-          "std": 0.001991
+          "mean": 0.835816,
+          "std": 0.001931
         },
         "ndcg": {
           "mean": 0.781222,
@@ -251,16 +251,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.497974,
-          "std": 0.007512
+          "mean": 0.498537,
+          "std": 0.006719
         },
         "pairwise_X_over_A": {
-          "mean": 0.495795,
-          "std": 0.005472
+          "mean": 0.499056,
+          "std": 0.004964
         },
         "mrr_cited": {
-          "mean": 0.833234,
-          "std": 0.002485
+          "mean": 0.833433,
+          "std": 0.002709
         },
         "ndcg": {
           "mean": 0.781335,
@@ -349,16 +349,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.723983,
-          "std": 0.019197
+          "mean": 0.724638,
+          "std": 0.018686
         },
         "pairwise_X_over_A": {
-          "mean": 0.490187,
-          "std": 0.006595
+          "mean": 0.519022,
+          "std": 0.00986
         },
         "mrr_cited": {
-          "mean": 0.927033,
-          "std": 0.007315
+          "mean": 0.927335,
+          "std": 0.006939
         },
         "ndcg": {
           "mean": 0.837266,
@@ -387,16 +387,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.711957,
-          "std": 0.008602
+          "mean": 0.723967,
+          "std": 0.01449
         },
         "pairwise_X_over_A": {
-          "mean": 0.476902,
-          "std": 0.002149
+          "mean": 0.505888,
+          "std": 0.022911
         },
         "mrr_cited": {
-          "mean": 0.923913,
-          "std": 0.004458
+          "mean": 0.930556,
+          "std": 0.004924
         },
         "ndcg": {
           "mean": 0.832652,
@@ -483,16 +483,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.743137,
-          "std": 0.020476
+          "mean": 0.747408,
+          "std": 0.018711
         },
         "pairwise_X_over_A": {
-          "mean": 0.485383,
-          "std": 0.002387
+          "mean": 0.516587,
+          "std": 0.00563
         },
         "mrr_cited": {
-          "mean": 0.928784,
-          "std": 0.006382
+          "mean": 0.931963,
+          "std": 0.005728
         },
         "ndcg": {
           "mean": 0.83929,
@@ -521,16 +521,16 @@
           ]
         },
         "pairwise_cited_over_U": {
-          "mean": 0.738409,
-          "std": 0.012991
+          "mean": 0.749881,
+          "std": 0.00892
         },
         "pairwise_X_over_A": {
-          "mean": 0.492186,
-          "std": 0.007837
+          "mean": 0.500248,
+          "std": 0.015903
         },
         "mrr_cited": {
-          "mean": 0.926996,
-          "std": 0.004466
+          "mean": 0.93385,
+          "std": 0.0044
         },
         "ndcg": {
           "mean": 0.840054,
