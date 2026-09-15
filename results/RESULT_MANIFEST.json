@@ -4,34 +4,6 @@
   "dataset_revision": "v1.0.1",
   "status": "intermediate experimental snapshot",
   "files": {
-    "experiments/run_lexical_baselines.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
-    "experiments/run_zero_shot_models.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
-    "experiments/train_supervised.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
-    "experiments/run_qwen3_8b.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
-    "evaluation/qwen3_bootstrap.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
-    "evaluation/supervised_bootstrap.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
-    "evaluation/family_holm.py": {
-      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
-      "bytes": 22032
-    },
     "results/zero_shot/zero_shot_results.json": {
       "sha256": "ef34c9369539a64a2e5a5c85c53d2788d929abbab8f0934f88cf44503296722c",
       "bytes": 2551
@@ -79,6 +51,26 @@
     "results/qwen3_8b/qwen3_8b_paired_tests.csv": {
       "sha256": "d8f99382bb87c00ccf9859e9b252e4689200b84a14299363b6f654ff5dd8a734",
       "bytes": 1635
+    },
+    "experiments/train_supervised.py": {
+      "sha256": "674a4eb41ad05792fcd4cd982381f0d71c3d5d4ccca88f0b4f98666a870afd12",
+      "bytes": 25157
+    },
+    "experiments/run_qwen3_8b.py": {
+      "sha256": "ab1b0a8119a73b01b4153ac564012bfef7a79221f19a7449508bb11579e91679",
+      "bytes": 21058
+    },
+    "evaluation/qwen3_bootstrap.py": {
+      "sha256": "59dea35c4735c5a50727201008b9acba49a5459585dd0103a15a16df05d7ce96",
+      "bytes": 20180
+    },
+    "evaluation/supervised_bootstrap.py": {
+      "sha256": "b5c27289d043da17c831c29e1f14cddb58b680af5c16f81c76806b20d668cb59",
+      "bytes": 26804
+    },
+    "evaluation/family_holm.py": {
+      "sha256": "dd596edfab099f3222cecfd1adf2c122599f5df59cd72977f6075337356c638c",
+      "bytes": 3640
     }
   },
   "excluded_artifacts": [
@@ -93,5 +85,19 @@
     "CPC subgroup analysis",
     "length and lexical-overlap analysis",
     "confusion matrices and error analysis"
-  ]
+  ],
+  "code_repair_status": {
+    "recovered": [
+      "evaluation/family_holm.py",
+      "evaluation/qwen3_bootstrap.py",
+      "evaluation/supervised_bootstrap.py",
+      "experiments/run_qwen3_8b.py",
+      "experiments/train_supervised.py"
+    ],
+    "missing": [
+      "experiments/run_lexical_baselines.py",
+      "experiments/run_zero_shot_models.py"
+    ],
+    "note": "Incorrect duplicate notebook-export files were removed before this manifest update."
+  }
 }
