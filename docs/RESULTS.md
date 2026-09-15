@@ -53,3 +53,18 @@ Supervised ranking metrics use task-specific scores:
 `p(X)/(p(A)+p(X))` for X-versus-A ranking, and
 `2p(X)+p(A)` for graded nDCG. Classification and binary
 ROC-AUC results are unchanged.
+
+## Random U versus Hard U
+
+The ablation uses 1,642 test queries for which both Hard U and matched Random U candidates are available. Random U candidates satisfy the same temporal, citation, priority, application, component, CPC, and duplication constraints as Hard U but are sampled without BM25-based selection. Random U generation achieved 97.9% coverage on the eligible test queries, with no detected eligibility or cross-split violations.
+
+| Model | Random similarity | Hard similarity | Random C/U AUC | Hard C/U AUC | Random pairwise | Hard pairwise |
+|---|---:|---:|---:|---:|---:|---:|
+| TF-IDF | 0.123 | 0.278 | 0.775 | 0.342 | 0.776 | 0.306 |
+| BM25 | 2.596 | 5.163 | 0.748 | 0.325 | 0.774 | 0.290 |
+| MiniLM | 0.317 | 0.466 | 0.806 | 0.524 | 0.813 | 0.520 |
+| PatentSBERTa | 0.492 | 0.599 | 0.775 | 0.490 | 0.781 | 0.487 |
+
+Hard U candidates are more similar to the claims under all four scoring models. Cited-versus-U AUC and pairwise accuracy decrease substantially when Random U is replaced with Hard U. All paired query-level differences remain significant after Holm correction, with adjusted p = 0.003. The lexical AUC values below 0.5 indicate that BM25-selected Hard U passages can be more lexically similar to the claims than examiner-cited passages.
+
+The analysis uses 2,000 paired query-level bootstrap samples with seed 42. Similarity scales are model specific. The frozen XART-H v1.0.1 dataset release is unchanged.
