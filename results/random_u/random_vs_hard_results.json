@@ -1,0 +1,237 @@
+{
+  "created_utc": "2026-09-15T13:39:27.672719+00:00",
+  "dataset": "yongminyoo91/xart-h",
+  "revision": "v1.0.1",
+  "split": "test",
+  "matched_queries": 1642,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 42,
+  "bootstrap_unit": "lowercased and whitespace-normalized claim text",
+  "method": "cluster bootstrap implemented through query multiplicity weights",
+  "results": {
+    "tfidf": {
+      "hard_mean_similarity": {
+        "estimate": 0.08551,
+        "ci_lower": 0.082776,
+        "ci_upper": 0.088285
+      },
+      "random_mean_similarity": {
+        "estimate": 0.019074,
+        "ci_lower": 0.018268,
+        "ci_upper": 0.019893
+      },
+      "similarity_hard_minus_random": {
+        "estimate": 0.066436,
+        "ci_lower": 0.063722,
+        "ci_upper": 0.069248,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_cited_vs_u_auc": {
+        "estimate": 0.34233,
+        "ci_lower": 0.327328,
+        "ci_upper": 0.35803
+      },
+      "random_cited_vs_u_auc": {
+        "estimate": 0.775459,
+        "ci_lower": 0.76319,
+        "ci_upper": 0.788801
+      },
+      "auc_random_minus_hard": {
+        "estimate": 0.433129,
+        "ci_lower": 0.418865,
+        "ci_upper": 0.447712,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_pairwise": {
+        "estimate": 0.331303,
+        "ci_lower": 0.312112,
+        "ci_upper": 0.350183
+      },
+      "random_pairwise": {
+        "estimate": 0.787333,
+        "ci_lower": 0.77165,
+        "ci_upper": 0.803137
+      },
+      "pairwise_random_minus_hard": {
+        "estimate": 0.456029,
+        "ci_lower": 0.436845,
+        "ci_upper": 0.476741,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      }
+    },
+    "bm25": {
+      "hard_mean_similarity": {
+        "estimate": 23.87346,
+        "ci_lower": 23.244312,
+        "ci_upper": 24.51026
+      },
+      "random_mean_similarity": {
+        "estimate": 6.442943,
+        "ci_lower": 6.135901,
+        "ci_upper": 6.74491
+      },
+      "similarity_hard_minus_random": {
+        "estimate": 17.430517,
+        "ci_lower": 16.856304,
+        "ci_upper": 18.020634,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_cited_vs_u_auc": {
+        "estimate": 0.325055,
+        "ci_lower": 0.311868,
+        "ci_upper": 0.33821
+      },
+      "random_cited_vs_u_auc": {
+        "estimate": 0.747611,
+        "ci_lower": 0.735213,
+        "ci_upper": 0.760934
+      },
+      "auc_random_minus_hard": {
+        "estimate": 0.422556,
+        "ci_lower": 0.409393,
+        "ci_upper": 0.436447,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_pairwise": {
+        "estimate": 0.290012,
+        "ci_lower": 0.272957,
+        "ci_upper": 0.308587
+      },
+      "random_pairwise": {
+        "estimate": 0.774239,
+        "ci_lower": 0.758709,
+        "ci_upper": 0.790987
+      },
+      "pairwise_random_minus_hard": {
+        "estimate": 0.484227,
+        "ci_lower": 0.46498,
+        "ci_upper": 0.503503,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      }
+    },
+    "minilm_dense": {
+      "hard_mean_similarity": {
+        "estimate": 0.346565,
+        "ci_lower": 0.340225,
+        "ci_upper": 0.352912
+      },
+      "random_mean_similarity": {
+        "estimate": 0.207686,
+        "ci_lower": 0.202652,
+        "ci_upper": 0.212791
+      },
+      "similarity_hard_minus_random": {
+        "estimate": 0.138879,
+        "ci_lower": 0.131734,
+        "ci_upper": 0.146223,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_cited_vs_u_auc": {
+        "estimate": 0.523654,
+        "ci_lower": 0.507183,
+        "ci_upper": 0.539682
+      },
+      "random_cited_vs_u_auc": {
+        "estimate": 0.805738,
+        "ci_lower": 0.793627,
+        "ci_upper": 0.817823
+      },
+      "auc_random_minus_hard": {
+        "estimate": 0.282084,
+        "ci_lower": 0.26752,
+        "ci_upper": 0.297027,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_pairwise": {
+        "estimate": 0.520311,
+        "ci_lower": 0.500213,
+        "ci_upper": 0.540256
+      },
+      "random_pairwise": {
+        "estimate": 0.812911,
+        "ci_lower": 0.797046,
+        "ci_upper": 0.827649
+      },
+      "pairwise_random_minus_hard": {
+        "estimate": 0.2926,
+        "ci_lower": 0.272836,
+        "ci_upper": 0.313125,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      }
+    },
+    "patentsberta": {
+      "hard_mean_similarity": {
+        "estimate": 0.474591,
+        "ci_lower": 0.469957,
+        "ci_upper": 0.479371
+      },
+      "random_mean_similarity": {
+        "estimate": 0.368117,
+        "ci_lower": 0.363815,
+        "ci_upper": 0.372588
+      },
+      "similarity_hard_minus_random": {
+        "estimate": 0.106474,
+        "ci_lower": 0.100937,
+        "ci_upper": 0.111978,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_cited_vs_u_auc": {
+        "estimate": 0.489548,
+        "ci_lower": 0.473462,
+        "ci_upper": 0.504159
+      },
+      "random_cited_vs_u_auc": {
+        "estimate": 0.774561,
+        "ci_lower": 0.761989,
+        "ci_upper": 0.78699
+      },
+      "auc_random_minus_hard": {
+        "estimate": 0.285012,
+        "ci_lower": 0.27,
+        "ci_upper": 0.30062,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      },
+      "hard_pairwise": {
+        "estimate": 0.494184,
+        "ci_lower": 0.47439,
+        "ci_upper": 0.513064
+      },
+      "random_pairwise": {
+        "estimate": 0.797229,
+        "ci_lower": 0.780782,
+        "ci_upper": 0.812607
+      },
+      "pairwise_random_minus_hard": {
+        "estimate": 0.303045,
+        "ci_lower": 0.282948,
+        "ci_upper": 0.325157,
+        "raw_p_value": 0.001,
+        "holm_p_value": 0.002999,
+        "significant_after_holm_0.05": true
+      }
+    }
+  }
+}
