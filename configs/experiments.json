@@ -1,0 +1,67 @@
+{
+  "dataset": {
+    "repo_id": "yongminyoo91/xart-h",
+    "revision": "v1.0.1",
+    "input_columns": [
+      "text",
+      "text_b"
+    ],
+    "label_column": "label",
+    "label_mapping": {
+      "0": "A",
+      "1": "X",
+      "2": "U"
+    }
+  },
+  "hardware": {
+    "gpu": "NVIDIA L4 22.5 GB"
+  },
+  "supervised": {
+    "models": {
+      "minilm": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "deberta": "microsoft/deberta-v3-base"
+    },
+    "tasks": [
+      "cited_vs_u",
+      "x_vs_a",
+      "direct_3way",
+      "hierarchical_3way"
+    ],
+    "seeds": [
+      13,
+      42,
+      77
+    ],
+    "epochs": 2,
+    "maximum_length": 384,
+    "learning_rates": {
+      "minilm": 2e-05,
+      "deberta": 1e-05
+    },
+    "train_batch_sizes": {
+      "minilm": 256,
+      "deberta": 32
+    },
+    "evaluation_batch_sizes": {
+      "minilm": 512,
+      "deberta": 64
+    }
+  },
+  "qwen3_8b": {
+    "model": "Qwen/Qwen3-8B",
+    "split": "test",
+    "quantization": "4-bit NF4 double quantization",
+    "compute_dtype": "bfloat16",
+    "maximum_length": 1280,
+    "tokens_per_text_field": 500,
+    "thinking": false,
+    "scoring": "constrained next-token logits"
+  },
+  "statistics": {
+    "bootstrap_unit": "lowercased and whitespace-normalized claim text",
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 42,
+    "confidence_level": 0.95,
+    "multiple_testing": "Holm correction within each comparison family"
+  }
+}
