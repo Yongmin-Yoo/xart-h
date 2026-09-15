@@ -1,0 +1,22 @@
+{
+  "dataset": {
+    "repo_id": "yongminyoo91/xart-h",
+    "revision": "v1.0.1",
+    "input_columns": [
+      "text",
+      "text_b"
+    ],
+    "label_column": "label",
+    "labels": {
+      "0": "A",
+      "1": "X",
+      "2": "U"
+    }
+  },
+  "splits": {
+    "train": 25187,
+    "validation": 5282,
+    "test": 5316
+  },
+  "seed": 42
+}
