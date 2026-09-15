@@ -24,8 +24,12 @@
   ],
   "files": {
     "docs/RESULTS.md": {
-      "bytes": 1977,
-      "sha256": "97c794ddb57d89cb4577ed6e630bc1c1de756859dbfc385822b72f6dac4ad71a"
+      "bytes": 3547,
+      "sha256": "9f067c4e22388426ffd5c4b6d4340938c051d7b9240cf42ec169bd32b8dba5ea"
+    },
+    "evaluation/evaluate_random_vs_hard_u.py": {
+      "bytes": 33094,
+      "sha256": "ff94cb939fb0b721d0feb9f30d1423cb3664a431311b2a8918c3f9d617b82342"
     },
     "evaluation/family_holm.py": {
       "bytes": 3640,
@@ -63,6 +67,18 @@
       "bytes": 1317,
       "sha256": "dab8d987c91215f0dbea081546a8e0e29a0538a53242f2538f5ba817152cde9f"
     },
+    "results/random_u/random_u_generation_report.json": {
+      "bytes": 3888,
+      "sha256": "4dc243e0840d9713fa899b827fbafdfe8228cf1ef7fb61217194559bd9eb39c1"
+    },
+    "results/random_u/random_vs_hard_results.json": {
+      "bytes": 6479,
+      "sha256": "34594f84c2ed3846b5f609f53f820cf04aa6f8c5f2fb8154eead8b91cd78127e"
+    },
+    "results/random_u/random_vs_hard_summary.csv": {
+      "bytes": 3218,
+      "sha256": "ac863c51444f049596fd47c76cbfb5f13b746133a36d6ec63c89d00cb42a4e36"
+    },
     "results/supervised/all_seed_results.json": {
       "bytes": 18673,
       "sha256": "a21e918d1498f5736cd0c2cea8aa129b3665765808c985703ee3ba16bba89652"
@@ -98,10 +114,13 @@
     "results/zero_shot/zero_shot_results.json": {
       "bytes": 2551,
       "sha256": "ef34c9369539a64a2e5a5c85c53d2788d929abbab8f0934f88cf44503296722c"
+    },
+    "scripts/generate_random_u.py": {
+      "bytes": 28011,
+      "sha256": "a5fe34c6213d214358dfd4cc635bb428d538465e6a0ba05e670d69eaf43e8e66"
     }
   },
   "pending_analyses": [
-    "Random U versus Hard U",
     "temporal robustness",
     "CPC subgroup analysis",
     "length and lexical-overlap analysis",
@@ -111,6 +130,11 @@
     "bootstrap_repetitions": 2000,
     "bootstrap_seed": 42,
     "common_test_queries": 1642,
+    "confidence_interval_sources": [
+      "results/random_u/random_vs_hard_results.json",
+      "results/random_u/random_vs_hard_summary.csv"
+    ],
+    "confidence_level": 0.95,
     "coverage": 0.9785458879618594,
     "dataset_modified": false,
     "dataset_revision": "v1.0.1",
@@ -123,27 +147,33 @@
     ],
     "files": {
       "docs/RESULTS.md": {
-        "sha256": "dc36074f88d9e174656719c95c1de0e8928fa93500b452db498629bd21f7e364"
+        "bytes": 3547,
+        "sha256": "9f067c4e22388426ffd5c4b6d4340938c051d7b9240cf42ec169bd32b8dba5ea"
       },
       "evaluation/evaluate_random_vs_hard_u.py": {
+        "bytes": 33094,
         "sha256": "ff94cb939fb0b721d0feb9f30d1423cb3664a431311b2a8918c3f9d617b82342"
       },
       "results/random_u/random_u_generation_report.json": {
+        "bytes": 3888,
         "sha256": "4dc243e0840d9713fa899b827fbafdfe8228cf1ef7fb61217194559bd9eb39c1"
       },
       "results/random_u/random_vs_hard_results.json": {
+        "bytes": 6479,
         "sha256": "34594f84c2ed3846b5f609f53f820cf04aa6f8c5f2fb8154eead8b91cd78127e"
       },
       "results/random_u/random_vs_hard_summary.csv": {
+        "bytes": 3218,
         "sha256": "ac863c51444f049596fd47c76cbfb5f13b746133a36d6ec63c89d00cb42a4e36"
       },
       "scripts/generate_random_u.py": {
+        "bytes": 28011,
         "sha256": "a5fe34c6213d214358dfd4cc635bb428d538465e6a0ba05e670d69eaf43e8e66"
       }
     },
     "holm_adjusted_p_value": 0.002999,
     "status": "complete",
-    "updated_at_utc": "2026-09-15T13:46:22.123385+00:00"
+    "updated_at_utc": "2026-09-15T13:48:33.891924+00:00"
   },
   "ranking_metric_correction": {
     "affected_outputs": [
@@ -161,5 +191,6 @@
       "ndcg"
     ]
   },
-  "status": "intermediate experimental snapshot"
+  "status": "intermediate experimental snapshot",
+  "updated_utc": "2026-09-15T13:48:33.892006+00:00"
 }
