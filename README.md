@@ -114,3 +114,20 @@ XART-H is released under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Users should cite both PatentMatch and XART-H.
+
+<!-- XARTH_RESULTS_START -->
+## Current Results
+
+Current experimental results are available in
+[`docs/RESULTS.md`](docs/RESULTS.md), with machine-readable
+files under [`results/`](results/).
+
+The strongest supervised cited-versus-U result is obtained by
+DeBERTa-v3-base with a test ROC-AUC of 0.746. X-versus-A
+performance remains close to chance across the evaluated model
+families. Qwen3-8B benefits from hierarchical prompting, but
+remains below the task-specific reranker and supervised DeBERTa.
+
+These results use the frozen Hugging Face release
+[`v1.0.1`](https://huggingface.co/datasets/yongminyoo91/xart-h/tree/v1.0.1).
+<!-- XARTH_RESULTS_END -->
