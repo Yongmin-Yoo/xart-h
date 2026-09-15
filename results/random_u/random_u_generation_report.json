@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-09-15T13:31:14.951544+00:00",
+  "method": "Uniform deterministic sampling from candidates satisfying the Hard-U eligibility constraints, excluding the selected Hard-U document and passage",
+  "seed": 42,
+  "source_split": "priority_augmented_temporal_split",
+  "metadata": "/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/hard_u_metadata/patent_metadata.csv",
+  "splits": {
+    "train": {
+      "hard_u_queries": 8275,
+      "random_u_generated": 8246,
+      "coverage_against_hard_u": 0.9964954682779457,
+      "candidate_passages": 9999,
+      "mean_eligible_pool_size": 741.274678632064,
+      "median_eligible_pool_size": 565.0,
+      "minimum_eligible_pool_size": 1,
+      "maximum_eligible_pool_size": 3214,
+      "failure_reasons": {
+        "no_remaining_candidate": 29
+      },
+      "violations": {
+        "duplicate_queries": 0,
+        "duplicate_query_passage_pairs": 0,
+        "same_as_hard_u_passage": 0,
+        "same_as_hard_u_document": 0,
+        "existing_citation_or_reference": 0,
+        "time_violation": 0,
+        "cpc_violation": 0,
+        "same_component_violation": 0
+      },
+      "csv_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/train_random_u.csv",
+      "parquet_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/train_random_u.parquet"
+    },
+    "validation": {
+      "hard_u_queries": 1656,
+      "random_u_generated": 1642,
+      "coverage_against_hard_u": 0.9915458937198067,
+      "candidate_passages": 2187,
+      "mean_eligible_pool_size": 170.23934226552984,
+      "median_eligible_pool_size": 119.5,
+      "minimum_eligible_pool_size": 1,
+      "maximum_eligible_pool_size": 747,
+      "failure_reasons": {
+        "no_remaining_candidate": 14
+      },
+      "violations": {
+        "duplicate_queries": 0,
+        "duplicate_query_passage_pairs": 0,
+        "same_as_hard_u_passage": 0,
+        "same_as_hard_u_document": 0,
+        "existing_citation_or_reference": 0,
+        "time_violation": 0,
+        "cpc_violation": 0,
+        "same_component_violation": 0
+      },
+      "csv_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/validation_random_u.csv",
+      "parquet_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/validation_random_u.parquet"
+    },
+    "test": {
+      "hard_u_queries": 1678,
+      "random_u_generated": 1642,
+      "coverage_against_hard_u": 0.9785458879618594,
+      "candidate_passages": 2079,
+      "mean_eligible_pool_size": 126.74969549330085,
+      "median_eligible_pool_size": 107.0,
+      "minimum_eligible_pool_size": 1,
+      "maximum_eligible_pool_size": 393,
+      "failure_reasons": {
+        "no_remaining_candidate": 36
+      },
+      "violations": {
+        "duplicate_queries": 0,
+        "duplicate_query_passage_pairs": 0,
+        "same_as_hard_u_passage": 0,
+        "same_as_hard_u_document": 0,
+        "existing_citation_or_reference": 0,
+        "time_violation": 0,
+        "cpc_violation": 0,
+        "same_component_violation": 0
+      },
+      "csv_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/test_random_u.csv",
+      "parquet_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/test_random_u.parquet"
+    }
+  },
+  "cross_split_violations": {
+    "train_validation_query_overlap": 0,
+    "train_validation_passage_overlap": 0,
+    "train_validation_document_overlap": 0,
+    "train_test_query_overlap": 0,
+    "train_test_passage_overlap": 0,
+    "train_test_document_overlap": 0,
+    "validation_test_query_overlap": 0,
+    "validation_test_passage_overlap": 0,
+    "validation_test_document_overlap": 0
+  },
+  "combined_rows": 11530,
+  "combined_path": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/random_u_v1/all_random_u.parquet"
+}
