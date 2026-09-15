@@ -1,0 +1,53 @@
+{
+  "dataset": "yongminyoo91/xart-h",
+  "revision": "v1.0.1",
+  "split": "test",
+  "rows": 5316,
+  "model": "Qwen/Qwen3-8B",
+  "quantization": "4-bit NF4 double quantization",
+  "compute_dtype": "torch.bfloat16",
+  "max_length": 1280,
+  "text_tokens_per_side": 500,
+  "seed": 42,
+  "input_columns": [
+    "text",
+    "text_b"
+  ],
+  "direct_3way": {
+    "accuracy": 0.335779,
+    "macro_f1": 0.249544,
+    "per_class_f1_A_X_U": [
+      0.455644,
+      0.289439,
+      0.003548
+    ],
+    "cited_vs_u_roc_auc": 0.53087,
+    "cited_vs_u_average_precision": 0.710585,
+    "x_vs_a_roc_auc": 0.488559,
+    "x_vs_a_average_precision": 0.494549,
+    "pairwise_cited_over_U": 0.535151,
+    "pairwise_X_over_A": 0.487279,
+    "mrr_cited": 0.848331,
+    "ndcg": 0.821217,
+    "u_eligible_queries": 1678
+  },
+  "hierarchical_3way": {
+    "accuracy": 0.347442,
+    "macro_f1": 0.290553,
+    "per_class_f1_A_X_U": [
+      0.093045,
+      0.303148,
+      0.475465
+    ],
+    "cited_vs_u_roc_auc": 0.576688,
+    "cited_vs_u_average_precision": 0.733699,
+    "x_vs_a_roc_auc": 0.496114,
+    "x_vs_a_average_precision": 0.496007,
+    "pairwise_cited_over_U": 0.571206,
+    "pairwise_X_over_A": 0.496313,
+    "mrr_cited": 0.858164,
+    "ndcg": 0.824067,
+    "u_eligible_queries": 1678
+  },
+  "elapsed_hours_current_session": 0.980955
+}
