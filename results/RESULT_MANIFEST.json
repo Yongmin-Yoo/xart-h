@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-09-15T13:16:26.348757+00:00",
+  "dataset": "yongminyoo91/xart-h",
+  "dataset_revision": "v1.0.1",
+  "status": "intermediate experimental snapshot",
+  "files": {
+    "experiments/run_lexical_baselines.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "experiments/run_zero_shot_models.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "experiments/train_supervised.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "experiments/run_qwen3_8b.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "evaluation/qwen3_bootstrap.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "evaluation/supervised_bootstrap.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "evaluation/family_holm.py": {
+      "sha256": "83090a57d18177e9dc759ed17dfadab6eff22d853407c20e6458587a6c014ef6",
+      "bytes": 22032
+    },
+    "results/zero_shot/zero_shot_results.json": {
+      "sha256": "ef34c9369539a64a2e5a5c85c53d2788d929abbab8f0934f88cf44503296722c",
+      "bytes": 2551
+    },
+    "results/supervised/summary.json": {
+      "sha256": "0b7b1b75e521d2b46a82a886057459eb682ce45d7d98175065609b355fc8e5b3",
+      "bytes": 11124
+    },
+    "results/supervised/all_seed_results.json": {
+      "sha256": "b58066ff24b9cab334e89a2ed288003792a633fb33ca7b01039adea846981f9a",
+      "bytes": 18681
+    },
+    "results/supervised/supervised_bootstrap_results.json": {
+      "sha256": "82266326b58a2f29125ba9ee26856b9141ce8afe58e3f9566935bdd3bc0957a1",
+      "bytes": 24272
+    },
+    "results/supervised/supervised_bootstrap_ci.csv": {
+      "sha256": "61df8fdec549efa81dbbba440bf06212b558511595eb9ea858c31d6f92520b56",
+      "bytes": 4652
+    },
+    "results/supervised/supervised_paired_tests.csv": {
+      "sha256": "25d6c66d1a65d9f00172e8870744aa4137cf3bccb7cb6f81221961703764f7e7",
+      "bytes": 8034
+    },
+    "results/supervised/supervised_bootstrap_family_holm.json": {
+      "sha256": "300b6c5c208e7dd63bdab33d379e497210eed5c1c7ed8d0c207f2720226132f5",
+      "bytes": 28850
+    },
+    "results/supervised/supervised_paired_tests_family_holm.csv": {
+      "sha256": "091c9f82db43b89ad4da2a52b5ec5195f661146ddb34947dffa53899aa9e1ab9",
+      "bytes": 5939
+    },
+    "results/qwen3_8b/qwen3_8b_results.json": {
+      "sha256": "dab8d987c91215f0dbea081546a8e0e29a0538a53242f2538f5ba817152cde9f",
+      "bytes": 1317
+    },
+    "results/qwen3_8b/qwen3_8b_bootstrap.json": {
+      "sha256": "63c2294f837880660ef79250bee4e78b7f4add8e4bca0a8f7a46f43ad17031e8",
+      "bytes": 7009
+    },
+    "results/qwen3_8b/qwen3_8b_bootstrap_ci.csv": {
+      "sha256": "1139cd992acb940bbd54d24ce227972763faacee6c88cfcfbc39770513b7cf71",
+      "bytes": 2379
+    },
+    "results/qwen3_8b/qwen3_8b_paired_tests.csv": {
+      "sha256": "d8f99382bb87c00ccf9859e9b252e4689200b84a14299363b6f654ff5dd8a734",
+      "bytes": 1635
+    }
+  },
+  "excluded_artifacts": [
+    "model checkpoints",
+    "per-example prediction parquet files",
+    "logit NPZ files",
+    "authentication tokens"
+  ],
+  "pending_analyses": [
+    "Random U versus Hard U",
+    "temporal robustness",
+    "CPC subgroup analysis",
+    "length and lexical-overlap analysis",
+    "confusion matrices and error analysis"
+  ]
+}
