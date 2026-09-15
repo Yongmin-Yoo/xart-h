@@ -317,19 +317,23 @@ def average_precision(labels, scores):
 def ranking_metrics(
     labels,
     queries,
-    scores
+    probabilities
 ):
     groups = {}
 
-    for label, query, score in zip(
+    for label, query, probability in zip(
         labels,
         queries,
-        scores
+        probabilities
     ):
-        groups.setdefault(
-            query, []
-        ).append(
-            (int(label), float(score))
+        groups.setdefault(query, []).append(
+            (
+                int(label),
+                np.asarray(
+                    probability,
+                    dtype=np.float64
+                )
+            )
         )
 
     pair_cited_u = []
@@ -341,127 +345,125 @@ def ranking_metrics(
         labels_array = np.asarray(
             [row[0] for row in rows]
         )
-        scores_array = np.asarray(
+
+        probability_array = np.stack(
             [row[1] for row in rows]
         )
 
-        if not np.any(labels_array == 2):
-            continue
-
-        cited_scores = scores_array[
-            labels_array != 2
-        ]
-        uncited_scores = scores_array[
-            labels_array == 2
-        ]
-
-        greater = (
-            cited_scores[:, None]
-            > uncited_scores[None, :]
-        )
-        equal = (
-            cited_scores[:, None]
-            == uncited_scores[None, :]
+        cited_score = (
+            probability_array[:, 0]
+            + probability_array[:, 1]
         )
 
-        pair_cited_u.append(
-            float(
-                (
-                    greater
-                    + 0.5 * equal
-                ).mean()
+        x_score = (
+            probability_array[:, 1]
+            / (
+                probability_array[:, 0]
+                + probability_array[:, 1]
+                + 1e-12
             )
         )
 
-        x_scores = scores_array[
-            labels_array == 1
-        ]
-        a_scores = scores_array[
-            labels_array == 0
-        ]
+        graded_score = (
+            probability_array[:, 0]
+            + 2.0 * probability_array[:, 1]
+        )
 
-        if len(x_scores) and len(a_scores):
-            greater = (
-                x_scores[:, None]
-                > a_scores[None, :]
-            )
-            equal = (
-                x_scores[:, None]
-                == a_scores[None, :]
+        cited_mask = labels_array != 2
+        u_mask = labels_array == 2
+        x_mask = labels_array == 1
+        a_mask = labels_array == 0
+
+        if cited_mask.any() and u_mask.any():
+            cited_values = cited_score[cited_mask]
+            u_values = cited_score[u_mask]
+
+            wins = (
+                cited_values[:, None]
+                > u_values[None, :]
+            ).astype(float)
+
+            ties = (
+                cited_values[:, None]
+                == u_values[None, :]
+            ).astype(float)
+
+            pair_cited_u.append(
+                float((wins + 0.5 * ties).mean())
             )
 
-            pair_x_a.append(
-                float(
-                    (
-                        greater
-                        + 0.5 * equal
-                    ).mean()
+            order = np.argsort(
+                -cited_score,
+                kind="mergesort"
+            )
+
+            positions = np.flatnonzero(
+                cited_mask[order]
+            )
+
+            reciprocal_ranks.append(
+                1.0 / (positions[0] + 1)
+                if len(positions)
+                else 0.0
+            )
+
+            relevance = np.where(
+                labels_array == 1,
+                2,
+                np.where(labels_array == 0, 1, 0)
+            )
+
+            ranked_relevance = relevance[
+                np.argsort(
+                    -graded_score,
+                    kind="mergesort"
+                )
+            ]
+
+            ideal_relevance = np.sort(
+                relevance
+            )[::-1]
+
+            discounts = np.log2(
+                np.arange(
+                    2,
+                    len(relevance) + 2
                 )
             )
 
-        ranking_order = np.argsort(
-            -scores_array
-        )
-        ranked_labels = labels_array[
-            ranking_order
-        ]
-
-        cited_positions = np.flatnonzero(
-            ranked_labels != 2
-        )
-
-        reciprocal_ranks.append(
-            1.0
-            / (cited_positions[0] + 1)
-            if len(cited_positions)
-            else 0.0
-        )
-
-        relevance = np.where(
-            labels_array == 1,
-            2,
-            np.where(
-                labels_array == 0,
-                1,
-                0
+            dcg = np.sum(
+                (2 ** ranked_relevance - 1)
+                / discounts
             )
-        )
 
-        ranked_relevance = relevance[
-            ranking_order
-        ]
-        ideal_relevance = np.sort(
-            relevance
-        )[::-1]
-
-        discounts = np.log2(
-            np.arange(
-                2,
-                len(relevance) + 2
+            idcg = np.sum(
+                (2 ** ideal_relevance - 1)
+                / discounts
             )
-        )
 
-        dcg = np.sum(
-            (
-                2 ** ranked_relevance
-                - 1
+            ndcg_scores.append(
+                float(dcg / idcg)
+                if idcg
+                else 0.0
             )
-            / discounts
-        )
 
-        idcg = np.sum(
-            (
-                2 ** ideal_relevance
-                - 1
+        if x_mask.any() and a_mask.any():
+            x_values = x_score[x_mask]
+            a_values = x_score[a_mask]
+
+            wins = (
+                x_values[:, None]
+                > a_values[None, :]
+            ).astype(float)
+
+            ties = (
+                x_values[:, None]
+                == a_values[None, :]
+            ).astype(float)
+
+            pair_x_a.append(
+                float((wins + 0.5 * ties).mean())
             )
-            / discounts
-        )
-
-        ndcg_scores.append(
-            float(dcg / idcg)
-            if idcg
-            else 0.0
-        )
 
     return {
         "pairwise_cited_over_U": float(
@@ -918,18 +920,12 @@ for model_name in MODELS:
                 )
             )
 
-            direct_ranking_score = (
-                2 * direct_probability[:, 1]
-                + direct_probability[:, 0]
-            )
 
             direct_metrics.update(
                 ranking_metrics(
                     labels[u_mask],
                     queries[u_mask],
-                    direct_ranking_score[
-                        u_mask
-                    ]
+                    direct_probability[u_mask]
                 )
             )
 
@@ -962,19 +958,12 @@ for model_name in MODELS:
                 )
             )
 
-            hierarchical_ranking_score = (
-                2
-                * hierarchical_probability[:, 1]
-                + hierarchical_probability[:, 0]
-            )
 
             hierarchical_metrics.update(
                 ranking_metrics(
                     labels[u_mask],
                     queries[u_mask],
-                    hierarchical_ranking_score[
-                        u_mask
-                    ]
+                    hierarchical_probability[u_mask]
                 )
             )
 
