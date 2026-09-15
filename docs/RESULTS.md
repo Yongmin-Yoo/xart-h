@@ -22,10 +22,10 @@ means over seeds 13, 42, and 77 unless otherwise stated.
 
 | Model | Method | Accuracy | Macro-F1 | P-C/U | P-X/A |
 |:--|:--|--:|--:|--:|--:|
-| MiniLM | Direct | 0.325 | 0.313 | 0.501 | 0.481 |
-| MiniLM | Hierarchical | 0.325 | 0.290 | 0.498 | 0.496 |
-| DeBERTa | Direct | 0.453 | 0.450 | 0.743 | 0.485 |
-| DeBERTa | Hierarchical | 0.446 | 0.432 | 0.738 | 0.492 |
+| MiniLM | Direct | 0.325 | 0.313 | 0.502 | 0.492 |
+| MiniLM | Hierarchical | 0.325 | 0.290 | 0.499 | 0.499 |
+| DeBERTa | Direct | 0.453 | 0.450 | 0.747 | 0.517 |
+| DeBERTa | Hierarchical | 0.446 | 0.432 | 0.750 | 0.500 |
 | Qwen3-8B | Direct | 0.336 | 0.250 | 0.535 | 0.488 |
 | Qwen3-8B | Hierarchical | 0.347 | 0.291 | 0.571 | 0.495 |
 
@@ -44,3 +44,12 @@ Holm-adjusted p = 0.036.
 Detailed confidence intervals and corrected tests are
 provided in the result files. Random U, temporal, and
 subgroup analyses remain pending.
+
+
+## Metric Correction
+
+Supervised ranking metrics use task-specific scores:
+`p(A)+p(X)` for cited-versus-U ranking,
+`p(X)/(p(A)+p(X))` for X-versus-A ranking, and
+`2p(X)+p(A)` for graded nDCG. Classification and binary
+ROC-AUC results are unchanged.
