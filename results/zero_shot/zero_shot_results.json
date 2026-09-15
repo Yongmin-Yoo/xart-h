@@ -1,0 +1,102 @@
+{
+  "random": {
+    "validation": {
+      "mean_A": 0.501874,
+      "mean_X": 0.497298,
+      "mean_U": 0.499921,
+      "auc_cited_vs_U": 0.4996,
+      "auc_X_vs_A": 0.495495,
+      "pairwise_cited_over_U": 0.501142,
+      "pairwise_X_over_A": 0.490077
+    },
+    "test": {
+      "mean_A": 0.496127,
+      "mean_X": 0.502807,
+      "mean_U": 0.500441,
+      "auc_cited_vs_U": 0.498755,
+      "auc_X_vs_A": 0.506717,
+      "pairwise_cited_over_U": 0.499762,
+      "pairwise_X_over_A": 0.505895
+    }
+  },
+  "minilm_bi": {
+    "validation": {
+      "mean_A": 0.342285,
+      "mean_X": 0.353516,
+      "mean_U": 0.337891,
+      "auc_cited_vs_U": 0.520109,
+      "auc_X_vs_A": 0.523667,
+      "pairwise_cited_over_U": 0.514694,
+      "pairwise_X_over_A": 0.533997
+    },
+    "test": {
+      "mean_A": 0.351807,
+      "mean_X": 0.362061,
+      "mean_U": 0.345459,
+      "auc_cited_vs_U": 0.528332,
+      "auc_X_vs_A": 0.523778,
+      "pairwise_cited_over_U": 0.526609,
+      "pairwise_X_over_A": 0.512491
+    }
+  },
+  "patentsberta": {
+    "validation": {
+      "mean_A": 0.464355,
+      "mean_X": 0.470947,
+      "mean_U": 0.456299,
+      "auc_cited_vs_U": 0.531078,
+      "auc_X_vs_A": 0.518089,
+      "pairwise_cited_over_U": 0.515952,
+      "pairwise_X_over_A": 0.519762
+    },
+    "test": {
+      "mean_A": 0.469971,
+      "mean_X": 0.473389,
+      "mean_U": 0.474121,
+      "auc_cited_vs_U": 0.49532,
+      "auc_X_vs_A": 0.511341,
+      "pairwise_cited_over_U": 0.500268,
+      "pairwise_X_over_A": 0.503365
+    }
+  },
+  "minilm_ce": {
+    "validation": {
+      "mean_A": -6.018161,
+      "mean_X": -5.76008,
+      "mean_U": -5.338292,
+      "auc_cited_vs_U": 0.449956,
+      "auc_X_vs_A": 0.520853,
+      "pairwise_cited_over_U": 0.416113,
+      "pairwise_X_over_A": 0.531233
+    },
+    "test": {
+      "mean_A": -5.831559,
+      "mean_X": -5.532597,
+      "mean_U": -4.771548,
+      "auc_cited_vs_U": 0.426078,
+      "auc_X_vs_A": 0.52419,
+      "pairwise_cited_over_U": 0.38972,
+      "pairwise_X_over_A": 0.528116
+    }
+  },
+  "qwen3_reranker_0.6b": {
+    "validation": {
+      "mean_A": -4.65795,
+      "mean_X": -4.27668,
+      "mean_U": -6.513865,
+      "auc_cited_vs_U": 0.642602,
+      "auc_X_vs_A": 0.524931,
+      "pairwise_cited_over_U": 0.640399,
+      "pairwise_X_over_A": 0.529298
+    },
+    "test": {
+      "mean_A": -4.098824,
+      "mean_X": -3.895301,
+      "mean_U": -6.054271,
+      "auc_cited_vs_U": 0.633256,
+      "auc_X_vs_A": 0.516433,
+      "pairwise_cited_over_U": 0.623063,
+      "pairwise_X_over_A": 0.498433
+    }
+  }
+}
