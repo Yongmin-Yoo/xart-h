@@ -9,12 +9,12 @@
       "bytes": 2551
     },
     "results/supervised/summary.json": {
-      "sha256": "0b7b1b75e521d2b46a82a886057459eb682ce45d7d98175065609b355fc8e5b3",
-      "bytes": 11124
+      "sha256": "436267771884e5cdea5ba9a8dd722dd617d22fe9d37b695e7da404fa99a1d9f7",
+      "bytes": 11117
     },
     "results/supervised/all_seed_results.json": {
-      "sha256": "b58066ff24b9cab334e89a2ed288003792a633fb33ca7b01039adea846981f9a",
-      "bytes": 18681
+      "sha256": "a21e918d1498f5736cd0c2cea8aa129b3665765808c985703ee3ba16bba89652",
+      "bytes": 18673
     },
     "results/supervised/supervised_bootstrap_results.json": {
       "sha256": "82266326b58a2f29125ba9ee26856b9141ce8afe58e3f9566935bdd3bc0957a1",
@@ -53,8 +53,8 @@
       "bytes": 1635
     },
     "experiments/train_supervised.py": {
-      "sha256": "674a4eb41ad05792fcd4cd982381f0d71c3d5d4ccca88f0b4f98666a870afd12",
-      "bytes": 25157
+      "sha256": "6715642ae98dec0a12c80584b6c782f2e32dac512126eb39f6c75b54bc9d137d",
+      "bytes": 25204
     },
     "experiments/run_qwen3_8b.py": {
       "sha256": "ab1b0a8119a73b01b4153ac564012bfef7a79221f19a7449508bb11579e91679",
@@ -71,6 +71,14 @@
     "evaluation/family_holm.py": {
       "sha256": "dd596edfab099f3222cecfd1adf2c122599f5df59cd72977f6075337356c638c",
       "bytes": 3640
+    },
+    "results/supervised/ranking_metric_corrections.csv": {
+      "sha256": "8bec30e30b3564d20497b32aa14e209c24333afcd841063c2a667840aabb7212",
+      "bytes": 8197
+    },
+    "docs/RESULTS.md": {
+      "sha256": "97c794ddb57d89cb4577ed6e630bc1c1de756859dbfc385822b72f6dac4ad71a",
+      "bytes": 1977
     }
   },
   "excluded_artifacts": [
@@ -99,5 +107,21 @@
       "experiments/run_zero_shot_models.py"
     ],
     "note": "Incorrect duplicate notebook-export files were removed before this manifest update."
+  },
+  "ranking_metric_correction": {
+    "status": "applied",
+    "affected_outputs": [
+      "pairwise_cited_over_U",
+      "pairwise_X_over_A",
+      "mrr_cited"
+    ],
+    "unaffected_outputs": [
+      "accuracy",
+      "macro_f1",
+      "per_class_f1",
+      "roc_auc",
+      "average_precision",
+      "ndcg"
+    ]
   }
 }
