@@ -42,8 +42,8 @@ hierarchical prediction by 0.019, with a query-level
 Holm-adjusted p = 0.036.
 
 Detailed confidence intervals and corrected tests are
-provided in the result files. Random U, temporal, and
-subgroup analyses remain pending.
+provided in the result files. Temporal and subgroup
+analyses remain pending.
 
 
 ## Metric Correction
@@ -60,11 +60,11 @@ The ablation uses 1,642 test queries for which both Hard U and matched Random U 
 
 | Model | Random similarity | Hard similarity | Random C/U AUC | Hard C/U AUC | Random pairwise | Hard pairwise |
 |---|---:|---:|---:|---:|---:|---:|
-| TF-IDF | 0.123 | 0.278 | 0.775 | 0.342 | 0.776 | 0.306 |
-| BM25 | 2.596 | 5.163 | 0.748 | 0.325 | 0.774 | 0.290 |
-| MiniLM | 0.317 | 0.466 | 0.806 | 0.524 | 0.813 | 0.520 |
-| PatentSBERTa | 0.492 | 0.599 | 0.775 | 0.490 | 0.781 | 0.487 |
+| TF-IDF | 0.019 | 0.086 | 0.775 | 0.342 | 0.787 | 0.331 |
+| BM25 | 6.443 | 23.873 | 0.748 | 0.325 | 0.774 | 0.290 |
+| MiniLM | 0.208 | 0.347 | 0.806 | 0.524 | 0.813 | 0.520 |
+| PatentSBERTa | 0.368 | 0.475 | 0.775 | 0.490 | 0.797 | 0.494 |
 
-Hard U candidates are more similar to the claims under all four scoring models. Cited-versus-U AUC and pairwise accuracy decrease substantially when Random U is replaced with Hard U. All paired query-level differences remain significant after Holm correction, with adjusted p = 0.003. The lexical AUC values below 0.5 indicate that BM25-selected Hard U passages can be more lexically similar to the claims than examiner-cited passages.
+Hard U candidates are more similar to the claims under all four scoring models. Cited-versus-U ROC-AUC and pairwise accuracy decrease substantially when Random U is replaced with Hard U. All paired query-level differences remain significant after Holm correction, with adjusted p = 0.003. The lexical AUC values below 0.5 indicate that BM25-selected Hard U passages can be more lexically similar to the claims than examiner-cited passages.
 
-The analysis uses 2,000 paired query-level bootstrap samples with seed 42. Similarity scales are model specific. The frozen XART-H v1.0.1 dataset release is unchanged.
+The analysis uses 2,000 paired query-level bootstrap samples with seed 42. Confidence intervals are reported in `results/random_u/random_vs_hard_summary.csv` and `results/random_u/random_vs_hard_results.json`. Similarity scales are model specific. The frozen XART-H v1.0.1 dataset release is unchanged.
