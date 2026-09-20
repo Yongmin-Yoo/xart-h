@@ -1,0 +1,9 @@
+relation,relaxed_test_rows,contaminated_test_rows,contaminated_test_fraction
+normalized_claim,3950,8,0.0020253164556962027
+normalized_passage,3950,14,0.0035443037974683543
+claim_id,3950,0,0.0
+patent_application,3950,0,0.0
+cited_document,3950,138,0.034936708860759495
+dependency_component,3950,234,0.05924050632911392
+supercomponent,3950,270,0.06835443037974684
+priority_component,3950,282,0.07139240506329114
