@@ -68,3 +68,62 @@ The ablation uses 1,642 test queries for which both Hard U and matched Random U 
 Hard U candidates are more similar to the claims under all four scoring models. Cited-versus-U ROC-AUC and pairwise accuracy decrease substantially when Random U is replaced with Hard U. All paired query-level differences remain significant after Holm correction, with adjusted p = 0.003. The lexical AUC values below 0.5 indicate that BM25-selected Hard U passages can be more lexically similar to the claims than examiner-cited passages.
 
 The analysis uses 2,000 paired query-level bootstrap samples with seed 42. Confidence intervals are reported in `results/random_u/random_vs_hard_summary.csv` and `results/random_u/random_vs_hard_results.json`. Similarity scales are model specific. The frozen XART-H v1.0.1 dataset release is unchanged.
+
+<!-- ROBUSTNESS_RESULTS_START -->
+## Temporal Robustness
+
+Temporal robustness is evaluated on the 1,678 U-eligible
+test queries. The date of each query's unique U row is used
+as the temporal anchor. Chronological bins contain 568 early,
+534 middle, and 576 late queries, with median distances of
+266, 336, and 427 days from the end of the training period.
+
+| System | Early M-F1 | Middle M-F1 | Late M-F1 | Early C/U AUC | Middle C/U AUC | Late C/U AUC |
+|:--|--:|--:|--:|--:|--:|--:|
+| MiniLM direct | 0.308 | 0.303 | 0.313 | 0.504 | 0.476 | 0.510 |
+| MiniLM hierarchical | 0.299 | 0.270 | 0.298 | 0.522 | 0.456 | 0.482 |
+| DeBERTa direct | 0.500 | 0.441 | 0.428 | 0.810 | 0.718 | 0.749 |
+| DeBERTa hierarchical | 0.471 | 0.427 | 0.415 | 0.813 | 0.721 | 0.742 |
+| Qwen3-8B direct | 0.252 | 0.235 | 0.242 | 0.573 | 0.526 | 0.483 |
+| Qwen3-8B hierarchical | 0.297 | 0.290 | 0.286 | 0.556 | 0.591 | 0.580 |
+
+DeBERTa direct, DeBERTa hierarchical, and Qwen3-8B
+direct exhibit significant early-to-late changes in
+cited-versus-U ROC-AUC after Holm correction. These
+results show a temporal association but do not establish
+causal temporal drift. The analysis uses 2,000 paired
+query-level bootstrap samples with seed 42.
+
+Detailed results are available under `results/temporal/`.
+
+## Dependency Relaxation
+
+The official dependency-controlled split has zero
+cross-split overlap for every audited relation. A relaxed
+row-level temporal reconstruction reassigns 1,100
+quarantined X/A rows and produces test contamination rates
+of 5.92% for dependency components, 6.84% for
+supercomponents, and 7.14% for priority components.
+
+DeBERTa was trained on the official and relaxed X/A
+partitions with seeds 13, 42, and 77. Both conditions were
+evaluated on the same frozen official X/A test set.
+
+| Metric | Official | Relaxed | Relaxed minus Official | Holm p |
+|:--|--:|--:|--:|--:|
+| Accuracy | 0.488 | 0.489 | 0.000 | 1.000 |
+| Macro-F1 | 0.460 | 0.445 | -0.015 | 0.136 |
+| ROC-AUC | 0.499 | 0.492 | -0.007 | 0.398 |
+| Average precision | 0.501 | 0.490 | -0.011 | 0.136 |
+
+No metric differs significantly after Holm correction.
+The dependency controls eliminate measurable structural
+overlap, but the introduced overlap does not produce
+detectable X/A performance inflation in this experiment.
+Both conditions remain near chance, so this result should
+not be interpreted as general evidence of insensitivity to
+dependency leakage.
+
+Detailed audit and model-comparison results are available
+under `results/dependency/`.
+<!-- ROBUSTNESS_RESULTS_END -->
