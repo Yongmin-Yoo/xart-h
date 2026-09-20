@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-09-20T04:31:20.317049+00:00",
+  "source_root": "/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/priority_augmented_temporal_split",
+  "source_files": {
+    "train": "/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/priority_augmented_temporal_split/train.csv",
+    "validation": "/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/priority_augmented_temporal_split/dev.csv",
+    "test": "/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/priority_augmented_temporal_split/test.csv",
+    "quarantine": "/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/priority_augmented_temporal_split/quarantine.csv"
+  },
+  "date_column": "_date",
+  "train_cutoff": "2016-09-25",
+  "validation_cutoff": "2017-05-13",
+  "official_method": "dependency-controlled temporal split with cross-boundary components quarantined",
+  "relaxed_method": "row-level chronological assignment without dependency-component quarantine",
+  "total_xa_rows": 25276,
+  "official_retained_rows": 24176,
+  "official_quarantine_rows": 1100,
+  "official_counts": {
+    "train": 16912,
+    "test": 3638,
+    "validation": 3626,
+    "quarantine": 1100
+  },
+  "relaxed_counts": {
+    "train": 17432,
+    "test": 3950,
+    "validation": 3894
+  },
+  "quarantine_destinations": {
+    "train": 520,
+    "test": 312,
+    "validation": 268
+  },
+  "audited_relations": [
+    "normalized_claim",
+    "normalized_passage",
+    "claim_id",
+    "patent_application",
+    "cited_document",
+    "dependency_component",
+    "supercomponent",
+    "priority_component"
+  ],
+  "official_total_cross_split_values": 0,
+  "relaxed_total_cross_split_values": 151,
+  "reconstruction_valid_for_comparison": true,
+  "interpretation_scope": "This audit measures structural overlap after relaxing dependency control. It does not estimate model performance inflation."
+}
