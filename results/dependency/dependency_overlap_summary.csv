@@ -1,0 +1,17 @@
+condition,relation,valid_unique_values,cross_split_values,cross_split_affected_rows,train_test_shared_values,train_test_affected_rows
+official_dependency_controlled,normalized_claim,11991,0,0,0,0
+official_dependency_controlled,normalized_passage,14621,0,0,0,0
+official_dependency_controlled,claim_id,24176,0,0,0,0
+official_dependency_controlled,patent_application,1552,0,0,0,0
+official_dependency_controlled,cited_document,3357,0,0,0,0
+official_dependency_controlled,dependency_component,1456,0,0,0,0
+official_dependency_controlled,supercomponent,1456,0,0,0,0
+official_dependency_controlled,priority_component,1452,0,0,0,0
+relaxed_row_level_temporal,normalized_claim,12523,17,70,4,18
+relaxed_row_level_temporal,normalized_passage,15327,27,86,7,31
+relaxed_row_level_temporal,claim_id,25276,0,0,0,0
+relaxed_row_level_temporal,patent_application,1623,0,0,0,0
+relaxed_row_level_temporal,cited_document,3489,34,523,18,257
+relaxed_row_level_temporal,dependency_component,1488,24,1016,13,538
+relaxed_row_level_temporal,supercomponent,1486,23,1046,13,640
+relaxed_row_level_temporal,priority_component,1478,26,1100,14,658
