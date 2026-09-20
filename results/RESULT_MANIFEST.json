@@ -343,16 +343,61 @@
     "script_files": [
       "experiments/run_temporal_robustness.py"
     ],
-    "split": "test U-eligible queries",
+    "split": "test U-eligible",
     "status": "complete",
     "temporal_anchor": "date of the unique U row",
     "temporal_bins": {
-      "early": 568,
-      "late": 576,
-      "middle": 534
+      "early": {
+        "queries": 568,
+        "rows": 1726,
+        "median_days_since_training": 266.0
+      },
+      "middle": {
+        "queries": 534,
+        "rows": 1602,
+        "median_days_since_training": 336.0
+      },
+      "late": {
+        "queries": 576,
+        "rows": 1728,
+        "median_days_since_training": 427.0
+      }
     },
-    "temporal_unit": "lowercased and whitespace-normalized claim",
-    "updated_at_utc": "2026-09-20T08:05:44.225725+00:00"
+    "temporal_unit": "lowercased whitespace-normalized claim query",
+    "updated_at_utc": "2026-09-20T08:05:44.225725+00:00",
+    "all_test_rows": 5316,
+    "all_test_normalized_queries": 1808,
+    "u_eligible_queries": 1678,
+    "excluded_queries_without_u": 130,
+    "bootstrap_unit": "lowercased whitespace-normalized claim query",
+    "date_column": "_date",
+    "updated_utc": "2026-09-20T23:08:16.108358+00:00",
+    "artifact_hashes": {
+      "experiments/run_temporal_robustness.py": {
+        "bytes": 33721,
+        "sha256": "b1aa76f89574a75cde1d7ab71f2566fa8b74d54b3c62c2e82693abfdbce830ad"
+      },
+      "results/temporal/temporal_robustness_results.json": {
+        "bytes": 26843,
+        "sha256": "eaffaaac29c73f322b9d6ea08181b76073ce298fbb42253e73dadc5ee3bbebab"
+      },
+      "results/temporal/temporal_bin_results.csv": {
+        "bytes": 10427,
+        "sha256": "e1a8f8796d988b849d10b675aefe1afe76781f2f2951e749e0c588e15fa7a4bf"
+      },
+      "results/temporal/temporal_early_late_tests.csv": {
+        "bytes": 5575,
+        "sha256": "eb055f1e7e3e75243f099de3b65f6dfbf8583e7ee28d241c195f0a466bd8130a"
+      },
+      "results/temporal/temporal_query_assignments.csv": {
+        "bytes": 172854,
+        "sha256": "8f04ce9ce723a9b7b1bd7b83d274d62e6323f1d53e473ca8cb5d1d8f3d1503c1"
+      },
+      "results/temporal/temporal_bin_summary.csv": {
+        "bytes": 203,
+        "sha256": "c354dfc1df53bc0ba892d4d27e8d551f74dda10eca8b3ce94f575cbe427b6da3"
+      }
+    }
   },
   "updated_utc": "2026-09-20T08:07:39.134329+00:00"
 }

@@ -5,6 +5,7 @@
 # ============================================================
 
 import json
+import os
 import math
 import re
 import time
@@ -29,23 +30,36 @@ REPO_ID = "yongminyoo91/xart-h"
 REVISION = "v1.0.1"
 
 SUPERVISED_ROOT = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/supervised_v1"
+    os.environ.get(
+        "XARTH_SUPERVISED_ROOT",
+        "/content/drive/MyDrive/PatentSearchBench/"
+        "XART-H/experiments/supervised_v1",
+    )
 )
 
 QWEN_ROOT = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/qwen3_8b_zero_shot_v1"
+    os.environ.get(
+        "XARTH_QWEN_ROOT",
+        "/content/drive/MyDrive/PatentSearchBench/"
+        "XART-H/experiments/qwen3_8b_zero_shot_v1",
+    )
 )
 
 OUTPUT_DIR = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/temporal_robustness_v1"
+    os.environ.get(
+        "XARTH_TEMPORAL_OUTPUT",
+        "/content/drive/MyDrive/PatentSearchBench/"
+        "XART-H/experiments/temporal_robustness_v1",
+    )
 )
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
 QWEN_PREDICTIONS = (
-    QWEN_ROOT / "qwen3_8b_test_predictions.parquet"
+    QWEN_ROOT
+    / "qwen3_8b_test_predictions.parquet"
 )
 
 MODELS = ["minilm", "deberta"]
@@ -79,9 +93,12 @@ except Exception as error:
     print("Drive mount skipped:", error)
 
 # ------------------------------------------------------------
-# 2. Load the frozen test set
-# Temporal unit: patent application and claim
 # ------------------------------------------------------------
+# 2. Load the frozen test set
+# Temporal unit: lowercased, whitespace-normalized claim query
+# Temporal anchor: date of the unique U row
+# ------------------------------------------------------------
+
 test_dataset = load_dataset(
     REPO_ID,
     revision=REVISION,
@@ -89,8 +106,6 @@ test_dataset = load_dataset(
 )
 
 required_columns = {
-    "claim_id",
-    "patent_application_id",
     "text",
     "label",
 }
@@ -102,11 +117,10 @@ missing_columns = (
 
 if missing_columns:
     raise ValueError(
-        f"Missing required columns: "
+        "Missing required columns: "
         f"{sorted(missing_columns)}"
     )
 
-# Prefer the normalized split date.
 date_candidates = [
     "_date",
     "_parsed_date",
@@ -131,8 +145,6 @@ keep_columns = [
     column
     for column in [
         "_row_id",
-        "claim_id",
-        "patent_application_id",
         "text",
         "label",
         date_column,
@@ -140,11 +152,15 @@ keep_columns = [
     if column in test_dataset.column_names
 ]
 
-data = test_dataset.select_columns(
-    keep_columns
-).to_pandas()
+data = (
+    test_dataset
+    .select_columns(keep_columns)
+    .to_pandas()
+    .reset_index(drop=True)
+)
 
 data["label"] = data["label"].astype(int)
+
 data["target_date"] = pd.to_datetime(
     data[date_column],
     errors="coerce",
@@ -157,54 +173,104 @@ if data["target_date"].isna().any():
         f"{int(data['target_date'].isna().sum())}"
     )
 
-assert len(data) == 5316
-assert data["label"].value_counts().sort_index().to_dict() == {
+if len(data) != 5316:
+    raise RuntimeError(
+        f"Expected 5,316 test rows, found {len(data):,}."
+    )
+
+expected_label_counts = {
     0: 1816,
     1: 1822,
     2: 1678,
 }
 
-data["_original_order"] = np.arange(len(data))
-
-# An identical normalized claim can occur in multiple applications
-# with different dates. Temporal evaluation therefore uses a unique
-# application-claim unit rather than claim text alone.
-data["query_key"] = (
-    data["patent_application_id"]
-    .fillna("")
-    .astype(str)
-    .str.strip()
-    + "::"
-    + data["claim_id"]
-    .fillna("")
-    .astype(str)
-    .str.strip()
+actual_label_counts = (
+    data["label"]
+    .value_counts()
+    .sort_index()
+    .to_dict()
 )
 
-if (data["query_key"] == "::").any():
+if actual_label_counts != expected_label_counts:
+    raise RuntimeError(
+        "Unexpected test label counts: "
+        f"{actual_label_counts}"
+    )
+
+data["_original_order"] = np.arange(
+    len(data),
+    dtype=np.int64,
+)
+
+
+def normalize_query(value):
+    value = "" if pd.isna(value) else str(value)
+
+    return re.sub(
+        r"\s+",
+        " ",
+        value,
+    ).strip().lower()
+
+
+data["query_key"] = data["text"].map(
+    normalize_query
+)
+
+if (data["query_key"] == "").any():
     raise ValueError(
-        "Missing application and claim identifiers."
+        "At least one normalized query is empty."
+    )
+
+all_query_groups = list(
+    data.groupby(
+        "query_key",
+        sort=False,
+    )
+)
+
+all_normalized_query_count = len(
+    all_query_groups
+)
+
+if all_normalized_query_count != 1808:
+    raise RuntimeError(
+        "Expected 1,808 normalized test queries, found "
+        f"{all_normalized_query_count:,}."
     )
 
 query_groups = []
 query_records = []
+excluded_without_u = 0
 
-for query_index, (query_key, group) in enumerate(
-    data.groupby("query_key", sort=False)
-):
-    row_indices = group.index.to_numpy(dtype=np.int64)
-    unique_dates = group["target_date"].drop_duplicates()
+for query_key, group in all_query_groups:
+    u_rows = group[
+        group["label"] == 2
+    ]
 
-    if len(unique_dates) != 1:
-        raise ValueError(
-            "Application-claim unit has multiple dates: "
-            f"{query_key}, dates="
-            f"{unique_dates.astype(str).tolist()}"
+    if len(u_rows) == 0:
+        excluded_without_u += 1
+        continue
+
+    if len(u_rows) != 1:
+        raise RuntimeError(
+            "Expected exactly one U row for an eligible query, "
+            f"found {len(u_rows)} for query hash "
+            f"{hashlib.sha256(query_key.encode('utf-8')).hexdigest()}."
         )
 
-    query_date = unique_dates.iloc[0]
+    row_indices = group.index.to_numpy(
+        dtype=np.int64
+    )
+
+    query_date = u_rows.iloc[0][
+        "target_date"
+    ]
+
+    query_index = len(query_groups)
 
     query_groups.append(row_indices)
+
     query_records.append({
         "query_index": query_index,
         "query_key": query_key,
@@ -218,49 +284,134 @@ for query_index, (query_key, group) in enumerate(
         "rows": int(len(row_indices)),
     })
 
-query_table = pd.DataFrame(query_records)
+query_table = pd.DataFrame(
+    query_records
+)
 
-if len(query_table) == 0:
+u_eligible_queries = len(
+    query_table
+)
+
+if u_eligible_queries != 1678:
     raise RuntimeError(
-        "No application-claim query units were created."
+        "Expected 1,678 U-eligible queries, found "
+        f"{u_eligible_queries:,}."
+    )
+
+if excluded_without_u != 130:
+    raise RuntimeError(
+        "Expected 130 queries without U, found "
+        f"{excluded_without_u:,}."
+    )
+
+eligible_row_count = sum(
+    len(indices)
+    for indices in query_groups
+)
+
+if eligible_row_count != 5056:
+    raise RuntimeError(
+        "Expected 5,056 U-eligible rows, found "
+        f"{eligible_row_count:,}."
+    )
+
+if query_table["query_hash"].duplicated().any():
+    raise RuntimeError(
+        "Duplicate normalized-query hashes detected."
     )
 
 print("Rows:", len(data))
-print("Application-claim units:", len(query_table))
-print("Date column:", date_column)
 print(
-    "Test date range:",
+    "All normalized queries:",
+    all_normalized_query_count,
+)
+print(
+    "U-eligible queries:",
+    u_eligible_queries,
+)
+print(
+    "Excluded without U:",
+    excluded_without_u,
+)
+print("Date column:", date_column)
+print("Temporal anchor: unique U row")
+print(
+    "U-eligible date range:",
     query_table["target_date"].min().date(),
     "to",
     query_table["target_date"].max().date(),
 )
 
+
 # ------------------------------------------------------------
-# 3. Create chronological tertiles
+# 3. Create chronological temporal tertiles
 # Identical dates remain in the same temporal bin
 # ------------------------------------------------------------
-date_rank = query_table["target_date"].rank(
+
+date_rank = query_table[
+    "target_date"
+].rank(
     method="average",
     pct=True,
 )
 
 query_table["temporal_bin"] = pd.cut(
     date_rank,
-    bins=[0.0, 1.0 / 3.0, 2.0 / 3.0, 1.0],
-    labels=["early", "middle", "late"],
+    bins=[
+        0.0,
+        1.0 / 3.0,
+        2.0 / 3.0,
+        1.0,
+    ],
+    labels=[
+        "early",
+        "middle",
+        "late",
+    ],
     include_lowest=True,
 ).astype(str)
 
-if query_table["temporal_bin"].isna().any():
+if query_table[
+    "temporal_bin"
+].isna().any():
     raise RuntimeError(
         "Temporal bin assignment failed."
     )
 
-BIN_ORDER = ["early", "middle", "late"]
+BIN_ORDER = [
+    "early",
+    "middle",
+    "late",
+]
+
+expected_bin_counts = {
+    "early": 568,
+    "middle": 534,
+    "late": 576,
+}
+
+expected_bin_rows = {
+    "early": 1726,
+    "middle": 1602,
+    "late": 1728,
+}
+
+actual_bin_counts = (
+    query_table["temporal_bin"]
+    .value_counts()
+    .to_dict()
+)
+
+if actual_bin_counts != expected_bin_counts:
+    raise RuntimeError(
+        "Unexpected temporal bin counts: "
+        f"{actual_bin_counts}"
+    )
 
 bin_query_indices = {
     bin_name: query_table.loc[
-        query_table["temporal_bin"] == bin_name,
+        query_table["temporal_bin"]
+        == bin_name,
         "query_index",
     ].to_numpy(dtype=np.int64)
     for bin_name in BIN_ORDER
@@ -270,89 +421,113 @@ bin_summary = []
 
 for bin_name in BIN_ORDER:
     subset = query_table[
-        query_table["temporal_bin"] == bin_name
+        query_table["temporal_bin"]
+        == bin_name
     ]
 
-    if len(subset) == 0:
+    row_count = int(
+        subset["rows"].sum()
+    )
+
+    if row_count != expected_bin_rows[bin_name]:
         raise RuntimeError(
-            f"Empty temporal bin: {bin_name}"
+            f"{bin_name}: expected "
+            f"{expected_bin_rows[bin_name]} rows, "
+            f"found {row_count}."
         )
 
     bin_summary.append({
         "temporal_bin": bin_name,
         "queries": int(len(subset)),
+        "rows": row_count,
         "start_date": str(
-            subset["target_date"].min().date()
+            subset["target_date"]
+            .min()
+            .date()
         ),
         "end_date": str(
-            subset["target_date"].max().date()
+            subset["target_date"]
+            .max()
+            .date()
         ),
         "median_days_since_train_end": float(
-            subset["days_since_train_end"].median()
+            subset[
+                "days_since_train_end"
+            ].median()
         ),
     })
 
-bin_summary_table = pd.DataFrame(bin_summary)
-
-print("\nTemporal bins:")
-print(bin_summary_table.to_string(index=False))
-
-# ------------------------------------------------------------
-# 3. Create chronological tertiles
-# Identical dates remain in the same temporal bin
-# ------------------------------------------------------------
-date_rank = query_table["target_date"].rank(
-    method="average",
-    pct=True,
+bin_summary_table = pd.DataFrame(
+    bin_summary
 )
 
-query_table["temporal_bin"] = pd.cut(
-    date_rank,
-    bins=[0.0, 1.0 / 3.0, 2.0 / 3.0, 1.0],
-    labels=["early", "middle", "late"],
-    include_lowest=True,
-).astype(str)
-
-if query_table["temporal_bin"].isna().any():
-    raise RuntimeError("Temporal bin assignment failed.")
-
-BIN_ORDER = ["early", "middle", "late"]
-
-bin_query_indices = {
-    bin_name: query_table.loc[
-        query_table["temporal_bin"] == bin_name,
-        "query_index",
-    ].to_numpy(dtype=np.int64)
-    for bin_name in BIN_ORDER
+expected_bin_summary = {
+    "early": {
+        "queries": 568,
+        "rows": 1726,
+        "start_date": "2017-05-17",
+        "end_date": "2017-07-05",
+        "median": 266.0,
+    },
+    "middle": {
+        "queries": 534,
+        "rows": 1602,
+        "start_date": "2017-07-12",
+        "end_date": "2017-10-04",
+        "median": 336.0,
+    },
+    "late": {
+        "queries": 576,
+        "rows": 1728,
+        "start_date": "2017-10-11",
+        "end_date": "2018-01-31",
+        "median": 427.0,
+    },
 }
 
-bin_summary = []
-
-for bin_name in BIN_ORDER:
-    subset = query_table[
-        query_table["temporal_bin"] == bin_name
+for record in bin_summary:
+    expected = expected_bin_summary[
+        record["temporal_bin"]
     ]
 
-    bin_summary.append({
-        "temporal_bin": bin_name,
-        "queries": int(len(subset)),
-        "start_date": str(
-            subset["target_date"].min().date()
+    checks = {
+        "queries": (
+            record["queries"]
+            == expected["queries"]
         ),
-        "end_date": str(
-            subset["target_date"].max().date()
+        "rows": (
+            record["rows"]
+            == expected["rows"]
         ),
-        "median_days_since_train_end": float(
-            subset["days_since_train_end"].median()
+        "start_date": (
+            record["start_date"]
+            == expected["start_date"]
         ),
-    })
+        "end_date": (
+            record["end_date"]
+            == expected["end_date"]
+        ),
+        "median": np.isclose(
+            record[
+                "median_days_since_train_end"
+            ],
+            expected["median"],
+        ),
+    }
 
-bin_summary_table = pd.DataFrame(bin_summary)
+    if not all(checks.values()):
+        raise RuntimeError(
+            "Temporal bin verification failed for "
+            f"{record['temporal_bin']}: {checks}"
+        )
 
 print("\nTemporal bins:")
-print(bin_summary_table.to_string(index=False))
+print(
+    bin_summary_table.to_string(
+        index=False
+    )
+)
 
-# ------------------------------------------------------------
 # 4. Prediction loading helpers
 # ------------------------------------------------------------
 def softmax(logits):
@@ -1118,8 +1293,22 @@ final_result = {
     ).isoformat(),
     "dataset": REPO_ID,
     "revision": REVISION,
-    "split": "test",
+    "split": "test U-eligible",
     "date_column": date_column,
+    "all_test_rows": int(len(data)),
+    "all_test_normalized_queries": int(
+        all_normalized_query_count
+    ),
+    "u_eligible_queries": int(
+        u_eligible_queries
+    ),
+    "excluded_queries_without_u": int(
+        excluded_without_u
+    ),
+    "temporal_unit": (
+        "lowercased whitespace-normalized claim query"
+    ),
+    "temporal_anchor": "date of the unique U row",
     "train_end_date": str(
         TRAIN_END_DATE.date()
     ),
@@ -1133,7 +1322,7 @@ final_result = {
         "mean class probabilities across seeds 13, 42, and 77"
     ),
     "bootstrap_unit": (
-        "patent application and claim identifier"
+        "lowercased whitespace-normalized claim query"
     ),
     "bootstrap_repetitions": N_BOOTSTRAP,
     "bootstrap_seed": BOOTSTRAP_SEED,
