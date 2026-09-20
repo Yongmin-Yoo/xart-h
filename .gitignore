@@ -10,3 +10,8 @@ wandb/
 *.bin
 *.safetensors
 .DS_Store
+
+# Public dependency-relaxation reproducibility input
+!data/
+!data/dependency/
+!data/dependency/dependency_quarantine_xa.csv
