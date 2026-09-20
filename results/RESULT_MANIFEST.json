@@ -16,6 +16,62 @@
   "created_utc": "2026-09-15T13:16:26.348757+00:00",
   "dataset": "yongminyoo91/xart-h",
   "dataset_revision": "v1.0.1",
+  "dependency_robustness": {
+    "bootstrap_queries": 1808,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 42,
+    "confidence_level": 0.95,
+    "dataset_revision": "v1.0.1",
+    "excluded_artifacts": [
+      "dependency_test_predictions.parquet",
+      "model_comparison_l4/cache/*.npz",
+      "model checkpoints",
+      "trainer output directories",
+      "quarantine.csv",
+      "dependency_quarantine_1100.parquet",
+      "authentication tokens"
+    ],
+    "holm_correction_metrics": [
+      "accuracy",
+      "macro_f1",
+      "roc_auc",
+      "average_precision"
+    ],
+    "model": "microsoft/deberta-v3-base",
+    "official_counts": {
+      "test": 3638,
+      "train": 16912,
+      "validation": 3626
+    },
+    "quarantine_rows_reassigned": 1100,
+    "relaxed_counts": {
+      "test": 3950,
+      "train": 17432,
+      "validation": 3894
+    },
+    "result_files": [
+      "results/dependency/dependency_reconstruction_report.json",
+      "results/dependency/dependency_overlap_summary.csv",
+      "results/dependency/dependency_test_contamination.csv",
+      "results/dependency/dependency_split_counts.csv",
+      "results/dependency/dependency_model_config.json",
+      "results/dependency/dependency_model_results.json",
+      "results/dependency/dependency_seed_results.csv",
+      "results/dependency/dependency_seed_summary.csv",
+      "results/dependency/dependency_paired_tests.csv"
+    ],
+    "script_files": [
+      "experiments/run_dependency_robustness.py"
+    ],
+    "seeds": [
+      13,
+      42,
+      77
+    ],
+    "status": "complete",
+    "task": "X versus A",
+    "updated_at_utc": "2026-09-20T07:58:58.663237+00:00"
+  },
   "excluded_artifacts": [
     "model checkpoints",
     "per-example prediction parquet files",
@@ -24,8 +80,8 @@
   ],
   "files": {
     "docs/RESULTS.md": {
-      "bytes": 3547,
-      "sha256": "9f067c4e22388426ffd5c4b6d4340938c051d7b9240cf42ec169bd32b8dba5ea"
+      "bytes": 6088,
+      "sha256": "68cb118a19c42ca87c2a812986b156205dc29bd3261e3f0c4521927e30afa023"
     },
     "evaluation/evaluate_random_vs_hard_u.py": {
       "bytes": 33094,
@@ -43,6 +99,10 @@
       "bytes": 26804,
       "sha256": "b5c27289d043da17c831c29e1f14cddb58b680af5c16f81c76806b20d668cb59"
     },
+    "experiments/run_dependency_robustness.py": {
+      "bytes": 39197,
+      "sha256": "5b08e75aa1b87dcc926a2ef84f12ba61dc8be4d6569a0f82b476bee75c4ee671"
+    },
     "experiments/run_qwen3_8b.py": {
       "bytes": 21058,
       "sha256": "ab1b0a8119a73b01b4153ac564012bfef7a79221f19a7449508bb11579e91679"
@@ -50,6 +110,42 @@
     "experiments/train_supervised.py": {
       "bytes": 25204,
       "sha256": "6715642ae98dec0a12c80584b6c782f2e32dac512126eb39f6c75b54bc9d137d"
+    },
+    "results/dependency/dependency_model_config.json": {
+      "bytes": 1968,
+      "sha256": "35d879b99f4878aef44e980630e40b63fb84c632d22479a0be970bbf8dd4024d"
+    },
+    "results/dependency/dependency_model_results.json": {
+      "bytes": 10052,
+      "sha256": "fd1612d128dfcae15a0b3115299e52a7069839e7c480f3f6f11d75092c865df4"
+    },
+    "results/dependency/dependency_overlap_summary.csv": {
+      "bytes": 1113,
+      "sha256": "11dc7959bf103ed9c2c6bb1b23470d5166a534dc4252fad87d52ba5d40ac8ae3"
+    },
+    "results/dependency/dependency_paired_tests.csv": {
+      "bytes": 1136,
+      "sha256": "b63bf18a57b1d1caba8d95680cf11da3ba74a3453debb9418947fabb0504f569"
+    },
+    "results/dependency/dependency_reconstruction_report.json": {
+      "bytes": 1886,
+      "sha256": "4e972695dede49847a0204b06a486ea4d28c12ba2f5f889b8617bd8094b22202"
+    },
+    "results/dependency/dependency_seed_results.csv": {
+      "bytes": 996,
+      "sha256": "13813f608982c3136572c792bc0e6902717acb54a0046e37baf82fe11f8f11a8"
+    },
+    "results/dependency/dependency_seed_summary.csv": {
+      "bytes": 869,
+      "sha256": "4c3acff517eabebb256a2abdeb253f5a984fcc691592d271b78fd2a5b594c854"
+    },
+    "results/dependency/dependency_split_counts.csv": {
+      "bytes": 564,
+      "sha256": "cf15029b22561187096dbdf6c6c21de6be0029e00580035b75604a5f6161f8c9"
+    },
+    "results/dependency/dependency_test_contamination.csv": {
+      "bytes": 409,
+      "sha256": "458aa35223f47652e891cca50f16f344e9e6f0d5cd8ec345a1ce1bbdf676151f"
     },
     "results/qwen3_8b/qwen3_8b_bootstrap.json": {
       "bytes": 7009,
@@ -111,6 +207,26 @@
       "bytes": 5939,
       "sha256": "091c9f82db43b89ad4da2a52b5ec5195f661146ddb34947dffa53899aa9e1ab9"
     },
+    "results/temporal/temporal_bin_results.csv": {
+      "bytes": 10432,
+      "sha256": "9f2a99758bd145d2271fcc48e1d8e68ae51da12a4ce15a59bd0821a8bcf4c913"
+    },
+    "results/temporal/temporal_bin_summary.csv": {
+      "bytes": 203,
+      "sha256": "c354dfc1df53bc0ba892d4d27e8d551f74dda10eca8b3ce94f575cbe427b6da3"
+    },
+    "results/temporal/temporal_early_late_tests.csv": {
+      "bytes": 5584,
+      "sha256": "5ff9fc2d928a5b7ab375a97297b8e44d90be4c3641cbf920eab266743d8c62d6"
+    },
+    "results/temporal/temporal_query_assignments.csv": {
+      "bytes": 182943,
+      "sha256": "dcfb89a8fd3cf3a4b2e3975be1bde5aef1ecc0fa6fb47cacf4231b19591dbc04"
+    },
+    "results/temporal/temporal_robustness_results.json": {
+      "bytes": 26994,
+      "sha256": "8d8282b3277bb32bb998273cd05ec0a97158e60d76bd0e272ff749100c2d6a24"
+    },
     "results/zero_shot/zero_shot_results.json": {
       "bytes": 2551,
       "sha256": "ef34c9369539a64a2e5a5c85c53d2788d929abbab8f0934f88cf44503296722c"
@@ -121,7 +237,6 @@
     }
   },
   "pending_analyses": [
-    "temporal robustness",
     "CPC subgroup analysis",
     "length and lexical-overlap analysis",
     "confusion matrices and error analysis"
@@ -192,5 +307,39 @@
     ]
   },
   "status": "intermediate experimental snapshot",
-  "updated_utc": "2026-09-15T13:48:33.892006+00:00"
+  "temporal_robustness": {
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 42,
+    "confidence_level": 0.95,
+    "dataset_revision": "v1.0.1",
+    "excluded_artifacts": [
+      "prediction caches",
+      "model checkpoints"
+    ],
+    "median_days_since_training": {
+      "early": 266,
+      "late": 427,
+      "middle": 336
+    },
+    "query_count": 1678,
+    "result_files": [
+      "results/temporal/temporal_robustness_results.json",
+      "results/temporal/temporal_bin_results.csv",
+      "results/temporal/temporal_early_late_tests.csv",
+      "results/temporal/temporal_query_assignments.csv",
+      "results/temporal/temporal_bin_summary.csv"
+    ],
+    "script_files": [],
+    "split": "test U-eligible queries",
+    "status": "complete",
+    "temporal_anchor": "date of the unique U row",
+    "temporal_bins": {
+      "early": 568,
+      "late": 576,
+      "middle": 534
+    },
+    "temporal_unit": "lowercased and whitespace-normalized claim",
+    "updated_at_utc": "2026-09-20T07:58:58.663237+00:00"
+  },
+  "updated_utc": "2026-09-20T07:58:58.663237+00:00"
 }
