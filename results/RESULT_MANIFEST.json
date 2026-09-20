@@ -27,8 +27,7 @@
       "model_comparison_l4/cache/*.npz",
       "model checkpoints",
       "trainer output directories",
-      "quarantine.csv",
-      "dependency_quarantine_1100.parquet",
+      "original source quarantine.csv",
       "authentication tokens"
     ],
     "holm_correction_metrics": [
@@ -43,6 +42,9 @@
       "train": 16912,
       "validation": 3626
     },
+    "public_inputs": [
+      "data/dependency/dependency_quarantine_xa.csv"
+    ],
     "quarantine_rows_reassigned": 1100,
     "relaxed_counts": {
       "test": 3950,
@@ -61,6 +63,7 @@
       "results/dependency/dependency_paired_tests.csv"
     ],
     "script_files": [
+      "experiments/run_dependency_reconstruction_audit.py",
       "experiments/run_dependency_robustness.py"
     ],
     "seeds": [
@@ -70,7 +73,7 @@
     ],
     "status": "complete",
     "task": "X versus A",
-    "updated_at_utc": "2026-09-20T07:58:58.663237+00:00"
+    "updated_at_utc": "2026-09-20T08:05:44.225725+00:00"
   },
   "excluded_artifacts": [
     "model checkpoints",
@@ -79,9 +82,13 @@
     "authentication tokens"
   ],
   "files": {
+    "data/dependency/dependency_quarantine_xa.csv": {
+      "bytes": 1364804,
+      "sha256": "5b394182d2dc09c0c545859528c9eaa75f19c2179f04958ddb9adda3ea61b7e6"
+    },
     "docs/RESULTS.md": {
-      "bytes": 6088,
-      "sha256": "68cb118a19c42ca87c2a812986b156205dc29bd3261e3f0c4521927e30afa023"
+      "bytes": 6929,
+      "sha256": "85df021d645713a60805647360f751ce23657e178b1aac9621c420030852fec6"
     },
     "evaluation/evaluate_random_vs_hard_u.py": {
       "bytes": 33094,
@@ -99,13 +106,21 @@
       "bytes": 26804,
       "sha256": "b5c27289d043da17c831c29e1f14cddb58b680af5c16f81c76806b20d668cb59"
     },
+    "experiments/run_dependency_reconstruction_audit.py": {
+      "bytes": 11203,
+      "sha256": "95be643690d14b05df9fdc09bb6d35489b50931f635d22e48c78a339f2e7126a"
+    },
     "experiments/run_dependency_robustness.py": {
-      "bytes": 39197,
-      "sha256": "5b08e75aa1b87dcc926a2ef84f12ba61dc8be4d6569a0f82b476bee75c4ee671"
+      "bytes": 39702,
+      "sha256": "b6d5fc0fbea5109b58abcaa723108da773abe0e34784af227ba6bf638c7bd834"
     },
     "experiments/run_qwen3_8b.py": {
       "bytes": 21058,
       "sha256": "ab1b0a8119a73b01b4153ac564012bfef7a79221f19a7449508bb11579e91679"
+    },
+    "experiments/run_temporal_robustness.py": {
+      "bytes": 30955,
+      "sha256": "c95938a1954dc74edd2aa81943fe1e7e076b652b1a46f273ca9cbdf9ebd1632a"
     },
     "experiments/train_supervised.py": {
       "bytes": 25204,
@@ -261,10 +276,6 @@
       "model checkpoints"
     ],
     "files": {
-      "docs/RESULTS.md": {
-        "bytes": 3547,
-        "sha256": "9f067c4e22388426ffd5c4b6d4340938c051d7b9240cf42ec169bd32b8dba5ea"
-      },
       "evaluation/evaluate_random_vs_hard_u.py": {
         "bytes": 33094,
         "sha256": "ff94cb939fb0b721d0feb9f30d1423cb3664a431311b2a8918c3f9d617b82342"
@@ -329,7 +340,9 @@
       "results/temporal/temporal_query_assignments.csv",
       "results/temporal/temporal_bin_summary.csv"
     ],
-    "script_files": [],
+    "script_files": [
+      "experiments/run_temporal_robustness.py"
+    ],
     "split": "test U-eligible queries",
     "status": "complete",
     "temporal_anchor": "date of the unique U row",
@@ -339,7 +352,7 @@
       "middle": 534
     },
     "temporal_unit": "lowercased and whitespace-normalized claim",
-    "updated_at_utc": "2026-09-20T07:58:58.663237+00:00"
+    "updated_at_utc": "2026-09-20T08:05:44.225725+00:00"
   },
-  "updated_utc": "2026-09-20T07:58:58.663237+00:00"
+  "updated_utc": "2026-09-20T08:07:39.134329+00:00"
 }

@@ -42,8 +42,7 @@ hierarchical prediction by 0.019, with a query-level
 Holm-adjusted p = 0.036.
 
 Detailed confidence intervals and corrected tests are
-provided in the result files. Temporal and subgroup
-analyses remain pending.
+provided in the result files. Subgroup analyses remain pending.
 
 
 ## Metric Correction
@@ -127,3 +126,34 @@ dependency leakage.
 Detailed audit and model-comparison results are available
 under `results/dependency/`.
 <!-- ROBUSTNESS_RESULTS_END -->
+
+<!-- ROBUSTNESS_REPRODUCIBILITY_START -->
+## Robustness Reproducibility
+
+Temporal robustness can be reproduced with:
+
+```bash
+python experiments/run_temporal_robustness.py
+```
+
+The dependency partition audit can be reproduced with:
+
+```bash
+python experiments/run_dependency_reconstruction_audit.py \
+  --output-dir results/dependency/reconstructed
+```
+
+The dependency model comparison can be reproduced with:
+
+```bash
+python experiments/run_dependency_robustness.py
+```
+
+The dependency scripts use the frozen XART-H v1.0.1 
+release and the auxiliary quarantine rows in 
+`data/dependency/dependency_quarantine_xa.csv`. The 
+auxiliary file contains only the columns required to 
+reconstruct the dependency-relaxed X/A partitions. Model 
+checkpoints, prediction caches, and authentication tokens 
+are not included.
+<!-- ROBUSTNESS_REPRODUCIBILITY_END -->

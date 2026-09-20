@@ -159,22 +159,16 @@ EXPECTED_COUNTS = {
 
 # If automatic discovery fails, enter the quarantine or master
 # Parquet path here.
-QUARANTINE_OR_MASTER_PATH = (
-    "/content/drive/MyDrive/PatentSearchBench/XART-H/"
-    "experiments/dependency_robustness_v1/"
-    "dependency_quarantine_1100.parquet"
+QUARANTINE_OR_MASTER_PATH = os.environ.get(
+    "XARTH_QUARANTINE_PATH"
 )
 
-print("\nConfiguration")
-print("Model:", MODEL_ID)
-print("Seeds:", SEEDS)
-print("Maximum length:", MAX_LENGTH)
-print("Training batch:", TRAIN_BATCH_SIZE)
-print("Gradient accumulation:", GRADIENT_ACCUMULATION_STEPS)
-print("Effective batch:", EFFECTIVE_BATCH_SIZE)
-print("Evaluation batch:", EVAL_BATCH_SIZE)
-print("Precision: BF16")
-print("Output:", OUTPUT_DIR)
+PUBLIC_QUARANTINE_URL = (
+
+    "https://raw.githubusercontent.com/Yongmin-Yoo/xart-h/"
+    "Yongmin-Yoo/data/dependency/"
+    "dependency_quarantine_xa.csv"
+)
 
 # ============================================================
 # 2. Utility functions
@@ -568,6 +562,35 @@ def extract_quarantine(frame, source_path):
 
 quarantine = None
 quarantine_source = None
+
+
+# If no local input is provided, download the public auxiliary
+# quarantine rows used by the dependency-relaxation experiment.
+if QUARANTINE_OR_MASTER_PATH is None:
+    PUBLIC_CACHE_PATH = (
+        AUDIT_DIR / "dependency_quarantine_public.parquet"
+    )
+
+    if not PUBLIC_CACHE_PATH.exists():
+        public_quarantine = pd.read_csv(
+            PUBLIC_QUARANTINE_URL,
+            low_memory=False,
+        )
+
+        if len(public_quarantine) != EXPECTED_COUNTS["quarantine"]:
+            raise ValueError(
+                "Unexpected public quarantine row count: "
+                f"{len(public_quarantine)}"
+            )
+
+        public_quarantine.to_parquet(
+            PUBLIC_CACHE_PATH,
+            index=False,
+        )
+
+    QUARANTINE_OR_MASTER_PATH = str(
+        PUBLIC_CACHE_PATH
+    )
 
 if QUARANTINE_OR_MASTER_PATH is not None:
     manual_path = Path(QUARANTINE_OR_MASTER_PATH)
