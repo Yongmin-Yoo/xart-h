@@ -1,0 +1,306 @@
+{
+  "experiment": {
+    "experiment": "dependency relaxation model comparison",
+    "dataset": "yongminyoo91/xart-h",
+    "revision": "v1.0.1",
+    "model": "microsoft/deberta-v3-base",
+    "task": "X versus A",
+    "conditions": [
+      "official",
+      "relaxed"
+    ],
+    "evaluation_split": "frozen official X/A test",
+    "seeds": [
+      13,
+      42,
+      77
+    ],
+    "epochs": 2,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "maximum_length": 384,
+    "training_batch_size": 48,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 48,
+    "evaluation_batch_size": 128,
+    "precision": "bfloat16",
+    "gradient_checkpointing": true,
+    "gpu": "NVIDIA L4",
+    "gpu_memory_gb": 22.0343017578125,
+    "train_end_date": "2016-09-25",
+    "validation_end_date": "2017-05-13",
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 42,
+    "confidence_level": 0.95,
+    "bootstrap_unit": "lowercased and whitespace-normalized claim text",
+    "quarantine_source": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dependency_robustness_v1/dependency_quarantine_1100.parquet",
+    "counts": {
+      "official_train": 16912,
+      "official_validation": 3626,
+      "official_test": 3638,
+      "quarantine": 1100,
+      "relaxed_train": 17432,
+      "relaxed_validation": 3894,
+      "relaxed_test": 3950
+    },
+    "fingerprints": {
+      "official_train": "ba99dd2588298085f717fbc9d117dcf74de260ddf1858c88b87f640dd150ccf0",
+      "official_validation": "63909f7b3c1f2e07d41d47c29b145b49dc24ac1ad2a986ba4d42debc0e5494b5",
+      "official_test": "096b1c7f42e24846bc23017e0b4d3c27760ebf59d32ba5f0736169afcf4f927b",
+      "relaxed_train": "bc8ae20bb89c61790fe87640c6dc61e01d7f9d624aa7bfb0a6f352f95c87f148",
+      "relaxed_validation": "bdcbc28b34c0aca34b9a2e3aca608516165423a63f00d729e55e575236778a80",
+      "relaxed_test": "6bbc5a735668b5d0d53d0c9b7d72e2af04a43d9bca0c375af4feea7087b1af75",
+      "quarantine": "862f4a9f448851307aa9113e4cd192eb2d4bef33d2f09aea6a141b2e06d43e69"
+    },
+    "created_at_utc": "2026-09-20T04:51:58.849465+00:00"
+  },
+  "seed_results": [
+    {
+      "condition": "official",
+      "seed": 13,
+      "test_rows": 3638,
+      "elapsed_seconds": 1389.5795946121216,
+      "accuracy": 0.5112699285321606,
+      "macro_f1": 0.5015509001323883,
+      "roc_auc": 0.5077846571758777,
+      "average_precision": 0.5146071218732767,
+      "f1_a": 0.4319488817891374,
+      "f1_x": 0.5711529184756392
+    },
+    {
+      "condition": "official",
+      "seed": 42,
+      "test_rows": 3638,
+      "elapsed_seconds": 1391.7383852005005,
+      "accuracy": 0.502473886750962,
+      "macro_f1": 0.46371724371587547,
+      "roc_auc": 0.493990936764073,
+      "average_precision": 0.4925582633341467,
+      "f1_a": 0.31954887218045114,
+      "f1_x": 0.6078856152512998
+    },
+    {
+      "condition": "official",
+      "seed": 77,
+      "test_rows": 3638,
+      "elapsed_seconds": 1389.5859484672546,
+      "accuracy": 0.4793842770753161,
+      "macro_f1": 0.4288636243070476,
+      "roc_auc": 0.4929626034226802,
+      "average_precision": 0.4893529107273276,
+      "f1_a": 0.2589984350547731,
+      "f1_x": 0.5987288135593221
+    },
+    {
+      "condition": "relaxed",
+      "seed": 13,
+      "test_rows": 3638,
+      "elapsed_seconds": 1434.4585587978363,
+      "accuracy": 0.4876305662451897,
+      "macro_f1": 0.4324895757734816,
+      "roc_auc": 0.501784660802623,
+      "average_precision": 0.5090964561383854,
+      "f1_a": 0.25559105431309903,
+      "f1_x": 0.6093880972338642
+    },
+    {
+      "condition": "relaxed",
+      "seed": 42,
+      "test_rows": 3638,
+      "elapsed_seconds": 1435.0562880039215,
+      "accuracy": 0.4994502473886751,
+      "macro_f1": 0.48026300356891727,
+      "roc_auc": 0.49284428086480947,
+      "average_precision": 0.49028751783351343,
+      "f1_a": 0.3804014971078598,
+      "f1_x": 0.5801245100299747
+    },
+    {
+      "condition": "relaxed",
+      "seed": 77,
+      "test_rows": 3638,
+      "elapsed_seconds": 1434.439748287201,
+      "accuracy": 0.49917537108301263,
+      "macro_f1": 0.4684991814720161,
+      "roc_auc": 0.4986635444421341,
+      "average_precision": 0.4927606837493084,
+      "f1_a": 0.34081041968162085,
+      "f1_x": 0.5961879432624113
+    }
+  ],
+  "seed_summary": [
+    {
+      "condition": "official",
+      "metric": "accuracy",
+      "mean": 0.4977093641194796,
+      "standard_deviation": 0.016468126764640642,
+      "minimum": 0.4793842770753161,
+      "maximum": 0.5112699285321606,
+      "num_seeds": 3
+    },
+    {
+      "condition": "official",
+      "metric": "macro_f1",
+      "mean": 0.4647105893851038,
+      "standard_deviation": 0.036353817797326625,
+      "minimum": 0.4288636243070476,
+      "maximum": 0.5015509001323883,
+      "num_seeds": 3
+    },
+    {
+      "condition": "official",
+      "metric": "roc_auc",
+      "mean": 0.49824606578754366,
+      "standard_deviation": 0.008276648574178785,
+      "minimum": 0.4929626034226802,
+      "maximum": 0.5077846571758777,
+      "num_seeds": 3
+    },
+    {
+      "condition": "official",
+      "metric": "average_precision",
+      "mean": 0.4988394319782503,
+      "standard_deviation": 0.013748949225406218,
+      "minimum": 0.4893529107273276,
+      "maximum": 0.5146071218732767,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "accuracy",
+      "mean": 0.4954187282389591,
+      "standard_deviation": 0.0067461462833791185,
+      "minimum": 0.4876305662451897,
+      "maximum": 0.4994502473886751,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "macro_f1",
+      "mean": 0.460417253604805,
+      "standard_deviation": 0.024891027888970917,
+      "minimum": 0.4324895757734816,
+      "maximum": 0.48026300356891727,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "roc_auc",
+      "mean": 0.49776416203652224,
+      "standard_deviation": 0.0045375395195808195,
+      "minimum": 0.49284428086480947,
+      "maximum": 0.501784660802623,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "average_precision",
+      "mean": 0.49738155257373573,
+      "standard_deviation": 0.010220487344473509,
+      "minimum": 0.49028751783351343,
+      "maximum": 0.5090964561383854,
+      "num_seeds": 3
+    }
+  ],
+  "ensemble_results": {
+    "official": {
+      "accuracy": 0.488455195162177,
+      "macro_f1": 0.46029517517780527,
+      "roc_auc": 0.499161012974076,
+      "average_precision": 0.5011328041043306,
+      "f1_a": 0.33701460634128966,
+      "f1_x": 0.5835757440143209
+    },
+    "relaxed": {
+      "accuracy": 0.4887300714678395,
+      "macro_f1": 0.4451104927704327,
+      "roc_auc": 0.4917530839422235,
+      "average_precision": 0.4899562059283871,
+      "f1_a": 0.28953399541634833,
+      "f1_x": 0.600686990124517
+    }
+  },
+  "paired_query_bootstrap": {
+    "unit": "lowercased and whitespace-normalized claim text",
+    "number_of_queries": 1808,
+    "repetitions": 2000,
+    "seed": 42,
+    "confidence_level": 0.95,
+    "multiple_testing": "Holm correction across four metrics",
+    "results": [
+      {
+        "metric": "accuracy",
+        "official_estimate": 0.488455195162177,
+        "official_ci_low": 0.47415984678449274,
+        "official_ci_high": 0.5026135880798231,
+        "relaxed_estimate": 0.4887300714678395,
+        "relaxed_ci_low": 0.47605880175167814,
+        "relaxed_ci_high": 0.5009678293224924,
+        "delta_relaxed_minus_official": 0.0002748763056624748,
+        "delta_ci_low": -0.011261262589345226,
+        "delta_ci_high": 0.012412188346044198,
+        "raw_p_value": 1.0,
+        "holm_adjusted_p_value": 1.0,
+        "significant_after_holm": false
+      },
+      {
+        "metric": "macro_f1",
+        "official_estimate": 0.46029517517780527,
+        "official_ci_low": 0.4445255082491816,
+        "official_ci_high": 0.4753053435132106,
+        "relaxed_estimate": 0.4451104927704327,
+        "relaxed_ci_low": 0.43001323610505265,
+        "relaxed_ci_high": 0.45922252195085805,
+        "delta_relaxed_minus_official": -0.015184682407372585,
+        "delta_ci_low": -0.027871784177150014,
+        "delta_ci_high": -0.0013644404865466634,
+        "raw_p_value": 0.03398300849575212,
+        "holm_adjusted_p_value": 0.1359320339830085,
+        "significant_after_holm": false
+      },
+      {
+        "metric": "roc_auc",
+        "official_estimate": 0.499161012974076,
+        "official_ci_low": 0.48230430353911086,
+        "official_ci_high": 0.5151274355291613,
+        "relaxed_estimate": 0.4917530839422235,
+        "relaxed_ci_low": 0.47477685589447544,
+        "relaxed_ci_high": 0.5082256548454539,
+        "delta_relaxed_minus_official": -0.0074079290318525,
+        "delta_ci_low": -0.018373142850861807,
+        "delta_ci_high": 0.00397610001252435,
+        "raw_p_value": 0.19890054972513743,
+        "holm_adjusted_p_value": 0.39780109945027486,
+        "significant_after_holm": false
+      },
+      {
+        "metric": "average_precision",
+        "official_estimate": 0.5011328041043306,
+        "official_ci_low": 0.48748810164463446,
+        "official_ci_high": 0.517368248071026,
+        "relaxed_estimate": 0.4899562059283871,
+        "relaxed_ci_low": 0.47809336592324997,
+        "relaxed_ci_high": 0.5041184977714017,
+        "delta_relaxed_minus_official": -0.011176598175943464,
+        "delta_ci_low": -0.021657181170793655,
+        "delta_ci_high": -0.0013848170833983392,
+        "raw_p_value": 0.03398300849575212,
+        "holm_adjusted_p_value": 0.1359320339830085,
+        "significant_after_holm": false
+      }
+    ]
+  },
+  "timing": {
+    "total_elapsed_seconds": 8527.536081552505,
+    "bootstrap_elapsed_seconds": 41.256675720214844
+  },
+  "output_files": [
+    "dependency_model_config.json",
+    "dependency_seed_results.csv",
+    "dependency_seed_summary.csv",
+    "dependency_paired_tests.csv",
+    "dependency_test_predictions.parquet",
+    "dependency_model_results.json"
+  ],
+  "completed_at_utc": "2026-09-20T07:14:26.061193+00:00"
+}
