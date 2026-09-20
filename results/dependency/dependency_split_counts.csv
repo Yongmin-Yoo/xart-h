@@ -1,0 +1,8 @@
+condition,split,rows,A,X,start_date,end_date
+official_dependency_controlled,train,16912,8450,8462,2012-07-04,2016-09-21
+official_dependency_controlled,validation,3626,1813,1813,2016-09-28,2017-05-10
+official_dependency_controlled,test,3638,1816,1822,2017-05-17,2018-01-31
+official_dependency_controlled,quarantine,1100,550,550,2012-10-17,2018-01-03
+relaxed_row_level_temporal,train,17432,8710,8722,2012-07-04,2016-09-21
+relaxed_row_level_temporal,validation,3894,1947,1947,2016-09-28,2017-05-10
+relaxed_row_level_temporal,test,3950,1972,1978,2017-05-17,2018-01-31
