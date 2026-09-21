@@ -1,0 +1,32 @@
+{
+  "distance": "maximum absolute standardized feature difference",
+  "standardization_fit": "official training rows only",
+  "caliper_selection": "validation nearest-pair distance quantiles",
+  "primary_caliper": "q50_primary",
+  "features": [
+    "log1p_bm25",
+    "token_jaccard",
+    "claim_coverage",
+    "log1p_passage_length",
+    "log1p_passage_claim_ratio"
+  ],
+  "feature_means": {
+    "log1p_bm25": 2.7099737112683213,
+    "token_jaccard": 0.10844139917154422,
+    "claim_coverage": 0.2796304599320618,
+    "log1p_passage_length": 4.497938030041591,
+    "log1p_passage_claim_ratio": 1.1882352625905026
+  },
+  "feature_stds": {
+    "log1p_bm25": 0.9145407906375453,
+    "token_jaccard": 0.0456512611847124,
+    "claim_coverage": 0.11342266449211004,
+    "log1p_passage_length": 0.7096078818338687,
+    "log1p_passage_claim_ratio": 0.6225166513610703
+  },
+  "calipers": {
+    "q25": 0.7511462535326169,
+    "q50_primary": 1.1611643896094515,
+    "q75": 1.6374852254258994
+  }
+}

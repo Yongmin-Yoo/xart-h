@@ -74,6 +74,76 @@ a different 1,642-query evaluation subset. Its corresponding reversed
 score is 0.674945. Values from the full and matched evaluation scopes
 must not be treated as if they were computed on identical examples.
 
+## Stage 2B: validation-defined lexical matching
+
+Stage 2B evaluates whether DeBERTa retains an advantage after reducing
+measured lexical and length differences within existing Hard-U queries.
+
+For each U-eligible query, one cited candidate is selected as the nearest
+candidate to the existing Hard U under five features: log-transformed BM25
+score, token Jaccard similarity, claim-token coverage, log-transformed
+passage length, and log-transformed passage-to-claim length ratio.
+
+Features are standardized using training-split statistics. Matching uses
+the maximum absolute standardized feature difference. No model prediction
+or error information is used for candidate selection.
+
+Matching calipers are fixed using validation nearest-pair distances:
+
+| Caliper | Validation threshold |
+|:--|--:|
+| q25 | 0.751146 |
+| q50, primary | 1.161164 |
+| q75 | 1.637485 |
+
+### Primary q50 result
+
+The validation-defined q50 rule retains 870 of 1,678 test queries, or
+51.8% of the U-eligible test population. Each retained query contributes
+one cited candidate and one existing Hard U.
+
+| Model | ROC-AUC | Pairwise accuracy |
+|:--|--:|--:|
+| BM25 | 0.441695 | 0.395402 |
+| Validation-selected reversed BM25 | 0.558305 | 0.604598 |
+| Length LR | 0.518228 | 0.513793 |
+| Lexical LR | 0.563710 | 0.588506 |
+| Combined LR | 0.565599 | 0.601149 |
+| DeBERTa three-seed probability ensemble | 0.674500 | 0.695402 |
+
+The DeBERTa ensemble exceeds combined LR by 0.108901 ROC-AUC, with a
+95% paired query-bootstrap interval of [0.086389, 0.131857]. Its
+pairwise-accuracy advantage is 0.094253, with an interval of
+[0.055144, 0.133333].
+
+### Matching sensitivity
+
+| Test scope | Queries | Retention | Combined LR AUC | DeBERTa AUC |
+|:--|--:|--:|--:|--:|
+| q25 | 410 | 24.4% | 0.521868 | 0.644860 |
+| q50, primary | 870 | 51.8% | 0.565599 | 0.674500 |
+| q75 | 1,239 | 73.8% | 0.596959 | 0.693607 |
+
+The direction of the DeBERTa advantage is consistent across all three
+validation-defined calipers.
+
+### Interpretation limits
+
+Matching reduces but does not eliminate measured feature differences. On
+the primary q50 subset, mean signed standardized differences range from
+-0.134 to -0.029, while mean absolute standardized differences range from
+0.368 to 0.492. Reversed BM25 also retains a pairwise accuracy of 0.605.
+
+The matched subset must therefore be described as approximately balanced
+under the measured features, not free of construction bias. The reduction
+in model performance is not interpreted causally because matching changes
+the evaluated query and cited-candidate population.
+
+The results support the limited conclusion that the evaluated BM25,
+overlap, and length baselines do not fully account for DeBERTa
+discrimination. They do not establish that DeBERTa performs deep technical
+reasoning or that unmeasured construction cues are absent.
+
 ## Artifact policy
 
 This branch includes aggregate configurations and results. It excludes

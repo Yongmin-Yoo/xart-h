@@ -20,3 +20,8 @@ results/construction_bias/*.parquet
 results/construction_bias/*predictions*
 results/construction_bias/*logits*
 results/construction_bias/checkpoints/
+
+results/construction_bias/**/*.parquet
+results/construction_bias/**/*predictions*
+results/construction_bias/**/*logits*
+results/construction_bias/**/checkpoints/
