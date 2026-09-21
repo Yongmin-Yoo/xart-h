@@ -1,0 +1,4 @@
+model,features,selected_c,validation_auc
+length_lr,claim_token_count|passage_token_count|passage_claim_ratio,0.001,0.6033906854947227
+lexical_lr,bm25_score|token_jaccard|claim_coverage,1.0,0.709880133016779
+combined_lr,claim_token_count|passage_token_count|passage_claim_ratio|bm25_score|token_jaccard|claim_coverage,10.0,0.7140007687367935

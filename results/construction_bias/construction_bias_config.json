@@ -1,0 +1,53 @@
+{
+  "dataset": "XART-H v1.0.1",
+  "positive_class": "C = labels 0 or 1",
+  "negative_class": "U = label 2",
+  "bm25": {
+    "vectorizer": "CountVectorizer",
+    "lowercase": true,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "min_df": 2,
+    "max_features": 200000,
+    "k1": 1.5,
+    "b": 0.75,
+    "fit_data": "official training passages",
+    "query_terms": "binary presence",
+    "selected_direction": "reversed",
+    "validation_original_auc": 0.3110830162460597,
+    "validation_reversed_auc": 0.6889169837539403
+  },
+  "tokenization_for_surface_features": "lowercase regex (?u)\\b\\w\\w+\\b",
+  "logistic_regression": {
+    "fit_split": "train",
+    "selection_split": "validation",
+    "candidate_C": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "penalty": "L2",
+    "solver": "liblinear"
+  },
+  "bootstrap": {
+    "unit": "lowercased whitespace-normalized claim",
+    "repetitions": 2000,
+    "seed": 42,
+    "confidence_level": 0.95,
+    "multiple_testing": "Holm across reported DeBERTa comparisons"
+  },
+  "deberta": {
+    "score": "mean seed probability for class column 1",
+    "seeds": [
+      13,
+      42,
+      77
+    ],
+    "note": "Seed-mean and ensemble metrics are reported separately"
+  }
+}

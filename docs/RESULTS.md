@@ -9,7 +9,7 @@ means over seeds 13, 42, and 77 unless otherwise stated.
 |:--|--:|--:|--:|--:|
 | Random scoring | 0.499 | 0.507 | N/A | N/A |
 | TF-IDF | 0.347 | 0.516 | N/A | N/A |
-| BM25 | 0.323 | 0.513 | N/A | N/A |
+| BM25 | 0.329 | 0.513 | N/A | N/A |
 | MiniLM bi-encoder | 0.528 | 0.524 | N/A | N/A |
 | PatentSBERTa | 0.495 | 0.511 | N/A | N/A |
 | MiniLM cross-encoder | 0.426 | 0.524 | N/A | N/A |

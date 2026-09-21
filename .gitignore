@@ -15,3 +15,8 @@ wandb/
 !data/
 !data/dependency/
 !data/dependency/dependency_quarantine_xa.csv
+
+results/construction_bias/*.parquet
+results/construction_bias/*predictions*
+results/construction_bias/*logits*
+results/construction_bias/checkpoints/
