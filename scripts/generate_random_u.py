@@ -20,61 +20,32 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from datasets import load_dataset
 
-try:
-    from google.colab import drive
-    drive.mount("/content/drive", force_remount=False)
-except Exception as error:
-    print("Drive mount skipped:", error)
-
-# ------------------------------------------------------------
-# 1. Paths and configuration
-# ------------------------------------------------------------
-ROOT = Path(
-    "/content/drive/MyDrive/"
-    "PatentSearchBench/external/PatentMatch"
-)
-
-SOURCE_ROOT = ROOT / "priority_augmented_temporal_split"
-HARD_ROOT = ROOT / "xart_hard_u_v1"
+# Public-only configuration
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 METADATA_PATH = (
-    ROOT
-    / "hard_u_metadata"
-    / "patent_metadata.csv"
+    PROJECT_ROOT / "data/random_u/patent_metadata.csv"
 )
-
-OUTPUT_ROOT = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/random_u_v1"
+OUTPUT_ROOT = (
+    PROJECT_ROOT / "results/random_u/generated"
 )
 OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 
+REPO_ID = "yongminyoo91/xart-h"
+REVISION = "v1.0.1"
 SEED = 42
 
+PUBLIC_DATASET = load_dataset(
+    REPO_ID,
+    revision=REVISION,
+)
+
 SPLIT_FILES = {
-    "train": {
-        "source": SOURCE_ROOT / "train.csv",
-        "hard_u": HARD_ROOT / "train_hard_u.csv",
-    },
-    "validation": {
-        "source": SOURCE_ROOT / "dev.csv",
-        "hard_u": HARD_ROOT / "dev_hard_u.csv",
-    },
-    "test": {
-        "source": SOURCE_ROOT / "test.csv",
-        "hard_u": HARD_ROOT / "test_hard_u.csv",
-    },
+    "train": None,
+    "validation": None,
+    "test": None,
 }
-
-for split, paths in SPLIT_FILES.items():
-    for role, path in paths.items():
-        if not path.exists():
-            raise FileNotFoundError(
-                f"{split}/{role}: {path}"
-            )
-
-if not METADATA_PATH.exists():
-    raise FileNotFoundError(METADATA_PATH)
 
 print("Metadata:", METADATA_PATH)
 print("Output:", OUTPUT_ROOT)
@@ -355,15 +326,9 @@ for split, paths in SPLIT_FILES.items():
     print("SPLIT:", split)
     print("=" * 70)
 
-    source = pd.read_csv(
-        paths["source"],
-        low_memory=False,
-    )
-
-    hard_u = pd.read_csv(
-        paths["hard_u"],
-        low_memory=False,
-    )
+    public_frame = PUBLIC_DATASET[split].to_pandas()
+    source = public_frame.copy()
+    hard_u = public_frame.copy()
 
     source["label"] = pd.to_numeric(
         source["label"],
