@@ -1,6 +1,6 @@
 """Reproducibility script exported from the executed XART-H notebook."""
 
-import gc, re, json, math, random, inspect, torch
+import gc, re, json, math, random, inspect, os, torch
 import numpy as np
 from pathlib import Path
 from datasets import load_dataset
@@ -12,7 +12,6 @@ from transformers import (
     TrainingArguments,
     set_seed
 )
-from google.colab import drive
 
 # =========================================================
 # 0. Clean previous failed run
@@ -24,14 +23,16 @@ for variable in ["trainer", "model", "train_data"]:
 gc.collect()
 torch.cuda.empty_cache()
 
-drive.mount("/content/drive")
 
 REPO = "yongminyoo91/xart-h"
 REVISION = "v1.0.1"
 
 OUT = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/supervised_v1"
+    os.environ.get(
+        "XARTH_SUPERVISED_OUTPUT",
+        Path(__file__).resolve().parents[1]
+        / "outputs/supervised_v1",
+    )
 )
 OUT.mkdir(parents=True, exist_ok=True)
 
