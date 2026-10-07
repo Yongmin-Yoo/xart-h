@@ -48,29 +48,23 @@ except ImportError:
     ])
     from sentence_transformers import SentenceTransformer
 
-try:
-    from google.colab import drive
-    drive.mount("/content/drive", force_remount=False)
-except Exception as error:
-    print("Drive mount skipped:", error)
-
-# ------------------------------------------------------------
-# 1. Configuration
-# ------------------------------------------------------------
+# Public-only configuration
 REPO_ID = "yongminyoo91/xart-h"
 REVISION = "v1.0.1"
 
-ROOT = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/random_u_v1"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+RANDOM_ROOT = (
+    PROJECT_ROOT / "results/random_u/generated"
 )
 
-RANDOM_U_PATH = ROOT / "test_random_u.parquet"
+RANDOM_U_PATH = RANDOM_ROOT / "test_random_u.parquet"
 GENERATION_REPORT = (
-    ROOT / "random_u_generation_report.json"
+    RANDOM_ROOT / "random_u_generation_report.json"
 )
 
-OUTPUT_DIR = ROOT / "hard_vs_random"
+OUTPUT_DIR = (
+    PROJECT_ROOT / "results/random_u/recomputed"
+)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 N_BOOTSTRAP = 2000
@@ -754,52 +748,66 @@ grouped = {
     )
 }
 
+_AUC_ARRAY_CACHE = {}
+
 def auc_for_condition(
     query_indices,
     model_name,
     condition,
 ):
-    labels = []
-    scores = []
+    key = (model_name, condition)
 
-    score_column = f"score_{model_name}"
+    if key not in _AUC_ARRAY_CACHE:
+        labels = []
+        scores = []
+        row_query_indices = []
+        score_column = f"score_{model_name}"
 
-    for query_index in query_indices:
-        query = common_queries[query_index]
-        group = grouped[query]
+        for query_index, query in enumerate(common_queries):
+            group = grouped[query]
 
-        cited_scores = group.loc[
-            group["candidate_type"] == "cited",
-            score_column,
-        ].to_numpy(dtype=np.float64)
+            cited_scores = group.loc[
+                group["candidate_type"] == "cited",
+                score_column,
+            ].to_numpy(dtype=np.float64)
 
-        u_scores = group.loc[
-            group["candidate_type"] == condition,
-            score_column,
-        ].to_numpy(dtype=np.float64)
+            u_scores = group.loc[
+                group["candidate_type"] == condition,
+                score_column,
+            ].to_numpy(dtype=np.float64)
 
-        labels.extend(
-            np.ones(
-                len(cited_scores),
-                dtype=np.int8,
+            labels.extend(np.ones(len(cited_scores), dtype=np.int8))
+            scores.extend(cited_scores)
+            row_query_indices.extend(
+                [query_index] * len(cited_scores)
             )
+
+            labels.extend(np.zeros(len(u_scores), dtype=np.int8))
+            scores.extend(u_scores)
+            row_query_indices.extend(
+                [query_index] * len(u_scores)
+            )
+
+        _AUC_ARRAY_CACHE[key] = (
+            np.asarray(labels),
+            np.asarray(scores),
+            np.asarray(row_query_indices),
         )
 
-        scores.extend(cited_scores)
+    labels, scores, row_query_indices = _AUC_ARRAY_CACHE[key]
 
-        labels.extend(
-            np.zeros(
-                len(u_scores),
-                dtype=np.int8,
-            )
-        )
+    multiplicities = np.bincount(
+        query_indices,
+        minlength=len(common_queries),
+    ).astype(np.float64)
 
-        scores.extend(u_scores)
+    sample_weights = multiplicities[row_query_indices]
 
     return float(
         roc_auc_score(
-            np.asarray(labels),
-            np.asarray(scores),
+            labels,
+            scores,
+            sample_weight=sample_weights,
         )
     )
 
