@@ -1,0 +1,4 @@
+temporal_bin,queries,rows,start_date,end_date,median_days_since_train_end
+early,568,1726,2017-05-17,2017-07-05,266.0
+middle,534,1602,2017-07-12,2017-10-04,336.0
+late,576,1728,2017-10-11,2018-01-31,427.0
