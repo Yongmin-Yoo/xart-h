@@ -1,0 +1,15 @@
+{
+  "dataset": "yongminyoo91/xart-h",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "maximum_length": 384,
+  "batch_size": 16,
+  "prompt": "SentenceTransformers model-card default query prompt",
+  "results": {
+    "cited_vs_u_roc_auc": 0.5460423295657028,
+    "x_vs_a_roc_auc": 0.5126768340449813,
+    "cited_vs_u_rows": 5056,
+    "x_vs_a_rows": 3638
+  }
+}
