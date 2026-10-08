@@ -1,0 +1,307 @@
+{
+  "experiment": {
+    "experiment": "dependency relaxation model comparison",
+    "dataset": "yongminyoo91/xart-h",
+    "revision": "4a3ad685a395252c66932c49e98a00728089b614",
+    "model": "microsoft/deberta-v3-base",
+    "model_revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+    "task": "X versus A",
+    "conditions": [
+      "official",
+      "relaxed"
+    ],
+    "evaluation_split": "frozen official X/A test",
+    "seeds": [
+      13,
+      42,
+      77
+    ],
+    "epochs": 2,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "maximum_length": 384,
+    "training_batch_size": 32,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 32,
+    "evaluation_batch_size": 64,
+    "precision": "bfloat16",
+    "gradient_checkpointing": true,
+    "gpu": "NVIDIA L4",
+    "gpu_memory_gb": 22.0343017578125,
+    "train_end_date": "2016-09-25",
+    "validation_end_date": "2017-05-13",
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 42,
+    "confidence_level": 0.95,
+    "bootstrap_unit": "lowercased and whitespace-normalized claim text",
+    "quarantine_source": "/content/xart-h/data/dependency/dependency_quarantine_xa.csv",
+    "counts": {
+      "official_train": 16912,
+      "official_validation": 3626,
+      "official_test": 3638,
+      "quarantine": 1100,
+      "relaxed_train": 17432,
+      "relaxed_validation": 3894,
+      "relaxed_test": 3950
+    },
+    "fingerprints": {
+      "official_train": "ba99dd2588298085f717fbc9d117dcf74de260ddf1858c88b87f640dd150ccf0",
+      "official_validation": "63909f7b3c1f2e07d41d47c29b145b49dc24ac1ad2a986ba4d42debc0e5494b5",
+      "official_test": "096b1c7f42e24846bc23017e0b4d3c27760ebf59d32ba5f0736169afcf4f927b",
+      "relaxed_train": "bc8ae20bb89c61790fe87640c6dc61e01d7f9d624aa7bfb0a6f352f95c87f148",
+      "relaxed_validation": "bdcbc28b34c0aca34b9a2e3aca608516165423a63f00d729e55e575236778a80",
+      "relaxed_test": "6bbc5a735668b5d0d53d0c9b7d72e2af04a43d9bca0c375af4feea7087b1af75",
+      "quarantine": "862f4a9f448851307aa9113e4cd192eb2d4bef33d2f09aea6a141b2e06d43e69"
+    },
+    "created_at_utc": "2026-10-08T18:20:40.631900+00:00"
+  },
+  "seed_results": [
+    {
+      "condition": "official",
+      "seed": 13,
+      "test_rows": 3638,
+      "elapsed_seconds": 1057.6327123641968,
+      "accuracy": 0.4881803188565146,
+      "macro_f1": 0.47800212376069007,
+      "roc_auc": 0.5024692089343656,
+      "average_precision": 0.5110346300440327,
+      "f1_a": 0.405111821086262,
+      "f1_x": 0.5508924264351182
+    },
+    {
+      "condition": "official",
+      "seed": 42,
+      "test_rows": 3638,
+      "elapsed_seconds": 1058.911545753479,
+      "accuracy": 0.5035733919736118,
+      "macro_f1": 0.4887238336070939,
+      "roc_auc": 0.5091560201550313,
+      "average_precision": 0.5048359340479847,
+      "f1_a": 0.40159045725646125,
+      "f1_x": 0.5758572099577266
+    },
+    {
+      "condition": "official",
+      "seed": 77,
+      "test_rows": 3638,
+      "elapsed_seconds": 1059.0747203826904,
+      "accuracy": 0.4947773501924134,
+      "macro_f1": 0.43332757054332943,
+      "roc_auc": 0.4918074851182561,
+      "average_precision": 0.48032064778082995,
+      "f1_a": 0.24672131147540985,
+      "f1_x": 0.619933829611249
+    },
+    {
+      "condition": "relaxed",
+      "seed": 13,
+      "test_rows": 3638,
+      "elapsed_seconds": 1090.1096007823944,
+      "accuracy": 0.4972512369433755,
+      "macro_f1": 0.45278948656111284,
+      "roc_auc": 0.501719228277006,
+      "average_precision": 0.5018098190318567,
+      "f1_a": 0.2968089196462899,
+      "f1_x": 0.6087700534759358
+    },
+    {
+      "condition": "relaxed",
+      "seed": 42,
+      "test_rows": 3638,
+      "elapsed_seconds": 1092.8318600654602,
+      "accuracy": 0.5153930731170973,
+      "macro_f1": 0.5104653788912822,
+      "roc_auc": 0.526350418526381,
+      "average_precision": 0.5190365086280562,
+      "f1_a": 0.4613504430186373,
+      "f1_x": 0.559580314763927
+    },
+    {
+      "condition": "relaxed",
+      "seed": 77,
+      "test_rows": 3638,
+      "elapsed_seconds": 1091.0048818588257,
+      "accuracy": 0.5032985156679495,
+      "macro_f1": 0.49361821933156086,
+      "roc_auc": 0.5196110195022172,
+      "average_precision": 0.5175031590492163,
+      "f1_a": 0.4236044657097289,
+      "f1_x": 0.5636319729533928
+    }
+  ],
+  "seed_summary": [
+    {
+      "condition": "official",
+      "metric": "accuracy",
+      "mean": 0.4955103536741799,
+      "standard_deviation": 0.007722670883527728,
+      "minimum": 0.4881803188565146,
+      "maximum": 0.5035733919736118,
+      "num_seeds": 3
+    },
+    {
+      "condition": "official",
+      "metric": "macro_f1",
+      "mean": 0.4666845093037045,
+      "standard_deviation": 0.029381163831699666,
+      "minimum": 0.43332757054332943,
+      "maximum": 0.4887238336070939,
+      "num_seeds": 3
+    },
+    {
+      "condition": "official",
+      "metric": "roc_auc",
+      "mean": 0.5011442380692176,
+      "standard_deviation": 0.008749833017016487,
+      "minimum": 0.4918074851182561,
+      "maximum": 0.5091560201550313,
+      "num_seeds": 3
+    },
+    {
+      "condition": "official",
+      "metric": "average_precision",
+      "mean": 0.49873040395761575,
+      "standard_deviation": 0.016241776376966388,
+      "minimum": 0.48032064778082995,
+      "maximum": 0.5110346300440327,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "accuracy",
+      "mean": 0.5053142752428074,
+      "standard_deviation": 0.00923737083461867,
+      "minimum": 0.4972512369433755,
+      "maximum": 0.5153930731170973,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "macro_f1",
+      "mean": 0.485624361594652,
+      "standard_deviation": 0.029657266565865023,
+      "minimum": 0.45278948656111284,
+      "maximum": 0.5104653788912822,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "roc_auc",
+      "mean": 0.5158935554352014,
+      "standard_deviation": 0.012729435870940697,
+      "minimum": 0.501719228277006,
+      "maximum": 0.526350418526381,
+      "num_seeds": 3
+    },
+    {
+      "condition": "relaxed",
+      "metric": "average_precision",
+      "mean": 0.5127831622363764,
+      "standard_deviation": 0.009534069752517315,
+      "minimum": 0.5018098190318567,
+      "maximum": 0.5190365086280562,
+      "num_seeds": 3
+    }
+  ],
+  "ensemble_results": {
+    "official": {
+      "accuracy": 0.4961517317207257,
+      "macro_f1": 0.4735999703189958,
+      "roc_auc": 0.5031144673278627,
+      "average_precision": 0.49824017382031877,
+      "f1_a": 0.36464471403812826,
+      "f1_x": 0.5825552265998634
+    },
+    "relaxed": {
+      "accuracy": 0.5137438152831226,
+      "macro_f1": 0.4911246402733349,
+      "roc_auc": 0.5169758869809523,
+      "average_precision": 0.5098505150439172,
+      "f1_a": 0.3838383838383838,
+      "f1_x": 0.5984108967082861
+    }
+  },
+  "paired_query_bootstrap": {
+    "unit": "lowercased and whitespace-normalized claim text",
+    "number_of_queries": 1808,
+    "repetitions": 2000,
+    "seed": 42,
+    "confidence_level": 0.95,
+    "multiple_testing": "Holm correction across four metrics",
+    "results": [
+      {
+        "metric": "accuracy",
+        "official_estimate": 0.4961517317207257,
+        "official_ci_low": 0.4822825097904229,
+        "official_ci_high": 0.5103244133636113,
+        "relaxed_estimate": 0.5137438152831226,
+        "relaxed_ci_low": 0.4999965687620093,
+        "relaxed_ci_high": 0.5274427477694974,
+        "delta_relaxed_minus_official": 0.017592083562396943,
+        "delta_ci_low": 0.004924175949254591,
+        "delta_ci_high": 0.03008876382602433,
+        "raw_p_value": 0.0079960019990005,
+        "holm_adjusted_p_value": 0.031984007996002,
+        "significant_after_holm": true
+      },
+      {
+        "metric": "macro_f1",
+        "official_estimate": 0.4735999703189958,
+        "official_ci_low": 0.4577919988279006,
+        "official_ci_high": 0.48897485329680773,
+        "relaxed_estimate": 0.4911246402733349,
+        "relaxed_ci_low": 0.4755858343704104,
+        "relaxed_ci_high": 0.5063004281652189,
+        "delta_relaxed_minus_official": 0.0175246699543391,
+        "delta_ci_low": 0.0036617815498544643,
+        "delta_ci_high": 0.031054624842970186,
+        "raw_p_value": 0.012993503248375811,
+        "holm_adjusted_p_value": 0.031984007996002,
+        "significant_after_holm": true
+      },
+      {
+        "metric": "roc_auc",
+        "official_estimate": 0.5031144673278627,
+        "official_ci_low": 0.48615145784244457,
+        "official_ci_high": 0.5196486983557572,
+        "relaxed_estimate": 0.5169758869809523,
+        "relaxed_ci_low": 0.4990307560313336,
+        "relaxed_ci_high": 0.5340140767899767,
+        "delta_relaxed_minus_official": 0.013861419653089624,
+        "delta_ci_low": 0.0029358029975112866,
+        "delta_ci_high": 0.024820075480479313,
+        "raw_p_value": 0.0079960019990005,
+        "holm_adjusted_p_value": 0.031984007996002,
+        "significant_after_holm": true
+      },
+      {
+        "metric": "average_precision",
+        "official_estimate": 0.49824017382031877,
+        "official_ci_low": 0.48575932461732935,
+        "official_ci_high": 0.5132272273562265,
+        "relaxed_estimate": 0.5098505150439172,
+        "relaxed_ci_low": 0.49600871751606457,
+        "relaxed_ci_high": 0.5252656482064422,
+        "delta_relaxed_minus_official": 0.011610341223598442,
+        "delta_ci_low": 0.0018068982391661631,
+        "delta_ci_high": 0.021458448962040754,
+        "raw_p_value": 0.026986506746626688,
+        "holm_adjusted_p_value": 0.031984007996002,
+        "significant_after_holm": true
+      }
+    ]
+  },
+  "timing": {
+    "total_elapsed_seconds": 6501.7739799022675,
+    "bootstrap_elapsed_seconds": 40.80816054344177
+  },
+  "output_files": [
+    "dependency_model_config.json",
+    "dependency_seed_results.csv",
+    "dependency_seed_summary.csv",
+    "dependency_paired_tests.csv",
+    "dependency_test_predictions.parquet",
+    "dependency_model_results.json"
+  ],
+  "completed_at_utc": "2026-10-08T20:09:35.865179+00:00"
+}
