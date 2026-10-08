@@ -1,0 +1,61 @@
+{
+  "dataset": "yongminyoo91/xart-h",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "seed": 42,
+  "max_length": 384,
+  "models": {
+    "minilm_bi": {
+      "id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "batch": 256
+    },
+    "patentsberta": {
+      "id": "AI-Growth-Lab/PatentSBERTa",
+      "revision": "3ff1d553c861d8f5bfd902333d97fc95eb6b4c8f",
+      "batch": 128
+    }
+  },
+  "cross_encoder": {
+    "id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "batch": 256
+  },
+  "results": {
+    "random": {
+      "cited_vs_u_roc_auc": 0.5175575182894858,
+      "x_vs_a_roc_auc": 0.5121677297059435,
+      "cited_vs_u_rows": 5056,
+      "x_vs_a_rows": 3638
+    },
+    "tfidf": {
+      "cited_vs_u_roc_auc": 0.3477690955499054,
+      "x_vs_a_roc_auc": 0.5164265862174017,
+      "cited_vs_u_rows": 5056,
+      "x_vs_a_rows": 3638
+    },
+    "bm25": {
+      "cited_vs_u_roc_auc": 0.3308374280470068,
+      "x_vs_a_roc_auc": 0.5138514461041505,
+      "cited_vs_u_rows": 5056,
+      "x_vs_a_rows": 3638
+    },
+    "minilm_bi": {
+      "cited_vs_u_roc_auc": 0.5267700947941212,
+      "x_vs_a_roc_auc": 0.5243557087385213,
+      "cited_vs_u_rows": 5056,
+      "x_vs_a_rows": 3638
+    },
+    "patentsberta": {
+      "cited_vs_u_roc_auc": 0.4949615262749714,
+      "x_vs_a_roc_auc": 0.5110150292315652,
+      "cited_vs_u_rows": 5056,
+      "x_vs_a_rows": 3638
+    },
+    "minilm_cross_encoder": {
+      "cited_vs_u_roc_auc": 0.4266464065667846,
+      "x_vs_a_roc_auc": 0.5245847981353694,
+      "cited_vs_u_rows": 5056,
+      "x_vs_a_rows": 3638
+    }
+  }
+}
