@@ -83,21 +83,14 @@ GPU_NAME = torch.cuda.get_device_name(0)
 print("GPU:", GPU_NAME)
 print("BF16 supported:", torch.cuda.is_bf16_supported())
 
-try:
-    from google.colab import drive
-    drive.mount("/content/drive", force_remount=False)
-except Exception as e:
-    print("Drive mount skipped:", e)
 
-OUT = Path(
-    "/content/drive/MyDrive/PatentSearchBench/"
-    "XART-H/experiments/qwen3_8b_zero_shot_v1"
-)
+OUT = Path(__file__).resolve().parents[1] / "results/table3_recomputed/qwen3_8b"
 OUT.mkdir(parents=True, exist_ok=True)
 
 REPO_ID = "yongminyoo91/xart-h"
-REVISION = "v1.0.1"
+REVISION = "4a3ad685a395252c66932c49e98a00728089b614"
 MODEL_ID = "Qwen/Qwen3-8B"
+MODEL_REVISION = "b968826d9c46dd6066d109eabc6255188de91218"
 
 # L4-safe defaults
 MAX_LENGTH = 1280
@@ -158,6 +151,7 @@ quantization_config = BitsAndBytesConfig(
 
 tokenizer = AutoTokenizer.from_pretrained(
     MODEL_ID,
+    revision=MODEL_REVISION,
     use_fast=True,
 )
 
@@ -169,6 +163,7 @@ tokenizer.truncation_side = "right"
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
+    revision=MODEL_REVISION,
     device_map="auto",
     quantization_config=quantization_config,
     torch_dtype=compute_dtype,
@@ -729,6 +724,7 @@ results = {
     "split": "test",
     "rows": int(len(df)),
     "model": MODEL_ID,
+    "model_revision": MODEL_REVISION,
     "quantization": "4-bit NF4 double quantization",
     "compute_dtype": str(compute_dtype),
     "max_length": MAX_LENGTH,

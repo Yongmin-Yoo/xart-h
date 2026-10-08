@@ -1,0 +1,54 @@
+{
+  "dataset": "yongminyoo91/xart-h",
+  "revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "split": "test",
+  "rows": 5316,
+  "model": "Qwen/Qwen3-8B",
+  "quantization": "4-bit NF4 double quantization",
+  "compute_dtype": "torch.bfloat16",
+  "max_length": 1280,
+  "text_tokens_per_side": 500,
+  "seed": 42,
+  "input_columns": [
+    "text",
+    "text_b"
+  ],
+  "direct_3way": {
+    "accuracy": 0.335214,
+    "macro_f1": 0.248732,
+    "per_class_f1_A_X_U": [
+      0.455412,
+      0.288418,
+      0.002365
+    ],
+    "cited_vs_u_roc_auc": 0.529009,
+    "cited_vs_u_average_precision": 0.708811,
+    "x_vs_a_roc_auc": 0.489564,
+    "x_vs_a_average_precision": 0.494614,
+    "pairwise_cited_over_U": 0.538876,
+    "pairwise_X_over_A": 0.491819,
+    "mrr_cited": 0.847139,
+    "ndcg": 0.821663,
+    "u_eligible_queries": 1678
+  },
+  "hierarchical_3way": {
+    "accuracy": 0.347065,
+    "macro_f1": 0.29078,
+    "per_class_f1_A_X_U": [
+      0.096641,
+      0.300908,
+      0.474791
+    ],
+    "cited_vs_u_roc_auc": 0.575809,
+    "cited_vs_u_average_precision": 0.732962,
+    "x_vs_a_roc_auc": 0.496079,
+    "x_vs_a_average_precision": 0.496002,
+    "pairwise_cited_over_U": 0.569716,
+    "pairwise_X_over_A": 0.495345,
+    "mrr_cited": 0.856973,
+    "ndcg": 0.823045,
+    "u_eligible_queries": 1678
+  },
+  "elapsed_hours_current_session": 0.92737,
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+}
