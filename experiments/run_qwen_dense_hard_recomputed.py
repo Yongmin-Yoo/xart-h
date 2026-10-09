@@ -59,6 +59,9 @@ import torch
 import transformers
 import peft
 
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
+
 # Canonical Qwen yes/no answer-token IDs
 FALSE_TOKEN_ID = 2152
 TRUE_TOKEN_ID = 9693
