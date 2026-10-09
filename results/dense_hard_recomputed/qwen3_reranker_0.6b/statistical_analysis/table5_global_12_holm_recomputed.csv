@@ -1,0 +1,13 @@
+model,subset,metric,raw_p,source,global_12_holm_p,significant_global_12_0_05
+DeBERTa,primary_all_1642,roc_auc,0.000999500249875,/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv,0.0119940029985,True
+DeBERTa,primary_all_1642,pairwise_cited_over_dense_hard,0.000999500249875,/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv,0.0119940029985,True
+DeBERTa,passage_disjoint_1555,roc_auc,0.000999500249875,/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv,0.0119940029985,True
+DeBERTa,passage_disjoint_1555,pairwise_cited_over_dense_hard,0.000999500249875,/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv,0.0119940029985,True
+DeBERTa,document_disjoint_1389,roc_auc,0.000999500249875,/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv,0.0119940029985,True
+DeBERTa,document_disjoint_1389,pairwise_cited_over_dense_hard,0.000999500249875,/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv,0.0119940029985,True
+Qwen3-Reranker-0.6B,primary_all_1642,roc_auc,0.0009995002498750624,canonical Qwen recomputation,0.0119940029985,True
+Qwen3-Reranker-0.6B,primary_all_1642,pairwise_cited_over_dense_hard,0.0009995002498750624,canonical Qwen recomputation,0.0119940029985,True
+Qwen3-Reranker-0.6B,passage_disjoint_1555,roc_auc,0.0009995002498750624,canonical Qwen recomputation,0.0119940029985,True
+Qwen3-Reranker-0.6B,passage_disjoint_1555,pairwise_cited_over_dense_hard,0.0009995002498750624,canonical Qwen recomputation,0.0119940029985,True
+Qwen3-Reranker-0.6B,document_disjoint_1389,roc_auc,0.0009995002498750624,canonical Qwen recomputation,0.0119940029985,True
+Qwen3-Reranker-0.6B,document_disjoint_1389,pairwise_cited_over_dense_hard,0.0009995002498750624,canonical Qwen recomputation,0.0119940029985,True

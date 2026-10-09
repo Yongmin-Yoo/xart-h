@@ -1,0 +1,43 @@
+{
+  "experiment": "Qwen Dense-Hard canonical recomputation",
+  "conditions": [
+    "hard_only",
+    "mixed_u"
+  ],
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "rows_per_run": 1642,
+  "total_predictions": 9852,
+  "unique_queries_per_run": 1642,
+  "unique_source_rows_per_run": 541,
+  "mapping": "query_id to Dense-Hard claim_id",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "instruction": "Given a patent claim, determine whether the prior-art passage is examiner-cited evidence for that claim",
+  "input_columns": [
+    "text",
+    "text_b"
+  ],
+  "prompt_construction": "native Qwen reranker prefix/suffix with token-ID concatenation",
+  "truncation": "balanced claim-passage truncation after reserving native reranker prompt tokens",
+  "maximum_length": 384,
+  "evaluation_batch_size": 36,
+  "precision": "bfloat16",
+  "attention_implementation": "sdpa",
+  "tf32": true,
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "gpu": "NVIDIA L4"
+  },
+  "combined_prediction_file": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/qwen_dense_hard_all_seed_predictions.parquet",
+  "combined_prediction_sha256": "1a2ff3400f156593948401940cebdceeb902b6169da8e010946f630cfddc31fc",
+  "total_elapsed_seconds": 438.9943630695343,
+  "completed_at_utc": "2026-10-09T02:12:59.859328+00:00"
+}

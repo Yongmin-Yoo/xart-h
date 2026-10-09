@@ -1,0 +1,55 @@
+{
+  "experiment": "Qwen Dense-Hard canonical recomputation",
+  "training_condition": "mixed_u",
+  "seed": 77,
+  "rows": 1642,
+  "unique_queries": 1642,
+  "unique_source_rows": 541,
+  "mapping": "query_id to Dense-Hard claim_id",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "adapter_directory": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/model_generalization_v1/qwen3_reranker_0.6b_control/adapters/mixed_u_seed77",
+  "adapter_sha256": "c1bb8bf4f6db5f44455bb58b8418f04fe7d5aacf1afbfe22364544d3d2967af0",
+  "dense_manifest": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/test_dense_hard_u.parquet",
+  "dense_manifest_sha256": "96c8e2dc77cace366b694ba52f46805fb76ceb66c62d2e7020381e86469bb726",
+  "instruction": "Given a patent claim, determine whether the prior-art passage is examiner-cited evidence for that claim",
+  "input_columns": [
+    "text",
+    "text_b"
+  ],
+  "prompt_construction": "native Qwen reranker prefix/suffix with token-ID concatenation",
+  "truncation": "balanced claim-passage truncation after reserving native reranker prompt tokens",
+  "maximum_length": 384,
+  "evaluation_batch_size": 36,
+  "precision": "bfloat16",
+  "attention_implementation": "sdpa",
+  "tf32": true,
+  "false_token_id": 2152,
+  "true_token_id": 9693,
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "gpu": "NVIDIA L4"
+  },
+  "probability_summary": {
+    "mean": 0.5466173897390583,
+    "standard_deviation": 0.2865755561639851,
+    "minimum": 0.0014103584690019488,
+    "maximum": 0.9883127808570862
+  },
+  "legacy_comparison": {
+    "mean_absolute_difference": 0.16318123112170335,
+    "correlation": 0.7539835431769083,
+    "mean_signed_difference": 0.008188498875789285,
+    "maximum_absolute_difference": 0.9182987660169601
+  },
+  "old_new_mae": 0.16318123112170335,
+  "old_new_correlation": 0.7539835431769083,
+  "elapsed_seconds": 72.75105214118958,
+  "prediction_file": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/qwen3_reranker_mixed_u_seed77_dense_hard_predictions.parquet",
+  "prediction_sha256": "8535c041ebf3e0cf97a6b2dc1b86e9ec25fc9d49059f5bf53c6151562d9e63b4",
+  "completed_at_utc": "2026-10-09T02:12:59.517536+00:00"
+}

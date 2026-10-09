@@ -1,0 +1,46 @@
+{
+  "file": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv",
+  "shape": [
+    12,
+    13
+  ],
+  "columns": [
+    "analysis_subset",
+    "model",
+    "metric",
+    "hard_only",
+    "mixed_u",
+    "delta_mixed_minus_hard",
+    "ci_low",
+    "ci_high",
+    "raw_p",
+    "holm_adjusted_p",
+    "significant",
+    "global_12_holm_p",
+    "global_12_significant"
+  ],
+  "normalized_columns": {
+    "analysis_subset": "analysis_subset",
+    "model": "model",
+    "metric": "metric",
+    "hard_only": "hard_only",
+    "mixed_u": "mixed_u",
+    "delta_mixed_minus_hard": "delta_mixed_minus_hard",
+    "ci_low": "ci_low",
+    "ci_high": "ci_high",
+    "raw_p": "raw_p",
+    "holm_adjusted_p": "holm_adjusted_p",
+    "significant": "significant",
+    "global_12_holm_p": "global_12_holm_p",
+    "global_12_significant": "global_12_significant"
+  },
+  "detected": {
+    "model_column": "model",
+    "subset_column": "analysis_subset",
+    "metric_column": "metric",
+    "raw_p_candidates": [
+      "raw_p"
+    ],
+    "selected_raw_p_column": "raw_p"
+  }
+}

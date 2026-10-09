@@ -1,0 +1,178 @@
+{
+  "experiment": "Canonical Qwen3-Reranker-0.6B Dense-Hard Table 5 recomputation",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "dataset": "yongminyoo91/xart-h",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "conditions": [
+    "hard_only",
+    "mixed_u"
+  ],
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "number_of_queries": 1642,
+  "number_of_prediction_rows": 9852,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 42,
+  "runtime": {
+    "gpu": "NVIDIA L4",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "precision": "BF16",
+    "attention": "SDPA",
+    "maximum_length": 384,
+    "evaluation_batch_size": 36
+  },
+  "canonical_input": {
+    "instruction": "Given a patent claim, determine whether the prior-art passage is examiner-cited evidence for that claim",
+    "input_columns": [
+      "text",
+      "text_b"
+    ],
+    "truncation": "balanced claim-passage truncation after reserving native reranker prompt tokens",
+    "true_token_id": 9693,
+    "false_token_id": 2152
+  },
+  "metrics": {
+    "roc_auc": "Query-macro weighted cited versus Dense-Hard ROC-AUC",
+    "pairwise": "Mean same-query cited-over-Dense-Hard comparison"
+  },
+  "multiple_testing": {
+    "qwen_family_size": 6,
+    "global_table5_family_size": 12,
+    "method": "Holm"
+  },
+  "artifacts": [
+    {
+      "relative_path": "qwen3_reranker_hard_only_seed13_dense_hard_predictions.parquet",
+      "size_bytes": 26966,
+      "sha256": "07ef5a8421d4e55cb442c6a00e33ee59572a2e69b91c06b0af464168fafef72f"
+    },
+    {
+      "relative_path": "qwen3_reranker_hard_only_seed13_dense_hard_summary.json",
+      "size_bytes": 2444,
+      "sha256": "598f911cc695d0ab3ab6ac5e17ddedea266813de01ac84634a65a610df41678f"
+    },
+    {
+      "relative_path": "qwen3_reranker_hard_only_seed42_dense_hard_predictions.parquet",
+      "size_bytes": 26967,
+      "sha256": "8c71e2cc80956bd078851a9310dbbdcef5afb00703a21430971d124a49ff866d"
+    },
+    {
+      "relative_path": "qwen3_reranker_hard_only_seed42_dense_hard_summary.json",
+      "size_bytes": 2445,
+      "sha256": "366eb47be6590b45afa21b37d0e21f61384572dcf410f8dcc7a72633342603cc"
+    },
+    {
+      "relative_path": "qwen3_reranker_hard_only_seed77_dense_hard_predictions.parquet",
+      "size_bytes": 26929,
+      "sha256": "5d1344ea5c91d7c538f5b22fb407ef9afd7c00501d1138313f9007b9f6368bee"
+    },
+    {
+      "relative_path": "qwen3_reranker_hard_only_seed77_dense_hard_summary.json",
+      "size_bytes": 2443,
+      "sha256": "3be48a83d7c4d83bdbf1dc5c9924dbad94e7d7b14ac5957648509fe7d1aa8f85"
+    },
+    {
+      "relative_path": "qwen3_reranker_mixed_u_seed13_dense_hard_predictions.parquet",
+      "size_bytes": 26872,
+      "sha256": "3510ce57b962caa60de2571cf2254102f9f3cab2a4746a9d1347cb0d7cf42d12"
+    },
+    {
+      "relative_path": "qwen3_reranker_mixed_u_seed13_dense_hard_summary.json",
+      "size_bytes": 2437,
+      "sha256": "a3b3fa627c0fe7bd81bc6f3dde79fe37caef4b629cf63f1c03f945a15479b718"
+    },
+    {
+      "relative_path": "qwen3_reranker_mixed_u_seed42_dense_hard_predictions.parquet",
+      "size_bytes": 26910,
+      "sha256": "fd53acca3bacfb885a9867f37d746e3b30c4184e0e5041c6ead69ecc37c2675f"
+    },
+    {
+      "relative_path": "qwen3_reranker_mixed_u_seed42_dense_hard_summary.json",
+      "size_bytes": 2437,
+      "sha256": "43577fcbe2e0b3af72be319bb404c5a0bd279fff4b054429b100b5465d91f4bb"
+    },
+    {
+      "relative_path": "qwen3_reranker_mixed_u_seed77_dense_hard_predictions.parquet",
+      "size_bytes": 26936,
+      "sha256": "8535c041ebf3e0cf97a6b2dc1b86e9ec25fc9d49059f5bf53c6151562d9e63b4"
+    },
+    {
+      "relative_path": "qwen3_reranker_mixed_u_seed77_dense_hard_summary.json",
+      "size_bytes": 2438,
+      "sha256": "20e8915bfd25d1d122d9b056a8a3bf6af38996c9b96eafe84e0c1bc3ac268d4c"
+    },
+    {
+      "relative_path": "qwen_dense_hard_all_seed_predictions.parquet",
+      "size_bytes": 59807,
+      "sha256": "1a2ff3400f156593948401940cebdceeb902b6169da8e010946f630cfddc31fc"
+    },
+    {
+      "relative_path": "qwen_dense_hard_canonical_config.json",
+      "size_bytes": 1533,
+      "sha256": "d59257a41d778afd11dbc6fdf824ce714bef76e084dd9b77dbec562e93e3bb17"
+    },
+    {
+      "relative_path": "qwen_dense_hard_inference_summary.csv",
+      "size_bytes": 1620,
+      "sha256": "4782f4849f56129fb7323ab140ab31a00b66a0b454c0e1c45c7291a1f00e932b"
+    },
+    {
+      "relative_path": "statistical_analysis/existing_integrated_table_schema.json",
+      "size_bytes": 1143,
+      "sha256": "e5005e588af4e2a6c7a77c1df1601e31b95c2df15f41722b965bd7d281368224"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_cited_ensemble_predictions.parquet",
+      "size_bytes": 340923,
+      "sha256": "9f159c2e3fbdda02b0711a5c305233105d70aaf67aaff228aea24aa6c368b9c4"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_bootstrap_ci.csv",
+      "size_bytes": 2245,
+      "sha256": "05cba820ec9dad833bfef6788b7ac4b403b2f5eff07b3894476073ee8cceb53b"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_cited_input_diagnostics.csv",
+      "size_bytes": 2003,
+      "sha256": "040a095b94705bdbba10cf7d5d47a3d9be93b9c71beea4ba01e726bcc8c90c7d"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_ensemble_predictions.parquet",
+      "size_bytes": 278062,
+      "sha256": "46d22b44735ae3309a45f13d43408f67f5f43a2c2263843dafc4c7a5e1101b1f"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_metric_inputs.parquet",
+      "size_bytes": 421776,
+      "sha256": "aa795668e92e9db2e39775465a9577665f5ba01dba798a09d6ff86232db3287c"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_paired_tests.csv",
+      "size_bytes": 1637,
+      "sha256": "6b98ed8a070c8b98651f69eb6c13c39beccb819159a507522555f5471adfd66d"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_point_estimates.csv",
+      "size_bytes": 1189,
+      "sha256": "2440992e17fd6338e499a9379d56ef70d5ae7a47975eb488ca372a72e2d8eef7"
+    },
+    {
+      "relative_path": "statistical_analysis/qwen_dense_hard_statistical_results.json",
+      "size_bytes": 15449,
+      "sha256": "9b046d49884ee607d763178870c3982df7fa5dbd0c9fa726b13a45d14e616b94"
+    },
+    {
+      "relative_path": "statistical_analysis/table5_global_12_holm_recomputed.csv",
+      "size_bytes": 2269,
+      "sha256": "0a7f998d1728ca517c1ae8f5b23b4da31c956a2debe8d9c910be9af7a9d8398c"
+    }
+  ],
+  "created_at_utc": "2026-10-09T02:23:20.784394+00:00"
+}

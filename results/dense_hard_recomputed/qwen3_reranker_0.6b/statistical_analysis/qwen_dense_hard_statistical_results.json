@@ -1,0 +1,414 @@
+{
+  "experiment": "Qwen canonical Dense-Hard Table 5 evaluation",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "conditions": [
+    "hard_only",
+    "mixed_u"
+  ],
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "number_of_queries": 1642,
+  "subsets": {
+    "primary_all_1642": 1642,
+    "passage_disjoint_1555": 1555,
+    "document_disjoint_1389": 1389
+  },
+  "bootstrap": {
+    "unit": "query",
+    "repetitions": 2000,
+    "seed": 42,
+    "confidence_level": 0.95,
+    "paired_between_conditions": true
+  },
+  "metric_definition": {
+    "roc_auc": "Query-macro weighted ROC-AUC: each query has total cited weight 1 and Dense-Hard weight 1.",
+    "pairwise_cited_over_dense_hard": "Mean same-query cited-over-Dense-Hard comparison; ties receive 0.5."
+  },
+  "multiple_testing": {
+    "qwen_family_size": 6,
+    "qwen_holm_completed": true,
+    "global_table5_family_size": 12,
+    "global_table5_holm_completed": true
+  },
+  "inputs": {
+    "canonical_predictions": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/qwen_dense_hard_all_seed_predictions.parquet",
+    "canonical_predictions_sha256": "1a2ff3400f156593948401940cebdceeb902b6169da8e010946f630cfddc31fc",
+    "overlap_alignment": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation/statistical_analysis_corrected/qwen_dense_hard_overlap_alignment.csv",
+    "overlap_alignment_sha256": "6d38101e402a89a199134219e922e879ade7744da36af29d8a3dcbc0543b4681",
+    "existing_deberta_integrated_file": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/integrated_metric_audit/integrated_dense_hard_query_macro_bootstrap.csv"
+  },
+  "point_estimates": [
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "hard_only",
+      "metric": "roc_auc",
+      "point_estimate": 0.6083009014535714
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "hard_only",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.6079983759642712
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "mixed_u",
+      "metric": "roc_auc",
+      "point_estimate": 0.7364722589822676
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "mixed_u",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.7322675598863174
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "hard_only",
+      "metric": "roc_auc",
+      "point_estimate": 0.6181896278988016
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "hard_only",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.6185423365487673
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "mixed_u",
+      "metric": "roc_auc",
+      "point_estimate": 0.7350946502483087
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "mixed_u",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.730150053590568
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "hard_only",
+      "metric": "roc_auc",
+      "point_estimate": 0.6249320227168004
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "hard_only",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.6251499880009599
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "mixed_u",
+      "metric": "roc_auc",
+      "point_estimate": 0.7271856782774873
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "mixed_u",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.7225581953443725
+    }
+  ],
+  "bootstrap_confidence_intervals": [
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "hard_only",
+      "metric": "roc_auc",
+      "point_estimate": 0.6083009014535714,
+      "ci_lower": 0.5909671817534097,
+      "ci_upper": 0.6247101312271806,
+      "bootstrap_mean": 0.6083204207687911,
+      "bootstrap_std": 0.008601123297456366,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "hard_only",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.6079983759642712,
+      "ci_lower": 0.587594904587901,
+      "ci_upper": 0.6284429557450264,
+      "bootstrap_mean": 0.6079709196102315,
+      "bootstrap_std": 0.010345109611544966,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "mixed_u",
+      "metric": "roc_auc",
+      "point_estimate": 0.7364722589822676,
+      "ci_lower": 0.7216769185776533,
+      "ci_upper": 0.7507961609994792,
+      "bootstrap_mean": 0.7363698452536023,
+      "bootstrap_std": 0.00754693020882693,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "training_condition": "mixed_u",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.7322675598863174,
+      "ci_lower": 0.7139661997563946,
+      "ci_upper": 0.749506191636216,
+      "bootstrap_mean": 0.7319972746650427,
+      "bootstrap_std": 0.009188013200587276,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "hard_only",
+      "metric": "roc_auc",
+      "point_estimate": 0.6181896278988016,
+      "ci_lower": 0.6008862434218007,
+      "ci_upper": 0.6353058200907766,
+      "bootstrap_mean": 0.6181675310463429,
+      "bootstrap_std": 0.008574849772775063,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "hard_only",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.6185423365487673,
+      "ci_lower": 0.5979849946409432,
+      "ci_upper": 0.6378193997856377,
+      "bootstrap_mean": 0.6183835798499465,
+      "bootstrap_std": 0.0102997918389362,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "mixed_u",
+      "metric": "roc_auc",
+      "point_estimate": 0.7350946502483087,
+      "ci_lower": 0.7194743755234126,
+      "ci_upper": 0.75094029735011,
+      "bootstrap_mean": 0.7349480983671246,
+      "bootstrap_std": 0.007902206873356285,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "training_condition": "mixed_u",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.730150053590568,
+      "ci_lower": 0.7116396034297964,
+      "ci_upper": 0.7485002679528402,
+      "bootstrap_mean": 0.7297983386923902,
+      "bootstrap_std": 0.009454813715597251,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "hard_only",
+      "metric": "roc_auc",
+      "point_estimate": 0.6249320227168004,
+      "ci_lower": 0.6065592404875427,
+      "ci_upper": 0.6433080090093873,
+      "bootstrap_mean": 0.6248337566623179,
+      "bootstrap_std": 0.009199205842315438,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "hard_only",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.6251499880009599,
+      "ci_lower": 0.6029931605471562,
+      "ci_upper": 0.6465124790016799,
+      "bootstrap_mean": 0.6250774178065756,
+      "bootstrap_std": 0.011021913691524476,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "mixed_u",
+      "metric": "roc_auc",
+      "point_estimate": 0.7271856782774873,
+      "ci_lower": 0.7101494767027708,
+      "ci_upper": 0.7435144271611619,
+      "bootstrap_mean": 0.7272346255668878,
+      "bootstrap_std": 0.00850581013473383,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "training_condition": "mixed_u",
+      "metric": "pairwise_cited_over_dense_hard",
+      "point_estimate": 0.7225581953443725,
+      "ci_lower": 0.7031899448044157,
+      "ci_upper": 0.7433576313894888,
+      "bootstrap_mean": 0.722791546676266,
+      "bootstrap_std": 0.010221816799411023,
+      "bootstrap_repetitions": 2000
+    }
+  ],
+  "paired_tests": [
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "metric": "roc_auc",
+      "hard_only": 0.6083009014535714,
+      "mixed_u": 0.7364722589822676,
+      "delta_mixed_minus_hard": 0.12817135752869624,
+      "ci_lower": 0.11133432651908422,
+      "ci_upper": 0.144450936126289,
+      "raw_p": 0.0009995002498750624,
+      "bootstrap_repetitions": 2000,
+      "qwen_family_6_holm_p": 0.005997001499250375,
+      "significant_qwen_family_0_05": true,
+      "global_12_holm_p": 0.0119940029985,
+      "significant_global_12_0_05": true
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "primary_all_1642",
+      "number_of_queries": 1642,
+      "metric": "pairwise_cited_over_dense_hard",
+      "hard_only": 0.6079983759642712,
+      "mixed_u": 0.7322675598863174,
+      "delta_mixed_minus_hard": 0.12426918392204622,
+      "ci_lower": 0.10194503654080397,
+      "ci_upper": 0.14525121802679652,
+      "raw_p": 0.0009995002498750624,
+      "bootstrap_repetitions": 2000,
+      "qwen_family_6_holm_p": 0.005997001499250375,
+      "significant_qwen_family_0_05": true,
+      "global_12_holm_p": 0.0119940029985,
+      "significant_global_12_0_05": true
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "metric": "roc_auc",
+      "hard_only": 0.6181896278988016,
+      "mixed_u": 0.7350946502483087,
+      "delta_mixed_minus_hard": 0.11690502234950706,
+      "ci_lower": 0.10068368141355039,
+      "ci_upper": 0.13371162234674994,
+      "raw_p": 0.0009995002498750624,
+      "bootstrap_repetitions": 2000,
+      "qwen_family_6_holm_p": 0.005997001499250375,
+      "significant_qwen_family_0_05": true,
+      "global_12_holm_p": 0.0119940029985,
+      "significant_global_12_0_05": true
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "passage_disjoint_1555",
+      "number_of_queries": 1555,
+      "metric": "pairwise_cited_over_dense_hard",
+      "hard_only": 0.6185423365487673,
+      "mixed_u": 0.730150053590568,
+      "delta_mixed_minus_hard": 0.11160771704180061,
+      "ci_lower": 0.08884244372990358,
+      "ci_upper": 0.13257315112540194,
+      "raw_p": 0.0009995002498750624,
+      "bootstrap_repetitions": 2000,
+      "qwen_family_6_holm_p": 0.005997001499250375,
+      "significant_qwen_family_0_05": true,
+      "global_12_holm_p": 0.0119940029985,
+      "significant_global_12_0_05": true
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "metric": "roc_auc",
+      "hard_only": 0.6249320227168004,
+      "mixed_u": 0.7271856782774873,
+      "delta_mixed_minus_hard": 0.10225365556068688,
+      "ci_lower": 0.08456141629619954,
+      "ci_upper": 0.1212756427649933,
+      "raw_p": 0.0009995002498750624,
+      "bootstrap_repetitions": 2000,
+      "qwen_family_6_holm_p": 0.005997001499250375,
+      "significant_qwen_family_0_05": true,
+      "global_12_holm_p": 0.0119940029985,
+      "significant_global_12_0_05": true
+    },
+    {
+      "model": "Qwen3-Reranker-0.6B",
+      "subset": "document_disjoint_1389",
+      "number_of_queries": 1389,
+      "metric": "pairwise_cited_over_dense_hard",
+      "hard_only": 0.6251499880009599,
+      "mixed_u": 0.7225581953443725,
+      "delta_mixed_minus_hard": 0.0974082073434126,
+      "ci_lower": 0.07325413966882655,
+      "ci_upper": 0.12152717782577391,
+      "raw_p": 0.0009995002498750624,
+      "bootstrap_repetitions": 2000,
+      "qwen_family_6_holm_p": 0.005997001499250375,
+      "significant_qwen_family_0_05": true,
+      "global_12_holm_p": 0.0119940029985,
+      "significant_global_12_0_05": true
+    }
+  ],
+  "output_files": {
+    "point_estimates": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/qwen_dense_hard_point_estimates.csv",
+    "bootstrap_ci": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/qwen_dense_hard_bootstrap_ci.csv",
+    "paired_tests": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/qwen_dense_hard_paired_tests.csv",
+    "metric_inputs": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/qwen_dense_hard_metric_inputs.parquet",
+    "ensemble_dense_hard": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/qwen_dense_hard_ensemble_predictions.parquet",
+    "ensemble_cited": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/qwen_cited_ensemble_predictions.parquet",
+    "global_12_holm": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/table5_global_12_holm_recomputed.csv",
+    "schema_report": "/content/drive/MyDrive/PatentSearchBench/XART-H/experiments/dense_hard_v1/qwen_frozen_evaluation_recomputed/statistical_analysis/existing_integrated_table_schema.json"
+  },
+  "completed_at_utc": "2026-10-09T02:21:51.045884+00:00"
+}
