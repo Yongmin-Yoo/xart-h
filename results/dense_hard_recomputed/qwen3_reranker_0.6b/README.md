@@ -36,3 +36,25 @@ All six Mixed-U improvements have confidence intervals above zero and remain sig
 These canonical predictions replace the earlier provisional Qwen Dense-Hard predictions that were produced with an inconsistent inference pipeline. The earlier predictions must not be used for the paper's final Table 5.
 
 See `artifact_manifest.json` for SHA256 hashes and full artifact provenance.
+
+
+## Statistical reproduction
+
+The canonical statistical evaluation is implemented in:
+
+```text
+evaluation/qwen_dense_hard_statistics_recomputed.py
+```
+
+Set `XARTH_ARTIFACT_ROOT` to the restored experiment-artifact root
+containing the `experiments/` directory:
+
+```bash
+XARTH_ARTIFACT_ROOT=/path/to/XART-H-artifacts \
+python evaluation/qwen_dense_hard_statistics_recomputed.py
+```
+
+The script does not train or load a language model. It recomputes
+three-seed ensembles, query-level bootstrap confidence intervals,
+paired tests, disjoint-sensitivity analyses, and Holm corrections
+from saved predictions.
