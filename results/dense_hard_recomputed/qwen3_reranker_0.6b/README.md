@@ -58,3 +58,24 @@ The script does not train or load a language model. It recomputes
 three-seed ensembles, query-level bootstrap confidence intervals,
 paired tests, disjoint-sensitivity analyses, and Holm corrections
 from saved predictions.
+
+
+## Canonical inference reproduction
+
+The canonical six-adapter Dense-Hard inference is implemented in:
+
+```text
+experiments/run_qwen_dense_hard_recomputed.py
+```
+
+It evaluates Hard-only and Mixed-U adapters for seeds 13, 42,
+and 77 without retraining the adapters.
+
+```bash
+XARTH_ARTIFACT_ROOT=/path/to/XART-H-artifacts \
+python experiments/run_qwen_dense_hard_recomputed.py
+```
+
+The canonical runtime is torch 2.11.0+cu128, CUDA 12.8,
+transformers 5.18.0, peft 0.21.1, BF16, SDPA, maximum
+length 384, and evaluation batch size 36.
