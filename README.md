@@ -111,13 +111,35 @@ Users should cite both PatentMatch and XART-H.
 <!-- XARTH_RESULTS_START -->
 ## Current Results
 
-All headline values below use the frozen XART-H v1.0.1 release. The current results supersede earlier provisional values. Full tables, confidence intervals, and provenance are reported in [`docs/RESULTS.md`](docs/RESULTS.md), with machine-readable outputs under [`results/`](results/).
+All headline values use the frozen XART-H v1.0.1 release. Supervised
+results are means over seeds 13, 42, and 77. Full tables, confidence
+intervals, and machine-readable provenance are reported in
+[`docs/RESULTS.md`](docs/RESULTS.md) and [`results/`](results/).
 
-Among the non-fine-tuned systems, Qwen3-Reranker-0.6B obtains the highest cited-versus-U ROC-AUC at 0.546. The recomputed supervised MiniLM and DeBERTa cited-versus-U ROC-AUC values are 0.478 and 0.474. X-versus-A ROC-AUC remains near chance across the evaluated systems, with the highest value in the main comparison equal to 0.525.
+The corrected supervised Cited-versus-U results are **0.726 ± 0.007**
+ROC-AUC for MiniLM and **0.745 ± 0.014** for DeBERTa. These replace the
+earlier non-reproducible values of 0.478 and 0.474. Evaluation on the
+1,642-query Table 4 matched subset produces 0.731 for MiniLM and 0.746
+for DeBERTa, confirming consistency with the controlled-training
+experiment.
 
-For joint X/A/U prediction, Qwen3-8B direct prediction obtains 0.335 accuracy, while supervised DeBERTa obtains 0.329 accuracy and 0.319 macro-F1. Hierarchical Qwen3-8B prediction increases macro-F1 from 0.249 to 0.291 and cited-versus-U ROC-AUC from 0.529 to 0.576.
+For X-versus-A discrimination, MiniLM obtains 0.530 ± 0.001 ROC-AUC
+and DeBERTa obtains 0.505 ± 0.009. Direct three-way macro-F1 is
+0.409 ± 0.018 for MiniLM and 0.450 ± 0.007 for DeBERTa. Hierarchical
+macro-F1 is 0.415 ± 0.006 and 0.430 ± 0.010, respectively.
 
-The canonical Dense-Hard evaluation shows that Mixed-U training improves Qwen3-Reranker ROC-AUC from 0.608 to 0.736 and pairwise cited-over-Dense-Hard accuracy from 0.608 to 0.732. The gains remain positive on passage-disjoint and document-disjoint subsets. All 12 Dense-Hard model, metric, and subset comparisons remain significant after global Holm correction at adjusted p = 0.011994.
+Among non-fine-tuned systems, Qwen3-Reranker-0.6B obtains 0.546
+Cited-versus-U ROC-AUC. Qwen3-8B obtains 0.335 direct three-way
+accuracy and 0.291 hierarchical macro-F1.
 
-The recomputed temporal analysis finds that direct Qwen3-8B cited-versus-U ROC-AUC decreases from 0.573 in the early period to 0.481 in the late period. The recomputed dependency experiment finds small improvements when dependency control is relaxed, including ROC-AUC from 0.503 to 0.517. These dependency differences are significant after Holm correction at adjusted p = 0.031984.
+The canonical Dense-Hard evaluation shows that Mixed-U training
+improves Qwen3-Reranker ROC-AUC from 0.608 to 0.736 and pairwise
+Cited-over-Dense-Hard accuracy from 0.608 to 0.732. All 12 Dense-Hard
+comparisons remain significant after global Holm correction at
+adjusted p = 0.011994.
+
+The corrected temporal analysis retains the significant Qwen3-8B
+direct decline from 0.573 in the early period to 0.481 in the late
+period and additionally reports temporal results recomputed from the
+corrected supervised logits.
 <!-- XARTH_RESULTS_END -->

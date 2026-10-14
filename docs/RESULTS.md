@@ -13,34 +13,48 @@ These results use XART-H v1.0.1. Supervised values are means over seeds 13, 42, 
 | BM25 | 0.331 | 0.514 |
 | MiniLM bi-encoder | 0.527 | 0.524 |
 | PatentSBERTa | 0.495 | 0.511 |
-| MiniLM cross-encoder | 0.427 | **0.525** |
-| Qwen3-Reranker-0.6B | **0.546** | 0.513 |
+| MiniLM cross-encoder | 0.427 | 0.525 |
+| Qwen3-Reranker-0.6B | 0.546 | 0.513 |
 | Qwen3-8B direct | 0.529 | 0.490 |
-| MiniLM supervised | 0.478 ± 0.006 | 0.493 ± 0.004 |
-| DeBERTa-v3-base supervised | 0.474 ± 0.010 | 0.508 ± 0.010 |
+| MiniLM supervised | **0.726 ± 0.007** | **0.530 ± 0.001** |
+| DeBERTa-v3-base supervised | **0.745 ± 0.014** | 0.505 ± 0.009 |
 
-Qwen3-Reranker-0.6B has the highest cited-versus-U ROC-AUC in the main test comparison at 0.546. TF-IDF and BM25 produce values below 0.5 because BM25-selected Hard-U passages can be more lexically similar to the claim than cited evidence. X-versus-A discrimination remains close to chance for every evaluated system.
+The supervised values were recomputed from the frozen XART-H v1.0.1
+release using seeds 13, 42, and 77. DeBERTa obtains the highest
+Cited-versus-U ROC-AUC in this comparison at 0.745 ± 0.014. The
+previous supervised values of 0.478 and 0.474 were not reproduced by
+the released training pipeline and are superseded by the versioned
+`table3_supervised_v2` outputs.
 
-### Joint classification and ranking
+A bridge evaluation confirms that excluding the 36 queries without an
+eligible Random-U candidate does not explain the earlier discrepancy.
+On the 1,642-query matched subset, MiniLM obtains 0.731 and DeBERTa
+obtains 0.746 Cited-versus-U ROC-AUC.
 
-| Model | Prediction | Accuracy | Macro-F1 | P-C/U | P-X/A |
-|:--|:--|--:|--:|--:|--:|
-| Qwen3-8B | Direct | **0.335** | 0.249 | **0.539** | 0.492 |
-| Qwen3-8B | Hierarchical | 0.347 | 0.291 | 0.570 | 0.496 |
-| MiniLM supervised | Direct | 0.313 ± 0.013 | 0.297 ± 0.011 | 0.460 | **0.506** |
-| MiniLM supervised | Hierarchical | 0.319 ± 0.003 | 0.287 ± 0.001 | 0.475 | 0.495 |
-| DeBERTa supervised | Direct | 0.329 ± 0.005 | **0.319 ± 0.011** | 0.483 | 0.502 |
-| DeBERTa supervised | Hierarchical | 0.325 ± 0.004 | 0.315 ± 0.006 | 0.473 | 0.500 |
+### Joint classification
 
-Qwen3-8B direct prediction has the highest direct three-way accuracy at 0.335. DeBERTa has the highest direct macro-F1 at 0.319. P-X/A remains close to 0.5, consistent with the binary X-versus-A results.
+| Model | Prediction | Accuracy | Macro-F1 |
+|:--|:--|--:|--:|
+| Qwen3-8B | Direct | 0.335 | 0.249 |
+| Qwen3-8B | Hierarchical | 0.347 | 0.291 |
+| MiniLM supervised | Direct | 0.437 ± 0.018 | 0.409 ± 0.018 |
+| MiniLM supervised | Hierarchical | 0.447 ± 0.006 | 0.415 ± 0.006 |
+| DeBERTa supervised | Direct | **0.453 ± 0.007** | **0.450 ± 0.007** |
+| DeBERTa supervised | Hierarchical | 0.443 ± 0.002 | 0.430 ± 0.010 |
+
+The corrected supervised direct and hierarchical results are means
+over seeds 13, 42, and 77. Ranking metrics and seed-level outputs are
+retained in the machine-readable result files.
 
 Machine-readable sources:
 
 - `results/table3_recomputed/table3_baseline_results.json`
 - `results/table3_recomputed/table3_qwen3_reranker_results.json`
 - `results/table3_recomputed/qwen3_8b/qwen3_8b_bootstrap.json`
-- `results/supervised_recomputed/summary.json`
-- `results/supervised_recomputed/bootstrap/supervised_bootstrap_results.json`
+- `results/table3_supervised_v2/summary.json`
+- `results/table3_supervised_v2/all_seed_results.json`
+- `results/table3_supervised_v2/bootstrap/supervised_bootstrap_results.json`
+- `results/table3_supervised_v2/table3_table4_bridge/bridge_summary.csv`
 
 ## Candidate-Construction Sensitivity
 
@@ -95,22 +109,30 @@ Machine-readable source:
 
 ## Temporal Robustness
 
-Temporal robustness is evaluated on 1,678 U-eligible test queries. The early, middle, and late bins contain 568, 534, and 576 queries.
+Temporal robustness is evaluated on 1,678 U-eligible test queries.
+The early, middle, and late bins contain 568, 534, and 576 queries.
+Supervised probabilities are averaged across seeds 13, 42, and 77.
 
-| System | Early C/U AUC | Middle C/U AUC | Late C/U AUC | Late minus Early |
-|:--|--:|--:|--:|--:|
-| MiniLM direct | 0.468 | 0.480 | 0.463 | -0.005 |
-| DeBERTa direct | 0.483 | 0.487 | 0.488 | +0.004 |
-| Qwen3-8B direct | 0.573 | 0.522 | 0.481 | -0.092 |
-| Qwen3-8B hierarchical | 0.556 | 0.588 | 0.579 | +0.023 |
+| System | Early C/U AUC | Middle C/U AUC | Late C/U AUC | Late minus Early | Holm p |
+|:--|--:|--:|--:|--:|--:|
+| MiniLM direct | 0.779 | 0.693 | 0.697 | -0.081 | 0.005997 |
+| MiniLM hierarchical | 0.787 | 0.693 | 0.704 | -0.082 | 0.005997 |
+| DeBERTa direct | 0.809 | 0.717 | 0.743 | -0.066 | 0.005997 |
+| DeBERTa hierarchical | 0.818 | 0.718 | 0.741 | -0.077 | 0.005997 |
+| Qwen3-8B direct | 0.573 | 0.522 | 0.481 | -0.092 | 0.005997 |
+| Qwen3-8B hierarchical | 0.556 | 0.588 | 0.579 | +0.023 | not significant |
 
-Direct Qwen3-8B exhibits a significant early-to-late reduction in cited-versus-U ROC-AUC. The difference is -0.0916 with a 95% confidence interval of [-0.1280, -0.0532] and Holm-adjusted p = 0.005997. Its P-C/U also decreases from 0.589 to 0.492. The corresponding temporal differences for MiniLM, DeBERTa, and hierarchical Qwen3-8B are not significant after Holm correction.
+The supervised rows were recomputed from the corrected Table 3 v2
+logits. Qwen3-8B values are unchanged. Statistical significance is
+determined using 2,000 query-level bootstrap replicates and Holm
+correction across the six temporal metrics within each system.
 
 Machine-readable sources:
 
+- `results/temporal_supervised_v2/temporal_robustness_results.json`
+- `results/temporal_supervised_v2/temporal_bin_results.csv`
+- `results/temporal_supervised_v2/temporal_early_late_tests.csv`
 - `results/temporal_recomputed/temporal_robustness_results.json`
-- `results/temporal_recomputed/temporal_bin_results.csv`
-- `results/temporal_recomputed/temporal_early_late_tests.csv`
 
 ## Dependency Relaxation
 

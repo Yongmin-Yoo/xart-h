@@ -1,0 +1,3 @@
+model,table3_full_auc,table3_matched_auc,matched_minus_full,old_table4_reference_auc,matched_minus_old_table4_reference,subset_consistent,table4_range_consistent
+minilm,0.7257317499734782,0.7308427583652454,0.005111008391767147,0.74,-0.00915724163475462,True,True
+deberta,0.7454565026499496,0.7461608760655891,0.0007043734156395587,0.769,-0.0228391239344109,True,True

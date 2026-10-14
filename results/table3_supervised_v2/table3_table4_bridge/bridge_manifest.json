@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-10-14T18:29:24.191797+00:00",
+  "dataset": "yongminyoo91/xart-h",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "models": [
+    "minilm",
+    "deberta"
+  ],
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "positive_class": "cited (A or X)",
+  "negative_class": "U",
+  "query_normalization": "lowercase, collapse whitespace, strip",
+  "full_scope": {
+    "queries": 1678,
+    "rows": 5056
+  },
+  "matched_scope": {
+    "queries": 1642,
+    "rows": 4948,
+    "source": "results/random_u/generated/test_random_u.parquet"
+  },
+  "excluded_scope": {
+    "queries": 36,
+    "rows": 108
+  },
+  "artifacts": [
+    {
+      "model": "minilm",
+      "seed": 13,
+      "path": "results/table3_supervised_v2/minilm_cited_vs_u_seed13_test.npz",
+      "sha256": "5f7867eb1d1ab831f8b45dfb2c2038a08e86546938d4f2bdce7083b4fa16e887",
+      "shape": [
+        5316,
+        2
+      ]
+    },
+    {
+      "model": "minilm",
+      "seed": 42,
+      "path": "results/table3_supervised_v2/minilm_cited_vs_u_seed42_test.npz",
+      "sha256": "2d771ddf74bda9a0cc4d641819d2de3cc14f63eb4d353ef8f0c9f9f54f69e6b1",
+      "shape": [
+        5316,
+        2
+      ]
+    },
+    {
+      "model": "minilm",
+      "seed": 77,
+      "path": "results/table3_supervised_v2/minilm_cited_vs_u_seed77_test.npz",
+      "sha256": "0b847b16a8fbef407475ee8c7adf0ad3927859d5a45bb991119a3a5c34eeb6fe",
+      "shape": [
+        5316,
+        2
+      ]
+    },
+    {
+      "model": "deberta",
+      "seed": 13,
+      "path": "results/table3_supervised_v2/deberta_cited_vs_u_seed13_test.npz",
+      "sha256": "d7b1c0a483cdb99db0fafcb7e11dfdada3ff90b6a85cea499a70be5a496961b7",
+      "shape": [
+        5316,
+        2
+      ]
+    },
+    {
+      "model": "deberta",
+      "seed": 42,
+      "path": "results/table3_supervised_v2/deberta_cited_vs_u_seed42_test.npz",
+      "sha256": "708c4dc272d0f631f60d64bb91d4324fdb7996a8b0f90a59c06ad26458689d2a",
+      "shape": [
+        5316,
+        2
+      ]
+    },
+    {
+      "model": "deberta",
+      "seed": 77,
+      "path": "results/table3_supervised_v2/deberta_cited_vs_u_seed77_test.npz",
+      "sha256": "229dbb6d86c8d1b2a9295226ffcc1d67c63ad6b031d7540c570d1975ce6eb9e1",
+      "shape": [
+        5316,
+        2
+      ]
+    }
+  ],
+  "outputs": [
+    "results/table3_supervised_v2/table3_table4_bridge/bridge_metrics_per_seed.csv",
+    "results/table3_supervised_v2/table3_table4_bridge/bridge_summary.csv",
+    "results/table3_supervised_v2/table3_table4_bridge/bridge_comparison.csv",
+    "results/table3_supervised_v2/table3_table4_bridge/bridge_query_assignments.csv",
+    "results/table3_supervised_v2/table3_table4_bridge/bridge_manifest.json"
+  ],
+  "conclusion": "The 36-query exclusion does not explain the earlier Table 3 discrepancy. Corrected Table 3 results remain consistent with the Table 4 Hard-only range.",
+  "committed": false,
+  "pushed": false
+}
