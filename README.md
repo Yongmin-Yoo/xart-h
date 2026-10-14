@@ -17,14 +17,7 @@ https://huggingface.co/datasets/yongminyoo91/xart-h
 
 https://huggingface.co/datasets/yongminyoo91/xart-h/tree/v1.0.1
 
-The Google Drive copy is retained only as an owner-side backup:
-
-```text
-/content/drive/MyDrive/PatentSearchBench/external/PatentMatch/releases/XART-H-v1.0
-```
-
-The Google Drive path is not a public download URL. Experiments and
-external users should use the Hugging Face release.
+Experiments and external users should use the frozen Hugging Face release. Owner-side working copies are not public download locations.
 
 ## Loading
 
@@ -118,16 +111,13 @@ Users should cite both PatentMatch and XART-H.
 <!-- XARTH_RESULTS_START -->
 ## Current Results
 
-Current experimental results are available in
-[`docs/RESULTS.md`](docs/RESULTS.md), with machine-readable
-files under [`results/`](results/).
+All headline values below use the frozen XART-H v1.0.1 release. The current results supersede earlier provisional values. Full tables, confidence intervals, and provenance are reported in [`docs/RESULTS.md`](docs/RESULTS.md), with machine-readable outputs under [`results/`](results/).
 
-The strongest supervised cited-versus-U result is obtained by
-DeBERTa-v3-base with a test ROC-AUC of 0.746. X-versus-A
-performance remains close to chance across the evaluated model
-families. Qwen3-8B benefits from hierarchical prompting, but
-remains below the task-specific reranker and supervised DeBERTa.
+Among the non-fine-tuned systems, Qwen3-Reranker-0.6B obtains the highest cited-versus-U ROC-AUC at 0.546. The recomputed supervised MiniLM and DeBERTa cited-versus-U ROC-AUC values are 0.478 and 0.474. X-versus-A ROC-AUC remains near chance across the evaluated systems, with the highest value in the main comparison equal to 0.525.
 
-These results use the frozen Hugging Face release
-[`v1.0.1`](https://huggingface.co/datasets/yongminyoo91/xart-h/tree/v1.0.1).
+For joint X/A/U prediction, Qwen3-8B direct prediction obtains 0.335 accuracy, while supervised DeBERTa obtains 0.329 accuracy and 0.319 macro-F1. Hierarchical Qwen3-8B prediction increases macro-F1 from 0.249 to 0.291 and cited-versus-U ROC-AUC from 0.529 to 0.576.
+
+The canonical Dense-Hard evaluation shows that Mixed-U training improves Qwen3-Reranker ROC-AUC from 0.608 to 0.736 and pairwise cited-over-Dense-Hard accuracy from 0.608 to 0.732. The gains remain positive on passage-disjoint and document-disjoint subsets. All 12 Dense-Hard model, metric, and subset comparisons remain significant after global Holm correction at adjusted p = 0.011994.
+
+The recomputed temporal analysis finds that direct Qwen3-8B cited-versus-U ROC-AUC decreases from 0.573 in the early period to 0.481 in the late period. The recomputed dependency experiment finds small improvements when dependency control is relaxed, including ROC-AUC from 0.503 to 0.517. These dependency differences are significant after Holm correction at adjusted p = 0.031984.
 <!-- XARTH_RESULTS_END -->
