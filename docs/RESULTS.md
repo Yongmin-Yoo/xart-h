@@ -1,6 +1,6 @@
 # Current Benchmark Results
 
-These results use XART-H v1.0.1. Supervised values are means over seeds 13, 42, and 77. Random scoring uses NumPy `default_rng(42)`. The values in this document supersede all earlier provisional results.
+These results use PatScout v1.0.1. Supervised values are means over seeds 13, 42, and 77. Random scoring uses NumPy `default_rng(42)`. The values in this document supersede all earlier provisional results.
 
 ## Main Test Results
 
@@ -19,7 +19,7 @@ These results use XART-H v1.0.1. Supervised values are means over seeds 13, 42, 
 | MiniLM supervised | **0.726 ± 0.007** | **0.530 ± 0.001** |
 | DeBERTa-v3-base supervised | **0.745 ± 0.014** | 0.505 ± 0.009 |
 
-The supervised values were recomputed from the frozen XART-H v1.0.1
+The supervised values were recomputed from the frozen PatScout v1.0.1
 release using seeds 13, 42, and 77. DeBERTa obtains the highest
 Cited-versus-U ROC-AUC in this comparison at 0.745 ± 0.014. The
 previous supervised values of 0.478 and 0.474 were not reproduced by
@@ -161,4 +161,4 @@ Confidence intervals and paired comparisons use 2,000 bootstrap replicates with 
 
 ## Versioning
 
-These results use dataset revision `4a3ad685a395252c66932c49e98a00728089b614`, corresponding to the frozen XART-H v1.0.1 release. Corrections to experimental outputs are recorded through versioned result directories and Git history.
+These results use dataset revision `4a3ad685a395252c66932c49e98a00728089b614`, corresponding to the frozen PatScout v1.0.1 release. Corrections to experimental outputs are recorded through versioned result directories and Git history.

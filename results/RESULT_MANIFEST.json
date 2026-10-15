@@ -1,4 +1,5 @@
 {
+  "benchmark_name": "PatScout",
   "code_repair_status": {
     "missing": [
       "experiments/run_lexical_baselines.py",
@@ -87,12 +88,12 @@
       "sha256": "5b394182d2dc09c0c545859528c9eaa75f19c2179f04958ddb9adda3ea61b7e6"
     },
     "docs/RESULTS.md": {
-      "bytes": 6929,
-      "sha256": "85df021d645713a60805647360f751ce23657e178b1aac9621c420030852fec6"
+      "bytes": 9195,
+      "sha256": "734fb0c25b1ab8f21fac2345a9d20b951c18dce6cdd51f0dc49418135cd803c5"
     },
     "evaluation/evaluate_random_vs_hard_u.py": {
-      "bytes": 33094,
-      "sha256": "ff94cb939fb0b721d0feb9f30d1423cb3664a431311b2a8918c3f9d617b82342"
+      "bytes": 33511,
+      "sha256": "4cad7a9362e320610f574c12b0acbf4cca244bc0188149d2f695ac6f8efc57de"
     },
     "evaluation/family_holm.py": {
       "bytes": 3640,
@@ -115,16 +116,16 @@
       "sha256": "b6d5fc0fbea5109b58abcaa723108da773abe0e34784af227ba6bf638c7bd834"
     },
     "experiments/run_qwen3_8b.py": {
-      "bytes": 21058,
-      "sha256": "ab1b0a8119a73b01b4153ac564012bfef7a79221f19a7449508bb11579e91679"
+      "bytes": 21065,
+      "sha256": "d9805f0f515a2c53e11b2985425271c47ebfb0ef8ed3f85203cbaab9abcf0e2b"
     },
     "experiments/run_temporal_robustness.py": {
-      "bytes": 30955,
-      "sha256": "c95938a1954dc74edd2aa81943fe1e7e076b652b1a46f273ca9cbdf9ebd1632a"
+      "bytes": 33721,
+      "sha256": "b1aa76f89574a75cde1d7ab71f2566fa8b74d54b3c62c2e82693abfdbce830ad"
     },
     "experiments/train_supervised.py": {
-      "bytes": 25204,
-      "sha256": "6715642ae98dec0a12c80584b6c782f2e32dac512126eb39f6c75b54bc9d137d"
+      "bytes": 25200,
+      "sha256": "f6aada8b51288e6fe047c8dcfde287103076cc5450855f0c83ab4ef06a0706fb"
     },
     "results/dependency/dependency_model_config.json": {
       "bytes": 1968,
@@ -223,34 +224,35 @@
       "sha256": "091c9f82db43b89ad4da2a52b5ec5195f661146ddb34947dffa53899aa9e1ab9"
     },
     "results/temporal/temporal_bin_results.csv": {
-      "bytes": 10432,
-      "sha256": "9f2a99758bd145d2271fcc48e1d8e68ae51da12a4ce15a59bd0821a8bcf4c913"
+      "bytes": 10427,
+      "sha256": "e1a8f8796d988b849d10b675aefe1afe76781f2f2951e749e0c588e15fa7a4bf"
     },
     "results/temporal/temporal_bin_summary.csv": {
       "bytes": 203,
       "sha256": "c354dfc1df53bc0ba892d4d27e8d551f74dda10eca8b3ce94f575cbe427b6da3"
     },
     "results/temporal/temporal_early_late_tests.csv": {
-      "bytes": 5584,
-      "sha256": "5ff9fc2d928a5b7ab375a97297b8e44d90be4c3641cbf920eab266743d8c62d6"
+      "bytes": 5575,
+      "sha256": "eb055f1e7e3e75243f099de3b65f6dfbf8583e7ee28d241c195f0a466bd8130a"
     },
     "results/temporal/temporal_query_assignments.csv": {
-      "bytes": 182943,
-      "sha256": "dcfb89a8fd3cf3a4b2e3975be1bde5aef1ecc0fa6fb47cacf4231b19591dbc04"
+      "bytes": 172854,
+      "sha256": "8f04ce9ce723a9b7b1bd7b83d274d62e6323f1d53e473ca8cb5d1d8f3d1503c1"
     },
     "results/temporal/temporal_robustness_results.json": {
-      "bytes": 26994,
-      "sha256": "8d8282b3277bb32bb998273cd05ec0a97158e60d76bd0e272ff749100c2d6a24"
+      "bytes": 26843,
+      "sha256": "eaffaaac29c73f322b9d6ea08181b76073ce298fbb42253e73dadc5ee3bbebab"
     },
     "results/zero_shot/zero_shot_results.json": {
       "bytes": 2551,
       "sha256": "ef34c9369539a64a2e5a5c85c53d2788d929abbab8f0934f88cf44503296722c"
     },
     "scripts/generate_random_u.py": {
-      "bytes": 28011,
-      "sha256": "a5fe34c6213d214358dfd4cc635bb428d538465e6a0ba05e670d69eaf43e8e66"
+      "bytes": 27082,
+      "sha256": "f43a142167e8ed77459c8b17f260fe048fb3db72d565dd2b974ed76cb4ec931d"
     }
   },
+  "paper_title": "PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search",
   "pending_analyses": [
     "CPC subgroup analysis",
     "length and lexical-overlap analysis",
@@ -277,8 +279,8 @@
     ],
     "files": {
       "evaluation/evaluate_random_vs_hard_u.py": {
-        "bytes": 33094,
-        "sha256": "ff94cb939fb0b721d0feb9f30d1423cb3664a431311b2a8918c3f9d617b82342"
+        "bytes": 33511,
+        "sha256": "4cad7a9362e320610f574c12b0acbf4cca244bc0188149d2f695ac6f8efc57de"
       },
       "results/random_u/random_u_generation_report.json": {
         "bytes": 3888,
@@ -293,8 +295,8 @@
         "sha256": "ac863c51444f049596fd47c76cbfb5f13b746133a36d6ec63c89d00cb42a4e36"
       },
       "scripts/generate_random_u.py": {
-        "bytes": 28011,
-        "sha256": "a5fe34c6213d214358dfd4cc635bb428d538465e6a0ba05e670d69eaf43e8e66"
+        "bytes": 27082,
+        "sha256": "f43a142167e8ed77459c8b17f260fe048fb3db72d565dd2b974ed76cb4ec931d"
       }
     },
     "holm_adjusted_p_value": 0.002999,
@@ -317,16 +319,54 @@
       "ndcg"
     ]
   },
+  "reproducibility_package": {
+    "manifest": "reproducibility/PUBLICATION_MANIFEST.json",
+    "path": "reproducibility",
+    "status": "public",
+    "table4_public_reproduction": "verified",
+    "table5_public_reproduction": "verified"
+  },
   "status": "intermediate experimental snapshot",
   "temporal_robustness": {
+    "all_test_normalized_queries": 1808,
+    "all_test_rows": 5316,
+    "artifact_hashes": {
+      "experiments/run_temporal_robustness.py": {
+        "bytes": 33721,
+        "sha256": "b1aa76f89574a75cde1d7ab71f2566fa8b74d54b3c62c2e82693abfdbce830ad"
+      },
+      "results/temporal/temporal_bin_results.csv": {
+        "bytes": 10427,
+        "sha256": "e1a8f8796d988b849d10b675aefe1afe76781f2f2951e749e0c588e15fa7a4bf"
+      },
+      "results/temporal/temporal_bin_summary.csv": {
+        "bytes": 203,
+        "sha256": "c354dfc1df53bc0ba892d4d27e8d551f74dda10eca8b3ce94f575cbe427b6da3"
+      },
+      "results/temporal/temporal_early_late_tests.csv": {
+        "bytes": 5575,
+        "sha256": "eb055f1e7e3e75243f099de3b65f6dfbf8583e7ee28d241c195f0a466bd8130a"
+      },
+      "results/temporal/temporal_query_assignments.csv": {
+        "bytes": 172854,
+        "sha256": "8f04ce9ce723a9b7b1bd7b83d274d62e6323f1d53e473ca8cb5d1d8f3d1503c1"
+      },
+      "results/temporal/temporal_robustness_results.json": {
+        "bytes": 26843,
+        "sha256": "eaffaaac29c73f322b9d6ea08181b76073ce298fbb42253e73dadc5ee3bbebab"
+      }
+    },
     "bootstrap_repetitions": 2000,
     "bootstrap_seed": 42,
+    "bootstrap_unit": "lowercased whitespace-normalized claim query",
     "confidence_level": 0.95,
     "dataset_revision": "v1.0.1",
+    "date_column": "_date",
     "excluded_artifacts": [
       "prediction caches",
       "model checkpoints"
     ],
+    "excluded_queries_without_u": 130,
     "median_days_since_training": {
       "early": 266,
       "late": 427,
@@ -348,56 +388,25 @@
     "temporal_anchor": "date of the unique U row",
     "temporal_bins": {
       "early": {
+        "median_days_since_training": 266.0,
         "queries": 568,
-        "rows": 1726,
-        "median_days_since_training": 266.0
-      },
-      "middle": {
-        "queries": 534,
-        "rows": 1602,
-        "median_days_since_training": 336.0
+        "rows": 1726
       },
       "late": {
+        "median_days_since_training": 427.0,
         "queries": 576,
-        "rows": 1728,
-        "median_days_since_training": 427.0
+        "rows": 1728
+      },
+      "middle": {
+        "median_days_since_training": 336.0,
+        "queries": 534,
+        "rows": 1602
       }
     },
     "temporal_unit": "lowercased whitespace-normalized claim query",
-    "updated_at_utc": "2026-09-20T08:05:44.225725+00:00",
-    "all_test_rows": 5316,
-    "all_test_normalized_queries": 1808,
     "u_eligible_queries": 1678,
-    "excluded_queries_without_u": 130,
-    "bootstrap_unit": "lowercased whitespace-normalized claim query",
-    "date_column": "_date",
-    "updated_utc": "2026-09-20T23:08:16.108358+00:00",
-    "artifact_hashes": {
-      "experiments/run_temporal_robustness.py": {
-        "bytes": 33721,
-        "sha256": "b1aa76f89574a75cde1d7ab71f2566fa8b74d54b3c62c2e82693abfdbce830ad"
-      },
-      "results/temporal/temporal_robustness_results.json": {
-        "bytes": 26843,
-        "sha256": "eaffaaac29c73f322b9d6ea08181b76073ce298fbb42253e73dadc5ee3bbebab"
-      },
-      "results/temporal/temporal_bin_results.csv": {
-        "bytes": 10427,
-        "sha256": "e1a8f8796d988b849d10b675aefe1afe76781f2f2951e749e0c588e15fa7a4bf"
-      },
-      "results/temporal/temporal_early_late_tests.csv": {
-        "bytes": 5575,
-        "sha256": "eb055f1e7e3e75243f099de3b65f6dfbf8583e7ee28d241c195f0a466bd8130a"
-      },
-      "results/temporal/temporal_query_assignments.csv": {
-        "bytes": 172854,
-        "sha256": "8f04ce9ce723a9b7b1bd7b83d274d62e6323f1d53e473ca8cb5d1d8f3d1503c1"
-      },
-      "results/temporal/temporal_bin_summary.csv": {
-        "bytes": 203,
-        "sha256": "c354dfc1df53bc0ba892d4d27e8d551f74dda10eca8b3ce94f575cbe427b6da3"
-      }
-    }
+    "updated_at_utc": "2026-09-20T08:05:44.225725+00:00",
+    "updated_utc": "2026-09-20T23:08:16.108358+00:00"
   },
-  "updated_utc": "2026-09-20T08:07:39.134329+00:00"
+  "updated_utc": "2026-10-15T07:06:42.097426+00:00"
 }

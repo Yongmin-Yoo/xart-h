@@ -1,9 +1,6 @@
 <div align="center">
 
-# PatScout
-
-### A Temporal and Dependency-Controlled Benchmark for Patent Prior-Art Search
-
+# PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search
 [![Dataset](https://img.shields.io/badge/Dataset-PatScout-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/yongminyoo91/xart-h)
 [![Release](https://img.shields.io/badge/Release-v1.0.1-2EA44F?style=for-the-badge)](https://huggingface.co/datasets/yongminyoo91/xart-h/tree/v1.0.1)
 [![Results](https://img.shields.io/badge/Results-Reproducible-6F42C1?style=for-the-badge)](docs/RESULTS.md)
@@ -407,8 +404,7 @@ U candidates, controlled evaluation tasks, and leakage audits.
 This repository hosts the dataset release, evaluation code, and experimental
 artifacts for:
 
-> **PatScout: A Temporal and Dependency-Controlled Benchmark for Patent
-> Prior-Art Search**
+> **PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search**
 
 Final citation metadata will be added after publication.
 
