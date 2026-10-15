@@ -1,0 +1,56 @@
+{
+  "status": "COMPLETE",
+  "experiment_design_statement": "This controlled follow-up plan was fixed before the present execution, but after observing the earlier test failure. It is not described as an independently preregistered validation.",
+  "project_root": "${PATSCOUT_SOURCE_ROOT}",
+  "control_root": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control",
+  "model_root": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/models",
+  "matched_path": "${PATSCOUT_SOURCE_ROOT}/experiments/random_u_v1/hard_vs_random/random_vs_hard_scored_pairs.parquet",
+  "evaluation_root": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation",
+  "model_seeds": [
+    13,
+    42,
+    77
+  ],
+  "training_conditions": [
+    "hard_only",
+    "mixed_u"
+  ],
+  "evaluation_conditions": [
+    "hard_u",
+    "random_u"
+  ],
+  "model_input": {
+    "text_a_column": "text",
+    "text_b_column": "text_b",
+    "paired_tokenization": true,
+    "max_length": 384
+  },
+  "software": {
+    "python": "3.13.15",
+    "pytorch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "transformers": "4.57.3",
+    "tokenizers": "0.22.1"
+  },
+  "hardware": {
+    "gpu": "NVIDIA L4",
+    "bf16": true,
+    "tf32": true,
+    "attention_implementation": "eager"
+  },
+  "bootstrap": {
+    "repetitions": 2000,
+    "seed": 20260922,
+    "ci_level": 0.95,
+    "resampling_unit": "query"
+  },
+  "multiple_testing": {
+    "method": "Holm",
+    "family": "eight fixed ensemble comparisons",
+    "comparison_count": 8
+  },
+  "row_id_status": "DERIVED_CONTENT_ROW_ID",
+  "cited_match_tolerance": 1e-05,
+  "dense_u_generated": false,
+  "official_benchmark_modified": false
+}

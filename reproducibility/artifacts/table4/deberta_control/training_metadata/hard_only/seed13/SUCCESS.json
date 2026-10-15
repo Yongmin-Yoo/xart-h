@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "created_utc": "2026-09-22T06:03:54.893616+00:00",
+  "condition": "hard_only",
+  "seed": 13,
+  "epochs": 2,
+  "final_epoch_model_saved": true,
+  "manifest_fingerprint": "39517cfb2135e98068ad7a13eb7bfd9e4456e139e919bd92e8b15192dde8d0c7",
+  "final_train_loss": 0.5089698985429958,
+  "elapsed_minutes": 10.545597298940022,
+  "model_directory": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/models/hard_only/seed13",
+  "model_weight_file": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/models/hard_only/seed13/model.safetensors",
+  "model_weight_sha256": "fab76a3dc3ac706f48a0c76c2097526b36bbbfede4490e3b5dc67afb2d16f150",
+  "model_directory_size_bytes": 750074954
+}

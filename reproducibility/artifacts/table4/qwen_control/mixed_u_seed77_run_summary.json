@@ -1,0 +1,16 @@
+{
+  "training_condition": "mixed_u",
+  "seed": 77,
+  "train_runtime_seconds": 3699.715151786804,
+  "train_micro_batch": 12,
+  "gradient_accumulation": 21,
+  "effective_batch": 252,
+  "peak_train_vram_gib": 11.820538520812988,
+  "peak_train_vram_ratio": 0.5364607715160244,
+  "hard_u_roc_auc": 0.7884339771264441,
+  "hard_u_pairwise": 0.7919610231425092,
+  "random_u_roc_auc": 0.8409738172134525,
+  "random_u_pairwise": 0.8496650426309379,
+  "cited_loader_max_error": 0.0,
+  "prediction_sha256": "7611a41db80089de74522ce0947193686411d38bcccd469738d5c0d73e442527"
+}

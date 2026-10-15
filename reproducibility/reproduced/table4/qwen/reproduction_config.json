@@ -1,0 +1,16 @@
+{
+  "model": "qwen",
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "ensemble_method": "mean cited probability across seeds",
+  "matched_queries": 1642,
+  "bootstrap_unit": "query_id",
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 42,
+  "confidence_interval": "95% percentile bootstrap",
+  "p_value": "two-sided bootstrap-tail with +1 correction",
+  "holm_family_size": 8
+}

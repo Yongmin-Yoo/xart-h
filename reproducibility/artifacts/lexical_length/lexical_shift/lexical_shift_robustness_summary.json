@@ -1,0 +1,34 @@
+{
+  "gpu_required": false,
+  "source_directory": "${PATSCOUT_SOURCE_ROOT}/audits/xa_corrected_three_seed_temporal",
+  "output_directory": "${PATSCOUT_SOURCE_ROOT}/audits/xa_lexical_shift_robustness",
+  "connected_group_summary": {
+    "rows": 24176,
+    "connected_groups": 4508,
+    "singleton_group_rate": 0.0,
+    "groups_with_multiple_rows": 4508,
+    "largest_group_rows": 80,
+    "detected_document_metadata_columns": ""
+  },
+  "comparisons": [
+    {
+      "comparison": "train_vs_validation",
+      "raw_pair_random_auc": 0.9756967515351533,
+      "raw_pair_group_auc": 0.7793622471886937,
+      "number_masked_pair_group_auc": 0.7822081405170044,
+      "content_normalized_pair_group_auc": 0.7786708771151225,
+      "content_normalized_claim_group_auc": 0.7892613581729871,
+      "content_normalized_passage_group_auc": 0.6857619655969924
+    },
+    {
+      "comparison": "train_vs_test",
+      "raw_pair_random_auc": 0.9701821830534703,
+      "raw_pair_group_auc": 0.8080204049291634,
+      "number_masked_pair_group_auc": 0.8055704125310509,
+      "content_normalized_pair_group_auc": 0.8059901036532399,
+      "content_normalized_claim_group_auc": 0.802803991803882,
+      "content_normalized_passage_group_auc": 0.7149131638377367
+    }
+  ],
+  "final_verdict": "POSSIBLE INTERNAL DOCUMENT LEAKAGE IN THE ORIGINAL SPLIT CLASSIFIER: group-aware evaluation substantially reduces separability."
+}

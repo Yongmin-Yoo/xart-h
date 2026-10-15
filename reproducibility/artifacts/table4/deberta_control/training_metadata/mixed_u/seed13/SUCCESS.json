@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "created_utc": "2026-09-22T06:35:32.838567+00:00",
+  "condition": "mixed_u",
+  "seed": 13,
+  "epochs": 2,
+  "final_epoch_model_saved": true,
+  "manifest_fingerprint": "df29c862de2a8139f1a4b87efb5a02d734319c4ce10425c43acc10b38f14af38",
+  "final_train_loss": 0.5820062310846003,
+  "elapsed_minutes": 10.313608002662658,
+  "model_directory": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/models/mixed_u/seed13",
+  "model_weight_file": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/models/mixed_u/seed13/model.safetensors",
+  "model_weight_sha256": "e9ddb91b594985bb418cd986a77db9e5604fa6306a5b05ae7a131088241cd747",
+  "model_directory_size_bytes": 750049165
+}

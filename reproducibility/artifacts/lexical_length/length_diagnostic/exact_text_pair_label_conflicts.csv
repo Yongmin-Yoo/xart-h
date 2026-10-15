@@ -1,0 +1,1 @@
+row_id,label,claim_text,passage_text,prob_X_seed13,query_id,prob_X_seed42,prob_X_seed77,ensemble_prob_X,split,claim_tokens,passage_tokens,pair_total_tokens,tokens_over_limit,is_truncated,claim_words,passage_words,lexical_jaccard,normalized_claim,normalized_passage,normalized_pair_hash

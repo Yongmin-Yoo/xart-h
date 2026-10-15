@@ -1,0 +1,86 @@
+{
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "adaptation": "BF16 LoRA",
+  "backbone_quantization": null,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "lora_target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "dataset": "yongminyoo91/xart-h",
+  "dataset_revision": "4a3ad685a395252c66932c49e98a00728089b614",
+  "seeds_trained_this_run": [
+    13,
+    77
+  ],
+  "required_ensemble_seeds": [
+    13,
+    42,
+    77
+  ],
+  "available_seeds_by_condition": {
+    "hard_only": [
+      13,
+      42,
+      77
+    ],
+    "mixed_u": [
+      13,
+      42,
+      77
+    ]
+  },
+  "epochs": 2,
+  "learning_rate": 0.0001,
+  "maximum_length": 384,
+  "truncation": "balanced claim-passage truncation after reserving native reranker prompt tokens",
+  "auto_tune_batch_size": false,
+  "train_micro_batch_size": 12,
+  "gradient_accumulation": 21,
+  "effective_batch_size": 252,
+  "initial_eval_batch_size": 36,
+  "minimum_eval_batch_size": 8,
+  "precision": "BF16 LoRA",
+  "compute_dtype": "torch.bfloat16",
+  "gradient_checkpointing": false,
+  "optimizer": "adamw_torch_fused",
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01,
+  "maximum_gradient_norm": 1.0,
+  "learning_rate_scheduler": "linear",
+  "attention_implementation": "sdpa",
+  "tf32": true,
+  "group_by_length": true,
+  "training_queries": 8246,
+  "cited_training_rows": 16617,
+  "u_training_rows": 8246,
+  "total_training_rows": 24863,
+  "matched_test_queries": 1642,
+  "cited_test_rows": 3306,
+  "hard_u_test_rows": 1642,
+  "random_u_test_rows": 1642,
+  "instruction": "Given a patent claim, determine whether the prior-art passage is examiner-cited evidence for that claim",
+  "false_token_id": 2152,
+  "true_token_id": 9693,
+  "gpu": "NVIDIA L4",
+  "gpu_total_memory_gib": 22.0343017578125,
+  "cuda_version": "12.8",
+  "torch_version": "2.11.0+cu128",
+  "manifest_sha256": {
+    "hard_only_train_manifest": "a7c9c0bdd6229f0330f6860dc4253ce18b34f06d97a6a2c6b8b3642321d63a04",
+    "mixed_u_train_manifest": "dddf0d89ec4ee5024742de315427061d92e22b3d3b1e141dcd7f90de354c8006",
+    "mixed_u_query_assignment": "48709f391167fd2956685b8ccaced0b78917c7cc3d77fabe3e5d68a250c9eb09",
+    "test_random_u": "ce35e36c0342091dd94ea3ef49f9f50a262428e1e45bc5f0b7e23c5857405d5b"
+  },
+  "all_six_predictions_exist": true,
+  "all_six_adapters_exist": true,
+  "three_seed_ensemble_complete": true
+}

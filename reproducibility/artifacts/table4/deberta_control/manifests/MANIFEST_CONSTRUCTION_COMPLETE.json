@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-22T05:49:24.900442+00:00",
+  "status": "READY_FOR_CONTROLLED_TRAINING",
+  "training_performed": false,
+  "hard_only_rows": 24863,
+  "mixed_u_rows": 24863,
+  "common_queries": 8246,
+  "cited_rows": 16617,
+  "u_rows": 8246,
+  "mixed_hard_u": 4123,
+  "mixed_random_u": 4123,
+  "hard_manifest_fingerprint": "39517cfb2135e98068ad7a13eb7bfd9e4456e139e919bd92e8b15192dde8d0c7",
+  "mixed_manifest_fingerprint": "df29c862de2a8139f1a4b87efb5a02d734319c4ce10425c43acc10b38f14af38",
+  "assignment_fingerprint": "f2699b2d50861523a1644c2593b426c39010dd3996b39c7cbe361320ac0a5249",
+  "q50_fingerprint": "81926e9e11a9392fc056673d5ca4c3028253d539b32eb5ddaadcb47bdab4e9ea",
+  "q50_ensemble_auc": 0.6828933808957589,
+  "q50_ensemble_pairwise": 0.696551724137931,
+  "elapsed_minutes": 0.37963250080744426
+}

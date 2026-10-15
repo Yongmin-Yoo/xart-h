@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED_STAGE1_Q50_STATISTICS_COMPLETE",
+  "historical_unverified_logits_used": false,
+  "stage1_prediction_source": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/integrity_audit/reproduced_predictions_with_row_ids.parquet",
+  "stage1_baseline_source": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/test_surface_and_deberta_scores.parquet",
+  "selected_position_mapping": "canonical_to_official_test_position",
+  "mapping_verified_by_q50_probabilities": true,
+  "stage1_rows": 5056,
+  "stage1_queries": 1678,
+  "stage1_row_fingerprint": "99cc154a4ae217a326a012b33ce09efeeae1e7186a0ab3e3fd913d361100479e",
+  "q50_verification": {
+    "status": "PASSED",
+    "source_row_id_match": true,
+    "query_key_match": true,
+    "task_label_match": true,
+    "pair_manifest_membership_match": true,
+    "pair_count": 870,
+    "row_count": 1740,
+    "q50_probability_mean_difference": 0.0,
+    "q50_probability_max_difference": 0.0,
+    "canonical_test_position_matches_official": true,
+    "canonical_test_position_matches_u_eligible": false,
+    "source_row_fingerprint": "b1d94028bd4c66d55f78c0eb76e4d78c50823a7880f0c8b5ae2946db7b05cf7f"
+  },
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 42,
+  "holm_family_size": 4,
+  "elapsed_minutes": 0.40323969125747683
+}

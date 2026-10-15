@@ -1,0 +1,3 @@
+heldout_split,rows,mean_similarity,median_similarity,p95_similarity,similarity_ge_0_80_rate,similarity_ge_0_90_rate,nearest_label_agreement_rate,near_conflict_rows_ge_0_90
+test,3638,0.18418015855036313,0.17154037952423096,0.28312198519706705,0.0,0.0,0.5046728971962616,0
+validation,3626,0.18229252639161378,0.16833719611167908,0.28304651379585266,0.0,0.0,0.4933811362382791,0

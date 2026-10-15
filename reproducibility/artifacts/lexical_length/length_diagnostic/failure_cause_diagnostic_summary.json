@@ -1,0 +1,29 @@
+{
+  "gpu_required": false,
+  "source_directory": "${PATSCOUT_SOURCE_ROOT}/audits/xa_corrected_three_seed_temporal",
+  "output_directory": "${PATSCOUT_SOURCE_ROOT}/audits/xa_failure_cause_diagnostic",
+  "model_tokenizer": "microsoft/deberta-v3-base",
+  "max_length": 384,
+  "rows": {
+    "train": 16912,
+    "validation": 3626,
+    "test": 3638
+  },
+  "maximum_absolute_smd": 0.06613693333123903,
+  "maximum_tfidf_split_classifier_auc": 0.9756967515351533,
+  "test_truncated_auc": 0.5350765306122449,
+  "test_nontruncated_auc": 0.5188521884176325,
+  "exact_conflicting_pair_groups": 0,
+  "near_conflict_rows_similarity_ge_0_90": 0,
+  "test_seed_disagreement_rate": 0.9813084112149533,
+  "test_all_three_seeds_wrong_rows": 39,
+  "interpretation": [
+    "No large train-to-held-out shift was found in the measured length and lexical-overlap features (all absolute SMD < 0.20).",
+    "The TF-IDF split classifier can distinguish train from held-out data well (AUC >= 0.70), supporting a lexical distribution-shift hypothesis.",
+    "Test AUC is similar for truncated and non-truncated inputs (absolute difference < 0.05; difference=-0.0162), weakening a truncation-only explanation.",
+    "No exact normalized text pair with conflicting labels was found.",
+    "No high-similarity opposite-label nearest-neighbor case was found at the 0.90 threshold.",
+    "Seed disagreement rate on test is 0.9813; all three seeds are wrong on 39 rows.",
+    "This diagnostic can identify associations and candidate causes, but it cannot determine whether a patent label is legally or technically correct without independent human review."
+  ]
+}

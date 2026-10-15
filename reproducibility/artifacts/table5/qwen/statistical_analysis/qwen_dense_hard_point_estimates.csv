@@ -1,0 +1,13 @@
+model,subset,number_of_queries,training_condition,metric,point_estimate
+Qwen3-Reranker-0.6B,primary_all_1642,1642,hard_only,roc_auc,0.6083009014535714
+Qwen3-Reranker-0.6B,primary_all_1642,1642,hard_only,pairwise_cited_over_dense_hard,0.6079983759642712
+Qwen3-Reranker-0.6B,primary_all_1642,1642,mixed_u,roc_auc,0.7364722589822676
+Qwen3-Reranker-0.6B,primary_all_1642,1642,mixed_u,pairwise_cited_over_dense_hard,0.7322675598863174
+Qwen3-Reranker-0.6B,passage_disjoint_1555,1555,hard_only,roc_auc,0.6181896278988016
+Qwen3-Reranker-0.6B,passage_disjoint_1555,1555,hard_only,pairwise_cited_over_dense_hard,0.6185423365487673
+Qwen3-Reranker-0.6B,passage_disjoint_1555,1555,mixed_u,roc_auc,0.7350946502483087
+Qwen3-Reranker-0.6B,passage_disjoint_1555,1555,mixed_u,pairwise_cited_over_dense_hard,0.730150053590568
+Qwen3-Reranker-0.6B,document_disjoint_1389,1389,hard_only,roc_auc,0.6249320227168004
+Qwen3-Reranker-0.6B,document_disjoint_1389,1389,hard_only,pairwise_cited_over_dense_hard,0.6251499880009599
+Qwen3-Reranker-0.6B,document_disjoint_1389,1389,mixed_u,roc_auc,0.7271856782774873
+Qwen3-Reranker-0.6B,document_disjoint_1389,1389,mixed_u,pairwise_cited_over_dense_hard,0.7225581953443725

@@ -1,0 +1,22 @@
+{
+  "candidate_universe_unique_passages": 2079,
+  "final_selected_rows": 1642,
+  "final_unique_selected_passages": 541,
+  "reused_selected_passages": 320,
+  "maximum_selected_passage_reuse": 24,
+  "final_unique_selected_documents": 290,
+  "dense_equals_hard_passage": 0,
+  "dense_equals_hard_document": 0,
+  "dense_equals_random_passage": 87,
+  "dense_equals_random_passage_fraction": 0.052984165651644335,
+  "dense_equals_random_document": 253,
+  "dense_equals_random_document_fraction": 0.1540803897685749,
+  "passage_disjoint_queries": 1555,
+  "document_disjoint_queries": 1389,
+  "document_disjoint_fraction": 0.8459196102314251,
+  "dense_document_column": "cited_document_id",
+  "random_document_column": "cited_document_id",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "bootstrap_runtime_seconds": 8.288028240203857
+}

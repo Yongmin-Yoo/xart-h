@@ -1,0 +1,26 @@
+{
+  "models": [
+    "deberta",
+    "qwen"
+  ],
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "subsets": {
+    "all": 1642,
+    "passage_different": 1555,
+    "document_different": 1389
+  },
+  "metrics": [
+    "roc_auc",
+    "pairwise_accuracy"
+  ],
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 42,
+  "bootstrap_unit": "normalized query",
+  "confidence_interval": "95% percentile bootstrap",
+  "p_value": "two-sided bootstrap-tail with +1 correction",
+  "multiple_testing": "global Holm correction over 12 comparisons"
+}

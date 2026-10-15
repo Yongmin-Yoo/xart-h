@@ -1,0 +1,29 @@
+{
+  "model": "DeBERTa-v3-base",
+  "training_condition": "mixed_u",
+  "seed": 42,
+  "checkpoint": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/models/mixed_u/seed42",
+  "checkpoint_sha256": "1caffabfed9f5f16de4a6cd02eba0c288ac9acaaa6005a170b77e05f20795e5d",
+  "runtime_seconds": 354.2008671760559,
+  "precision": "BF16",
+  "maximum_length": 384,
+  "inference_records": {
+    "cited": {
+      "batch_size": 64,
+      "peak_vram_gib": 2.657280921936035
+    },
+    "hard_u": {
+      "batch_size": 64,
+      "peak_vram_gib": 2.657280921936035
+    },
+    "random_u": {
+      "batch_size": 64,
+      "peak_vram_gib": 2.657280921936035
+    },
+    "dense_hard_u": {
+      "batch_size": 64,
+      "peak_vram_gib": 2.657280921936035
+    }
+  },
+  "prediction_sha256": "ba068c3a59e0fa35a09eee853cb15e2756708bbe5e977675054ebc338826a7a5"
+}

@@ -1,0 +1,13 @@
+analysis,training_condition,evaluation_condition,rows,queries,roc_auc,pairwise
+primary_all_1642,hard_only,hard_u,4948,1642,0.769183922046285,0.7664738124238732
+primary_all_1642,hard_only,random_u,4948,1642,0.3356253311257058,0.3200568412505075
+primary_all_1642,hard_only,dense_hard_u,4948,1642,0.5418661710557632,0.5306638246041413
+primary_all_1642,mixed_u,hard_u,4948,1642,0.7368100519264056,0.740925700365408
+primary_all_1642,mixed_u,random_u,4948,1642,0.8175535124930644,0.8235383678440926
+primary_all_1642,mixed_u,dense_hard_u,4948,1642,0.6910579664331562,0.6963154689403166
+sensitivity_exclude_87_exact_passage_overlap,hard_only,hard_u,4687,1555,0.7822590580379691,0.777524115755627
+sensitivity_exclude_87_exact_passage_overlap,hard_only,random_u,4687,1555,0.3356536406680547,0.31963558413719184
+sensitivity_exclude_87_exact_passage_overlap,hard_only,dense_hard_u,4687,1555,0.5537533930426712,0.5420257234726689
+sensitivity_exclude_87_exact_passage_overlap,mixed_u,hard_u,4687,1555,0.7337795107448063,0.7354340836012861
+sensitivity_exclude_87_exact_passage_overlap,mixed_u,random_u,4687,1555,0.8207660371314879,0.8258842443729904
+sensitivity_exclude_87_exact_passage_overlap,mixed_u,dense_hard_u,4687,1555,0.6864504153782345,0.6915434083601285

@@ -1,0 +1,13 @@
+{
+  "status": "ORDERED_EVALUATION_AND_PRIMARY_BOOTSTRAP_COMPLETE",
+  "models_evaluated": 6,
+  "all_models_verified": true,
+  "all_cited_consistency_checks_passed": true,
+  "primary_comparison_count": 8,
+  "matched_query_count": 1642,
+  "matched_source_rows": 6590,
+  "saved_prediction_rows": 59376,
+  "row_id_status": "DERIVED_CONTENT_ROW_ID",
+  "total_elapsed_minutes": 14.965169783433279,
+  "next_step": "Recompute paired Stage-1 and q50 DeBERTa-vs-LR comparisons using verified reproduced row-ID predictions."
+}

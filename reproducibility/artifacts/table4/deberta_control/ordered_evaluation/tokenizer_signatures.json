@@ -1,0 +1,74 @@
+{
+  "hard_only_seed13": {
+    "tokenizer_class": "DebertaV2TokenizerFast",
+    "vocab_size": 128001,
+    "vocab_sha256": "ca155fadca82c3addf44f9ffa97c7c0fc96c7c222e2cb8c10f4150b523ef2172",
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "cls_token_id": 1,
+    "sep_token_id": 2,
+    "unk_token_id": 3,
+    "model_max_length": 1000000000000000019884624838656
+  },
+  "hard_only_seed42": {
+    "tokenizer_class": "DebertaV2TokenizerFast",
+    "vocab_size": 128001,
+    "vocab_sha256": "ca155fadca82c3addf44f9ffa97c7c0fc96c7c222e2cb8c10f4150b523ef2172",
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "cls_token_id": 1,
+    "sep_token_id": 2,
+    "unk_token_id": 3,
+    "model_max_length": 1000000000000000019884624838656
+  },
+  "hard_only_seed77": {
+    "tokenizer_class": "DebertaV2TokenizerFast",
+    "vocab_size": 128001,
+    "vocab_sha256": "ca155fadca82c3addf44f9ffa97c7c0fc96c7c222e2cb8c10f4150b523ef2172",
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "cls_token_id": 1,
+    "sep_token_id": 2,
+    "unk_token_id": 3,
+    "model_max_length": 1000000000000000019884624838656
+  },
+  "mixed_u_seed13": {
+    "tokenizer_class": "DebertaV2TokenizerFast",
+    "vocab_size": 128001,
+    "vocab_sha256": "ca155fadca82c3addf44f9ffa97c7c0fc96c7c222e2cb8c10f4150b523ef2172",
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "cls_token_id": 1,
+    "sep_token_id": 2,
+    "unk_token_id": 3,
+    "model_max_length": 1000000000000000019884624838656
+  },
+  "mixed_u_seed42": {
+    "tokenizer_class": "DebertaV2TokenizerFast",
+    "vocab_size": 128001,
+    "vocab_sha256": "ca155fadca82c3addf44f9ffa97c7c0fc96c7c222e2cb8c10f4150b523ef2172",
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "cls_token_id": 1,
+    "sep_token_id": 2,
+    "unk_token_id": 3,
+    "model_max_length": 1000000000000000019884624838656
+  },
+  "mixed_u_seed77": {
+    "tokenizer_class": "DebertaV2TokenizerFast",
+    "vocab_size": 128001,
+    "vocab_sha256": "ca155fadca82c3addf44f9ffa97c7c0fc96c7c222e2cb8c10f4150b523ef2172",
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "cls_token_id": 1,
+    "sep_token_id": 2,
+    "unk_token_id": 3,
+    "model_max_length": 1000000000000000019884624838656
+  }
+}

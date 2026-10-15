@@ -1,0 +1,28 @@
+{
+  "analysis": "Integrated DeBERTa/Qwen Dense-Hard query-macro P-C/U audit",
+  "models": [
+    "DeBERTa",
+    "Qwen3-Reranker-0.6B"
+  ],
+  "conditions": [
+    "hard_only",
+    "mixed_u"
+  ],
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed_base": 42,
+  "bootstrap_unit": "normalized query",
+  "pairwise_definition": "Mean cited-vs-U pair credit within each query, followed by equal-weight mean across queries",
+  "primary_holm_family_size": 4,
+  "global_sensitivity_family_size": 12,
+  "primary_queries": 1642,
+  "passage_disjoint_queries": 1555,
+  "document_disjoint_queries": 1389,
+  "dense_sha256": "96c8e2dc77cace366b694ba52f46805fb76ceb66c62d2e7020381e86469bb726",
+  "random_sha256": "ce35e36c0342091dd94ea3ef49f9f50a262428e1e45bc5f0b7e23c5857405d5b",
+  "deberta_ensemble_sha256": "870a8d1496033fa6b9d762ad0d2fd7dff6a8f344b21e109034ca877df0513cf2"
+}

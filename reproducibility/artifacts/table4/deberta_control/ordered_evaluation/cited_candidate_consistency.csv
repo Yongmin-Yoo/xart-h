@@ -1,0 +1,7 @@
+training_condition,seed,cited_rows,mean_absolute_difference,max_absolute_difference,tolerance,status
+hard_only,13,3306,0.0,0.0,1e-05,PASSED
+hard_only,42,3306,0.0,0.0,1e-05,PASSED
+hard_only,77,3306,0.0,0.0,1e-05,PASSED
+mixed_u,13,3306,0.0,0.0,1e-05,PASSED
+mixed_u,42,3306,0.0,0.0,1e-05,PASSED
+mixed_u,77,3306,0.0,0.0,1e-05,PASSED

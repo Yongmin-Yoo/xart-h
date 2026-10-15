@@ -1,0 +1,29 @@
+{
+  "analysis": "validation-defined lexical matching",
+  "status": "post-hoc diagnostic",
+  "matching_unit": "one cited candidate and one existing Hard U per normalized query",
+  "candidate_selection": "feature-nearest cited candidate to each Hard U",
+  "distance": "maximum absolute standardized feature difference",
+  "standardization_fit": "official train split only",
+  "features": [
+    "log1p_bm25",
+    "token_jaccard",
+    "claim_coverage",
+    "log1p_passage_length",
+    "log1p_passage_claim_ratio"
+  ],
+  "caliper_selection": "validation nearest-pair distance quantiles",
+  "primary_caliper": "validation q50",
+  "sensitivity_calipers": [
+    "validation q25",
+    "validation q75"
+  ],
+  "model_predictions_used_for_matching": false,
+  "bootstrap": {
+    "unit": "normalized query",
+    "repetitions": 2000,
+    "seed": 42,
+    "confidence_level": 0.95,
+    "holm_family": "five baseline comparisons across AUC and pairwise accuracy"
+  }
+}

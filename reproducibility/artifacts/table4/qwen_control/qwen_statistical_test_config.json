@@ -1,0 +1,39 @@
+{
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "ensemble_method": "mean cited probability across seeds",
+  "matched_queries": 1642,
+  "bootstrap_unit": "normalized claim query",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "confidence_level": 0.95,
+  "confidence_interval": "percentile bootstrap",
+  "p_value": "two-sided bootstrap-tail p-value with +1 finite-sample correction",
+  "multiple_testing": "Holm correction across the predefined family of 8 Qwen comparisons",
+  "delta_definition": "condition B minus condition A",
+  "cell_definitions": {
+    "HH": "Hard-only training, Hard-U evaluation",
+    "HR": "Hard-only training, Random-U evaluation",
+    "MH": "Mixed-U training, Hard-U evaluation",
+    "MR": "Mixed-U training, Random-U evaluation"
+  },
+  "input_sha256": {
+    "qwen3_reranker_hard_only_seed13_ordered_predictions.parquet": "e87e33c1b3bbe5202bada613533a7aa6e8c30f2884065345d519ed99929b7530",
+    "qwen3_reranker_hard_only_seed42_ordered_predictions.parquet": "ed3703d9ff8875299e44ed5908e2caf0d5de58530a4b29645ba595c56e19a77c",
+    "qwen3_reranker_hard_only_seed77_ordered_predictions.parquet": "334f47c901db25dfc8d6973b4dc4081c1bcea104f1973fb7e1d56e6de34fb664",
+    "qwen3_reranker_mixed_u_seed13_ordered_predictions.parquet": "328b697e8d70f8628eaed41db39dbda218501fc2f721c613dbf0b8c55b93e4b1",
+    "qwen3_reranker_mixed_u_seed42_ordered_predictions.parquet": "a40aec169334950fa0f4e3fc3a4f403594000b05c584ae8a2247a12eb79c0cd0",
+    "qwen3_reranker_mixed_u_seed77_ordered_predictions.parquet": "7611a41db80089de74522ce0947193686411d38bcccd469738d5c0d73e442527"
+  },
+  "output_files": {
+    "ensemble_predictions": "${PATSCOUT_SOURCE_ROOT}/experiments/model_generalization_v1/qwen3_reranker_0.6b_control/qwen_three_seed_ensemble_predictions.parquet",
+    "ensemble_metrics": "${PATSCOUT_SOURCE_ROOT}/experiments/model_generalization_v1/qwen3_reranker_0.6b_control/qwen_three_seed_ensemble_metrics.csv",
+    "primary_comparisons": "${PATSCOUT_SOURCE_ROOT}/experiments/model_generalization_v1/qwen3_reranker_0.6b_control/qwen_primary_comparisons_bootstrap.csv",
+    "bootstrap_replicates": "${PATSCOUT_SOURCE_ROOT}/experiments/model_generalization_v1/qwen3_reranker_0.6b_control/qwen_bootstrap_delta_replicates.npz"
+  }
+}

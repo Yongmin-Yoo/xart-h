@@ -1,0 +1,2001 @@
+comparison,text_variant,direction,rank,feature,coefficient,feature_category
+train_vs_validation,claim_raw,toward_validation,1,program,1.7861067694550485,content_unigram
+train_vs_validation,claim_raw,toward_validation,2,filters,1.6957732765801945,content_unigram
+train_vs_validation,claim_raw,toward_validation,3,assembly according,1.6645836304625956,content_bigram
+train_vs_validation,claim_raw,toward_validation,4,the device,1.6111376272334987,content_bigram
+train_vs_validation,claim_raw,toward_validation,5,tire,1.6077512782913388,content_unigram
+train_vs_validation,claim_raw,toward_validation,6,window,1.5876334447185854,content_unigram
+train_vs_validation,claim_raw,toward_validation,7,extension,1.533718423003509,content_unigram
+train_vs_validation,claim_raw,toward_validation,8,induction heater,1.468735232237158,content_bigram
+train_vs_validation,claim_raw,toward_validation,9,system,1.468503342380723,content_unigram
+train_vs_validation,claim_raw,toward_validation,10,xray imaging,1.4645356762585873,content_bigram
+train_vs_validation,claim_raw,toward_validation,11,broadcast,1.4643073002337954,content_unigram
+train_vs_validation,claim_raw,toward_validation,12,imaging,1.458639414323758,content_unigram
+train_vs_validation,claim_raw,toward_validation,13,fiber,1.4565965263702259,content_unigram
+train_vs_validation,claim_raw,toward_validation,14,downhole,1.4377526090696817,content_unigram
+train_vs_validation,claim_raw,toward_validation,15,the fiber,1.4159101210419742,content_bigram
+train_vs_validation,claim_raw,toward_validation,16,photo,1.3982559139182915,content_unigram
+train_vs_validation,claim_raw,toward_validation,17,printing,1.3964346249860495,content_unigram
+train_vs_validation,claim_raw,toward_validation,18,drill,1.3676239086186632,content_unigram
+train_vs_validation,claim_raw,toward_validation,19,the electronic,1.3356223884493228,content_bigram
+train_vs_validation,claim_raw,toward_validation,20,composite material,1.334905197976376,content_bigram
+train_vs_validation,claim_raw,toward_validation,21,messages,1.3328810214561895,content_unigram
+train_vs_validation,claim_raw,toward_validation,22,message,1.327592078646704,content_unigram
+train_vs_validation,claim_raw,toward_validation,23,the evaluation,1.311740037990994,content_bigram
+train_vs_validation,claim_raw,toward_validation,24,cooling assembly,1.2916720371870758,content_bigram
+train_vs_validation,claim_raw,toward_validation,25,use according,1.283412244175058,content_bigram
+train_vs_validation,claim_raw,toward_validation,26,rfid,1.2771566906084784,content_unigram
+train_vs_validation,claim_raw,toward_validation,27,shaft,1.275779760581512,content_unigram
+train_vs_validation,claim_raw,toward_validation,28,pixel,1.2751070431893807,content_unigram
+train_vs_validation,claim_raw,toward_validation,29,tie,1.2727998689968683,content_unigram
+train_vs_validation,claim_raw,toward_validation,30,the composite,1.2676112980902847,content_bigram
+train_vs_validation,claim_raw,toward_validation,31,the printing,1.2639855463353813,content_bigram
+train_vs_validation,claim_raw,toward_validation,32,system information,1.2604867887336493,content_bigram
+train_vs_validation,claim_raw,toward_validation,33,diaper,1.2568371511415095,content_unigram
+train_vs_validation,claim_raw,toward_validation,34,evaluation unit,1.2454710911275975,content_bigram
+train_vs_validation,claim_raw,toward_validation,35,seal segment,1.2340672155820516,content_bigram
+train_vs_validation,claim_raw,toward_validation,36,damping,1.232453747960608,content_unigram
+train_vs_validation,claim_raw,toward_validation,37,switching,1.219577206085834,content_unigram
+train_vs_validation,claim_raw,toward_validation,38,control signal,1.21846262589568,content_bigram
+train_vs_validation,claim_raw,toward_validation,39,network access,1.2111799471522384,content_bigram
+train_vs_validation,claim_raw,toward_validation,40,activity,1.2100129992080995,content_unigram
+train_vs_validation,claim_raw,toward_validation,41,locationupdaterequest,1.2054896880800634,content_unigram
+train_vs_validation,claim_raw,toward_validation,42,xray,1.2046213746478507,content_unigram
+train_vs_validation,claim_raw,toward_validation,43,diaper 10,1.2028980638685274,contains_digit
+train_vs_validation,claim_raw,toward_validation,44,element according,1.1979110024055932,content_bigram
+train_vs_validation,claim_raw,toward_validation,45,fiber according,1.1953829035048915,content_bigram
+train_vs_validation,claim_raw,toward_validation,46,strap,1.195294830309493,content_unigram
+train_vs_validation,claim_raw,toward_validation,47,motor control,1.1923111169394893,content_bigram
+train_vs_validation,claim_raw,toward_validation,48,brushless motor,1.1896236661312802,content_bigram
+train_vs_validation,claim_raw,toward_validation,49,brushless,1.1896236661312802,content_unigram
+train_vs_validation,claim_raw,toward_validation,50,input is,1.182185965608377,content_bigram
+train_vs_validation,claim_raw,toward_validation,51,tire of,1.180154890439257,content_bigram
+train_vs_validation,claim_raw,toward_validation,52,configuration,1.179075072293329,content_unigram
+train_vs_validation,claim_raw,toward_validation,53,engine,1.178885818343597,content_unigram
+train_vs_validation,claim_raw,toward_validation,54,processor to,1.1785462293854194,content_bigram
+train_vs_validation,claim_raw,toward_validation,55,related to,1.1758917598384833,content_bigram
+train_vs_validation,claim_raw,toward_validation,56,radio,1.1695590637052553,content_unigram
+train_vs_validation,claim_raw,toward_validation,57,broadcast channel,1.1658351821469146,content_bigram
+train_vs_validation,claim_raw,toward_validation,58,composite,1.1608397662052568,content_unigram
+train_vs_validation,claim_raw,toward_validation,59,heater,1.1578207599612758,content_unigram
+train_vs_validation,claim_raw,toward_validation,60,access right,1.1563412866364409,content_bigram
+train_vs_validation,claim_raw,toward_validation,61,for use,1.1554913998353569,content_bigram
+train_vs_validation,claim_raw,toward_validation,62,the temperature,1.1435553274270718,content_bigram
+train_vs_validation,claim_raw,toward_validation,63,access device,1.1431279190201704,content_bigram
+train_vs_validation,claim_raw,toward_validation,64,the at,1.130750684659603,content_bigram
+train_vs_validation,claim_raw,toward_validation,65,sidewall,1.1176965427854744,content_unigram
+train_vs_validation,claim_raw,toward_validation,66,detector,1.1164685533375973,content_unigram
+train_vs_validation,claim_raw,toward_validation,67,symbol,1.1153946625922395,content_unigram
+train_vs_validation,claim_raw,toward_validation,68,stage,1.1130172659448319,content_unigram
+train_vs_validation,claim_raw,toward_validation,69,evaluation,1.103369770651018,content_unigram
+train_vs_validation,claim_raw,toward_validation,70,aircraft component,1.102432448195598,content_bigram
+train_vs_validation,claim_raw,toward_validation,71,transparent display,1.0998001765620868,content_bigram
+train_vs_validation,claim_raw,toward_validation,72,wearable,1.0995356643166068,content_unigram
+train_vs_validation,claim_raw,toward_validation,73,broadcasting,1.0957030247761401,content_unigram
+train_vs_validation,claim_raw,toward_validation,74,support side,1.0919753117237347,content_bigram
+train_vs_validation,claim_raw,toward_validation,75,first photo,1.0901481439947338,content_bigram
+train_vs_validation,claim_raw,toward_validation,76,reinforced,1.0881706812204364,content_unigram
+train_vs_validation,claim_raw,toward_validation,77,reinforced composition,1.0881706812204364,content_bigram
+train_vs_validation,claim_raw,toward_validation,78,fiber reinforced,1.0881706812204364,content_bigram
+train_vs_validation,claim_raw,toward_validation,79,infant,1.087672779582993,content_unigram
+train_vs_validation,claim_raw,toward_validation,80,sprinkling,1.0805805847396144,content_unigram
+train_vs_validation,claim_raw,toward_validation,81,tie strap,1.080221691435101,content_bigram
+train_vs_validation,claim_raw,toward_validation,82,the tire,1.0781295843591208,content_bigram
+train_vs_validation,claim_raw,toward_validation,83,rfid tag,1.0724680813689031,content_bigram
+train_vs_validation,claim_raw,toward_validation,84,projection,1.0706338061995666,content_unigram
+train_vs_validation,claim_raw,toward_validation,85,second sensor,1.0691325632002615,content_bigram
+train_vs_validation,claim_raw,toward_validation,86,token,1.0653876348479876,content_unigram
+train_vs_validation,claim_raw,toward_validation,87,g2,1.0621338196207541,contains_digit
+train_vs_validation,claim_raw,toward_validation,88,sprinkling device,1.058820937077385,content_bigram
+train_vs_validation,claim_raw,toward_validation,89,camera image,1.0564248793563202,content_bigram
+train_vs_validation,claim_raw,toward_validation,90,unit,1.054745777883189,content_unigram
+train_vs_validation,claim_raw,toward_validation,91,deformable,1.0539482072577493,content_unigram
+train_vs_validation,claim_raw,toward_validation,92,the induction,1.0531453416453063,content_bigram
+train_vs_validation,claim_raw,toward_validation,93,oligosaccharide,1.0530698152436029,content_unigram
+train_vs_validation,claim_raw,toward_validation,94,tag according,1.0519572764109444,content_bigram
+train_vs_validation,claim_raw,toward_validation,95,the plurality,1.0487013356787054,content_bigram
+train_vs_validation,claim_raw,toward_validation,96,bit,1.0465506257811792,content_unigram
+train_vs_validation,claim_raw,toward_validation,97,sensor,1.044811502640712,content_unigram
+train_vs_validation,claim_raw,toward_validation,98,the protector,1.0399443067055603,content_bigram
+train_vs_validation,claim_raw,toward_validation,99,of from,1.0348357351503537,content_bigram
+train_vs_validation,claim_raw,toward_validation,100,the rfid,1.0347195506914861,content_bigram
+train_vs_validation,claim_raw,toward_train,1,said,-3.4143725598649537,patent_boilerplate
+train_vs_validation,claim_raw,toward_train,2,data,-2.4633039525527027,content_unigram
+train_vs_validation,claim_raw,toward_train,3,apparatus,-2.291218680854148,content_unigram
+train_vs_validation,claim_raw,toward_train,4,electrode,-2.05756177092926,content_unigram
+train_vs_validation,claim_raw,toward_train,5,device,-1.981939303430734,content_unigram
+train_vs_validation,claim_raw,toward_train,6,mode,-1.8363423317870506,content_unigram
+train_vs_validation,claim_raw,toward_train,7,apparatus according,-1.773213289982999,content_bigram
+train_vs_validation,claim_raw,toward_train,8,information processing,-1.6834331152442343,content_bigram
+train_vs_validation,claim_raw,toward_train,9,gas,-1.5986060938200903,content_unigram
+train_vs_validation,claim_raw,toward_train,10,section,-1.5769107995090978,content_unigram
+train_vs_validation,claim_raw,toward_train,11,to,-1.438002624267326,content_unigram
+train_vs_validation,claim_raw,toward_train,12,the,-1.366940849688888,content_unigram
+train_vs_validation,claim_raw,toward_train,13,wireless,-1.3411652656080117,content_unigram
+train_vs_validation,claim_raw,toward_train,14,method as,-1.240613835201629,content_bigram
+train_vs_validation,claim_raw,toward_train,15,of an,-1.2367472504521366,content_bigram
+train_vs_validation,claim_raw,toward_train,16,the light,-1.2321909298013602,content_bigram
+train_vs_validation,claim_raw,toward_train,17,panel,-1.2240314656102689,content_unigram
+train_vs_validation,claim_raw,toward_train,18,packet,-1.201066706016212,content_unigram
+train_vs_validation,claim_raw,toward_train,19,liquid,-1.1800256490862562,content_unigram
+train_vs_validation,claim_raw,toward_train,20,portion,-1.177717379603353,content_unigram
+train_vs_validation,claim_raw,toward_train,21,node,-1.1657898537930385,content_unigram
+train_vs_validation,claim_raw,toward_train,22,parameter,-1.1627405608878183,content_unigram
+train_vs_validation,claim_raw,toward_train,23,service,-1.1485925892090274,content_unigram
+train_vs_validation,claim_raw,toward_train,24,path,-1.1464162891140028,content_unigram
+train_vs_validation,claim_raw,toward_train,25,layer,-1.1413611346571573,content_unigram
+train_vs_validation,claim_raw,toward_train,26,information,-1.139622909403693,content_unigram
+train_vs_validation,claim_raw,toward_train,27,an,-1.12990912889626,content_unigram
+train_vs_validation,claim_raw,toward_train,28,ue,-1.1245326397994035,content_unigram
+train_vs_validation,claim_raw,toward_train,29,ink,-1.1206613421432399,content_unigram
+train_vs_validation,claim_raw,toward_train,30,pressure,-1.1093641046417901,content_unigram
+train_vs_validation,claim_raw,toward_train,31,11,-1.0989069765496384,contains_digit
+train_vs_validation,claim_raw,toward_train,32,mobile,-1.0939847959605609,content_unigram
+train_vs_validation,claim_raw,toward_train,33,ejection,-1.0848901540428444,content_unigram
+train_vs_validation,claim_raw,toward_train,34,monitoring,-1.072718037271479,content_unigram
+train_vs_validation,claim_raw,toward_train,35,optical,-1.071548599825288,content_unigram
+train_vs_validation,claim_raw,toward_train,36,of said,-1.0654181438500994,patent_boilerplate
+train_vs_validation,claim_raw,toward_train,37,forth,-1.0597329854294457,content_unigram
+train_vs_validation,claim_raw,toward_train,38,subsea,-1.0490093986212452,content_unigram
+train_vs_validation,claim_raw,toward_train,39,wherein said,-1.0480143415490693,patent_boilerplate
+train_vs_validation,claim_raw,toward_train,40,devices,-1.0473198696522212,content_unigram
+train_vs_validation,claim_raw,toward_train,41,processing,-1.0456812254853776,content_unigram
+train_vs_validation,claim_raw,toward_train,42,102,-1.0423689232197217,contains_digit
+train_vs_validation,claim_raw,toward_train,43,to wherein,-1.038571634578938,patent_boilerplate
+train_vs_validation,claim_raw,toward_train,44,external,-1.0362268101866667,content_unigram
+train_vs_validation,claim_raw,toward_train,45,10,-1.0358518054417163,contains_digit
+train_vs_validation,claim_raw,toward_train,46,the surgical,-1.0305394227228382,content_bigram
+train_vs_validation,claim_raw,toward_train,47,secure,-1.0223493244254123,content_unigram
+train_vs_validation,claim_raw,toward_train,48,position,-1.01294519433389,content_unigram
+train_vs_validation,claim_raw,toward_train,49,instrument,-1.0123355852297768,content_unigram
+train_vs_validation,claim_raw,toward_train,50,object,-1.011665077423137,content_unigram
+train_vs_validation,claim_raw,toward_train,51,heating,-1.0026222903322746,content_unigram
+train_vs_validation,claim_raw,toward_train,52,member,-0.9959884781047926,content_unigram
+train_vs_validation,claim_raw,toward_train,53,screen,-0.9940365961750075,content_unigram
+train_vs_validation,claim_raw,toward_train,54,set forth,-0.9939439942938387,content_bigram
+train_vs_validation,claim_raw,toward_train,55,forth in,-0.9939439942938387,content_bigram
+train_vs_validation,claim_raw,toward_train,56,surgical,-0.9844909797106447,content_unigram
+train_vs_validation,claim_raw,toward_train,57,the optical,-0.9844686946405359,content_bigram
+train_vs_validation,claim_raw,toward_train,58,the portable,-0.9787315156671615,content_bigram
+train_vs_validation,claim_raw,toward_train,59,authentication,-0.9773034246434478,content_unigram
+train_vs_validation,claim_raw,toward_train,60,navigation,-0.9724103703643912,content_unigram
+train_vs_validation,claim_raw,toward_train,61,forming,-0.9720455830229386,content_unigram
+train_vs_validation,claim_raw,toward_train,62,input device,-0.9718756771944959,content_bigram
+train_vs_validation,claim_raw,toward_train,63,emitting,-0.9611914518131016,content_unigram
+train_vs_validation,claim_raw,toward_train,64,or wherein,-0.9567487646549492,patent_boilerplate
+train_vs_validation,claim_raw,toward_train,65,the liquid,-0.9438952155082448,content_bigram
+train_vs_validation,claim_raw,toward_train,66,apparatus as,-0.9436873445685632,content_bigram
+train_vs_validation,claim_raw,toward_train,67,washing machine,-0.9435838571434537,content_bigram
+train_vs_validation,claim_raw,toward_train,68,container,-0.9424219615945161,content_unigram
+train_vs_validation,claim_raw,toward_train,69,transport,-0.940895106033295,content_unigram
+train_vs_validation,claim_raw,toward_train,70,or less,-0.9408535744414601,content_bigram
+train_vs_validation,claim_raw,toward_train,71,the external,-0.9387810512938695,content_bigram
+train_vs_validation,claim_raw,toward_train,72,fuel,-0.9304166075807402,content_unigram
+train_vs_validation,claim_raw,toward_train,73,rechargeable,-0.9166203077488387,content_unigram
+train_vs_validation,claim_raw,toward_train,74,processing apparatus,-0.9110827742143714,content_bigram
+train_vs_validation,claim_raw,toward_train,75,packets,-0.9097225019936714,content_unigram
+train_vs_validation,claim_raw,toward_train,76,organic,-0.9086676367480855,content_unigram
+train_vs_validation,claim_raw,toward_train,77,power,-0.9085607949230247,content_unigram
+train_vs_validation,claim_raw,toward_train,78,mounted,-0.9048817910614728,content_unigram
+train_vs_validation,claim_raw,toward_train,79,3d,-0.9041138529143751,contains_digit
+train_vs_validation,claim_raw,toward_train,80,when,-0.9013896317582047,content_unigram
+train_vs_validation,claim_raw,toward_train,81,200,-0.8995057081486133,contains_digit
+train_vs_validation,claim_raw,toward_train,82,at,-0.8976032308933143,content_unigram
+train_vs_validation,claim_raw,toward_train,83,session,-0.8939480740122078,content_unigram
+train_vs_validation,claim_raw,toward_train,84,predetermined,-0.8916496442719768,content_unigram
+train_vs_validation,claim_raw,toward_train,85,main,-0.8911905088688655,content_unigram
+train_vs_validation,claim_raw,toward_train,86,plant,-0.8897632353311451,content_unigram
+train_vs_validation,claim_raw,toward_train,87,rear,-0.8882934834145382,content_unigram
+train_vs_validation,claim_raw,toward_train,88,terminal device,-0.8819191497916138,content_bigram
+train_vs_validation,claim_raw,toward_train,89,method,-0.8813951978086612,content_unigram
+train_vs_validation,claim_raw,toward_train,90,inkjet,-0.8789651858240748,content_unigram
+train_vs_validation,claim_raw,toward_train,91,combustor,-0.877882748146259,content_unigram
+train_vs_validation,claim_raw,toward_train,92,portable,-0.8771716919147894,content_unigram
+train_vs_validation,claim_raw,toward_train,93,private,-0.8749923446855328,content_unigram
+train_vs_validation,claim_raw,toward_train,94,pitch,-0.8743137981928518,content_unigram
+train_vs_validation,claim_raw,toward_train,95,result,-0.8741921417089816,content_unigram
+train_vs_validation,claim_raw,toward_train,96,separator,-0.8734576257776423,content_unigram
+train_vs_validation,claim_raw,toward_train,97,portable electronic,-0.8694168220464825,content_bigram
+train_vs_validation,claim_raw,toward_train,98,to claim,-0.8679166248571396,patent_boilerplate
+train_vs_validation,claim_raw,toward_train,99,210,-0.8673077720332906,contains_digit
+train_vs_validation,claim_raw,toward_train,100,30,-0.866702607602784,contains_digit
+train_vs_validation,passage_raw,toward_validation,1,xray,1.779848759053732,content_unigram
+train_vs_validation,passage_raw,toward_validation,2,radio,1.7728790713653095,content_unigram
+train_vs_validation,passage_raw,toward_validation,3,motor,1.6105085699325146,content_unigram
+train_vs_validation,passage_raw,toward_validation,4,cancellation,1.5311597652653925,content_unigram
+train_vs_validation,passage_raw,toward_validation,5,print,1.500000098538418,content_unigram
+train_vs_validation,passage_raw,toward_validation,6,tire,1.4666491088086602,content_unigram
+train_vs_validation,passage_raw,toward_validation,7,phone,1.4110005717682494,content_unigram
+train_vs_validation,passage_raw,toward_validation,8,gizzard,1.1971962895612671,content_unigram
+train_vs_validation,passage_raw,toward_validation,9,key,1.18336704435454,content_unigram
+train_vs_validation,passage_raw,toward_validation,10,satellite,1.1768986776320371,content_unigram
+train_vs_validation,passage_raw,toward_validation,11,26,1.1740546876161515,contains_digit
+train_vs_validation,passage_raw,toward_validation,12,the xray,1.1584388739642095,content_bigram
+train_vs_validation,passage_raw,toward_validation,13,solar,1.1162755724757205,content_unigram
+train_vs_validation,passage_raw,toward_validation,14,head,1.0538499307036653,content_unigram
+train_vs_validation,passage_raw,toward_validation,15,transparent display,1.0514506571650408,content_bigram
+train_vs_validation,passage_raw,toward_validation,16,the phone,1.0432993459485054,content_bigram
+train_vs_validation,passage_raw,toward_validation,17,tube,1.0422706634929664,content_unigram
+train_vs_validation,passage_raw,toward_validation,18,the motor,1.0399530889208222,content_bigram
+train_vs_validation,passage_raw,toward_validation,19,block,1.035429297930495,content_unigram
+train_vs_validation,passage_raw,toward_validation,20,the field,1.0207498799243604,content_bigram
+train_vs_validation,passage_raw,toward_validation,21,imaging,1.0116096067841076,content_unigram
+train_vs_validation,passage_raw,toward_validation,22,may be,1.0047554955960996,content_bigram
+train_vs_validation,passage_raw,toward_validation,23,keyboard,1.001553945337769,content_unigram
+train_vs_validation,passage_raw,toward_validation,24,groove,1.0004280598942077,content_unigram
+train_vs_validation,passage_raw,toward_validation,25,grating,0.995464121233126,content_unigram
+train_vs_validation,passage_raw,toward_validation,26,the tire,0.9892316303230989,content_bigram
+train_vs_validation,passage_raw,toward_validation,27,shaft,0.9870646702936953,content_unigram
+train_vs_validation,passage_raw,toward_validation,28,the program,0.9819822325012255,content_bigram
+train_vs_validation,passage_raw,toward_validation,29,fibers,0.9679879333662761,content_unigram
+train_vs_validation,passage_raw,toward_validation,30,ic,0.964455029245415,content_unigram
+train_vs_validation,passage_raw,toward_validation,31,constraints,0.9613191613055033,content_unigram
+train_vs_validation,passage_raw,toward_validation,32,unit 14,0.9611809131705131,contains_digit
+train_vs_validation,passage_raw,toward_validation,33,preferably is,0.9554110705158871,content_bigram
+train_vs_validation,passage_raw,toward_validation,34,sheath,0.9482983886710177,content_unigram
+train_vs_validation,passage_raw,toward_validation,35,in addition,0.9472895699439978,content_bigram
+train_vs_validation,passage_raw,toward_validation,36,addition,0.942345640653228,content_unigram
+train_vs_validation,passage_raw,toward_validation,37,fins,0.93610907446667,content_unigram
+train_vs_validation,passage_raw,toward_validation,38,strap,0.9352944977789237,content_unigram
+train_vs_validation,passage_raw,toward_validation,39,fiber,0.9279375990487411,content_unigram
+train_vs_validation,passage_raw,toward_validation,40,radio base,0.9212172655994176,content_bigram
+train_vs_validation,passage_raw,toward_validation,41,detector,0.9055218452871902,content_unigram
+train_vs_validation,passage_raw,toward_validation,42,the print,0.9051105909660535,content_bigram
+train_vs_validation,passage_raw,toward_validation,43,chip,0.9047238538417066,content_unigram
+train_vs_validation,passage_raw,toward_validation,44,tool,0.8980218780946848,content_unigram
+train_vs_validation,passage_raw,toward_validation,45,the radio,0.8950089136154655,content_bigram
+train_vs_validation,passage_raw,toward_validation,46,membrane,0.8924792431950336,content_unigram
+train_vs_validation,passage_raw,toward_validation,47,fig,0.8903308925688468,patent_boilerplate
+train_vs_validation,passage_raw,toward_validation,48,buses,0.8893169551289573,content_unigram
+train_vs_validation,passage_raw,toward_validation,49,grid,0.8844063495090839,content_unigram
+train_vs_validation,passage_raw,toward_validation,50,paper,0.879489253969936,content_unigram
+train_vs_validation,passage_raw,toward_validation,51,name,0.8768535551743912,content_unigram
+train_vs_validation,passage_raw,toward_validation,52,servers,0.8732444171188012,content_unigram
+train_vs_validation,passage_raw,toward_validation,53,engine,0.8689135728955891,content_unigram
+train_vs_validation,passage_raw,toward_validation,54,utility,0.8682445162545334,content_unigram
+train_vs_validation,passage_raw,toward_validation,55,blood,0.8652558297477381,content_unigram
+train_vs_validation,passage_raw,toward_validation,56,mea,0.8649994739790537,content_unigram
+train_vs_validation,passage_raw,toward_validation,57,the input,0.8633658466392283,content_bigram
+train_vs_validation,passage_raw,toward_validation,58,ethylene,0.8615117592910679,content_unigram
+train_vs_validation,passage_raw,toward_validation,59,field of,0.8579105534137317,content_bigram
+train_vs_validation,passage_raw,toward_validation,60,sink,0.856539955330897,content_unigram
+train_vs_validation,passage_raw,toward_validation,61,passageway,0.8538698879143259,content_unigram
+train_vs_validation,passage_raw,toward_validation,62,invention is,0.8532611652266313,patent_boilerplate
+train_vs_validation,passage_raw,toward_validation,63,determination,0.852012365595828,content_unigram
+train_vs_validation,passage_raw,toward_validation,64,touch panel,0.8504913640767133,content_bigram
+train_vs_validation,passage_raw,toward_validation,65,noise,0.8471762594282507,content_unigram
+train_vs_validation,passage_raw,toward_validation,66,cladding,0.8424353354706826,content_unigram
+train_vs_validation,passage_raw,toward_validation,67,known,0.8406162089094619,content_unigram
+train_vs_validation,passage_raw,toward_validation,68,ud,0.8336359716689388,content_unigram
+train_vs_validation,passage_raw,toward_validation,69,entry,0.8286808408076294,content_unigram
+train_vs_validation,passage_raw,toward_validation,70,alert,0.8279022949055564,content_unigram
+train_vs_validation,passage_raw,toward_validation,71,target set,0.8263429316721365,content_bigram
+train_vs_validation,passage_raw,toward_validation,72,set 300,0.8263429316721365,contains_digit
+train_vs_validation,passage_raw,toward_validation,73,biometric,0.8238854070410842,content_unigram
+train_vs_validation,passage_raw,toward_validation,74,thread,0.8234672502308211,content_unigram
+train_vs_validation,passage_raw,toward_validation,75,the like,0.8171075624770392,content_bigram
+train_vs_validation,passage_raw,toward_validation,76,managing,0.8159545637733391,content_unigram
+train_vs_validation,passage_raw,toward_validation,77,region,0.81367817509508,content_unigram
+train_vs_validation,passage_raw,toward_validation,78,safety,0.8130880759173555,content_unigram
+train_vs_validation,passage_raw,toward_validation,79,steering,0.8130477377934924,content_unigram
+train_vs_validation,passage_raw,toward_validation,80,worn,0.8125737785151066,content_unigram
+train_vs_validation,passage_raw,toward_validation,81,the groove,0.80909579200389,content_bigram
+train_vs_validation,passage_raw,toward_validation,82,triple,0.8086939534641996,content_unigram
+train_vs_validation,passage_raw,toward_validation,83,subcarriers,0.8081101990981102,content_unigram
+train_vs_validation,passage_raw,toward_validation,84,the gizzard,0.8066614670616945,content_bigram
+train_vs_validation,passage_raw,toward_validation,85,end,0.8061408650828762,content_unigram
+train_vs_validation,passage_raw,toward_validation,86,polymers,0.8043280345238213,content_unigram
+train_vs_validation,passage_raw,toward_validation,87,wires,0.8023443080283615,content_unigram
+train_vs_validation,passage_raw,toward_validation,88,rotating,0.8015163458223926,content_unigram
+train_vs_validation,passage_raw,toward_validation,89,scattered light,0.8011160712014068,content_bigram
+train_vs_validation,passage_raw,toward_validation,90,the second,0.8008211830032579,content_bigram
+train_vs_validation,passage_raw,toward_validation,91,separator sheet,0.8006755169090478,content_bigram
+train_vs_validation,passage_raw,toward_validation,92,sample,0.7932390710119873,content_unigram
+train_vs_validation,passage_raw,toward_validation,93,home cell,0.7923733836247987,content_bigram
+train_vs_validation,passage_raw,toward_validation,94,specimen,0.7919663177595477,content_unigram
+train_vs_validation,passage_raw,toward_validation,95,color,0.7874119876596848,content_unigram
+train_vs_validation,passage_raw,toward_validation,96,subscription,0.7869828160396539,content_unigram
+train_vs_validation,passage_raw,toward_validation,97,sheet,0.786286997063059,content_unigram
+train_vs_validation,passage_raw,toward_validation,98,module,0.7846614520752191,content_unigram
+train_vs_validation,passage_raw,toward_validation,99,scattered,0.7834494706517389,content_unigram
+train_vs_validation,passage_raw,toward_validation,100,the imaging,0.7769015162372879,content_bigram
+train_vs_validation,passage_raw,toward_train,1,the,-2.1546327780081165,content_unigram
+train_vs_validation,passage_raw,toward_train,2,and,-1.8014800657828858,content_unigram
+train_vs_validation,passage_raw,toward_train,3,are,-1.7279415280707873,content_unigram
+train_vs_validation,passage_raw,toward_train,4,of the,-1.594078642448051,content_bigram
+train_vs_validation,passage_raw,toward_train,5,apparatus,-1.5489741107951298,content_unigram
+train_vs_validation,passage_raw,toward_train,6,resin,-1.484887094457215,content_unigram
+train_vs_validation,passage_raw,toward_train,7,case,-1.4780901588203443,content_unigram
+train_vs_validation,passage_raw,toward_train,8,with the,-1.4693062244680242,content_bigram
+train_vs_validation,passage_raw,toward_train,9,of,-1.4442872367715778,content_unigram
+train_vs_validation,passage_raw,toward_train,10,card,-1.4435527580314895,content_unigram
+train_vs_validation,passage_raw,toward_train,11,control,-1.427476572358677,content_unigram
+train_vs_validation,passage_raw,toward_train,12,transmission,-1.3294608008784694,content_unigram
+train_vs_validation,passage_raw,toward_train,13,electrode,-1.3278439097308548,content_unigram
+train_vs_validation,passage_raw,toward_train,14,figure,-1.281702269141392,patent_boilerplate
+train_vs_validation,passage_raw,toward_train,15,method,-1.2791437095057856,content_unigram
+train_vs_validation,passage_raw,toward_train,16,an,-1.2574804195630058,content_unigram
+train_vs_validation,passage_raw,toward_train,17,at the,-1.2493379317542046,content_bigram
+train_vs_validation,passage_raw,toward_train,18,metal,-1.243102339049286,content_unigram
+train_vs_validation,passage_raw,toward_train,19,fuel,-1.2075622705660345,content_unigram
+train_vs_validation,passage_raw,toward_train,20,to the,-1.1995023776557474,content_bigram
+train_vs_validation,passage_raw,toward_train,21,node,-1.1863101678587151,content_unigram
+train_vs_validation,passage_raw,toward_train,22,path,-1.175162793588009,content_unigram
+train_vs_validation,passage_raw,toward_train,23,injection,-1.1686253131837496,content_unigram
+train_vs_validation,passage_raw,toward_train,24,not,-1.1644067397571223,content_unigram
+train_vs_validation,passage_raw,toward_train,25,terminal,-1.1408963210854444,content_unigram
+train_vs_validation,passage_raw,toward_train,26,port,-1.1406375483268791,content_unigram
+train_vs_validation,passage_raw,toward_train,27,in step,-1.1347828813703194,content_bigram
+train_vs_validation,passage_raw,toward_train,28,defined,-1.1237046642227801,content_unigram
+train_vs_validation,passage_raw,toward_train,29,optical,-1.1149907133141421,content_unigram
+train_vs_validation,passage_raw,toward_train,30,exemplary embodiment,-1.1012589355116575,patent_boilerplate
+train_vs_validation,passage_raw,toward_train,31,battery,-1.0972820272709705,content_unigram
+train_vs_validation,passage_raw,toward_train,32,connection,-1.0957178630172517,content_unigram
+train_vs_validation,passage_raw,toward_train,33,needle,-1.0864402608119688,content_unigram
+train_vs_validation,passage_raw,toward_train,34,steel,-1.0800156846375006,content_unigram
+train_vs_validation,passage_raw,toward_train,35,ue,-1.0797098633444442,content_unigram
+train_vs_validation,passage_raw,toward_train,36,wireless device,-1.0703098439789998,content_bigram
+train_vs_validation,passage_raw,toward_train,37,mobile device,-1.066209944418516,content_bigram
+train_vs_validation,passage_raw,toward_train,38,external,-1.0650886439625933,content_unigram
+train_vs_validation,passage_raw,toward_train,39,music,-1.0581405422661705,content_unigram
+train_vs_validation,passage_raw,toward_train,40,up,-1.0475867641838108,content_unigram
+train_vs_validation,passage_raw,toward_train,41,thereto,-1.0471498263044572,content_unigram
+train_vs_validation,passage_raw,toward_train,42,100,-1.046032457805734,contains_digit
+train_vs_validation,passage_raw,toward_train,43,to,-1.031747964889053,content_unigram
+train_vs_validation,passage_raw,toward_train,44,based,-1.0260911661706134,content_unigram
+train_vs_validation,passage_raw,toward_train,45,wind turbine,-1.023590968919533,content_bigram
+train_vs_validation,passage_raw,toward_train,46,following,-1.0014962530564402,content_unigram
+train_vs_validation,passage_raw,toward_train,47,include,-0.9974235378360083,content_unigram
+train_vs_validation,passage_raw,toward_train,48,48,-0.9916109469062518,contains_digit
+train_vs_validation,passage_raw,toward_train,49,air,-0.986595350957225,content_unigram
+train_vs_validation,passage_raw,toward_train,50,applied,-0.984558049280642,content_unigram
+train_vs_validation,passage_raw,toward_train,51,tower,-0.9797545890596159,content_unigram
+train_vs_validation,passage_raw,toward_train,52,the substrate,-0.9752061418971324,content_bigram
+train_vs_validation,passage_raw,toward_train,53,17,-0.9693823819234934,contains_digit
+train_vs_validation,passage_raw,toward_train,54,systems,-0.9671314025657547,content_unigram
+train_vs_validation,passage_raw,toward_train,55,into the,-0.9667582934474338,content_bigram
+train_vs_validation,passage_raw,toward_train,56,wind,-0.9658205514327635,content_unigram
+train_vs_validation,passage_raw,toward_train,57,menu,-0.9593507552343388,content_unigram
+train_vs_validation,passage_raw,toward_train,58,space,-0.9446900084111516,content_unigram
+train_vs_validation,passage_raw,toward_train,59,the connection,-0.937918641295636,content_bigram
+train_vs_validation,passage_raw,toward_train,60,board,-0.9355433085086634,content_unigram
+train_vs_validation,passage_raw,toward_train,61,it is,-0.9345682615425919,content_bigram
+train_vs_validation,passage_raw,toward_train,62,no,-0.930206094656276,content_unigram
+train_vs_validation,passage_raw,toward_train,63,machine,-0.9261104927458653,content_unigram
+train_vs_validation,passage_raw,toward_train,64,in an,-0.9212278818035419,content_bigram
+train_vs_validation,passage_raw,toward_train,65,oxide,-0.9189699994910759,content_unigram
+train_vs_validation,passage_raw,toward_train,66,section,-0.9169741470916811,content_unigram
+train_vs_validation,passage_raw,toward_train,67,heating,-0.9155213839091617,content_unigram
+train_vs_validation,passage_raw,toward_train,68,gas,-0.9149971174789664,content_unigram
+train_vs_validation,passage_raw,toward_train,69,mobile,-0.9136092939950633,content_unigram
+train_vs_validation,passage_raw,toward_train,70,chemical,-0.9106237151457923,content_unigram
+train_vs_validation,passage_raw,toward_train,71,combustion,-0.9106194886211915,content_unigram
+train_vs_validation,passage_raw,toward_train,72,level,-0.9057673517845604,content_unigram
+train_vs_validation,passage_raw,toward_train,73,coating,-0.904290196186629,content_unigram
+train_vs_validation,passage_raw,toward_train,74,header,-0.903227521298671,content_unigram
+train_vs_validation,passage_raw,toward_train,75,opening,-0.9003383156421508,content_unigram
+train_vs_validation,passage_raw,toward_train,76,on the,-0.8910057596644307,content_bigram
+train_vs_validation,passage_raw,toward_train,77,transmitted,-0.8907372665834193,content_unigram
+train_vs_validation,passage_raw,toward_train,78,equation,-0.8879828270167902,content_unigram
+train_vs_validation,passage_raw,toward_train,79,network,-0.8870094336379604,content_unigram
+train_vs_validation,passage_raw,toward_train,80,which,-0.8867974149793977,content_unigram
+train_vs_validation,passage_raw,toward_train,81,for the,-0.8867034989693467,content_bigram
+train_vs_validation,passage_raw,toward_train,82,step,-0.8843798846244016,content_unigram
+train_vs_validation,passage_raw,toward_train,83,amount,-0.8775276925513916,content_unigram
+train_vs_validation,passage_raw,toward_train,84,secondary,-0.8764404314653762,content_unigram
+train_vs_validation,passage_raw,toward_train,85,time,-0.8752695673996074,content_unigram
+train_vs_validation,passage_raw,toward_train,86,pin,-0.8707141477050219,content_unigram
+train_vs_validation,passage_raw,toward_train,87,laundry,-0.8704884220970955,content_unigram
+train_vs_validation,passage_raw,toward_train,88,assemblies,-0.867557306554648,content_unigram
+train_vs_validation,passage_raw,toward_train,89,earth,-0.865388906117418,content_unigram
+train_vs_validation,passage_raw,toward_train,90,inside,-0.8631127096291743,content_unigram
+train_vs_validation,passage_raw,toward_train,91,cover,-0.8627416761965921,content_unigram
+train_vs_validation,passage_raw,toward_train,92,calculation,-0.8626356229806473,content_unigram
+train_vs_validation,passage_raw,toward_train,93,valve,-0.8605506738234783,content_unigram
+train_vs_validation,passage_raw,toward_train,94,transfer,-0.8595882018855546,content_unigram
+train_vs_validation,passage_raw,toward_train,95,used,-0.8519837979558942,content_unigram
+train_vs_validation,passage_raw,toward_train,96,capacitance,-0.8519580428434353,content_unigram
+train_vs_validation,passage_raw,toward_train,97,casing,-0.8458786139013909,content_unigram
+train_vs_validation,passage_raw,toward_train,98,so,-0.8454979119711082,content_unigram
+train_vs_validation,passage_raw,toward_train,99,ultrasound,-0.8442652939715212,content_unigram
+train_vs_validation,passage_raw,toward_train,100,exemplary,-0.8438293688170937,content_unigram
+train_vs_validation,pair_raw,toward_validation,1,xray,1.642467432542805,content_unigram
+train_vs_validation,pair_raw,toward_validation,2,tire,1.6216255363858598,content_unigram
+train_vs_validation,pair_raw,toward_validation,3,print,1.5180947025750569,content_unigram
+train_vs_validation,pair_raw,toward_validation,4,radio,1.5012738977409128,content_unigram
+train_vs_validation,pair_raw,toward_validation,5,shaft,1.4336322399337142,content_unigram
+train_vs_validation,pair_raw,toward_validation,6,extension,1.4233502999284495,content_unigram
+train_vs_validation,pair_raw,toward_validation,7,motor,1.383246208710736,content_unigram
+train_vs_validation,pair_raw,toward_validation,8,cancellation,1.3831880299903863,content_unigram
+train_vs_validation,pair_raw,toward_validation,9,imaging,1.3813296349267081,content_unigram
+train_vs_validation,pair_raw,toward_validation,10,xray imaging,1.3490822874142816,content_bigram
+train_vs_validation,pair_raw,toward_validation,11,system,1.3360574548444557,content_unigram
+train_vs_validation,pair_raw,toward_validation,12,transparent display,1.2875664179818846,content_bigram
+train_vs_validation,pair_raw,toward_validation,13,window,1.2668186560315284,content_unigram
+train_vs_validation,pair_raw,toward_validation,14,chip,1.2659789553192173,content_unigram
+train_vs_validation,pair_raw,toward_validation,15,tube,1.2472351994290245,content_unigram
+train_vs_validation,pair_raw,toward_validation,16,the electronic,1.240114073646835,content_bigram
+train_vs_validation,pair_raw,toward_validation,17,noise,1.2340142187826835,content_unigram
+train_vs_validation,pair_raw,toward_validation,18,detector,1.2278845304195722,content_unigram
+train_vs_validation,pair_raw,toward_validation,19,photo,1.201507337036671,content_unigram
+train_vs_validation,pair_raw,toward_validation,20,the tire,1.2001469472450716,content_bigram
+train_vs_validation,pair_raw,toward_validation,21,printing,1.1995789355604234,content_unigram
+train_vs_validation,pair_raw,toward_validation,22,the xray,1.1914590140574106,content_bigram
+train_vs_validation,pair_raw,toward_validation,23,fiber,1.1817550683065212,content_unigram
+train_vs_validation,pair_raw,toward_validation,24,program,1.179933453056174,content_unigram
+train_vs_validation,pair_raw,toward_validation,25,strap,1.177010445695501,content_unigram
+train_vs_validation,pair_raw,toward_validation,26,head,1.1717455958432874,content_unigram
+train_vs_validation,pair_raw,toward_validation,27,damping,1.1642617350639837,content_unigram
+train_vs_validation,pair_raw,toward_validation,28,solar,1.161257050066389,content_unigram
+train_vs_validation,pair_raw,toward_validation,29,gizzard,1.1610306285296768,content_unigram
+train_vs_validation,pair_raw,toward_validation,30,media,1.1461300225879354,content_unigram
+train_vs_validation,pair_raw,toward_validation,31,the fiber,1.1361510848774365,content_bigram
+train_vs_validation,pair_raw,toward_validation,32,the printing,1.1303175874248337,content_bigram
+train_vs_validation,pair_raw,toward_validation,33,the print,1.1253116652008792,content_bigram
+train_vs_validation,pair_raw,toward_validation,34,induction heater,1.115696071428681,content_bigram
+train_vs_validation,pair_raw,toward_validation,35,rfid,1.1103730055659138,content_unigram
+train_vs_validation,pair_raw,toward_validation,36,engagement,1.089387875243771,content_unigram
+train_vs_validation,pair_raw,toward_validation,37,configuration,1.0844399368282516,content_unigram
+train_vs_validation,pair_raw,toward_validation,38,system information,1.0819574964091347,content_bigram
+train_vs_validation,pair_raw,toward_validation,39,engine,1.0778135681164225,content_unigram
+train_vs_validation,pair_raw,toward_validation,40,color,1.0767212013663747,content_unigram
+train_vs_validation,pair_raw,toward_validation,41,satellite,1.065418538778465,content_unigram
+train_vs_validation,pair_raw,toward_validation,42,assembly according,1.0606964375068013,content_bigram
+train_vs_validation,pair_raw,toward_validation,43,wearable,1.0492666543225804,content_unigram
+train_vs_validation,pair_raw,toward_validation,44,cooling assembly,1.0469925069909458,content_bigram
+train_vs_validation,pair_raw,toward_validation,45,phone,1.0371950142766202,content_unigram
+train_vs_validation,pair_raw,toward_validation,46,answer extension,1.0326771578261156,content_bigram
+train_vs_validation,pair_raw,toward_validation,47,drill,1.0326632942579805,content_unigram
+train_vs_validation,pair_raw,toward_validation,48,broadcast,1.0281832058074976,content_unigram
+train_vs_validation,pair_raw,toward_validation,49,system of,1.0267077988528204,content_bigram
+train_vs_validation,pair_raw,toward_validation,50,motor control,1.0267008055810423,content_bigram
+train_vs_validation,pair_raw,toward_validation,51,the composite,1.0256528067345927,content_bigram
+train_vs_validation,pair_raw,toward_validation,52,composite material,1.0169566683010798,content_bigram
+train_vs_validation,pair_raw,toward_validation,53,reinforced,1.0168990967312561,content_unigram
+train_vs_validation,pair_raw,toward_validation,54,entry,1.0119046677966592,content_unigram
+train_vs_validation,pair_raw,toward_validation,55,network access,1.0070912174885363,content_bigram
+train_vs_validation,pair_raw,toward_validation,56,first photo,1.0059531363511152,content_bigram
+train_vs_validation,pair_raw,toward_validation,57,block,1.0057078832627617,content_unigram
+train_vs_validation,pair_raw,toward_validation,58,the device,1.0053908849299547,content_bigram
+train_vs_validation,pair_raw,toward_validation,59,resolution,1.0050242261980122,content_unigram
+train_vs_validation,pair_raw,toward_validation,60,sensing unit,1.0022519279002233,content_bigram
+train_vs_validation,pair_raw,toward_validation,61,the motor,1.0009919814150812,content_bigram
+train_vs_validation,pair_raw,toward_validation,62,cladding,0.9983291037009938,content_unigram
+train_vs_validation,pair_raw,toward_validation,63,the evaluation,0.9983089834116295,content_bigram
+train_vs_validation,pair_raw,toward_validation,64,the field,0.9870325868130218,content_bigram
+train_vs_validation,pair_raw,toward_validation,65,the plurality,0.9806514386600731,content_bigram
+train_vs_validation,pair_raw,toward_validation,66,name,0.9797103888425724,content_unigram
+train_vs_validation,pair_raw,toward_validation,67,target,0.9750252233362122,content_unigram
+train_vs_validation,pair_raw,toward_validation,68,module,0.963265815397526,content_unigram
+train_vs_validation,pair_raw,toward_validation,69,key,0.9622103250411658,content_unigram
+train_vs_validation,pair_raw,toward_validation,70,in addition,0.9583172308868719,content_bigram
+train_vs_validation,pair_raw,toward_validation,71,projection,0.9565478539420008,content_unigram
+train_vs_validation,pair_raw,toward_validation,72,evaluation unit,0.9547500163325643,content_bigram
+train_vs_validation,pair_raw,toward_validation,73,fiber reinforced,0.9540601068030692,content_bigram
+train_vs_validation,pair_raw,toward_validation,74,element according,0.9505773101529374,content_bigram
+train_vs_validation,pair_raw,toward_validation,75,adhesive layer,0.9501929136864791,content_bigram
+train_vs_validation,pair_raw,toward_validation,76,the solar,0.9471321761418663,content_bigram
+train_vs_validation,pair_raw,toward_validation,77,joint,0.9356906396340491,content_unigram
+train_vs_validation,pair_raw,toward_validation,78,sidewall,0.9319251298816671,content_unigram
+train_vs_validation,pair_raw,toward_validation,79,pixel data,0.9238809906561898,content_bigram
+train_vs_validation,pair_raw,toward_validation,80,the radio,0.9215196550917522,content_bigram
+train_vs_validation,pair_raw,toward_validation,81,locationupdaterequest,0.9203441364075592,content_unigram
+train_vs_validation,pair_raw,toward_validation,82,grating,0.9184736686718928,content_unigram
+train_vs_validation,pair_raw,toward_validation,83,tie,0.9158951786024161,content_unigram
+train_vs_validation,pair_raw,toward_validation,84,the at,0.9157652731353108,content_bigram
+train_vs_validation,pair_raw,toward_validation,85,stage,0.9153161918639134,content_unigram
+train_vs_validation,pair_raw,toward_validation,86,messages,0.9129405840569862,content_unigram
+train_vs_validation,pair_raw,toward_validation,87,plane,0.9119168791051159,content_unigram
+train_vs_validation,pair_raw,toward_validation,88,the program,0.9112147130606767,content_bigram
+train_vs_validation,pair_raw,toward_validation,89,field of,0.9105947113461396,content_bigram
+train_vs_validation,pair_raw,toward_validation,90,extension function,0.9095596492274588,content_bigram
+train_vs_validation,pair_raw,toward_validation,91,reinforced composition,0.9057679826238948,content_bigram
+train_vs_validation,pair_raw,toward_validation,92,pane,0.9031239599278693,content_unigram
+train_vs_validation,pair_raw,toward_validation,93,the detector,0.9002418093504215,content_bigram
+train_vs_validation,pair_raw,toward_validation,94,delay,0.8989667991415812,content_unigram
+train_vs_validation,pair_raw,toward_validation,95,filtration,0.8988366315327722,content_unigram
+train_vs_validation,pair_raw,toward_validation,96,scattered light,0.8983518364855573,content_bigram
+train_vs_validation,pair_raw,toward_validation,97,blood,0.8979139367994067,content_unigram
+train_vs_validation,pair_raw,toward_validation,98,nonwoven,0.8960150296522171,content_unigram
+train_vs_validation,pair_raw,toward_validation,99,rfid tag,0.895398687349943,content_bigram
+train_vs_validation,pair_raw,toward_validation,100,input is,0.8921788668847428,content_bigram
+train_vs_validation,pair_raw,toward_train,1,said,-2.9517014027600488,patent_boilerplate
+train_vs_validation,pair_raw,toward_train,2,apparatus,-2.1591274229655535,content_unigram
+train_vs_validation,pair_raw,toward_train,3,data,-1.844239495877475,content_unigram
+train_vs_validation,pair_raw,toward_train,4,electrode,-1.7806969766061895,content_unigram
+train_vs_validation,pair_raw,toward_train,5,mode,-1.5554702741313067,content_unigram
+train_vs_validation,pair_raw,toward_train,6,node,-1.5103199137526817,content_unigram
+train_vs_validation,pair_raw,toward_train,7,apparatus according,-1.4881892679393744,content_bigram
+train_vs_validation,pair_raw,toward_train,8,are,-1.486208901739001,content_unigram
+train_vs_validation,pair_raw,toward_train,9,external,-1.4755380526554258,content_unigram
+train_vs_validation,pair_raw,toward_train,10,section,-1.4570252407765862,content_unigram
+train_vs_validation,pair_raw,toward_train,11,gas,-1.4431002507081179,content_unigram
+train_vs_validation,pair_raw,toward_train,12,path,-1.4122053255321039,content_unigram
+train_vs_validation,pair_raw,toward_train,13,to,-1.3446385758685557,content_unigram
+train_vs_validation,pair_raw,toward_train,14,an,-1.2749195548248793,content_unigram
+train_vs_validation,pair_raw,toward_train,15,and,-1.2716351104036248,content_unigram
+train_vs_validation,pair_raw,toward_train,16,transmission,-1.2394032046174448,content_unigram
+train_vs_validation,pair_raw,toward_train,17,case,-1.2307092091303078,content_unigram
+train_vs_validation,pair_raw,toward_train,18,card,-1.2210517417405835,content_unigram
+train_vs_validation,pair_raw,toward_train,19,ue,-1.217534733171358,content_unigram
+train_vs_validation,pair_raw,toward_train,20,instrument,-1.2107093017735882,content_unigram
+train_vs_validation,pair_raw,toward_train,21,of the,-1.2057633079115706,content_bigram
+train_vs_validation,pair_raw,toward_train,22,port,-1.1979566466247062,content_unigram
+train_vs_validation,pair_raw,toward_train,23,device,-1.1869043895441154,content_unigram
+train_vs_validation,pair_raw,toward_train,24,not,-1.178471469394796,content_unigram
+train_vs_validation,pair_raw,toward_train,25,mobile,-1.17775835726316,content_unigram
+train_vs_validation,pair_raw,toward_train,26,with the,-1.1599752585239917,content_bigram
+train_vs_validation,pair_raw,toward_train,27,injection,-1.1588951479189453,content_unigram
+train_vs_validation,pair_raw,toward_train,28,the portable,-1.139747097516802,content_bigram
+train_vs_validation,pair_raw,toward_train,29,ultrasound,-1.1375418299967268,content_unigram
+train_vs_validation,pair_raw,toward_train,30,method,-1.1357672017583695,content_unigram
+train_vs_validation,pair_raw,toward_train,31,casing,-1.1041831007871783,content_unigram
+train_vs_validation,pair_raw,toward_train,32,organic,-1.100223331774553,content_unigram
+train_vs_validation,pair_raw,toward_train,33,layer,-1.078314734145002,content_unigram
+train_vs_validation,pair_raw,toward_train,34,from the,-1.0758432827530577,content_bigram
+train_vs_validation,pair_raw,toward_train,35,of said,-1.0755971067640082,patent_boilerplate
+train_vs_validation,pair_raw,toward_train,36,by,-1.073921481433403,content_unigram
+train_vs_validation,pair_raw,toward_train,37,into the,-1.0688777704921673,content_bigram
+train_vs_validation,pair_raw,toward_train,38,wireless device,-1.0583715697466225,content_bigram
+train_vs_validation,pair_raw,toward_train,39,the connection,-1.0573117606538684,content_bigram
+train_vs_validation,pair_raw,toward_train,40,thickness,-1.0448697966915033,content_unigram
+train_vs_validation,pair_raw,toward_train,41,control,-1.0375433520196349,content_unigram
+train_vs_validation,pair_raw,toward_train,42,in step,-1.0287764976081268,content_bigram
+train_vs_validation,pair_raw,toward_train,43,fuel,-1.0281591221843824,content_unigram
+train_vs_validation,pair_raw,toward_train,44,heating,-1.0158265408380087,content_unigram
+train_vs_validation,pair_raw,toward_train,45,emitting,-1.0024471007932805,content_unigram
+train_vs_validation,pair_raw,toward_train,46,terminal,-0.99096468322093,content_unigram
+train_vs_validation,pair_raw,toward_train,47,is,-0.9902763829774972,content_unigram
+train_vs_validation,pair_raw,toward_train,48,air,-0.9900290015510409,content_unigram
+train_vs_validation,pair_raw,toward_train,49,packet,-0.9896624409806991,content_unigram
+train_vs_validation,pair_raw,toward_train,50,optical,-0.9852587332467694,content_unigram
+train_vs_validation,pair_raw,toward_train,51,guide,-0.9795684363600977,content_unigram
+train_vs_validation,pair_raw,toward_train,52,ink,-0.9758544082567847,content_unigram
+train_vs_validation,pair_raw,toward_train,53,protection,-0.9726192613687998,content_unigram
+train_vs_validation,pair_raw,toward_train,54,wind,-0.9711194822969906,content_unigram
+train_vs_validation,pair_raw,toward_train,55,coating,-0.9706369783343672,content_unigram
+train_vs_validation,pair_raw,toward_train,56,wireless,-0.9687581433783345,content_unigram
+train_vs_validation,pair_raw,toward_train,57,thereto,-0.966394148327169,content_unigram
+train_vs_validation,pair_raw,toward_train,58,test,-0.9647100000565748,content_unigram
+train_vs_validation,pair_raw,toward_train,59,48,-0.9639386484010231,contains_digit
+train_vs_validation,pair_raw,toward_train,60,service,-0.9544107344800563,content_unigram
+train_vs_validation,pair_raw,toward_train,61,ejection,-0.950502781291187,content_unigram
+train_vs_validation,pair_raw,toward_train,62,information processing,-0.9493504860891978,content_bigram
+train_vs_validation,pair_raw,toward_train,63,needle,-0.9419029488959875,content_unigram
+train_vs_validation,pair_raw,toward_train,64,wherein said,-0.9398013981690109,patent_boilerplate
+train_vs_validation,pair_raw,toward_train,65,11,-0.9362802801659449,contains_digit
+train_vs_validation,pair_raw,toward_train,66,light emitting,-0.935690078998459,content_bigram
+train_vs_validation,pair_raw,toward_train,67,user,-0.9339366441040837,content_unigram
+train_vs_validation,pair_raw,toward_train,68,the ue,-0.9321805811644758,content_bigram
+train_vs_validation,pair_raw,toward_train,69,mounted,-0.919699276387185,content_unigram
+train_vs_validation,pair_raw,toward_train,70,60,-0.9196179096984815,contains_digit
+train_vs_validation,pair_raw,toward_train,71,wind turbine,-0.9186469285980304,content_bigram
+train_vs_validation,pair_raw,toward_train,72,foam,-0.9176710561384377,content_unigram
+train_vs_validation,pair_raw,toward_train,73,priority,-0.9170308040292138,content_unigram
+train_vs_validation,pair_raw,toward_train,74,pressure,-0.9146267287853221,content_unigram
+train_vs_validation,pair_raw,toward_train,75,the external,-0.9082179796104559,content_bigram
+train_vs_validation,pair_raw,toward_train,76,following,-0.9048951901281569,content_unigram
+train_vs_validation,pair_raw,toward_train,77,arranged to,-0.9030967309018072,content_bigram
+train_vs_validation,pair_raw,toward_train,78,for an,-0.9008756120046909,content_bigram
+train_vs_validation,pair_raw,toward_train,79,monitoring,-0.8975460393627783,content_unigram
+train_vs_validation,pair_raw,toward_train,80,figure,-0.8967183039428794,patent_boilerplate
+train_vs_validation,pair_raw,toward_train,81,point,-0.8966688790810821,content_unigram
+train_vs_validation,pair_raw,toward_train,82,method as,-0.8956081580732139,content_bigram
+train_vs_validation,pair_raw,toward_train,83,information,-0.8913290991781951,content_unigram
+train_vs_validation,pair_raw,toward_train,84,the light,-0.8904020488537348,content_bigram
+train_vs_validation,pair_raw,toward_train,85,liquid,-0.8884737477103686,content_unigram
+train_vs_validation,pair_raw,toward_train,86,tower,-0.8884440275794785,content_unigram
+train_vs_validation,pair_raw,toward_train,87,exemplary embodiment,-0.8863905593830631,patent_boilerplate
+train_vs_validation,pair_raw,toward_train,88,which,-0.8845965686183005,content_unigram
+train_vs_validation,pair_raw,toward_train,89,board,-0.8835855383336976,content_unigram
+train_vs_validation,pair_raw,toward_train,90,menu,-0.8798884347879921,content_unigram
+train_vs_validation,pair_raw,toward_train,91,to the,-0.8788110502847852,content_bigram
+train_vs_validation,pair_raw,toward_train,92,battery,-0.8784396686287037,content_unigram
+train_vs_validation,pair_raw,toward_train,93,portable electronic,-0.8771815621357361,content_bigram
+train_vs_validation,pair_raw,toward_train,94,thickness of,-0.8766157850125835,content_bigram
+train_vs_validation,pair_raw,toward_train,95,inside,-0.8730244173741969,content_unigram
+train_vs_validation,pair_raw,toward_train,96,resin,-0.872457262266659,content_unigram
+train_vs_validation,pair_raw,toward_train,97,pitch,-0.8673970838022576,content_unigram
+train_vs_validation,pair_raw,toward_train,98,forth,-0.8664720107187331,content_unigram
+train_vs_validation,pair_raw,toward_train,99,systems,-0.8655722779913729,content_unigram
+train_vs_validation,pair_raw,toward_train,100,terminal device,-0.862681940486078,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,1,xray,1.6964467453448941,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,2,tire,1.5574593659809215,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,3,print,1.5102296429170032,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,4,radio,1.5066583543682404,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,5,shaft,1.4527695375804417,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,6,motor,1.4086143358552172,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,7,extension,1.391698909008584,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,8,imaging,1.379339200293488,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,9,tube id,1.3773061397508777,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,10,xray imaging,1.349561158805453,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,11,cancellation,1.346007254719223,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,12,transparent display,1.3240020520282263,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,13,noise,1.3233876078383464,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,14,system,1.3015109177422721,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,15,window,1.3008472218253677,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,16,the electronic,1.2651703755300183,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,17,chip,1.2599621987146434,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,18,detector,1.249930481585146,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,19,from id,1.2289726746032672,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,20,the xray,1.2233311186372404,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,21,printing,1.2185762530478312,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,22,photo,1.2100057202076737,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,23,damping,1.202646498327032,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,24,head id,1.1856929975839794,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,25,fiber,1.1796054381358592,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,26,gizzard,1.1747991660062456,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,27,program,1.168261151089754,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,28,strap,1.1661094099107556,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,29,engine,1.159837936410545,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,30,the tire,1.1538546672047374,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,31,the fiber,1.147764290204561,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,32,engagement,1.1432392118890153,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,33,surface id,1.142138500356209,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,34,the printing,1.138687727323219,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,35,induction heater,1.138460164663111,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,36,solar,1.1307881853265656,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,37,covering id,1.1223655334345766,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,38,rfid,1.119672059098437,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,39,media,1.1153092388869532,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,40,the print,1.1073949321601195,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,41,tube,1.107232928072439,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,42,head,1.1064879291230512,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,43,assembly according,1.1032674980370134,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,44,configuration,1.083868532890494,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,45,system information,1.0798965997139474,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,46,color,1.0661112311250411,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,47,drill,1.0618133771483913,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,48,wearable,1.0561571548093278,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,49,satellite,1.0548392076984134,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,50,the plurality,1.0513604401939454,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,51,block,1.0490175806000934,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,52,broadcast,1.0444325226430982,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,53,the motor,1.0395409940892597,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,54,system of,1.0324389181069107,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,55,answer extension,1.0317827489836955,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,56,cladding,1.0317597836508412,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,57,the device,1.0314093619206715,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,58,cooling assembly,1.0296505850999425,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,59,entry,1.0295717113537382,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,60,motor control,1.0271329450379416,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,61,grating,1.0260960758425193,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,62,phone,1.0217110126166213,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,63,the composite,1.0204534321977865,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,64,network access,1.0191519703225884,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,65,name,1.0168766459342116,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,66,first photo,1.015986589218013,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,67,the field,1.0105123638190376,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,68,target,1.0087248961647872,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,69,reinforced,1.0018134653069393,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,70,resolution,0.9938560468287939,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,71,composite material,0.9932814888554223,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,72,sensing unit,0.9893332825763113,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,73,tool id,0.9892127807504174,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,74,joint,0.987450690904512,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,75,key,0.9834781531693687,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,76,the evaluation,0.9672159038583176,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,77,the radio,0.9565961189252754,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,78,the detector,0.9555149135070953,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,79,the at,0.9486158921528927,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,80,fiber reinforced,0.9460432659649454,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,81,adhesive layer,0.9440358205911055,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,82,the projection,0.9337105165585883,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,83,first,0.9335456550916902,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,84,evaluation unit,0.9327863828670658,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,85,messages,0.9326178221302804,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,86,pane,0.9317813558828903,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,87,addition,0.9286157791946595,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,88,nonwoven,0.9277224063696995,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,89,pixel data,0.9246248365360439,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,90,field of,0.9236960411925215,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,91,plane,0.9227617807306457,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,92,the solar,0.9209379725608845,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,93,projection,0.9191961758672951,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,94,element according,0.9139743365054821,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,95,tie,0.9137195588855582,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,96,locationupdaterequest,0.9118016544369422,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,97,delay,0.9096265634058944,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,98,stage,0.9083613202956103,content_unigram
+train_vs_validation,pair_number_masked,toward_validation,99,reinforced composition,0.9057357647339835,content_bigram
+train_vs_validation,pair_number_masked,toward_validation,100,rfid tag,0.9053426100432515,content_bigram
+train_vs_validation,pair_number_masked,toward_train,1,said,-2.9662797306659034,patent_boilerplate
+train_vs_validation,pair_number_masked,toward_train,2,apparatus,-2.155964610635322,content_unigram
+train_vs_validation,pair_number_masked,toward_train,3,data,-1.7993420192119236,content_unigram
+train_vs_validation,pair_number_masked,toward_train,4,electrode,-1.7320091664873831,content_unigram
+train_vs_validation,pair_number_masked,toward_train,5,mode,-1.5899699412058323,content_unigram
+train_vs_validation,pair_number_masked,toward_train,6,id,-1.5024672155612013,content_unigram
+train_vs_validation,pair_number_masked,toward_train,7,external,-1.4965803028315237,content_unigram
+train_vs_validation,pair_number_masked,toward_train,8,apparatus according,-1.4900243288156634,content_bigram
+train_vs_validation,pair_number_masked,toward_train,9,node,-1.4742734588383184,content_unigram
+train_vs_validation,pair_number_masked,toward_train,10,gas,-1.4592680472688584,content_unigram
+train_vs_validation,pair_number_masked,toward_train,11,id id,-1.4503838623894316,content_bigram
+train_vs_validation,pair_number_masked,toward_train,12,are,-1.3798274002750626,content_unigram
+train_vs_validation,pair_number_masked,toward_train,13,path,-1.323998171070452,content_unigram
+train_vs_validation,pair_number_masked,toward_train,14,an,-1.2753846917246405,content_unigram
+train_vs_validation,pair_number_masked,toward_train,15,section,-1.2651762411670804,content_unigram
+train_vs_validation,pair_number_masked,toward_train,16,not,-1.2223709067978512,content_unigram
+train_vs_validation,pair_number_masked,toward_train,17,instrument,-1.2125576392928648,content_unigram
+train_vs_validation,pair_number_masked,toward_train,18,ue,-1.2116057525368575,content_unigram
+train_vs_validation,pair_number_masked,toward_train,19,card,-1.2100741490598035,content_unigram
+train_vs_validation,pair_number_masked,toward_train,20,transmission,-1.2093110051262563,content_unigram
+train_vs_validation,pair_number_masked,toward_train,21,case,-1.2011371266710367,content_unigram
+train_vs_validation,pair_number_masked,toward_train,22,port,-1.1727802461431363,content_unigram
+train_vs_validation,pair_number_masked,toward_train,23,injection,-1.1622567532497001,content_unigram
+train_vs_validation,pair_number_masked,toward_train,24,mobile,-1.1597174357644384,content_unigram
+train_vs_validation,pair_number_masked,toward_train,25,method,-1.1445946350528926,content_unigram
+train_vs_validation,pair_number_masked,toward_train,26,ultrasound,-1.1403221976951614,content_unigram
+train_vs_validation,pair_number_masked,toward_train,27,with the,-1.1277096009687873,content_bigram
+train_vs_validation,pair_number_masked,toward_train,28,the portable,-1.1225306538286162,content_bigram
+train_vs_validation,pair_number_masked,toward_train,29,to,-1.122299991773746,content_unigram
+train_vs_validation,pair_number_masked,toward_train,30,device,-1.1050875669658036,content_unigram
+train_vs_validation,pair_number_masked,toward_train,31,of said,-1.086415558139969,patent_boilerplate
+train_vs_validation,pair_number_masked,toward_train,32,organic,-1.084238067895891,content_unigram
+train_vs_validation,pair_number_masked,toward_train,33,id by,-1.0776183854323989,content_bigram
+train_vs_validation,pair_number_masked,toward_train,34,layer,-1.0542097603617457,content_unigram
+train_vs_validation,pair_number_masked,toward_train,35,wireless device,-1.0489432691727312,content_bigram
+train_vs_validation,pair_number_masked,toward_train,36,into the,-1.0481861785096835,content_bigram
+train_vs_validation,pair_number_masked,toward_train,37,and,-1.0434480694202954,content_unigram
+train_vs_validation,pair_number_masked,toward_train,38,station id,-1.043200188529013,content_bigram
+train_vs_validation,pair_number_masked,toward_train,39,casing,-1.041280734674292,content_unigram
+train_vs_validation,pair_number_masked,toward_train,40,thickness,-1.0300484654836566,content_unigram
+train_vs_validation,pair_number_masked,toward_train,41,emitting,-1.0294693737531557,content_unigram
+train_vs_validation,pair_number_masked,toward_train,42,fuel,-1.0188724562331088,content_unigram
+train_vs_validation,pair_number_masked,toward_train,43,of the,-1.0184351037105916,content_bigram
+train_vs_validation,pair_number_masked,toward_train,44,guide,-1.0116478838143692,content_unigram
+train_vs_validation,pair_number_masked,toward_train,45,from the,-1.0088309798251924,content_bigram
+train_vs_validation,pair_number_masked,toward_train,46,thereto,-1.0037743120730307,content_unigram
+train_vs_validation,pair_number_masked,toward_train,47,wind,-1.0031842144120589,content_unigram
+train_vs_validation,pair_number_masked,toward_train,48,heating,-0.9971361020494438,content_unigram
+train_vs_validation,pair_number_masked,toward_train,49,protection,-0.9867910802475527,content_unigram
+train_vs_validation,pair_number_masked,toward_train,50,wireless,-0.976069591888601,content_unigram
+train_vs_validation,pair_number_masked,toward_train,51,user,-0.9739759998157228,content_unigram
+train_vs_validation,pair_number_masked,toward_train,52,ink,-0.9722582593748609,content_unigram
+train_vs_validation,pair_number_masked,toward_train,53,terminal id,-0.9718414733637207,content_bigram
+train_vs_validation,pair_number_masked,toward_train,54,packet,-0.9679881715427634,content_unigram
+train_vs_validation,pair_number_masked,toward_train,55,information processing,-0.9664463362171071,content_bigram
+train_vs_validation,pair_number_masked,toward_train,56,air,-0.9644937065300357,content_unigram
+train_vs_validation,pair_number_masked,toward_train,57,light emitting,-0.9567288628903174,content_bigram
+train_vs_validation,pair_number_masked,toward_train,58,by,-0.9564278356936314,content_unigram
+train_vs_validation,pair_number_masked,toward_train,59,wind turbine,-0.9492352757646529,content_bigram
+train_vs_validation,pair_number_masked,toward_train,60,coating,-0.9455368868510804,content_unigram
+train_vs_validation,pair_number_masked,toward_train,61,ejection,-0.9393365008696183,content_unigram
+train_vs_validation,pair_number_masked,toward_train,62,service,-0.9388461887673141,content_unigram
+train_vs_validation,pair_number_masked,toward_train,63,control,-0.93684853783195,content_unigram
+train_vs_validation,pair_number_masked,toward_train,64,foam,-0.9359426243885516,content_unigram
+train_vs_validation,pair_number_masked,toward_train,65,in step,-0.9310457365288681,content_bigram
+train_vs_validation,pair_number_masked,toward_train,66,test,-0.9291749981599475,content_unigram
+train_vs_validation,pair_number_masked,toward_train,67,exemplary embodiment,-0.9289605792608637,patent_boilerplate
+train_vs_validation,pair_number_masked,toward_train,68,priority,-0.9282997604208736,content_unigram
+train_vs_validation,pair_number_masked,toward_train,69,the connection,-0.9281251514654661,content_bigram
+train_vs_validation,pair_number_masked,toward_train,70,needle,-0.9250471982192411,content_unigram
+train_vs_validation,pair_number_masked,toward_train,71,information,-0.9226088392387612,content_unigram
+train_vs_validation,pair_number_masked,toward_train,72,optical,-0.9219160868394158,content_unigram
+train_vs_validation,pair_number_masked,toward_train,73,menu,-0.9173650803768671,content_unigram
+train_vs_validation,pair_number_masked,toward_train,74,wherein said,-0.9170387980662529,patent_boilerplate
+train_vs_validation,pair_number_masked,toward_train,75,following,-0.9095527668406609,content_unigram
+train_vs_validation,pair_number_masked,toward_train,76,the ue,-0.9088952650012244,content_bigram
+train_vs_validation,pair_number_masked,toward_train,77,arranged to,-0.9087241011117301,content_bigram
+train_vs_validation,pair_number_masked,toward_train,78,systems,-0.9070802057693579,content_unigram
+train_vs_validation,pair_number_masked,toward_train,79,the external,-0.9066087984420959,content_bigram
+train_vs_validation,pair_number_masked,toward_train,80,for an,-0.9059137520033653,content_bigram
+train_vs_validation,pair_number_masked,toward_train,81,mounted,-0.9046983913421276,content_unigram
+train_vs_validation,pair_number_masked,toward_train,82,method as,-0.9002269327433116,content_bigram
+train_vs_validation,pair_number_masked,toward_train,83,liquid,-0.893594898471552,content_unigram
+train_vs_validation,pair_number_masked,toward_train,84,the light,-0.8915274331559996,content_bigram
+train_vs_validation,pair_number_masked,toward_train,85,pressure,-0.8890946647230835,content_unigram
+train_vs_validation,pair_number_masked,toward_train,86,tower,-0.8872343452477018,content_unigram
+train_vs_validation,pair_number_masked,toward_train,87,portable electronic,-0.8863079499381787,content_bigram
+train_vs_validation,pair_number_masked,toward_train,88,thickness of,-0.8791659329256941,content_bigram
+train_vs_validation,pair_number_masked,toward_train,89,monitoring,-0.8684261465617269,content_unigram
+train_vs_validation,pair_number_masked,toward_train,90,apparatus id,-0.8621534025831791,content_bigram
+train_vs_validation,pair_number_masked,toward_train,91,network id,-0.8617897774485944,content_bigram
+train_vs_validation,pair_number_masked,toward_train,92,forth,-0.8596401148088422,content_unigram
+train_vs_validation,pair_number_masked,toward_train,93,terminal,-0.8580999813599617,content_unigram
+train_vs_validation,pair_number_masked,toward_train,94,terminal device,-0.8580675570816916,content_bigram
+train_vs_validation,pair_number_masked,toward_train,95,oxide,-0.8577359068490313,content_unigram
+train_vs_validation,pair_number_masked,toward_train,96,used,-0.8554472770249746,content_unigram
+train_vs_validation,pair_number_masked,toward_train,97,return,-0.8544507098089934,content_unigram
+train_vs_validation,pair_number_masked,toward_train,98,board,-0.8521472469430145,content_unigram
+train_vs_validation,pair_number_masked,toward_train,99,of an,-0.850716951397238,content_bigram
+train_vs_validation,pair_number_masked,toward_train,100,pitch,-0.8485923408543684,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,1,xray,1.7113409391774097,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,2,tire,1.6471344960516319,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,3,print,1.565868085910879,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,4,radio,1.4760266206666162,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,5,shaft,1.4260824570307633,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,6,extension,1.421017293180734,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,7,imaging,1.4020277097441687,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,8,cancellation,1.3730788508459781,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,9,noise,1.3635856685554866,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,10,transparent display,1.3602158210480266,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,11,xray imaging,1.348804865479615,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,12,chip,1.341002134903119,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,13,system,1.3317004050520254,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,14,the electronic,1.3202104998572572,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,15,claims the,1.3158043708423584,patent_boilerplate
+train_vs_validation,pair_content_normalized,toward_validation,16,detector,1.2709072181528642,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,17,motor,1.2701757279286814,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,18,window,1.2682421663787296,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,19,tube,1.265928241597662,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,20,printing,1.2648526190276732,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,21,program,1.255560227934363,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,22,strap,1.2555258320450475,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,23,the tire,1.241302472084441,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,24,photo,1.2272780883091414,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,25,the xray,1.2268880097939223,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,26,damping,1.219093246166419,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,27,engine,1.2029347747672232,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,28,gizzard,1.192124071391393,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,29,head,1.185526293794085,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,30,fiber,1.1805058972570879,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,31,media,1.1709967929287413,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,32,rfid,1.168901472959518,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,33,solar,1.167611566779506,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,34,the printing,1.1582815363918089,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,35,the fiber,1.1490003020022554,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,36,the print,1.1438887089246894,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,37,the plurality,1.1415865750150962,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,38,induction heater,1.1393500993429542,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,39,engagement,1.120180975814513,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,40,satellite,1.1158219660191517,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,41,configuration,1.1057150718003657,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,42,assembly according,1.0968727170477626,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,43,the device,1.0957473235094943,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,44,cooling assembly,1.0908152294128983,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,45,from to,1.0879215452885238,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,46,color,1.0757693961710466,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,47,drill,1.0752429269704689,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,48,system of,1.0714695590815748,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,49,system information,1.0662750802891823,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,50,wearable,1.0579324092162936,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,51,the composite,1.0486719788389776,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,52,answer extension,1.0470990982755377,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,53,broadcast,1.0444727742050137,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,54,phone,1.0441237246203732,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,55,entry,1.0403070480172356,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,56,name,1.0338263491143462,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,57,grating,1.0316568105603756,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,58,sensing unit,1.0308178231236322,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,59,the at,1.0294559242073158,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,60,cladding,1.0283868399370415,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,61,target,1.0273085551388772,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,62,network access,1.0265752035024558,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,63,first photo,1.0265710626304791,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,64,the field,1.024923507583516,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,65,joint,1.0240350230228155,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,66,composite material,1.0131592725320915,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,67,the evaluation,1.0110785221716851,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,68,resolution,1.0090079883007204,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,69,block,1.008853169670859,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,70,key,1.0006104231485693,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,71,the motor,0.9917920549534606,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,72,adhesive layer,0.9794328987307036,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,73,tie,0.9781579028384892,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,74,reinforced,0.9768213972455185,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,75,the detector,0.973159492051449,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,76,evaluation unit,0.969611315776976,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,77,addition,0.9670516604968804,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,78,pixel data,0.9565338222488724,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,79,locationupdaterequest,0.950312564280316,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,80,the solar,0.944367901023116,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,81,the radio,0.9434393210858457,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,82,the program,0.9353544770712071,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,83,nonwoven,0.9350116298932449,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,84,motor control,0.9342387020403626,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,85,plane,0.9342067926697727,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,86,sidewall,0.9321975458252001,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,87,the projection,0.9296194619311418,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,88,projection,0.926810458994533,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,89,fiber reinforced,0.9259737864546731,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,90,rfid tag,0.923740519190865,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,91,extension function,0.9178458830042715,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,92,token,0.9169451684997181,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,93,pane,0.9138809839701005,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,94,junction,0.9118436409990945,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,95,element according,0.9118017072462887,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,96,delay,0.9117430222530476,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,97,transparent,0.9095518274427636,content_unigram
+train_vs_validation,pair_content_normalized,toward_validation,98,the imaging,0.9066058860443521,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,99,scattered light,0.9057809180913063,content_bigram
+train_vs_validation,pair_content_normalized,toward_validation,100,messages,0.9048424822585426,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,1,apparatus,-2.1546438508879517,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,2,data,-1.7638081256796385,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,3,electrode,-1.7485372322649835,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,4,node,-1.552888948397359,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,5,external,-1.5472561306903008,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,6,mode,-1.5254223502200377,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,7,are,-1.442885607525454,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,8,gas,-1.4426770516989287,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,9,apparatus according,-1.4023582596273008,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,10,path,-1.3870718380774798,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,11,section,-1.3411145303531928,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,12,to,-1.3029538889369243,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,13,an,-1.2995317782946092,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,14,transmission,-1.2935562816489687,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,15,ue,-1.2618217666003326,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,16,port,-1.241929317464878,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,17,instrument,-1.2379421364871652,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,18,case,-1.2368616453063976,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,19,card,-1.2154688212771083,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,20,mobile,-1.2138481255306963,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,21,not,-1.2015919586576003,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,22,method,-1.1958251435548275,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,23,and,-1.182932321564595,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,24,the portable,-1.1724116525781616,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,25,injection,-1.1634682307531592,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,26,device,-1.1513949072310052,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,27,ultrasound,-1.1344784121844746,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,28,organic,-1.120192796246174,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,29,into the,-1.1175793056991734,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,30,casing,-1.0930181558054808,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,31,control,-1.0825442901505355,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,32,guide,-1.0789758084968957,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,33,wireless device,-1.0667599795493874,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,34,thickness,-1.0595474455571667,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,35,heating,-1.0342814589915932,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,36,layer,-1.0332592102417202,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,37,fuel,-1.031151473633085,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,38,emitting,-1.0240847678279927,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,39,wireless,-1.0220391895776915,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,40,of to,-1.0184458181569458,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,41,of the,-1.0163428766843277,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,42,user,-1.0125585455666812,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,43,packet,-1.0118229713535745,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,44,with the,-1.0083095424517126,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,45,test,-1.007694105273519,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,46,thereto,-1.006897447291668,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,47,wind,-1.0035261252144567,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,48,protection,-1.0026191202068542,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,49,needle,-1.00013734719186,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,50,to the,-0.9973341685802226,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,51,by,-0.9950617106003189,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,52,ink,-0.9947512567632265,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,53,air,-0.9943013251423648,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,54,coating,-0.9791678018144214,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,55,the connection,-0.9729486132848638,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,56,from the,-0.9721425876370611,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,57,information processing,-0.9675330016058078,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,58,wind turbine,-0.9665072371818658,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,59,terminal,-0.9618483044402297,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,60,following,-0.957501546103983,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,61,ejection,-0.9570059586976565,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,62,for an,-0.9519610475322317,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,63,mounted,-0.9496421725561118,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,64,light emitting,-0.9464619492509688,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,65,the ue,-0.9407494982720955,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,66,in step,-0.9334718283624088,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,67,pressure,-0.9334096134650616,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,68,tower,-0.9331602798068908,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,69,arranged to,-0.9291104874925581,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,70,portable electronic,-0.9285442116323197,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,71,optical,-0.9274293020522792,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,72,inside,-0.9214670746055962,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,73,liquid,-0.9165712192112155,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,74,foam,-0.916218771274636,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,75,service,-0.9150310826234093,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,76,figure,-0.9141235518098401,patent_boilerplate
+train_vs_validation,pair_content_normalized,toward_train,77,the light,-0.9116583709361279,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,78,exemplary embodiment,-0.9110183323836597,patent_boilerplate
+train_vs_validation,pair_content_normalized,toward_train,79,menu,-0.9082779225473385,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,80,priority,-0.9052682856415192,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,81,the external,-0.9026544298289295,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,82,is,-0.9026455443865775,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,83,the ultrasound,-0.9025834907766284,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,84,systems,-0.9011203914543708,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,85,method as,-0.8929607389691472,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,86,information,-0.8859400183031964,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,87,plate,-0.8818976435304087,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,88,forth,-0.8798008963691876,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,89,monitoring,-0.8774743888816191,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,90,terminal device,-0.870320141922252,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,91,mobile device,-0.8669417471192139,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,92,board,-0.8657467701386239,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,93,forming,-0.8655075725845345,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,94,up,-0.8654906053237138,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,95,the substrate,-0.8652486448558312,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,96,the front,-0.8647134238949645,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,97,arranged,-0.8616686213883695,content_unigram
+train_vs_validation,pair_content_normalized,toward_train,98,according to,-0.8613113108714587,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,99,thickness of,-0.8611394643658634,content_bigram
+train_vs_validation,pair_content_normalized,toward_train,100,resource,-0.8581444643716709,content_unigram
+train_vs_test,claim_raw,toward_test,1,connector,1.816256082232449,content_unigram
+train_vs_test,claim_raw,toward_test,2,article,1.805118883576024,content_unigram
+train_vs_test,claim_raw,toward_test,3,cloud,1.7796588150040349,content_unigram
+train_vs_test,claim_raw,toward_test,4,the coated,1.7666815304157077,content_bigram
+train_vs_test,claim_raw,toward_test,5,one external,1.704969187988728,content_bigram
+train_vs_test,claim_raw,toward_test,6,capturing,1.6535717710446638,content_unigram
+train_vs_test,claim_raw,toward_test,7,external device,1.6301719679501252,content_bigram
+train_vs_test,claim_raw,toward_test,8,context,1.6127675220552398,content_unigram
+train_vs_test,claim_raw,toward_test,9,catalyst,1.574122037239509,content_unigram
+train_vs_test,claim_raw,toward_test,10,coated,1.544190806407616,content_unigram
+train_vs_test,claim_raw,toward_test,11,baggage,1.533596313661823,content_unigram
+train_vs_test,claim_raw,toward_test,12,assistance device,1.5058603459948465,content_bigram
+train_vs_test,claim_raw,toward_test,13,engine,1.5041106253578886,content_unigram
+train_vs_test,claim_raw,toward_test,14,circuit according,1.4968598594259617,content_bigram
+train_vs_test,claim_raw,toward_test,15,wiring,1.4639096092021333,content_unigram
+train_vs_test,claim_raw,toward_test,16,interval,1.452368779292512,content_unigram
+train_vs_test,claim_raw,toward_test,17,connector part,1.4516479116799905,content_bigram
+train_vs_test,claim_raw,toward_test,18,hearing assistance,1.4377469563198408,content_bigram
+train_vs_test,claim_raw,toward_test,19,detector,1.4215717555763003,content_unigram
+train_vs_test,claim_raw,toward_test,20,load,1.4182980245195729,content_unigram
+train_vs_test,claim_raw,toward_test,21,whereby said,1.4135615274838804,patent_boilerplate
+train_vs_test,claim_raw,toward_test,22,part,1.408338695831997,content_unigram
+train_vs_test,claim_raw,toward_test,23,system,1.4058709826563434,content_unigram
+train_vs_test,claim_raw,toward_test,24,amine,1.389088394980901,content_unigram
+train_vs_test,claim_raw,toward_test,25,the material,1.3840992366990383,content_bigram
+train_vs_test,claim_raw,toward_test,26,the connector,1.3485706972396612,content_bigram
+train_vs_test,claim_raw,toward_test,27,the cloud,1.3392007214057389,content_bigram
+train_vs_test,claim_raw,toward_test,28,polymer composition,1.31365209166384,content_bigram
+train_vs_test,claim_raw,toward_test,29,furnace,1.3087697854949094,content_unigram
+train_vs_test,claim_raw,toward_test,30,the apparatus,1.3039112665613903,content_bigram
+train_vs_test,claim_raw,toward_test,31,airfoil,1.29890908226149,content_unigram
+train_vs_test,claim_raw,toward_test,32,electronic circuit,1.2705429548184046,content_bigram
+train_vs_test,claim_raw,toward_test,33,exhaust gas,1.2644532669060755,content_bigram
+train_vs_test,claim_raw,toward_test,34,assistance,1.2608179722966066,content_unigram
+train_vs_test,claim_raw,toward_test,35,generator according,1.2585182356078908,content_bigram
+train_vs_test,claim_raw,toward_test,36,mac,1.255316179220003,content_unigram
+train_vs_test,claim_raw,toward_test,37,100 of,1.253712135625668,contains_digit
+train_vs_test,claim_raw,toward_test,38,pin,1.247737929799648,content_unigram
+train_vs_test,claim_raw,toward_test,39,aircraft,1.2326781537690237,content_unigram
+train_vs_test,claim_raw,toward_test,40,adapter assembly,1.2281195692647573,content_bigram
+train_vs_test,claim_raw,toward_test,41,context aware,1.2267952697351148,content_bigram
+train_vs_test,claim_raw,toward_test,42,whereby,1.2215063574269494,content_unigram
+train_vs_test,claim_raw,toward_test,43,includes,1.2157983193831094,content_unigram
+train_vs_test,claim_raw,toward_test,44,which the,1.2147207352701819,content_bigram
+train_vs_test,claim_raw,toward_test,45,industrial,1.2041539543445814,content_unigram
+train_vs_test,claim_raw,toward_test,46,is configured,1.2016898742136664,content_bigram
+train_vs_test,claim_raw,toward_test,47,aware,1.1944317769904822,content_unigram
+train_vs_test,claim_raw,toward_test,48,image capturing,1.1893395905241648,content_bigram
+train_vs_test,claim_raw,toward_test,49,control unit,1.1888159602849786,content_bigram
+train_vs_test,claim_raw,toward_test,50,the plurality,1.1885970669857864,content_bigram
+train_vs_test,claim_raw,toward_test,51,wing,1.1838476914639622,content_unigram
+train_vs_test,claim_raw,toward_test,52,profile,1.1696998237821856,content_unigram
+train_vs_test,claim_raw,toward_test,53,purification,1.1541406594814592,content_unigram
+train_vs_test,claim_raw,toward_test,54,gas purification,1.1541406594814592,content_bigram
+train_vs_test,claim_raw,toward_test,55,the catheter,1.1526759038385668,content_bigram
+train_vs_test,claim_raw,toward_test,56,bsr,1.1508604485330207,content_unigram
+train_vs_test,claim_raw,toward_test,57,database,1.1439633931008253,content_unigram
+train_vs_test,claim_raw,toward_test,58,the at,1.141161894232949,content_bigram
+train_vs_test,claim_raw,toward_test,59,image forming,1.1407459799915367,content_bigram
+train_vs_test,claim_raw,toward_test,60,aware announcement,1.1404926742485268,content_bigram
+train_vs_test,claim_raw,toward_test,61,announcement,1.1404926742485268,content_unigram
+train_vs_test,claim_raw,toward_test,62,detergent composition,1.134131346627858,content_bigram
+train_vs_test,claim_raw,toward_test,63,storage apparatus,1.1256628271103815,content_bigram
+train_vs_test,claim_raw,toward_test,64,flight,1.111924131836977,content_unigram
+train_vs_test,claim_raw,toward_test,65,locking,1.108908845309422,content_unigram
+train_vs_test,claim_raw,toward_test,66,an aircraft,1.1059145082501483,content_bigram
+train_vs_test,claim_raw,toward_test,67,article 100,1.1032948946891385,contains_digit
+train_vs_test,claim_raw,toward_test,68,the airfoil,1.1005022502762454,content_bigram
+train_vs_test,claim_raw,toward_test,69,energy management,1.0980994331556548,content_bigram
+train_vs_test,claim_raw,toward_test,70,the high,1.09688686731837,content_bigram
+train_vs_test,claim_raw,toward_test,71,cutting tool,1.093099270887985,content_bigram
+train_vs_test,claim_raw,toward_test,72,printer,1.0904351610781728,content_unigram
+train_vs_test,claim_raw,toward_test,73,the catalyst,1.0892890019640171,content_bigram
+train_vs_test,claim_raw,toward_test,74,catheter,1.0860225836996766,content_unigram
+train_vs_test,claim_raw,toward_test,75,linear,1.0839841482676318,content_unigram
+train_vs_test,claim_raw,toward_test,76,the generator,1.0783624731134447,content_bigram
+train_vs_test,claim_raw,toward_test,77,volume,1.0777006834866014,content_unigram
+train_vs_test,claim_raw,toward_test,78,glass,1.0774350263248016,content_unigram
+train_vs_test,claim_raw,toward_test,79,energy storage,1.0647928656204488,content_bigram
+train_vs_test,claim_raw,toward_test,80,glass article,1.0570533224007295,content_bigram
+train_vs_test,claim_raw,toward_test,81,ablation,1.0506074374051761,content_unigram
+train_vs_test,claim_raw,toward_test,82,and wherein,1.045700136031754,patent_boilerplate
+train_vs_test,claim_raw,toward_test,83,instrument of,1.0453093481607212,content_bigram
+train_vs_test,claim_raw,toward_test,84,zeolite,1.0398843407373521,content_unigram
+train_vs_test,claim_raw,toward_test,85,interest,1.038829912614272,content_unigram
+train_vs_test,claim_raw,toward_test,86,the tool,1.0384302755344044,content_bigram
+train_vs_test,claim_raw,toward_test,87,the method,1.0363583005228885,content_bigram
+train_vs_test,claim_raw,toward_test,88,photomask,1.032864833932076,content_unigram
+train_vs_test,claim_raw,toward_test,89,temperature of,1.0320005538011536,content_bigram
+train_vs_test,claim_raw,toward_test,90,the body,1.02306881004682,content_bigram
+train_vs_test,claim_raw,toward_test,91,the adapter,1.021966592851816,content_bigram
+train_vs_test,claim_raw,toward_test,92,state,1.0174597718091343,content_unigram
+train_vs_test,claim_raw,toward_test,93,100,1.0149353879893597,contains_digit
+train_vs_test,claim_raw,toward_test,94,chamber,1.0071852719266483,content_unigram
+train_vs_test,claim_raw,toward_test,95,of interest,1.005251715492081,content_bigram
+train_vs_test,claim_raw,toward_test,96,conference,1.0044025039488411,content_unigram
+train_vs_test,claim_raw,toward_test,97,display area,1.002002595088707,content_bigram
+train_vs_test,claim_raw,toward_test,98,energy,1.0009723805349982,content_unigram
+train_vs_test,claim_raw,toward_test,99,wiring portion,0.9991806567031447,content_bigram
+train_vs_test,claim_raw,toward_test,100,liquid laundry,0.999060064539043,content_bigram
+train_vs_test,claim_raw,toward_train,1,information,-2.6966437164630648,content_unigram
+train_vs_test,claim_raw,toward_train,2,mobile,-2.343192062893208,content_unigram
+train_vs_test,claim_raw,toward_train,3,the,-2.126475973235146,content_unigram
+train_vs_test,claim_raw,toward_train,4,device,-1.8411013376623546,content_unigram
+train_vs_test,claim_raw,toward_train,5,electronic device,-1.8263788174758886,content_bigram
+train_vs_test,claim_raw,toward_train,6,processing,-1.7497006341059917,content_unigram
+train_vs_test,claim_raw,toward_train,7,of,-1.7094672368594686,content_unigram
+train_vs_test,claim_raw,toward_train,8,data,-1.6383271910732562,content_unigram
+train_vs_test,claim_raw,toward_train,9,the mobile,-1.6140261314607824,content_bigram
+train_vs_test,claim_raw,toward_train,10,to,-1.575439296393282,content_unigram
+train_vs_test,claim_raw,toward_train,11,network,-1.553743099168328,content_unigram
+train_vs_test,claim_raw,toward_train,12,terminal,-1.48855188097314,content_unigram
+train_vs_test,claim_raw,toward_train,13,service,-1.4837821464356011,content_unigram
+train_vs_test,claim_raw,toward_train,14,base,-1.428602790923977,content_unigram
+train_vs_test,claim_raw,toward_train,15,voltage,-1.4070636735870943,content_unigram
+train_vs_test,claim_raw,toward_train,16,line,-1.3843180924836864,content_unigram
+train_vs_test,claim_raw,toward_train,17,circuit,-1.3842806782570658,content_unigram
+train_vs_test,claim_raw,toward_train,18,arrangement,-1.3724351221916342,content_unigram
+train_vs_test,claim_raw,toward_train,19,user,-1.368825360918297,content_unigram
+train_vs_test,claim_raw,toward_train,20,power,-1.3318668488819503,content_unigram
+train_vs_test,claim_raw,toward_train,21,having,-1.3241602120157399,content_unigram
+train_vs_test,claim_raw,toward_train,22,battery,-1.3118906813939144,content_unigram
+train_vs_test,claim_raw,toward_train,23,output,-1.3083304313009902,content_unigram
+train_vs_test,claim_raw,toward_train,24,information processing,-1.3075215628912729,content_bigram
+train_vs_test,claim_raw,toward_train,25,ejection,-1.294808826399384,content_unigram
+train_vs_test,claim_raw,toward_train,26,housing,-1.2582817829979935,content_unigram
+train_vs_test,claim_raw,toward_train,27,display device,-1.2404301223841885,content_bigram
+train_vs_test,claim_raw,toward_train,28,in that,-1.2128626690974134,content_bigram
+train_vs_test,claim_raw,toward_train,29,the external,-1.2127911950696466,content_bigram
+train_vs_test,claim_raw,toward_train,30,value,-1.192644183593809,content_unigram
+train_vs_test,claim_raw,toward_train,31,section,-1.1791821251939434,content_unigram
+train_vs_test,claim_raw,toward_train,32,any of,-1.1761245569938164,content_bigram
+train_vs_test,claim_raw,toward_train,33,level,-1.173753820452536,content_unigram
+train_vs_test,claim_raw,toward_train,34,signal,-1.1710993334884592,content_unigram
+train_vs_test,claim_raw,toward_train,35,two,-1.1669160536679546,content_unigram
+train_vs_test,claim_raw,toward_train,36,manufacturing,-1.1621809932050207,content_unigram
+train_vs_test,claim_raw,toward_train,37,of the,-1.1597800722224314,content_bigram
+train_vs_test,claim_raw,toward_train,38,node,-1.1236871581528143,content_unigram
+train_vs_test,claim_raw,toward_train,39,apparatus,-1.1192080260784554,content_unigram
+train_vs_test,claim_raw,toward_train,40,operation,-1.1139907479342561,content_unigram
+train_vs_test,claim_raw,toward_train,41,electrical,-1.0950998771904155,content_unigram
+train_vs_test,claim_raw,toward_train,42,the preceding,-1.0871738656843357,content_bigram
+train_vs_test,claim_raw,toward_train,43,as,-1.0846311988412425,content_unigram
+train_vs_test,claim_raw,toward_train,44,the housing,-1.0802438636038132,content_bigram
+train_vs_test,claim_raw,toward_train,45,mobile terminal,-1.0718970508343189,content_bigram
+train_vs_test,claim_raw,toward_train,46,selection,-1.0682656687575485,content_unigram
+train_vs_test,claim_raw,toward_train,47,in,-1.0661049008620713,content_unigram
+train_vs_test,claim_raw,toward_train,48,power tool,-1.0535515452912843,content_bigram
+train_vs_test,claim_raw,toward_train,49,method of,-1.045370026501634,content_bigram
+train_vs_test,claim_raw,toward_train,50,communication,-1.0368800912533243,content_unigram
+train_vs_test,claim_raw,toward_train,51,inkjet,-1.0252301896169955,content_unigram
+train_vs_test,claim_raw,toward_train,52,at,-1.0225910329319479,content_unigram
+train_vs_test,claim_raw,toward_train,53,application,-1.0219049842996053,patent_boilerplate
+train_vs_test,claim_raw,toward_train,54,of claim,-1.0169794688436957,patent_boilerplate
+train_vs_test,claim_raw,toward_train,55,washing machine,-1.0123977744162094,content_bigram
+train_vs_test,claim_raw,toward_train,56,ink,-1.002711325752483,content_unigram
+train_vs_test,claim_raw,toward_train,57,ranges,-0.9940505661845175,content_unigram
+train_vs_test,claim_raw,toward_train,58,in any,-0.9933353510852342,content_bigram
+train_vs_test,claim_raw,toward_train,59,for,-0.9892808412985655,content_unigram
+train_vs_test,claim_raw,toward_train,60,further configured,-0.9808954191101722,content_bigram
+train_vs_test,claim_raw,toward_train,61,security,-0.9802206811961854,content_unigram
+train_vs_test,claim_raw,toward_train,62,printing,-0.9779354176880107,content_unigram
+train_vs_test,claim_raw,toward_train,63,at least,-0.9748657169262608,content_bigram
+train_vs_test,claim_raw,toward_train,64,ue,-0.9734934711006188,content_unigram
+train_vs_test,claim_raw,toward_train,65,pack,-0.9726577904954653,content_unigram
+train_vs_test,claim_raw,toward_train,66,device of,-0.9721304143093088,content_bigram
+train_vs_test,claim_raw,toward_train,67,that,-0.9670594233012106,content_unigram
+train_vs_test,claim_raw,toward_train,68,communication device,-0.9580589455850397,content_bigram
+train_vs_test,claim_raw,toward_train,69,storage,-0.9567493883429714,content_unigram
+train_vs_test,claim_raw,toward_train,70,surgical access,-0.954168302940226,content_bigram
+train_vs_test,claim_raw,toward_train,71,cell,-0.9525906252345862,content_unigram
+train_vs_test,claim_raw,toward_train,72,drum,-0.9459500335890336,content_unigram
+train_vs_test,claim_raw,toward_train,73,the information,-0.9421627760054071,content_bigram
+train_vs_test,claim_raw,toward_train,74,switching,-0.9412167378312964,content_unigram
+train_vs_test,claim_raw,toward_train,75,the data,-0.9396368750707104,content_bigram
+train_vs_test,claim_raw,toward_train,76,least,-0.9321335944918425,content_unigram
+train_vs_test,claim_raw,toward_train,77,as set,-0.9320581345075692,content_bigram
+train_vs_test,claim_raw,toward_train,78,battery pack,-0.9115622953586177,content_bigram
+train_vs_test,claim_raw,toward_train,79,received,-0.9105799139556806,content_unigram
+train_vs_test,claim_raw,toward_train,80,wireless communication,-0.9100109102970471,content_bigram
+train_vs_test,claim_raw,toward_train,81,tower,-0.9086778331149792,content_unigram
+train_vs_test,claim_raw,toward_train,82,the one,-0.907287377424686,content_bigram
+train_vs_test,claim_raw,toward_train,83,source,-0.906303052205066,content_unigram
+train_vs_test,claim_raw,toward_train,84,video,-0.8953615107598882,content_unigram
+train_vs_test,claim_raw,toward_train,85,separator,-0.8948716341013406,content_unigram
+train_vs_test,claim_raw,toward_train,86,instruction,-0.8930412477454709,content_unigram
+train_vs_test,claim_raw,toward_train,87,the separator,-0.8821019139104634,content_bigram
+train_vs_test,claim_raw,toward_train,88,priority,-0.874290809240508,content_unigram
+train_vs_test,claim_raw,toward_train,89,if,-0.866467670547035,content_unigram
+train_vs_test,claim_raw,toward_train,90,claim,-0.8621424469775824,patent_boilerplate
+train_vs_test,claim_raw,toward_train,91,secure,-0.8566025615311464,content_unigram
+train_vs_test,claim_raw,toward_train,92,session,-0.8536665938595331,content_unigram
+train_vs_test,claim_raw,toward_train,93,gateway,-0.8532182050715919,content_unigram
+train_vs_test,claim_raw,toward_train,94,washing,-0.8529835859474817,content_unigram
+train_vs_test,claim_raw,toward_train,95,mobile device,-0.8509209129890677,content_bigram
+train_vs_test,claim_raw,toward_train,96,of said,-0.8493016932977988,patent_boilerplate
+train_vs_test,claim_raw,toward_train,97,the laundry,-0.8459813906591266,content_bigram
+train_vs_test,claim_raw,toward_train,98,wind,-0.8450108479066272,content_unigram
+train_vs_test,claim_raw,toward_train,99,stream,-0.838124609129197,content_unigram
+train_vs_test,claim_raw,toward_train,100,set,-0.8362884945375144,content_unigram
+train_vs_test,passage_raw,toward_test,1,cooling,1.5509121176455385,content_unigram
+train_vs_test,passage_raw,toward_test,2,engine,1.522127920776158,content_unigram
+train_vs_test,passage_raw,toward_test,3,rail,1.5173709191480957,content_unigram
+train_vs_test,passage_raw,toward_test,4,catalyst,1.4647906454941997,content_unigram
+train_vs_test,passage_raw,toward_test,5,cooking,1.4415747655867384,content_unigram
+train_vs_test,passage_raw,toward_test,6,shaft,1.4364509882739662,content_unigram
+train_vs_test,passage_raw,toward_test,7,system,1.4204229377164412,content_unigram
+train_vs_test,passage_raw,toward_test,8,end,1.4188918796661139,content_unigram
+train_vs_test,passage_raw,toward_test,9,flow,1.2866362395161302,content_unigram
+train_vs_test,passage_raw,toward_test,10,aircraft,1.2550003402549004,content_unigram
+train_vs_test,passage_raw,toward_test,11,the cooking,1.2086237665654818,content_bigram
+train_vs_test,passage_raw,toward_test,12,ticket,1.1904133404139394,content_unigram
+train_vs_test,passage_raw,toward_test,13,the communication,1.1593389554661349,content_bigram
+train_vs_test,passage_raw,toward_test,14,example the,1.1107380129509001,content_bigram
+train_vs_test,passage_raw,toward_test,15,examples,1.102909134386149,content_unigram
+train_vs_test,passage_raw,toward_test,16,conveyor,1.0922630003298035,content_unigram
+train_vs_test,passage_raw,toward_test,17,lever,1.055958677665559,content_unigram
+train_vs_test,passage_raw,toward_test,18,demand,1.043449085531881,content_unigram
+train_vs_test,passage_raw,toward_test,19,22,1.035415095384493,contains_digit
+train_vs_test,passage_raw,toward_test,20,may,1.0265936703663365,content_unigram
+train_vs_test,passage_raw,toward_test,21,burner,1.022468345822608,content_unigram
+train_vs_test,passage_raw,toward_test,22,frequency,1.022114534247703,content_unigram
+train_vs_test,passage_raw,toward_test,23,end of,1.019314137536516,content_bigram
+train_vs_test,passage_raw,toward_test,24,clearance,1.018276221952008,content_unigram
+train_vs_test,passage_raw,toward_test,25,herein,1.0168895337623813,patent_boilerplate
+train_vs_test,passage_raw,toward_test,26,trip,1.0161136596043467,content_unigram
+train_vs_test,passage_raw,toward_test,27,configured,1.0119537687463425,content_unigram
+train_vs_test,passage_raw,toward_test,28,pore,1.0035321826463064,content_unigram
+train_vs_test,passage_raw,toward_test,29,communication device,1.0020283689034015,content_bigram
+train_vs_test,passage_raw,toward_test,30,hc,0.9931688793153628,content_unigram
+train_vs_test,passage_raw,toward_test,31,be formed,0.9927597039961923,content_bigram
+train_vs_test,passage_raw,toward_test,32,account,0.9860384834936792,content_unigram
+train_vs_test,passage_raw,toward_test,33,the zeolite,0.9736197856266386,content_bigram
+train_vs_test,passage_raw,toward_test,34,template,0.9641090931876514,content_unigram
+train_vs_test,passage_raw,toward_test,35,distal,0.9630711230188693,content_unigram
+train_vs_test,passage_raw,toward_test,36,fibres,0.9527565780874248,content_unigram
+train_vs_test,passage_raw,toward_test,37,comprises,0.9476821581345546,content_unigram
+train_vs_test,passage_raw,toward_test,38,zeolite,0.918605986031174,content_unigram
+train_vs_test,passage_raw,toward_test,39,flow rate,0.9132567585568706,content_bigram
+train_vs_test,passage_raw,toward_test,40,feedback,0.9086399264696257,content_unigram
+train_vs_test,passage_raw,toward_test,41,the engine,0.902370438176228,content_bigram
+train_vs_test,passage_raw,toward_test,42,below,0.8989442309020055,content_unigram
+train_vs_test,passage_raw,toward_test,43,14 is,0.8957716965057749,contains_digit
+train_vs_test,passage_raw,toward_test,44,natural fibres,0.8916943966057581,content_bigram
+train_vs_test,passage_raw,toward_test,45,rotation of,0.8851683015620813,content_bigram
+train_vs_test,passage_raw,toward_test,46,printed,0.8830114304198362,content_unigram
+train_vs_test,passage_raw,toward_test,47,knob,0.8816332313361944,content_unigram
+train_vs_test,passage_raw,toward_test,48,coupling,0.8809796660592613,content_unigram
+train_vs_test,passage_raw,toward_test,49,the trip,0.8787757441241953,content_bigram
+train_vs_test,passage_raw,toward_test,50,airfoil,0.8786394134609026,content_unigram
+train_vs_test,passage_raw,toward_test,51,rate,0.8751969409758033,content_unigram
+train_vs_test,passage_raw,toward_test,52,inorganic,0.8712281850204496,content_unigram
+train_vs_test,passage_raw,toward_test,53,assembly,0.8697429232215007,content_unigram
+train_vs_test,passage_raw,toward_test,54,cloud,0.8673356067312415,content_unigram
+train_vs_test,passage_raw,toward_test,55,layers,0.8662577778680028,content_unigram
+train_vs_test,passage_raw,toward_test,56,sense,0.8648369133205998,content_unigram
+train_vs_test,passage_raw,toward_test,57,al2o3,0.8576856462351858,contains_digit
+train_vs_test,passage_raw,toward_test,58,speed,0.8560454160715663,content_unigram
+train_vs_test,passage_raw,toward_test,59,burners,0.8553097960386589,content_unigram
+train_vs_test,passage_raw,toward_test,60,temperatures,0.8536590920203072,content_unigram
+train_vs_test,passage_raw,toward_test,61,head,0.8520873549321235,content_unigram
+train_vs_test,passage_raw,toward_test,62,provided by,0.8396826473340269,content_bigram
+train_vs_test,passage_raw,toward_test,63,user terminal,0.8302632494005361,content_bigram
+train_vs_test,passage_raw,toward_test,64,processor 120,0.828459177178587,contains_digit
+train_vs_test,passage_raw,toward_test,65,the insertion,0.8267192314253939,content_bigram
+train_vs_test,passage_raw,toward_test,66,gaming machine,0.8264273098163905,content_bigram
+train_vs_test,passage_raw,toward_test,67,exciter,0.8253750416530176,content_unigram
+train_vs_test,passage_raw,toward_test,68,coolant,0.8219576279491189,content_unigram
+train_vs_test,passage_raw,toward_test,69,tip clearance,0.8197206228489052,content_bigram
+train_vs_test,passage_raw,toward_test,70,boiler,0.8187509344975701,content_unigram
+train_vs_test,passage_raw,toward_test,71,industrial,0.8165266771576017,content_unigram
+train_vs_test,passage_raw,toward_test,72,positions,0.8126259841804275,content_unigram
+train_vs_test,passage_raw,toward_test,73,clock,0.8063998527229865,content_unigram
+train_vs_test,passage_raw,toward_test,74,thread,0.8055348547529131,content_unigram
+train_vs_test,passage_raw,toward_test,75,security,0.8046078735494671,content_unigram
+train_vs_test,passage_raw,toward_test,76,slurry,0.8044305773165626,content_unigram
+train_vs_test,passage_raw,toward_test,77,gaming,0.8004415650898626,content_unigram
+train_vs_test,passage_raw,toward_test,78,silicone,0.7965357861815144,content_unigram
+train_vs_test,passage_raw,toward_test,79,27,0.7957782271074731,contains_digit
+train_vs_test,passage_raw,toward_test,80,may be,0.7943021098519991,content_bigram
+train_vs_test,passage_raw,toward_test,81,plating,0.79195619030278,content_unigram
+train_vs_test,passage_raw,toward_test,82,representation,0.7886306523521767,content_unigram
+train_vs_test,passage_raw,toward_test,83,of examples,0.7876283945207299,content_bigram
+train_vs_test,passage_raw,toward_test,84,refers to,0.778021868937989,content_bigram
+train_vs_test,passage_raw,toward_test,85,refers,0.778021868937989,content_unigram
+train_vs_test,passage_raw,toward_test,86,silane,0.7754993308686267,content_unigram
+train_vs_test,passage_raw,toward_test,87,ethylene,0.7656037371630279,content_unigram
+train_vs_test,passage_raw,toward_test,88,to one,0.76380049302668,content_bigram
+train_vs_test,passage_raw,toward_test,89,amino,0.7634744360572367,content_unigram
+train_vs_test,passage_raw,toward_test,90,flat,0.7586642904131029,content_unigram
+train_vs_test,passage_raw,toward_test,91,natural,0.758297839660242,content_unigram
+train_vs_test,passage_raw,toward_test,92,idle screen,0.7578493896215099,content_bigram
+train_vs_test,passage_raw,toward_test,93,directional,0.7572866265120969,content_unigram
+train_vs_test,passage_raw,toward_test,94,pipes,0.7563890412882153,content_unigram
+train_vs_test,passage_raw,toward_test,95,aps,0.7553250003672082,content_unigram
+train_vs_test,passage_raw,toward_test,96,vendor,0.754472733512862,content_unigram
+train_vs_test,passage_raw,toward_test,97,the honeycomb,0.7530085008141041,content_bigram
+train_vs_test,passage_raw,toward_test,98,adapter,0.7508415228938615,content_unigram
+train_vs_test,passage_raw,toward_test,99,formed,0.7489725171609514,content_unigram
+train_vs_test,passage_raw,toward_test,100,latch,0.7461672465750497,content_unigram
+train_vs_test,passage_raw,toward_train,1,the,-2.655863670191568,content_unigram
+train_vs_test,passage_raw,toward_train,2,unit,-1.911125258194136,content_unigram
+train_vs_test,passage_raw,toward_train,3,voltage,-1.8738292021320062,content_unigram
+train_vs_test,passage_raw,toward_train,4,using,-1.7015430379682626,content_unigram
+train_vs_test,passage_raw,toward_train,5,network,-1.685487994139371,content_unigram
+train_vs_test,passage_raw,toward_train,6,service,-1.6841518514454397,content_unigram
+train_vs_test,passage_raw,toward_train,7,therefore,-1.6199254213663314,content_unigram
+train_vs_test,passage_raw,toward_train,8,electrode,-1.6112159080540709,content_unigram
+train_vs_test,passage_raw,toward_train,9,resin,-1.6025939024545637,content_unigram
+train_vs_test,passage_raw,toward_train,10,current,-1.5773126598429434,content_unigram
+train_vs_test,passage_raw,toward_train,11,station,-1.5718185627264005,content_unigram
+train_vs_test,passage_raw,toward_train,12,with the,-1.5370245422836284,content_bigram
+train_vs_test,passage_raw,toward_train,13,card,-1.5346101359318125,content_unigram
+train_vs_test,passage_raw,toward_train,14,battery,-1.5335288402698324,content_unigram
+train_vs_test,passage_raw,toward_train,15,mobile,-1.494406573796429,content_unigram
+train_vs_test,passage_raw,toward_train,16,no,-1.487626095871576,content_unigram
+train_vs_test,passage_raw,toward_train,17,receiver,-1.4617432968598034,content_unigram
+train_vs_test,passage_raw,toward_train,18,memory,-1.4440798778043835,content_unigram
+train_vs_test,passage_raw,toward_train,19,circuit,-1.4069002621387339,content_unigram
+train_vs_test,passage_raw,toward_train,20,to,-1.3847718989748266,content_unigram
+train_vs_test,passage_raw,toward_train,21,step,-1.3837330658761757,content_unigram
+train_vs_test,passage_raw,toward_train,22,by,-1.364222550778933,content_unigram
+train_vs_test,passage_raw,toward_train,23,to the,-1.3377997780002762,content_bigram
+train_vs_test,passage_raw,toward_train,24,wireless,-1.3267425375599207,content_unigram
+train_vs_test,passage_raw,toward_train,25,an,-1.239042705405052,content_unigram
+train_vs_test,passage_raw,toward_train,26,information,-1.2281076633806576,content_unigram
+train_vs_test,passage_raw,toward_train,27,compressed,-1.1965484554722157,content_unigram
+train_vs_test,passage_raw,toward_train,28,particle,-1.1877926295309098,content_unigram
+train_vs_test,passage_raw,toward_train,29,mode,-1.1808866560941196,content_unigram
+train_vs_test,passage_raw,toward_train,30,level,-1.1768875906342429,content_unigram
+train_vs_test,passage_raw,toward_train,31,mm,-1.1746852294381922,content_unigram
+train_vs_test,passage_raw,toward_train,32,of,-1.1680318533283505,content_unigram
+train_vs_test,passage_raw,toward_train,33,on the,-1.1662477867374554,content_bigram
+train_vs_test,passage_raw,toward_train,34,106,-1.1591548409327845,contains_digit
+train_vs_test,passage_raw,toward_train,35,base,-1.1535046992903815,content_unigram
+train_vs_test,passage_raw,toward_train,36,this,-1.150416079710966,content_unigram
+train_vs_test,passage_raw,toward_train,37,address,-1.142194025945723,content_unigram
+train_vs_test,passage_raw,toward_train,38,body,-1.1394547756379516,content_unigram
+train_vs_test,passage_raw,toward_train,39,by weight,-1.1321545692549522,content_bigram
+train_vs_test,passage_raw,toward_train,40,refrigerant,-1.112394125188497,content_unigram
+train_vs_test,passage_raw,toward_train,41,transmission,-1.0853133415047116,content_unigram
+train_vs_test,passage_raw,toward_train,42,set,-1.0721666676092048,content_unigram
+train_vs_test,passage_raw,toward_train,43,defined,-1.0647833977047039,content_unigram
+train_vs_test,passage_raw,toward_train,44,needle,-1.0599370045454468,content_unigram
+train_vs_test,passage_raw,toward_train,45,valve,-1.0560431770906822,content_unigram
+train_vs_test,passage_raw,toward_train,46,the battery,-1.0495036498434351,content_bigram
+train_vs_test,passage_raw,toward_train,47,was,-1.0443469535144498,content_unigram
+train_vs_test,passage_raw,toward_train,48,terminal,-1.0427906728466572,content_unigram
+train_vs_test,passage_raw,toward_train,49,tower,-1.037739255012044,content_unigram
+train_vs_test,passage_raw,toward_train,50,of the,-1.0307207357575197,content_bigram
+train_vs_test,passage_raw,toward_train,51,which,-1.0286965732820323,content_unigram
+train_vs_test,passage_raw,toward_train,52,ink,-1.028514484438339,content_unigram
+train_vs_test,passage_raw,toward_train,53,and,-1.0237881720809285,content_unigram
+train_vs_test,passage_raw,toward_train,54,are,-1.020491509987509,content_unigram
+train_vs_test,passage_raw,toward_train,55,music,-1.004527329922154,content_unigram
+train_vs_test,passage_raw,toward_train,56,ground,-1.0027201913411792,content_unigram
+train_vs_test,passage_raw,toward_train,57,between,-0.9968557953799569,content_unigram
+train_vs_test,passage_raw,toward_train,58,connection,-0.9959614999174142,content_unigram
+train_vs_test,passage_raw,toward_train,59,apparatus,-0.9946138069578366,content_unigram
+train_vs_test,passage_raw,toward_train,60,case,-0.9932660817503421,content_unigram
+train_vs_test,passage_raw,toward_train,61,switching,-0.980922444245812,content_unigram
+train_vs_test,passage_raw,toward_train,62,oxide,-0.9766451594466333,content_unigram
+train_vs_test,passage_raw,toward_train,63,nozzle,-0.9728850032433665,content_unigram
+train_vs_test,passage_raw,toward_train,64,data,-0.9687731074943922,content_unigram
+train_vs_test,passage_raw,toward_train,65,tub,-0.9644769948585552,content_unigram
+train_vs_test,passage_raw,toward_train,66,the wind,-0.96375019090064,content_bigram
+train_vs_test,passage_raw,toward_train,67,display,-0.9632399863512792,content_unigram
+train_vs_test,passage_raw,toward_train,68,vector,-0.9602288624339019,content_unigram
+train_vs_test,passage_raw,toward_train,69,interface,-0.9485793751286001,content_unigram
+train_vs_test,passage_raw,toward_train,70,injection,-0.947774312576765,content_unigram
+train_vs_test,passage_raw,toward_train,71,frame,-0.9475453627570951,content_unigram
+train_vs_test,passage_raw,toward_train,72,wind,-0.9473736893974226,content_unigram
+train_vs_test,passage_raw,toward_train,73,process,-0.9466665901688566,content_unigram
+train_vs_test,passage_raw,toward_train,74,11,-0.9451995899112983,contains_digit
+train_vs_test,passage_raw,toward_train,75,invention,-0.9295679298300357,patent_boilerplate
+train_vs_test,passage_raw,toward_train,76,preferred,-0.9268664959910147,content_unigram
+train_vs_test,passage_raw,toward_train,77,for the,-0.9262707735276883,content_bigram
+train_vs_test,passage_raw,toward_train,78,thereto,-0.9250666912715843,content_unigram
+train_vs_test,passage_raw,toward_train,79,local,-0.9217284846486512,content_unigram
+train_vs_test,passage_raw,toward_train,80,the network,-0.9211938251467136,content_bigram
+train_vs_test,passage_raw,toward_train,81,type of,-0.9113324207839211,content_bigram
+train_vs_test,passage_raw,toward_train,82,control unit,-0.9109001352596263,content_bigram
+train_vs_test,passage_raw,toward_train,83,from the,-0.909242698013402,content_bigram
+train_vs_test,passage_raw,toward_train,84,function,-0.9000211552766681,content_unigram
+train_vs_test,passage_raw,toward_train,85,request,-0.8958779486943098,content_unigram
+train_vs_test,passage_raw,toward_train,86,its,-0.8927749197857692,content_unigram
+train_vs_test,passage_raw,toward_train,87,the base,-0.8908702915360851,content_bigram
+train_vs_test,passage_raw,toward_train,88,earth,-0.8893316216625272,content_unigram
+train_vs_test,passage_raw,toward_train,89,112,-0.8874149384973827,contains_digit
+train_vs_test,passage_raw,toward_train,90,relates to,-0.8861346193534928,content_bigram
+train_vs_test,passage_raw,toward_train,91,core,-0.8827547298381487,content_unigram
+train_vs_test,passage_raw,toward_train,92,ultrasound,-0.8796342597468874,content_unigram
+train_vs_test,passage_raw,toward_train,93,device,-0.8779910040911443,content_unigram
+train_vs_test,passage_raw,toward_train,94,id,-0.87485326357362,content_unigram
+train_vs_test,passage_raw,toward_train,95,location,-0.8715710033620719,content_unigram
+train_vs_test,passage_raw,toward_train,96,the invention,-0.8712898450434281,patent_boilerplate
+train_vs_test,passage_raw,toward_train,97,combustion,-0.8697903237786154,content_unigram
+train_vs_test,passage_raw,toward_train,98,inside,-0.8680212175933633,content_unigram
+train_vs_test,passage_raw,toward_train,99,based on,-0.8623035423464858,content_bigram
+train_vs_test,passage_raw,toward_train,100,binder,-0.8609340734205483,content_unigram
+train_vs_test,pair_raw,toward_test,1,system,1.8543535311683135,content_unigram
+train_vs_test,pair_raw,toward_test,2,aircraft,1.736488415141424,content_unigram
+train_vs_test,pair_raw,toward_test,3,catalyst,1.6195432015478561,content_unigram
+train_vs_test,pair_raw,toward_test,4,engine,1.5568753961194814,content_unigram
+train_vs_test,pair_raw,toward_test,5,cloud,1.499811607587015,content_unigram
+train_vs_test,pair_raw,toward_test,6,one external,1.408480105118922,content_bigram
+train_vs_test,pair_raw,toward_test,7,mac,1.3621253238433249,content_unigram
+train_vs_test,pair_raw,toward_test,8,airfoil,1.3487443627796865,content_unigram
+train_vs_test,pair_raw,toward_test,9,the coated,1.3366759168600715,content_bigram
+train_vs_test,pair_raw,toward_test,10,baggage,1.3294795978757183,content_unigram
+train_vs_test,pair_raw,toward_test,11,article,1.3162139466649128,content_unigram
+train_vs_test,pair_raw,toward_test,12,wiring,1.2843596092853327,content_unigram
+train_vs_test,pair_raw,toward_test,13,context,1.2536323419441469,content_unigram
+train_vs_test,pair_raw,toward_test,14,capturing,1.247524187291011,content_unigram
+train_vs_test,pair_raw,toward_test,15,is configured,1.2197649962985213,content_bigram
+train_vs_test,pair_raw,toward_test,16,14,1.2032782267452302,contains_digit
+train_vs_test,pair_raw,toward_test,17,external device,1.1667915006693192,content_bigram
+train_vs_test,pair_raw,toward_test,18,industrial,1.1591592252133804,content_unigram
+train_vs_test,pair_raw,toward_test,19,whereby said,1.1273678188983098,patent_boilerplate
+train_vs_test,pair_raw,toward_test,20,pump,1.1197609317258996,content_unigram
+train_vs_test,pair_raw,toward_test,21,image capturing,1.1185879939958698,content_bigram
+train_vs_test,pair_raw,toward_test,22,configured,1.115070484413521,content_unigram
+train_vs_test,pair_raw,toward_test,23,end,1.106886750975717,content_unigram
+train_vs_test,pair_raw,toward_test,24,shaft,1.1027141991050113,content_unigram
+train_vs_test,pair_raw,toward_test,25,glass article,1.089597483527516,content_bigram
+train_vs_test,pair_raw,toward_test,26,zeolite,1.0879210012271276,content_unigram
+train_vs_test,pair_raw,toward_test,27,the plurality,1.0871009109717358,content_bigram
+train_vs_test,pair_raw,toward_test,28,bsr,1.0864603261609136,content_unigram
+train_vs_test,pair_raw,toward_test,29,energy management,1.083909580677595,content_bigram
+train_vs_test,pair_raw,toward_test,30,coated glass,1.0665403670976317,content_bigram
+train_vs_test,pair_raw,toward_test,31,cooling,1.0551987268808518,content_unigram
+train_vs_test,pair_raw,toward_test,32,profile,1.0527306904120957,content_unigram
+train_vs_test,pair_raw,toward_test,33,coated,1.0519474829042559,content_unigram
+train_vs_test,pair_raw,toward_test,34,22,1.0511335133437085,contains_digit
+train_vs_test,pair_raw,toward_test,35,detector,1.045971393347196,content_unigram
+train_vs_test,pair_raw,toward_test,36,connector,1.0455576264956885,content_unigram
+train_vs_test,pair_raw,toward_test,37,ticket,1.0379319902282738,content_unigram
+train_vs_test,pair_raw,toward_test,38,the cooking,1.0369230345006444,content_bigram
+train_vs_test,pair_raw,toward_test,39,rail,1.032803232984833,content_unigram
+train_vs_test,pair_raw,toward_test,40,amine,1.027441047734336,content_unigram
+train_vs_test,pair_raw,toward_test,41,the catalyst,1.0212379380964234,content_bigram
+train_vs_test,pair_raw,toward_test,42,the cloud,1.0180711896630403,content_bigram
+train_vs_test,pair_raw,toward_test,43,rotation of,1.0056153767101066,content_bigram
+train_vs_test,pair_raw,toward_test,44,wing,1.0043411895592729,content_unigram
+train_vs_test,pair_raw,toward_test,45,lever,0.9970911623105171,content_unigram
+train_vs_test,pair_raw,toward_test,46,connector part,0.9963167464999613,content_bigram
+train_vs_test,pair_raw,toward_test,47,al2o3,0.9962049614783525,contains_digit
+train_vs_test,pair_raw,toward_test,48,account,0.9958639126068026,content_unigram
+train_vs_test,pair_raw,toward_test,49,electronic circuit,0.9952854561903315,content_bigram
+train_vs_test,pair_raw,toward_test,50,configured to,0.9919678589058069,content_bigram
+train_vs_test,pair_raw,toward_test,51,gaming machine,0.9798954705696192,content_bigram
+train_vs_test,pair_raw,toward_test,52,circuit according,0.9769253072646603,content_bigram
+train_vs_test,pair_raw,toward_test,53,context aware,0.9760217208629628,content_bigram
+train_vs_test,pair_raw,toward_test,54,conveyor,0.9758997352858177,content_unigram
+train_vs_test,pair_raw,toward_test,55,herein,0.9681384761000452,patent_boilerplate
+train_vs_test,pair_raw,toward_test,56,ethylene,0.9663247004960553,content_unigram
+train_vs_test,pair_raw,toward_test,57,exciter,0.9595409437549178,content_unigram
+train_vs_test,pair_raw,toward_test,58,display area,0.9539391130575314,content_bigram
+train_vs_test,pair_raw,toward_test,59,printer,0.9520988559096919,content_unigram
+train_vs_test,pair_raw,toward_test,60,the connector,0.9514054938034515,content_bigram
+train_vs_test,pair_raw,toward_test,61,the load,0.9447765929910202,content_bigram
+train_vs_test,pair_raw,toward_test,62,trip,0.9440563229697124,content_unigram
+train_vs_test,pair_raw,toward_test,63,estimate,0.9434897306148622,content_unigram
+train_vs_test,pair_raw,toward_test,64,polymer,0.9350972748643335,content_unigram
+train_vs_test,pair_raw,toward_test,65,aware,0.9344179849796618,content_unigram
+train_vs_test,pair_raw,toward_test,66,assistance device,0.9342633096067776,content_bigram
+train_vs_test,pair_raw,toward_test,67,be formed,0.926862997966983,content_bigram
+train_vs_test,pair_raw,toward_test,68,polymer composition,0.9250247360248997,content_bigram
+train_vs_test,pair_raw,toward_test,69,token,0.9190386639886122,content_unigram
+train_vs_test,pair_raw,toward_test,70,examples,0.9174189266685292,content_unigram
+train_vs_test,pair_raw,toward_test,71,collagen,0.9164218210717046,content_unigram
+train_vs_test,pair_raw,toward_test,72,inverter,0.9161950987696962,content_unigram
+train_vs_test,pair_raw,toward_test,73,demand,0.9149022843284013,content_unigram
+train_vs_test,pair_raw,toward_test,74,of interest,0.9119358216349315,content_bigram
+train_vs_test,pair_raw,toward_test,75,passenger,0.9111202098020683,content_unigram
+train_vs_test,pair_raw,toward_test,76,frequency,0.9110981460801931,content_unigram
+train_vs_test,pair_raw,toward_test,77,announcement,0.9100487238949742,content_unigram
+train_vs_test,pair_raw,toward_test,78,the chamber,0.9094046051551964,content_bigram
+train_vs_test,pair_raw,toward_test,79,26,0.9087267944223685,contains_digit
+train_vs_test,pair_raw,toward_test,80,chamber,0.9018344771931593,content_unigram
+train_vs_test,pair_raw,toward_test,81,buffer,0.89756662776729,content_unigram
+train_vs_test,pair_raw,toward_test,82,aware announcement,0.8954329205955658,content_bigram
+train_vs_test,pair_raw,toward_test,83,gaming,0.8933127099131729,content_unigram
+train_vs_test,pair_raw,toward_test,84,whereby,0.8926233552376247,content_unigram
+train_vs_test,pair_raw,toward_test,85,wiring portion,0.8872682546173022,content_bigram
+train_vs_test,pair_raw,toward_test,86,sense,0.8846577635287624,content_unigram
+train_vs_test,pair_raw,toward_test,87,cooking,0.8845053501827608,content_unigram
+train_vs_test,pair_raw,toward_test,88,the engine,0.8842212435078584,content_bigram
+train_vs_test,pair_raw,toward_test,89,indicator,0.8833916367143504,content_unigram
+train_vs_test,pair_raw,toward_test,90,energy,0.8827417300690986,content_unigram
+train_vs_test,pair_raw,toward_test,91,interest,0.8786780707054921,content_unigram
+train_vs_test,pair_raw,toward_test,92,fibers,0.8773335165249727,content_unigram
+train_vs_test,pair_raw,toward_test,93,system of,0.8750834163465674,content_bigram
+train_vs_test,pair_raw,toward_test,94,al2o3 layer,0.8708220178699649,contains_digit
+train_vs_test,pair_raw,toward_test,95,proximal,0.8706937943495637,content_unigram
+train_vs_test,pair_raw,toward_test,96,example the,0.8705979383229087,content_bigram
+train_vs_test,pair_raw,toward_test,97,access point,0.8678716238632357,content_bigram
+train_vs_test,pair_raw,toward_test,98,liquid,0.8672001687286244,content_unigram
+train_vs_test,pair_raw,toward_test,99,fibres,0.8660061337266112,content_unigram
+train_vs_test,pair_raw,toward_test,100,pore,0.8659036761903213,content_unigram
+train_vs_test,pair_raw,toward_train,1,mobile,-2.239230448158628,content_unigram
+train_vs_test,pair_raw,toward_train,2,voltage,-2.0088501065236666,content_unigram
+train_vs_test,pair_raw,toward_train,3,information,-1.920608650820523,content_unigram
+train_vs_test,pair_raw,toward_train,4,of the,-1.8056988661225108,content_bigram
+train_vs_test,pair_raw,toward_train,5,data,-1.7379514307876107,content_unigram
+train_vs_test,pair_raw,toward_train,6,network,-1.7066698977957173,content_unigram
+train_vs_test,pair_raw,toward_train,7,service,-1.6801060630920677,content_unigram
+train_vs_test,pair_raw,toward_train,8,circuit,-1.6774245972534236,content_unigram
+train_vs_test,pair_raw,toward_train,9,unit,-1.5525492027902335,content_unigram
+train_vs_test,pair_raw,toward_train,10,battery,-1.5378545110010584,content_unigram
+train_vs_test,pair_raw,toward_train,11,device,-1.494542287248491,content_unigram
+train_vs_test,pair_raw,toward_train,12,electronic device,-1.4915645822763308,content_bigram
+train_vs_test,pair_raw,toward_train,13,level,-1.457716156917718,content_unigram
+train_vs_test,pair_raw,toward_train,14,to,-1.4408344520827125,content_unigram
+train_vs_test,pair_raw,toward_train,15,resin,-1.4386870134847696,content_unigram
+train_vs_test,pair_raw,toward_train,16,using,-1.4314409169317084,content_unigram
+train_vs_test,pair_raw,toward_train,17,by,-1.4216912145688154,content_unigram
+train_vs_test,pair_raw,toward_train,18,base,-1.3879031460679143,content_unigram
+train_vs_test,pair_raw,toward_train,19,terminal,-1.381278077422714,content_unigram
+train_vs_test,pair_raw,toward_train,20,station,-1.3780675957489525,content_unigram
+train_vs_test,pair_raw,toward_train,21,the mobile,-1.3635256259516844,content_bigram
+train_vs_test,pair_raw,toward_train,22,electrode,-1.3610835434903938,content_unigram
+train_vs_test,pair_raw,toward_train,23,106,-1.3343315474375945,contains_digit
+train_vs_test,pair_raw,toward_train,24,processing,-1.3340615567488647,content_unigram
+train_vs_test,pair_raw,toward_train,25,current,-1.3272510170226326,content_unigram
+train_vs_test,pair_raw,toward_train,26,in that,-1.321949118712234,content_bigram
+train_vs_test,pair_raw,toward_train,27,defined,-1.2616850027467965,content_unigram
+train_vs_test,pair_raw,toward_train,28,switching,-1.2372136742319066,content_unigram
+train_vs_test,pair_raw,toward_train,29,to the,-1.2356663119913536,content_bigram
+train_vs_test,pair_raw,toward_train,30,value,-1.2189510573426336,content_unigram
+train_vs_test,pair_raw,toward_train,31,line,-1.201770817924468,content_unigram
+train_vs_test,pair_raw,toward_train,32,in any,-1.1962458886926348,content_bigram
+train_vs_test,pair_raw,toward_train,33,mm,-1.1949242189151768,content_unigram
+train_vs_test,pair_raw,toward_train,34,any of,-1.1925142357167569,content_bigram
+train_vs_test,pair_raw,toward_train,35,having,-1.1807881639428628,content_unigram
+train_vs_test,pair_raw,toward_train,36,card,-1.172008386918671,content_unigram
+train_vs_test,pair_raw,toward_train,37,ink,-1.1656659100037583,content_unigram
+train_vs_test,pair_raw,toward_train,38,housing,-1.1602072247834472,content_unigram
+train_vs_test,pair_raw,toward_train,39,wind,-1.1547583861750832,content_unigram
+train_vs_test,pair_raw,toward_train,40,in,-1.142146643216383,content_unigram
+train_vs_test,pair_raw,toward_train,41,wireless,-1.1406059305938325,content_unigram
+train_vs_test,pair_raw,toward_train,42,power,-1.1389853300310855,content_unigram
+train_vs_test,pair_raw,toward_train,43,the preceding,-1.1357598016709118,content_bigram
+train_vs_test,pair_raw,toward_train,44,memory,-1.1282036228768404,content_unigram
+train_vs_test,pair_raw,toward_train,45,mobile device,-1.127999960848635,content_bigram
+train_vs_test,pair_raw,toward_train,46,operation,-1.1138497943699506,content_unigram
+train_vs_test,pair_raw,toward_train,47,information processing,-1.105288391331014,content_bigram
+train_vs_test,pair_raw,toward_train,48,user,-1.1031951433425464,content_unigram
+train_vs_test,pair_raw,toward_train,49,body,-1.1021038023835128,content_unigram
+train_vs_test,pair_raw,toward_train,50,compressed,-1.098633845424441,content_unigram
+train_vs_test,pair_raw,toward_train,51,tower,-1.0937975114668217,content_unigram
+train_vs_test,pair_raw,toward_train,52,set,-1.0907594122036932,content_unigram
+train_vs_test,pair_raw,toward_train,53,ultrasound,-1.0902448303007672,content_unigram
+train_vs_test,pair_raw,toward_train,54,nozzle,-1.0828946796416723,content_unigram
+train_vs_test,pair_raw,toward_train,55,therefore,-1.0649987662805656,content_unigram
+train_vs_test,pair_raw,toward_train,56,selection,-1.0578208832445164,content_unigram
+train_vs_test,pair_raw,toward_train,57,stream,-1.0497263430835846,content_unigram
+train_vs_test,pair_raw,toward_train,58,drum,-1.0473538660287456,content_unigram
+train_vs_test,pair_raw,toward_train,59,output,-1.0431168224314518,content_unigram
+train_vs_test,pair_raw,toward_train,60,the battery,-1.0410310194783925,content_bigram
+train_vs_test,pair_raw,toward_train,61,for the,-1.0357247700543117,content_bigram
+train_vs_test,pair_raw,toward_train,62,wireless communication,-1.0246665290855508,content_bigram
+train_vs_test,pair_raw,toward_train,63,base station,-1.0197213464973132,content_bigram
+train_vs_test,pair_raw,toward_train,64,from the,-1.0192130884019623,content_bigram
+train_vs_test,pair_raw,toward_train,65,needle,-1.0082689465172423,content_unigram
+train_vs_test,pair_raw,toward_train,66,cell,-1.003208532460151,content_unigram
+train_vs_test,pair_raw,toward_train,67,received,-0.9958268390917971,content_unigram
+train_vs_test,pair_raw,toward_train,68,transmission,-0.9850623251233782,content_unigram
+train_vs_test,pair_raw,toward_train,69,information of,-0.9845064897737029,content_bigram
+train_vs_test,pair_raw,toward_train,70,tub,-0.979957371785767,content_unigram
+train_vs_test,pair_raw,toward_train,71,as,-0.9776233456970028,content_unigram
+train_vs_test,pair_raw,toward_train,72,that the,-0.9748059786686177,content_bigram
+train_vs_test,pair_raw,toward_train,73,devices,-0.9719828259235218,content_unigram
+train_vs_test,pair_raw,toward_train,74,has,-0.9693036427896734,content_unigram
+train_vs_test,pair_raw,toward_train,75,mode,-0.9655896908917992,content_unigram
+train_vs_test,pair_raw,toward_train,76,cap,-0.9625933685394197,content_unigram
+train_vs_test,pair_raw,toward_train,77,to be,-0.9574058302881955,content_bigram
+train_vs_test,pair_raw,toward_train,78,signal,-0.9535391014319075,content_unigram
+train_vs_test,pair_raw,toward_train,79,via,-0.9502640651040383,content_unigram
+train_vs_test,pair_raw,toward_train,80,users,-0.9480171736268127,content_unigram
+train_vs_test,pair_raw,toward_train,81,instruction,-0.9466168942631928,content_unigram
+train_vs_test,pair_raw,toward_train,82,this,-0.9459492409766797,content_unigram
+train_vs_test,pair_raw,toward_train,83,electrical,-0.9415194019027718,content_unigram
+train_vs_test,pair_raw,toward_train,84,determined,-0.9401114901287949,content_unigram
+train_vs_test,pair_raw,toward_train,85,than the,-0.9344964414838689,content_bigram
+train_vs_test,pair_raw,toward_train,86,printing plate,-0.9321064819122686,content_bigram
+train_vs_test,pair_raw,toward_train,87,arrangement,-0.924076436036954,content_unigram
+train_vs_test,pair_raw,toward_train,88,the wind,-0.9236366459245832,content_bigram
+train_vs_test,pair_raw,toward_train,89,arranged to,-0.9223892884951056,content_bigram
+train_vs_test,pair_raw,toward_train,90,separator,-0.921131983353264,content_unigram
+train_vs_test,pair_raw,toward_train,91,the portable,-0.9199894509451533,content_bigram
+train_vs_test,pair_raw,toward_train,92,case,-0.9192123437826087,content_unigram
+train_vs_test,pair_raw,toward_train,93,display device,-0.9192046448279717,content_bigram
+train_vs_test,pair_raw,toward_train,94,apparatus,-0.9164567951489124,content_unigram
+train_vs_test,pair_raw,toward_train,95,core,-0.9069411052494717,content_unigram
+train_vs_test,pair_raw,toward_train,96,ejection,-0.9055365296703044,content_unigram
+train_vs_test,pair_raw,toward_train,97,lamp,-0.9050695940176505,content_unigram
+train_vs_test,pair_raw,toward_train,98,size,-0.9036113965424089,content_unigram
+train_vs_test,pair_raw,toward_train,99,tissue,-0.9028018604654764,content_unigram
+train_vs_test,pair_raw,toward_train,100,portable,-0.9016987628020826,content_unigram
+train_vs_test,pair_number_masked,toward_test,1,system,1.7606919856525445,content_unigram
+train_vs_test,pair_number_masked,toward_test,2,aircraft,1.6853454271836024,content_unigram
+train_vs_test,pair_number_masked,toward_test,3,catalyst,1.657117764101032,content_unigram
+train_vs_test,pair_number_masked,toward_test,4,engine,1.538082288251272,content_unigram
+train_vs_test,pair_number_masked,toward_test,5,cloud,1.5148010377462287,content_unigram
+train_vs_test,pair_number_masked,toward_test,6,one external,1.4093365153996127,content_bigram
+train_vs_test,pair_number_masked,toward_test,7,airfoil,1.4020578826255174,content_unigram
+train_vs_test,pair_number_masked,toward_test,8,the coated,1.3929741668766522,content_bigram
+train_vs_test,pair_number_masked,toward_test,9,id with,1.3766909552363211,content_bigram
+train_vs_test,pair_number_masked,toward_test,10,mac,1.3589873433496358,content_unigram
+train_vs_test,pair_number_masked,toward_test,11,capturing,1.3509011494829162,content_unigram
+train_vs_test,pair_number_masked,toward_test,12,article,1.3483539896630077,content_unigram
+train_vs_test,pair_number_masked,toward_test,13,baggage,1.3180615499507415,content_unigram
+train_vs_test,pair_number_masked,toward_test,14,wiring,1.278853430245377,content_unigram
+train_vs_test,pair_number_masked,toward_test,15,is configured,1.2748216373377856,content_bigram
+train_vs_test,pair_number_masked,toward_test,16,image capturing,1.2446535785563537,content_bigram
+train_vs_test,pair_number_masked,toward_test,17,context,1.232122915069256,content_unigram
+train_vs_test,pair_number_masked,toward_test,18,external device,1.1627892204195074,content_bigram
+train_vs_test,pair_number_masked,toward_test,19,id that,1.1566823977199727,content_bigram
+train_vs_test,pair_number_masked,toward_test,20,the plurality,1.1534337066854634,content_bigram
+train_vs_test,pair_number_masked,toward_test,21,airfoil id,1.1467234984704913,content_bigram
+train_vs_test,pair_number_masked,toward_test,22,industrial,1.1418774197024326,content_unigram
+train_vs_test,pair_number_masked,toward_test,23,whereby said,1.1294629095208115,patent_boilerplate
+train_vs_test,pair_number_masked,toward_test,24,pump,1.1274787386259608,content_unigram
+train_vs_test,pair_number_masked,toward_test,25,connector,1.124883465330826,content_unigram
+train_vs_test,pair_number_masked,toward_test,26,coated,1.1247056827252977,content_unigram
+train_vs_test,pair_number_masked,toward_test,27,configured,1.1231907822854847,content_unigram
+train_vs_test,pair_number_masked,toward_test,28,the cooking,1.1224451940683537,content_bigram
+train_vs_test,pair_number_masked,toward_test,29,end,1.119484133276086,content_unigram
+train_vs_test,pair_number_masked,toward_test,30,ticket,1.11790785003977,content_unigram
+train_vs_test,pair_number_masked,toward_test,31,zeolite,1.1056562466293947,content_unigram
+train_vs_test,pair_number_masked,toward_test,32,energy management,1.1040499829743908,content_bigram
+train_vs_test,pair_number_masked,toward_test,33,glass article,1.102952434305751,content_bigram
+train_vs_test,pair_number_masked,toward_test,34,cooling,1.1004437740669988,content_unigram
+train_vs_test,pair_number_masked,toward_test,35,rail,1.0984633129783419,content_unigram
+train_vs_test,pair_number_masked,toward_test,36,coated glass,1.0798891526695515,content_bigram
+train_vs_test,pair_number_masked,toward_test,37,bsr,1.0789871300816476,content_unigram
+train_vs_test,pair_number_masked,toward_test,38,the connector,1.0783543779760676,content_bigram
+train_vs_test,pair_number_masked,toward_test,39,wing,1.0744250992575042,content_unigram
+train_vs_test,pair_number_masked,toward_test,40,shaft,1.0665965510281434,content_unigram
+train_vs_test,pair_number_masked,toward_test,41,shaft id,1.0538338021677427,content_bigram
+train_vs_test,pair_number_masked,toward_test,42,detector,1.0480282150954485,content_unigram
+train_vs_test,pair_number_masked,toward_test,43,profile,1.0447073340067539,content_unigram
+train_vs_test,pair_number_masked,toward_test,44,connector part,1.043915915406481,content_bigram
+train_vs_test,pair_number_masked,toward_test,45,system id,1.0425116055065347,content_bigram
+train_vs_test,pair_number_masked,toward_test,46,the catalyst,1.0398613710231819,content_bigram
+train_vs_test,pair_number_masked,toward_test,47,rotation of,1.032389935563932,content_bigram
+train_vs_test,pair_number_masked,toward_test,48,engine id,1.021735322716229,content_bigram
+train_vs_test,pair_number_masked,toward_test,49,the cloud,1.018735964738606,content_bigram
+train_vs_test,pair_number_masked,toward_test,50,amine,1.0147540884527069,content_unigram
+train_vs_test,pair_number_masked,toward_test,51,id of,1.0037831874934156,content_bigram
+train_vs_test,pair_number_masked,toward_test,52,configured to,1.000917074903237,content_bigram
+train_vs_test,pair_number_masked,toward_test,53,ethylene,1.0005696024699713,content_unigram
+train_vs_test,pair_number_masked,toward_test,54,exciter,0.999861776527932,content_unigram
+train_vs_test,pair_number_masked,toward_test,55,printer,0.9990177515216079,content_unigram
+train_vs_test,pair_number_masked,toward_test,56,estimate,0.9936149552665428,content_unigram
+train_vs_test,pair_number_masked,toward_test,57,herein,0.9863115430661351,patent_boilerplate
+train_vs_test,pair_number_masked,toward_test,58,cooking,0.9855536014720486,content_unigram
+train_vs_test,pair_number_masked,toward_test,59,electronic circuit,0.980986995781592,content_bigram
+train_vs_test,pair_number_masked,toward_test,60,circuit according,0.9798189641718846,content_bigram
+train_vs_test,pair_number_masked,toward_test,61,lever,0.9725114664512244,content_unigram
+train_vs_test,pair_number_masked,toward_test,62,conveyor,0.9695872369243738,content_unigram
+train_vs_test,pair_number_masked,toward_test,63,be formed,0.9669269735234123,content_bigram
+train_vs_test,pair_number_masked,toward_test,64,account,0.9640991653933827,content_unigram
+train_vs_test,pair_number_masked,toward_test,65,display area,0.963723758527729,content_bigram
+train_vs_test,pair_number_masked,toward_test,66,part and,0.9578106504199676,content_bigram
+train_vs_test,pair_number_masked,toward_test,67,sense,0.9577439839656087,content_unigram
+train_vs_test,pair_number_masked,toward_test,68,assembly id,0.9563516322419643,content_bigram
+train_vs_test,pair_number_masked,toward_test,69,context aware,0.9561484619515853,content_bigram
+train_vs_test,pair_number_masked,toward_test,70,trip,0.9525681060627538,content_unigram
+train_vs_test,pair_number_masked,toward_test,71,demand,0.9507781087643881,content_unigram
+train_vs_test,pair_number_masked,toward_test,72,token,0.9450561043281467,content_unigram
+train_vs_test,pair_number_masked,toward_test,73,polymer,0.9433549631596744,content_unigram
+train_vs_test,pair_number_masked,toward_test,74,the load,0.9344433266817986,content_bigram
+train_vs_test,pair_number_masked,toward_test,75,gaming machine,0.932576784969487,content_bigram
+train_vs_test,pair_number_masked,toward_test,76,the chamber,0.9314689574654441,content_bigram
+train_vs_test,pair_number_masked,toward_test,77,id may,0.9278047591180166,content_bigram
+train_vs_test,pair_number_masked,toward_test,78,aware,0.9213437451697482,content_unigram
+train_vs_test,pair_number_masked,toward_test,79,polymer composition,0.9175362144242581,content_bigram
+train_vs_test,pair_number_masked,toward_test,80,assistance device,0.9171480287915121,content_bigram
+train_vs_test,pair_number_masked,toward_test,81,of interest,0.9170498852588819,content_bigram
+train_vs_test,pair_number_masked,toward_test,82,appliance id,0.9141140087480362,content_bigram
+train_vs_test,pair_number_masked,toward_test,83,inverter,0.9134420665420947,content_unigram
+train_vs_test,pair_number_masked,toward_test,84,buffer,0.9134311050520794,content_unigram
+train_vs_test,pair_number_masked,toward_test,85,passenger,0.9078383281383732,content_unigram
+train_vs_test,pair_number_masked,toward_test,86,flow,0.9059496033013268,content_unigram
+train_vs_test,pair_number_masked,toward_test,87,energy,0.9034973679857018,content_unigram
+train_vs_test,pair_number_masked,toward_test,88,id at,0.895908250619987,content_bigram
+train_vs_test,pair_number_masked,toward_test,89,announcement,0.8927725120080658,content_unigram
+train_vs_test,pair_number_masked,toward_test,90,indicator,0.8916342962723105,content_unigram
+train_vs_test,pair_number_masked,toward_test,91,collagen,0.8903688578941967,content_unigram
+train_vs_test,pair_number_masked,toward_test,92,image forming,0.8901607539704032,content_bigram
+train_vs_test,pair_number_masked,toward_test,93,frequency,0.8894516350565276,content_unigram
+train_vs_test,pair_number_masked,toward_test,94,interest,0.8892228672089877,content_unigram
+train_vs_test,pair_number_masked,toward_test,95,the engine,0.8863269967000889,content_bigram
+train_vs_test,pair_number_masked,toward_test,96,id whereby,0.8847746916124963,content_bigram
+train_vs_test,pair_number_masked,toward_test,97,whereby,0.8838890003521616,content_unigram
+train_vs_test,pair_number_masked,toward_test,98,end of,0.8810881296334333,content_bigram
+train_vs_test,pair_number_masked,toward_test,99,the furnace,0.8798626585801931,content_bigram
+train_vs_test,pair_number_masked,toward_test,100,food,0.8797656265829612,content_unigram
+train_vs_test,pair_number_masked,toward_train,1,mobile,-2.2089238014928503,content_unigram
+train_vs_test,pair_number_masked,toward_train,2,voltage,-1.981662097643917,content_unigram
+train_vs_test,pair_number_masked,toward_train,3,information,-1.8864576850788797,content_unigram
+train_vs_test,pair_number_masked,toward_train,4,data,-1.7340763833969144,content_unigram
+train_vs_test,pair_number_masked,toward_train,5,network,-1.7058744633425507,content_unigram
+train_vs_test,pair_number_masked,toward_train,6,service,-1.6466634616423073,content_unigram
+train_vs_test,pair_number_masked,toward_train,7,of the,-1.6262851957372075,content_bigram
+train_vs_test,pair_number_masked,toward_train,8,circuit,-1.6062673928357347,content_unigram
+train_vs_test,pair_number_masked,toward_train,9,battery,-1.5387603456288823,content_unigram
+train_vs_test,pair_number_masked,toward_train,10,electronic device,-1.5181986270689918,content_bigram
+train_vs_test,pair_number_masked,toward_train,11,level,-1.4267868006051616,content_unigram
+train_vs_test,pair_number_masked,toward_train,12,base,-1.4211810497071182,content_unigram
+train_vs_test,pair_number_masked,toward_train,13,device,-1.4074813606715124,content_unigram
+train_vs_test,pair_number_masked,toward_train,14,electrode,-1.393791467780357,content_unigram
+train_vs_test,pair_number_masked,toward_train,15,resin,-1.3843347240843327,content_unigram
+train_vs_test,pair_number_masked,toward_train,16,the mobile,-1.3700477800148152,content_bigram
+train_vs_test,pair_number_masked,toward_train,17,using,-1.3572963672726677,content_unigram
+train_vs_test,pair_number_masked,toward_train,18,processing,-1.345871889261735,content_unigram
+train_vs_test,pair_number_masked,toward_train,19,current,-1.3173225294578583,content_unigram
+train_vs_test,pair_number_masked,toward_train,20,station,-1.3151692801015518,content_unigram
+train_vs_test,pair_number_masked,toward_train,21,unit,-1.3133008566484503,content_unigram
+train_vs_test,pair_number_masked,toward_train,22,terminal,-1.3116188565500069,content_unigram
+train_vs_test,pair_number_masked,toward_train,23,in that,-1.3045026936433548,content_bigram
+train_vs_test,pair_number_masked,toward_train,24,by,-1.296077131829427,content_unigram
+train_vs_test,pair_number_masked,toward_train,25,device of,-1.2846810209129063,content_bigram
+train_vs_test,pair_number_masked,toward_train,26,defined,-1.2309048960104683,content_unigram
+train_vs_test,pair_number_masked,toward_train,27,switching,-1.2266780569927842,content_unigram
+train_vs_test,pair_number_masked,toward_train,28,value,-1.2153631737513002,content_unigram
+train_vs_test,pair_number_masked,toward_train,29,line,-1.184400394406468,content_unigram
+train_vs_test,pair_number_masked,toward_train,30,ink,-1.1799841542624814,content_unigram
+train_vs_test,pair_number_masked,toward_train,31,wind,-1.1723071190167564,content_unigram
+train_vs_test,pair_number_masked,toward_train,32,id mm,-1.1672664181428916,content_bigram
+train_vs_test,pair_number_masked,toward_train,33,to the,-1.1655673387733827,content_bigram
+train_vs_test,pair_number_masked,toward_train,34,in any,-1.1591941112955753,content_bigram
+train_vs_test,pair_number_masked,toward_train,35,the preceding,-1.1529895141951498,content_bigram
+train_vs_test,pair_number_masked,toward_train,36,card,-1.1489912221987177,content_unigram
+train_vs_test,pair_number_masked,toward_train,37,housing,-1.1418344636294007,content_unigram
+train_vs_test,pair_number_masked,toward_train,38,having,-1.1282644377579845,content_unigram
+train_vs_test,pair_number_masked,toward_train,39,to,-1.1254411844825352,content_unigram
+train_vs_test,pair_number_masked,toward_train,40,any of,-1.1203338066498352,content_bigram
+train_vs_test,pair_number_masked,toward_train,41,mobile device,-1.1181337939973437,content_bigram
+train_vs_test,pair_number_masked,toward_train,42,wireless,-1.118063968517831,content_unigram
+train_vs_test,pair_number_masked,toward_train,43,operation,-1.1099241012762067,content_unigram
+train_vs_test,pair_number_masked,toward_train,44,information processing,-1.1082694261619919,content_bigram
+train_vs_test,pair_number_masked,toward_train,45,tower,-1.1043750396610714,content_unigram
+train_vs_test,pair_number_masked,toward_train,46,compressed,-1.102717246531229,content_unigram
+train_vs_test,pair_number_masked,toward_train,47,mm,-1.0956335267933566,content_unigram
+train_vs_test,pair_number_masked,toward_train,48,set,-1.0909111356059813,content_unigram
+train_vs_test,pair_number_masked,toward_train,49,power,-1.0869186003387084,content_unigram
+train_vs_test,pair_number_masked,toward_train,50,memory,-1.081625942414586,content_unigram
+train_vs_test,pair_number_masked,toward_train,51,ultrasound,-1.0761422194529242,content_unigram
+train_vs_test,pair_number_masked,toward_train,52,user,-1.075144122316009,content_unigram
+train_vs_test,pair_number_masked,toward_train,53,nozzle,-1.0651942351316865,content_unigram
+train_vs_test,pair_number_masked,toward_train,54,output,-1.057788970703492,content_unigram
+train_vs_test,pair_number_masked,toward_train,55,for the,-1.036512206290078,content_bigram
+train_vs_test,pair_number_masked,toward_train,56,wireless communication,-1.030856614439791,content_bigram
+train_vs_test,pair_number_masked,toward_train,57,needle,-1.023334398538859,content_unigram
+train_vs_test,pair_number_masked,toward_train,58,selection,-1.018006599518243,content_unigram
+train_vs_test,pair_number_masked,toward_train,59,stream,-1.009111980102872,content_unigram
+train_vs_test,pair_number_masked,toward_train,60,drum,-1.0027287253570696,content_unigram
+train_vs_test,pair_number_masked,toward_train,61,devices,-0.9944253735332581,content_unigram
+train_vs_test,pair_number_masked,toward_train,62,information of,-0.9927798698287567,content_bigram
+train_vs_test,pair_number_masked,toward_train,63,id,-0.992018484317422,content_unigram
+train_vs_test,pair_number_masked,toward_train,64,transmission,-0.9898026174698836,content_unigram
+train_vs_test,pair_number_masked,toward_train,65,the battery,-0.9885425335602861,content_bigram
+train_vs_test,pair_number_masked,toward_train,66,this,-0.9830125662175837,content_unigram
+train_vs_test,pair_number_masked,toward_train,67,base station,-0.9812752425760517,content_bigram
+train_vs_test,pair_number_masked,toward_train,68,users,-0.9689168154888221,content_unigram
+train_vs_test,pair_number_masked,toward_train,69,arranged to,-0.9631613775903073,content_bigram
+train_vs_test,pair_number_masked,toward_train,70,body,-0.9597188060009025,content_unigram
+train_vs_test,pair_number_masked,toward_train,71,tub,-0.9579398741526487,content_unigram
+train_vs_test,pair_number_masked,toward_train,72,as,-0.9557033492928557,content_unigram
+train_vs_test,pair_number_masked,toward_train,73,from the,-0.9550170404073032,content_bigram
+train_vs_test,pair_number_masked,toward_train,74,mode,-0.9536394076112419,content_unigram
+train_vs_test,pair_number_masked,toward_train,75,received,-0.9530969279826379,content_unigram
+train_vs_test,pair_number_masked,toward_train,76,cap,-0.9512389035685752,content_unigram
+train_vs_test,pair_number_masked,toward_train,77,display device,-0.9493797815646493,content_bigram
+train_vs_test,pair_number_masked,toward_train,78,therefore,-0.9462465151485278,content_unigram
+train_vs_test,pair_number_masked,toward_train,79,to be,-0.9453254511707195,content_bigram
+train_vs_test,pair_number_masked,toward_train,80,that the,-0.9444941743173997,content_bigram
+train_vs_test,pair_number_masked,toward_train,81,instruction,-0.9431988581287967,content_unigram
+train_vs_test,pair_number_masked,toward_train,82,cell,-0.9413557016592987,content_unigram
+train_vs_test,pair_number_masked,toward_train,83,determined,-0.9377899656613818,content_unigram
+train_vs_test,pair_number_masked,toward_train,84,via,-0.9354584341951545,content_unigram
+train_vs_test,pair_number_masked,toward_train,85,the portable,-0.9314365838688389,content_bigram
+train_vs_test,pair_number_masked,toward_train,86,signal,-0.9299641834634914,content_unigram
+train_vs_test,pair_number_masked,toward_train,87,has,-0.9296091073118018,content_unigram
+train_vs_test,pair_number_masked,toward_train,88,portable,-0.926724019126016,content_unigram
+train_vs_test,pair_number_masked,toward_train,89,tissue,-0.924145540375834,content_unigram
+train_vs_test,pair_number_masked,toward_train,90,printing plate,-0.9232803984433808,content_bigram
+train_vs_test,pair_number_masked,toward_train,91,washing machine,-0.9232280594562944,content_bigram
+train_vs_test,pair_number_masked,toward_train,92,lamp,-0.9203993080243236,content_unigram
+train_vs_test,pair_number_masked,toward_train,93,case,-0.918915679550921,content_unigram
+train_vs_test,pair_number_masked,toward_train,94,electrical,-0.9158212950614094,content_unigram
+train_vs_test,pair_number_masked,toward_train,95,id the,-0.9131237692823113,content_bigram
+train_vs_test,pair_number_masked,toward_train,96,the wind,-0.9104997807695037,content_bigram
+train_vs_test,pair_number_masked,toward_train,97,than the,-0.9101908409304476,content_bigram
+train_vs_test,pair_number_masked,toward_train,98,detected,-0.9090230513081468,content_unigram
+train_vs_test,pair_number_masked,toward_train,99,the base,-0.9085480391858092,content_bigram
+train_vs_test,pair_number_masked,toward_train,100,arrangement,-0.9080760821517504,content_unigram
+train_vs_test,pair_content_normalized,toward_test,1,system,1.8474351704089595,content_unigram
+train_vs_test,pair_content_normalized,toward_test,2,aircraft,1.7208157177490935,content_unigram
+train_vs_test,pair_content_normalized,toward_test,3,engine,1.645162610952635,content_unigram
+train_vs_test,pair_content_normalized,toward_test,4,catalyst,1.6365818067007567,content_unigram
+train_vs_test,pair_content_normalized,toward_test,5,cloud,1.5226668293281678,content_unigram
+train_vs_test,pair_content_normalized,toward_test,6,airfoil,1.4749611950759807,content_unigram
+train_vs_test,pair_content_normalized,toward_test,7,one external,1.421008551652756,content_bigram
+train_vs_test,pair_content_normalized,toward_test,8,the coated,1.411090867444752,content_bigram
+train_vs_test,pair_content_normalized,toward_test,9,mac,1.390884433291071,content_unigram
+train_vs_test,pair_content_normalized,toward_test,10,baggage,1.3514047571471557,content_unigram
+train_vs_test,pair_content_normalized,toward_test,11,article,1.3362358248160537,content_unigram
+train_vs_test,pair_content_normalized,toward_test,12,capturing,1.3174056593427474,content_unigram
+train_vs_test,pair_content_normalized,toward_test,13,is configured,1.3111326930393266,content_bigram
+train_vs_test,pair_content_normalized,toward_test,14,wiring,1.3008451663277265,content_unigram
+train_vs_test,pair_content_normalized,toward_test,15,context,1.268135706305253,content_unigram
+train_vs_test,pair_content_normalized,toward_test,16,image capturing,1.200720310230444,content_bigram
+train_vs_test,pair_content_normalized,toward_test,17,the plurality,1.1959032174477175,content_bigram
+train_vs_test,pair_content_normalized,toward_test,18,pump,1.1839429605787657,content_unigram
+train_vs_test,pair_content_normalized,toward_test,19,cooling,1.175606214211843,content_unigram
+train_vs_test,pair_content_normalized,toward_test,20,external device,1.166684498922487,content_bigram
+train_vs_test,pair_content_normalized,toward_test,21,wing,1.1624230437827021,content_unigram
+train_vs_test,pair_content_normalized,toward_test,22,industrial,1.1615969289314925,content_unigram
+train_vs_test,pair_content_normalized,toward_test,23,shaft,1.1608165396056147,content_unigram
+train_vs_test,pair_content_normalized,toward_test,24,end,1.1579739230973154,content_unigram
+train_vs_test,pair_content_normalized,toward_test,25,configured,1.1523168058200925,content_unigram
+train_vs_test,pair_content_normalized,toward_test,26,rotation of,1.1247705748795853,content_bigram
+train_vs_test,pair_content_normalized,toward_test,27,coated,1.124265641421228,content_unigram
+train_vs_test,pair_content_normalized,toward_test,28,rail,1.1172668281056837,content_unigram
+train_vs_test,pair_content_normalized,toward_test,29,glass article,1.1096840900820533,content_bigram
+train_vs_test,pair_content_normalized,toward_test,30,zeolite,1.1054101436148076,content_unigram
+train_vs_test,pair_content_normalized,toward_test,31,the connector,1.090057302155498,content_bigram
+train_vs_test,pair_content_normalized,toward_test,32,connector,1.08850582680337,content_unigram
+train_vs_test,pair_content_normalized,toward_test,33,connector part,1.0876937147344314,content_bigram
+train_vs_test,pair_content_normalized,toward_test,34,bsr,1.0875416415596015,content_unigram
+train_vs_test,pair_content_normalized,toward_test,35,coated glass,1.0861673206354785,content_bigram
+train_vs_test,pair_content_normalized,toward_test,36,ticket,1.0856251966324895,content_unigram
+train_vs_test,pair_content_normalized,toward_test,37,the cooking,1.0829593510497078,content_bigram
+train_vs_test,pair_content_normalized,toward_test,38,energy management,1.0737524955276185,content_bigram
+train_vs_test,pair_content_normalized,toward_test,39,profile,1.0678419812706492,content_unigram
+train_vs_test,pair_content_normalized,toward_test,40,whereby,1.057965078610364,content_unigram
+train_vs_test,pair_content_normalized,toward_test,41,printer,1.0553898210126713,content_unigram
+train_vs_test,pair_content_normalized,toward_test,42,system of,1.0509032457775422,content_bigram
+train_vs_test,pair_content_normalized,toward_test,43,detector,1.0427789201032658,content_unigram
+train_vs_test,pair_content_normalized,toward_test,44,exciter,1.039815425898618,content_unigram
+train_vs_test,pair_content_normalized,toward_test,45,example the,1.0373693941628848,content_bigram
+train_vs_test,pair_content_normalized,toward_test,46,electronic circuit,1.037077961734085,content_bigram
+train_vs_test,pair_content_normalized,toward_test,47,the catalyst,1.031774352350434,content_bigram
+train_vs_test,pair_content_normalized,toward_test,48,configured to,1.030763607576323,content_bigram
+train_vs_test,pair_content_normalized,toward_test,49,lever,1.0273558823202584,content_unigram
+train_vs_test,pair_content_normalized,toward_test,50,the cloud,1.0226989634692663,content_bigram
+train_vs_test,pair_content_normalized,toward_test,51,device according,1.0222414932690713,content_bigram
+train_vs_test,pair_content_normalized,toward_test,52,trip,1.0199678164382577,content_unigram
+train_vs_test,pair_content_normalized,toward_test,53,amine,1.0166319328535016,content_unigram
+train_vs_test,pair_content_normalized,toward_test,54,ethylene,1.0126081878678728,content_unigram
+train_vs_test,pair_content_normalized,toward_test,55,estimate,1.0001407179007782,content_unigram
+train_vs_test,pair_content_normalized,toward_test,56,conveyor,0.9991427464182405,content_unigram
+train_vs_test,pair_content_normalized,toward_test,57,display area,0.9873767988226972,content_bigram
+train_vs_test,pair_content_normalized,toward_test,58,account,0.9839242367995685,content_unigram
+train_vs_test,pair_content_normalized,toward_test,59,be formed,0.977762456949422,content_bigram
+train_vs_test,pair_content_normalized,toward_test,60,sense,0.9765714221850663,content_unigram
+train_vs_test,pair_content_normalized,toward_test,61,context aware,0.9705480121482675,content_bigram
+train_vs_test,pair_content_normalized,toward_test,62,may,0.9612027064315203,content_unigram
+train_vs_test,pair_content_normalized,toward_test,63,token,0.9602426951293667,content_unigram
+train_vs_test,pair_content_normalized,toward_test,64,gaming machine,0.9556601162277316,content_bigram
+train_vs_test,pair_content_normalized,toward_test,65,the chamber,0.9478217805770314,content_bigram
+train_vs_test,pair_content_normalized,toward_test,66,the load,0.9428849436235753,content_bigram
+train_vs_test,pair_content_normalized,toward_test,67,demand,0.9413452726540581,content_unigram
+train_vs_test,pair_content_normalized,toward_test,68,chamber,0.9372267352773962,content_unigram
+train_vs_test,pair_content_normalized,toward_test,69,flow,0.9367539535094641,content_unigram
+train_vs_test,pair_content_normalized,toward_test,70,polymer,0.9359512548040825,content_unigram
+train_vs_test,pair_content_normalized,toward_test,71,buffer,0.9356106921524178,content_unigram
+train_vs_test,pair_content_normalized,toward_test,72,inverter,0.9352252673322917,content_unigram
+train_vs_test,pair_content_normalized,toward_test,73,cooking,0.9324817252240203,content_unigram
+train_vs_test,pair_content_normalized,toward_test,74,aware,0.9320834418626415,content_unigram
+train_vs_test,pair_content_normalized,toward_test,75,of interest,0.9253619909643688,content_bigram
+train_vs_test,pair_content_normalized,toward_test,76,passenger,0.9239970718400787,content_unigram
+train_vs_test,pair_content_normalized,toward_test,77,position,0.9177912748432095,content_unigram
+train_vs_test,pair_content_normalized,toward_test,78,assistance device,0.9109127170672596,content_bigram
+train_vs_test,pair_content_normalized,toward_test,79,polymer composition,0.9067295482256473,content_bigram
+train_vs_test,pair_content_normalized,toward_test,80,image forming,0.900533674543624,content_bigram
+train_vs_test,pair_content_normalized,toward_test,81,announcement,0.8999928574453018,content_unigram
+train_vs_test,pair_content_normalized,toward_test,82,interest,0.8973327824558176,content_unigram
+train_vs_test,pair_content_normalized,toward_test,83,indicator,0.8964771929158444,content_unigram
+train_vs_test,pair_content_normalized,toward_test,84,access point,0.8962254518526116,content_bigram
+train_vs_test,pair_content_normalized,toward_test,85,the engine,0.8932266997163227,content_bigram
+train_vs_test,pair_content_normalized,toward_test,86,frequency,0.8902008514034755,content_unigram
+train_vs_test,pair_content_normalized,toward_test,87,aware announcement,0.8889194471047925,content_bigram
+train_vs_test,pair_content_normalized,toward_test,88,proximal,0.8871078697775536,content_unigram
+train_vs_test,pair_content_normalized,toward_test,89,the furnace,0.8853403233896677,content_bigram
+train_vs_test,pair_content_normalized,toward_test,90,food,0.8817785885785542,content_unigram
+train_vs_test,pair_content_normalized,toward_test,91,wiring portion,0.8801216321013049,content_bigram
+train_vs_test,pair_content_normalized,toward_test,92,integrated,0.876830101983912,content_unigram
+train_vs_test,pair_content_normalized,toward_test,93,detergent composition,0.8761393832761257,content_bigram
+train_vs_test,pair_content_normalized,toward_test,94,fibres,0.8749847999040736,content_unigram
+train_vs_test,pair_content_normalized,toward_test,95,energy,0.8712159653434182,content_unigram
+train_vs_test,pair_content_normalized,toward_test,96,collagen,0.8706634674697001,content_unigram
+train_vs_test,pair_content_normalized,toward_test,97,ball,0.8674400446900494,content_unigram
+train_vs_test,pair_content_normalized,toward_test,98,gaming,0.8650736550361485,content_unigram
+train_vs_test,pair_content_normalized,toward_test,99,configuration,0.8642743032653034,content_unigram
+train_vs_test,pair_content_normalized,toward_test,100,direction sep,0.8590583013090932,content_bigram
+train_vs_test,pair_content_normalized,toward_train,1,mobile,-2.2374590872282676,content_unigram
+train_vs_test,pair_content_normalized,toward_train,2,voltage,-1.998558981197658,content_unigram
+train_vs_test,pair_content_normalized,toward_train,3,information,-1.927087445951437,content_unigram
+train_vs_test,pair_content_normalized,toward_train,4,network,-1.7419268378356492,content_unigram
+train_vs_test,pair_content_normalized,toward_train,5,data,-1.7391691858634275,content_unigram
+train_vs_test,pair_content_normalized,toward_train,6,service,-1.6224945632399728,content_unigram
+train_vs_test,pair_content_normalized,toward_train,7,circuit,-1.6100723509967705,content_unigram
+train_vs_test,pair_content_normalized,toward_train,8,of the,-1.6096360106241487,content_bigram
+train_vs_test,pair_content_normalized,toward_train,9,battery,-1.6064056890871057,content_unigram
+train_vs_test,pair_content_normalized,toward_train,10,electronic device,-1.562571049175422,content_bigram
+train_vs_test,pair_content_normalized,toward_train,11,unit,-1.5061425835116424,content_unigram
+train_vs_test,pair_content_normalized,toward_train,12,level,-1.4843660126211213,content_unigram
+train_vs_test,pair_content_normalized,toward_train,13,base,-1.4746026075022656,content_unigram
+train_vs_test,pair_content_normalized,toward_train,14,resin,-1.420225114468439,content_unigram
+train_vs_test,pair_content_normalized,toward_train,15,device,-1.4127269865153966,content_unigram
+train_vs_test,pair_content_normalized,toward_train,16,station,-1.3857992481709909,content_unigram
+train_vs_test,pair_content_normalized,toward_train,17,using,-1.376526670374119,content_unigram
+train_vs_test,pair_content_normalized,toward_train,18,processing,-1.3754727650683145,content_unigram
+train_vs_test,pair_content_normalized,toward_train,19,the mobile,-1.3733918816851691,content_bigram
+train_vs_test,pair_content_normalized,toward_train,20,terminal,-1.355936007909138,content_unigram
+train_vs_test,pair_content_normalized,toward_train,21,electrode,-1.35074786248737,content_unigram
+train_vs_test,pair_content_normalized,toward_train,22,current,-1.3221666963161274,content_unigram
+train_vs_test,pair_content_normalized,toward_train,23,by,-1.3002130864534043,content_unigram
+train_vs_test,pair_content_normalized,toward_train,24,in that,-1.2975770700665565,content_bigram
+train_vs_test,pair_content_normalized,toward_train,25,switching,-1.2547763117602937,content_unigram
+train_vs_test,pair_content_normalized,toward_train,26,mm,-1.235459735358367,content_unigram
+train_vs_test,pair_content_normalized,toward_train,27,value,-1.2328856223472493,content_unigram
+train_vs_test,pair_content_normalized,toward_train,28,line,-1.232331367286784,content_unigram
+train_vs_test,pair_content_normalized,toward_train,29,defined,-1.2280833910807543,content_unigram
+train_vs_test,pair_content_normalized,toward_train,30,to,-1.2196715135381109,content_unigram
+train_vs_test,pair_content_normalized,toward_train,31,housing,-1.20639231105194,content_unigram
+train_vs_test,pair_content_normalized,toward_train,32,wind,-1.1992092224525226,content_unigram
+train_vs_test,pair_content_normalized,toward_train,33,in any,-1.1869820994158267,content_bigram
+train_vs_test,pair_content_normalized,toward_train,34,ink,-1.182624170485946,content_unigram
+train_vs_test,pair_content_normalized,toward_train,35,having,-1.1798810783836644,content_unigram
+train_vs_test,pair_content_normalized,toward_train,36,any of,-1.1695083522783063,content_bigram
+train_vs_test,pair_content_normalized,toward_train,37,card,-1.1685399048557479,content_unigram
+train_vs_test,pair_content_normalized,toward_train,38,compressed,-1.139535779985791,content_unigram
+train_vs_test,pair_content_normalized,toward_train,39,the preceding,-1.138948634361339,content_bigram
+train_vs_test,pair_content_normalized,toward_train,40,tower,-1.1357803478543762,content_unigram
+train_vs_test,pair_content_normalized,toward_train,41,mobile device,-1.1239597905364114,content_bigram
+train_vs_test,pair_content_normalized,toward_train,42,wireless,-1.1235704529626103,content_unigram
+train_vs_test,pair_content_normalized,toward_train,43,memory,-1.121465977170533,content_unigram
+train_vs_test,pair_content_normalized,toward_train,44,to the,-1.1078615974550587,content_bigram
+train_vs_test,pair_content_normalized,toward_train,45,information processing,-1.1062378740654557,content_bigram
+train_vs_test,pair_content_normalized,toward_train,46,set,-1.1034136329692366,content_unigram
+train_vs_test,pair_content_normalized,toward_train,47,power,-1.0897597841308087,content_unigram
+train_vs_test,pair_content_normalized,toward_train,48,drum,-1.0889624981539985,content_unigram
+train_vs_test,pair_content_normalized,toward_train,49,ultrasound,-1.086996606157875,content_unigram
+train_vs_test,pair_content_normalized,toward_train,50,user,-1.0841865757863216,content_unigram
+train_vs_test,pair_content_normalized,toward_train,51,nozzle,-1.0835453960269261,content_unigram
+train_vs_test,pair_content_normalized,toward_train,52,needle,-1.068913201477422,content_unigram
+train_vs_test,pair_content_normalized,toward_train,53,operation,-1.0668134185562002,content_unigram
+train_vs_test,pair_content_normalized,toward_train,54,for the,-1.0664423536567436,content_bigram
+train_vs_test,pair_content_normalized,toward_train,55,the battery,-1.0542629068128115,content_bigram
+train_vs_test,pair_content_normalized,toward_train,56,output,-1.0501556127133258,content_unigram
+train_vs_test,pair_content_normalized,toward_train,57,selection,-1.0460465228121032,content_unigram
+train_vs_test,pair_content_normalized,toward_train,58,wireless communication,-1.045508041315642,content_bigram
+train_vs_test,pair_content_normalized,toward_train,59,stream,-1.033873783472646,content_unigram
+train_vs_test,pair_content_normalized,toward_train,60,base station,-1.0135620571346151,content_bigram
+train_vs_test,pair_content_normalized,toward_train,61,transmission,-1.0117970903556806,content_unigram
+train_vs_test,pair_content_normalized,toward_train,62,devices,-1.010382764354712,content_unigram
+train_vs_test,pair_content_normalized,toward_train,63,tub,-0.9980590679900528,content_unigram
+train_vs_test,pair_content_normalized,toward_train,64,information of,-0.9938250005061234,content_bigram
+train_vs_test,pair_content_normalized,toward_train,65,cell,-0.9876148533241805,content_unigram
+train_vs_test,pair_content_normalized,toward_train,66,arranged to,-0.9859333428636993,content_bigram
+train_vs_test,pair_content_normalized,toward_train,67,users,-0.9809484035984573,content_unigram
+train_vs_test,pair_content_normalized,toward_train,68,washing machine,-0.9775649170488825,content_bigram
+train_vs_test,pair_content_normalized,toward_train,69,than the,-0.9763627638776717,content_bigram
+train_vs_test,pair_content_normalized,toward_train,70,therefore,-0.9733930260413923,content_unigram
+train_vs_test,pair_content_normalized,toward_train,71,this,-0.9730079186604987,content_unigram
+train_vs_test,pair_content_normalized,toward_train,72,body,-0.9709268592584258,content_unigram
+train_vs_test,pair_content_normalized,toward_train,73,received,-0.9703726051832078,content_unigram
+train_vs_test,pair_content_normalized,toward_train,74,cap,-0.9658380162638198,content_unigram
+train_vs_test,pair_content_normalized,toward_train,75,via,-0.962890683488449,content_unigram
+train_vs_test,pair_content_normalized,toward_train,76,as,-0.9626389836204032,content_unigram
+train_vs_test,pair_content_normalized,toward_train,77,mode,-0.9620437893996522,content_unigram
+train_vs_test,pair_content_normalized,toward_train,78,display device,-0.9608438369405218,content_bigram
+train_vs_test,pair_content_normalized,toward_train,79,signal,-0.9598924415434789,content_unigram
+train_vs_test,pair_content_normalized,toward_train,80,case,-0.9589909646589843,content_unigram
+train_vs_test,pair_content_normalized,toward_train,81,electrical,-0.9565756450616985,content_unigram
+train_vs_test,pair_content_normalized,toward_train,82,controller is,-0.9561786454483597,content_bigram
+train_vs_test,pair_content_normalized,toward_train,83,to be,-0.9555460307202915,content_bigram
+train_vs_test,pair_content_normalized,toward_train,84,instruction,-0.9540660047793609,content_unigram
+train_vs_test,pair_content_normalized,toward_train,85,ejection,-0.9443630358620045,content_unigram
+train_vs_test,pair_content_normalized,toward_train,86,tissue,-0.9424115480116025,content_unigram
+train_vs_test,pair_content_normalized,toward_train,87,determined,-0.9420404900979411,content_unigram
+train_vs_test,pair_content_normalized,toward_train,88,the wind,-0.9396967106534261,content_bigram
+train_vs_test,pair_content_normalized,toward_train,89,from the,-0.9382503724461234,content_bigram
+train_vs_test,pair_content_normalized,toward_train,90,to or,-0.9378129443436269,content_bigram
+train_vs_test,pair_content_normalized,toward_train,91,lamp,-0.9360847740935074,content_unigram
+train_vs_test,pair_content_normalized,toward_train,92,the portable,-0.9358524422323357,content_bigram
+train_vs_test,pair_content_normalized,toward_train,93,the base,-0.9340459194772314,content_bigram
+train_vs_test,pair_content_normalized,toward_train,94,portable,-0.9295022808398733,content_unigram
+train_vs_test,pair_content_normalized,toward_train,95,that the,-0.9290373721111309,content_bigram
+train_vs_test,pair_content_normalized,toward_train,96,printing plate,-0.9286654349744211,content_bigram
+train_vs_test,pair_content_normalized,toward_train,97,in,-0.927740995657377,content_unigram
+train_vs_test,pair_content_normalized,toward_train,98,detected,-0.9277269293325066,content_unigram
+train_vs_test,pair_content_normalized,toward_train,99,apparatus,-0.9200586350685619,content_unigram
+train_vs_test,pair_content_normalized,toward_train,100,device of,-0.9167540033167233,content_bigram

@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-09-24T04:34:12.225261+00:00",
+  "method": "Top-1 cosine similarity under the released Random-U eligibility constraints, excluding the selected BM25 Hard-U document and passage",
+  "split": "test",
+  "retriever": "AI-Growth-Lab/PatentSBERTa",
+  "retriever_revision": "3ff1d553c861d8f5bfd902333d97fc95eb6b4c8f",
+  "pooling": "CLS token",
+  "embedding_normalization": "L2",
+  "similarity": "cosine",
+  "embedding_precision": "BF16 model inference with float32 normalized output",
+  "maximum_length": 384,
+  "target_queries": 1642,
+  "dense_hard_generated": 1642,
+  "coverage": 1.0,
+  "candidate_passages": 2079,
+  "eligibility_pool_parity": {
+    "mismatch_queries": 0,
+    "maximum_absolute_difference": 0
+  },
+  "mean_eligible_pool_size": 126.74969549330085,
+  "median_eligible_pool_size": 107.0,
+  "minimum_eligible_pool_size": 1,
+  "maximum_eligible_pool_size": 393,
+  "mean_selected_cosine": 0.5378725470999998,
+  "median_selected_cosine": 0.5449425876140594,
+  "minimum_selected_cosine": 0.25365012884140015,
+  "maximum_selected_cosine": 0.7470442056655884,
+  "queries_with_similarity_tie": 0,
+  "maximum_tie_count": 1,
+  "eligibility_violations": {
+    "duplicate_queries": 0,
+    "duplicate_query_passage_pairs": 0,
+    "same_as_hard_u_passage": 0,
+    "same_as_hard_u_document": 0,
+    "existing_citation_or_reference": 0,
+    "time_violation": 0,
+    "cpc_violation": 0,
+    "same_component_violation": 0
+  },
+  "dense_random_same_passage": 87,
+  "dense_random_same_document": 253,
+  "candidate_embedding_batch_size": 256,
+  "query_embedding_batch_size": 256,
+  "embedding_dimension": 768,
+  "source_paths": {
+    "source_test": "${PATSCOUT_SOURCE_ROOT}/external/PatentMatch/priority_augmented_temporal_split/test.csv",
+    "hard_u_test": "${PATSCOUT_SOURCE_ROOT}/external/PatentMatch/xart_hard_u_v1/test_hard_u.csv",
+    "random_u_test": "${PATSCOUT_SOURCE_ROOT}/experiments/random_u_v1/test_random_u.parquet",
+    "metadata": "${PATSCOUT_SOURCE_ROOT}/external/PatentMatch/hard_u_metadata/patent_metadata.csv"
+  },
+  "output_files": {
+    "dense_hard_parquet": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_dense_hard_u.parquet",
+    "dense_hard_csv": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_dense_hard_u.csv",
+    "pool_parity": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/eligibility_pool_parity.csv",
+    "candidate_embeddings": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_candidate_embeddings.npy",
+    "query_embeddings": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_query_embeddings.npy"
+  }
+}

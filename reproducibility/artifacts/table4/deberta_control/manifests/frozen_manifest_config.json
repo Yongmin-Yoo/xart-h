@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-09-22T05:49:24.895203+00:00",
+  "status": "MANIFESTS_FROZEN",
+  "training_performed": false,
+  "dataset": "yongminyoo91/xart-h",
+  "revision": "v1.0.1",
+  "construction_seed": 42,
+  "model_seeds": [
+    13,
+    42,
+    77
+  ],
+  "training_conditions": {
+    "hard_only": "All common-query cited rows plus one original Hard-U per query.",
+    "mixed_u": "Identical cited rows plus exactly one U per query; fixed 50% Hard-U and 50% Random-U query assignment."
+  },
+  "common_train_queries": 8246,
+  "excluded_hard_queries_without_random_u": 29,
+  "cited_rows_per_condition": 16617,
+  "u_rows_per_condition": 8246,
+  "total_rows_per_condition": 24863,
+  "mixed_hard_u_rows": 4123,
+  "mixed_random_u_rows": 4123,
+  "hard_only_manifest_fingerprint": "39517cfb2135e98068ad7a13eb7bfd9e4456e139e919bd92e8b15192dde8d0c7",
+  "mixed_u_manifest_fingerprint": "df29c862de2a8139f1a4b87efb5a02d734319c4ce10425c43acc10b38f14af38",
+  "assignment_fingerprint": "f2699b2d50861523a1644c2593b426c39010dd3996b39c7cbe361320ac0a5249",
+  "q50": {
+    "source_assignment_file": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/lexical_matching/lexical_matching_assignments.parquet",
+    "selection_repeated": false,
+    "saved_scope": "q50_primary",
+    "queries": 870,
+    "rows": 1740,
+    "fingerprint": "81926e9e11a9392fc056673d5ca4c3028253d539b32eb5ddaadcb47bdab4e9ea",
+    "source_alignment_status": "EXACT_ROW_ID_AND_CONTENT_MATCH",
+    "existing_deberta_result_status": "UNVERIFIED_EXISTING_NPZ",
+    "reproduced_model_result_status": "VERIFIED_RECONSTRUCTED_EXISTING_Q50"
+  },
+  "random_u_generation_audit": {
+    "source_report": "${PATSCOUT_SOURCE_ROOT}/experiments/random_u_v1/random_u_generation_report.json",
+    "train_violations": {
+      "duplicate_queries": 0,
+      "duplicate_query_passage_pairs": 0,
+      "same_as_hard_u_passage": 0,
+      "same_as_hard_u_document": 0,
+      "existing_citation_or_reference": 0,
+      "time_violation": 0,
+      "cpc_violation": 0,
+      "same_component_violation": 0
+    },
+    "cross_split_violations": {
+      "train_validation_query_overlap": 0,
+      "train_validation_passage_overlap": 0,
+      "train_validation_document_overlap": 0,
+      "train_test_query_overlap": 0,
+      "train_test_passage_overlap": 0,
+      "train_test_document_overlap": 0,
+      "validation_test_query_overlap": 0,
+      "validation_test_passage_overlap": 0,
+      "validation_test_document_overlap": 0
+    },
+    "generation_seed": 42
+  },
+  "files": {
+    "hard_only_train_manifest": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/hard_only_train_manifest.parquet",
+    "mixed_u_train_manifest": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/mixed_u_train_manifest.parquet",
+    "mixed_assignment": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/mixed_u_query_assignment.csv",
+    "common_queries": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/common_train_queries.csv",
+    "excluded_queries": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/excluded_hard_queries_without_random_u.csv",
+    "q50_pair_manifest": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/stage2b_existing_q50_pair_manifest.parquet",
+    "q50_row_manifest": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/stage2b_existing_q50_row_manifest.parquet",
+    "q50_metrics": "${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/manifests/stage2b_reproduced_q50_metrics.csv"
+  }
+}

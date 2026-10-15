@@ -1,0 +1,13 @@
+model,subset,training_condition,metric,estimate,queries,rows
+deberta,all,hard_only,roc_auc,0.5418661710557632,1642,4948
+deberta,all,hard_only,pairwise_accuracy,0.5306638246041413,1642,4948
+deberta,all,mixed_u,roc_auc,0.6910579664331562,1642,4948
+deberta,all,mixed_u,pairwise_accuracy,0.6963154689403166,1642,4948
+deberta,passage_different,hard_only,roc_auc,0.5537533930426712,1555,4687
+deberta,passage_different,hard_only,pairwise_accuracy,0.5420257234726689,1555,4687
+deberta,passage_different,mixed_u,roc_auc,0.6864504153782345,1555,4687
+deberta,passage_different,mixed_u,pairwise_accuracy,0.6915434083601285,1555,4687
+deberta,document_different,hard_only,roc_auc,0.5677139257430834,1389,4189
+deberta,document_different,hard_only,pairwise_accuracy,0.5585673146148308,1389,4189
+deberta,document_different,mixed_u,roc_auc,0.6733249768589942,1389,4189
+deberta,document_different,mixed_u,pairwise_accuracy,0.67735781137509,1389,4189

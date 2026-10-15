@@ -1,0 +1,7 @@
+training_condition,seed,hard_batch_size,random_batch_size,elapsed_minutes,prediction_rows,prediction_path
+hard_only,13,256,256,2.30553963581721,9896,${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation/predictions/hard_only_seed13_ordered_predictions.parquet
+hard_only,42,256,256,1.9336767117182414,9896,${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation/predictions/hard_only_seed42_ordered_predictions.parquet
+hard_only,77,256,256,1.9389514724413555,9896,${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation/predictions/hard_only_seed77_ordered_predictions.parquet
+mixed_u,13,256,256,1.9391309857368468,9896,${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation/predictions/mixed_u_seed13_ordered_predictions.parquet
+mixed_u,42,256,256,1.9387886285781861,9896,${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation/predictions/mixed_u_seed42_ordered_predictions.parquet
+mixed_u,77,256,256,1.9399048765500386,9896,${PATSCOUT_SOURCE_ROOT}/experiments/construction_bias_v1/mixed_u_control/ordered_evaluation/predictions/mixed_u_seed77_ordered_predictions.parquet

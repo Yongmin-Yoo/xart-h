@@ -1,0 +1,5 @@
+dense_column,random_column,overlap_count,distance_from_expected
+cited_document_id,cited_document_id,253,0
+cited_document_id,patent_application_id,0,253
+patent_application_id,cited_document_id,0,253
+patent_application_id,patent_application_id,1642,1389

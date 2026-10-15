@@ -1,0 +1,3 @@
+mapping_name,stage_position_column,matched_rows,matched_queries,label_match,q50_rows_matched,q50_probability_mean_difference,q50_probability_max_difference,is_valid
+canonical_to_official_test_position,official_test_position,5056,1678,True,1740,0.0,0.0,True
+canonical_to_u_eligible_position,u_eligible_position,4796,1678,False,0,inf,inf,False

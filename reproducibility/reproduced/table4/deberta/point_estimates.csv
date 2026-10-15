@@ -1,0 +1,9 @@
+model,training_condition,evaluation_condition,metric,estimate,queries,rows
+deberta,hard_only,hard_u,roc_auc,0.7692272124723587,1642,4948
+deberta,hard_only,hard_u,pairwise_accuracy,0.767082825822168,1642,4948
+deberta,hard_only,random_u,roc_auc,0.3356393314337126,1642,4948
+deberta,hard_only,random_u,pairwise_accuracy,0.32097036134794965,1642,4948
+deberta,mixed_u,hard_u,roc_auc,0.7367709984356497,1642,4948
+deberta,mixed_u,hard_u,pairwise_accuracy,0.7411084043848966,1642,4948
+deberta,mixed_u,random_u,roc_auc,0.8174855373133999,1642,4948
+deberta,mixed_u,random_u,pairwise_accuracy,0.8241473812423873,1642,4948

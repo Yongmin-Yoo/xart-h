@@ -1,0 +1,121 @@
+comparison,direction,rank,feature,coefficient
+train_vs_validation,toward_validation,1,xray,1.467225973291798
+train_vs_validation,toward_validation,2,tire,1.444492021859636
+train_vs_validation,toward_validation,3,shaft,1.3226729086173363
+train_vs_validation,toward_validation,4,radio,1.3189624831552849
+train_vs_validation,toward_validation,5,print,1.3119236375273677
+train_vs_validation,toward_validation,6,cancellation,1.1943686582527016
+train_vs_validation,toward_validation,7,system,1.1938732716909355
+train_vs_validation,toward_validation,8,chip,1.1639435815084207
+train_vs_validation,toward_validation,9,head,1.1616229640488447
+train_vs_validation,toward_validation,10,detector,1.1490685685969366
+train_vs_validation,toward_validation,11,xray imaging,1.1272468086592997
+train_vs_validation,toward_validation,12,imaging,1.1083017150539045
+train_vs_validation,toward_validation,13,solar,1.094706243617673
+train_vs_validation,toward_validation,14,photo,1.086426886825135
+train_vs_validation,toward_validation,15,extension,1.0790835664552054
+train_vs_validation,toward_validation,16,transparent display,1.0765230986274152
+train_vs_validation,toward_validation,17,configuration,1.0704678465996944
+train_vs_validation,toward_validation,18,block,1.058956914128048
+train_vs_validation,toward_validation,19,noise,1.057886183226243
+train_vs_validation,toward_validation,20,the xray,1.0391460840234308
+train_vs_validation,toward_validation,21,the printing,1.0362117383730534
+train_vs_validation,toward_validation,22,the electronic,1.0356784059828066
+train_vs_validation,toward_validation,23,strap,1.0344828306553653
+train_vs_validation,toward_validation,24,the tire,1.033770546118805
+train_vs_validation,toward_validation,25,program,1.025799940585849
+train_vs_validation,toward_validation,26,rfid,1.0131612599866944
+train_vs_validation,toward_validation,27,printing,1.0054576093319292
+train_vs_validation,toward_validation,28,engine,1.0035623077887024
+train_vs_validation,toward_validation,29,media,0.9948462401509974
+train_vs_validation,toward_validation,30,motor,0.9888775564232956
+train_vs_validation,toward_train,1,said,-2.444514287889098
+train_vs_validation,toward_train,2,apparatus,-1.9578023744055104
+train_vs_validation,toward_train,3,electrode,-1.6593875892983692
+train_vs_validation,toward_train,4,data,-1.5666093327855086
+train_vs_validation,toward_train,5,node,-1.4492056803913813
+train_vs_validation,toward_train,6,mode,-1.3243758564753516
+train_vs_validation,toward_train,7,apparatus according,-1.299997709575919
+train_vs_validation,toward_train,8,section,-1.2470240068403435
+train_vs_validation,toward_train,9,device,-1.2154628264351564
+train_vs_validation,toward_train,10,an,-1.2035799107689247
+train_vs_validation,toward_train,11,gas,-1.1964988655559086
+train_vs_validation,toward_train,12,transmission,-1.1930462646656048
+train_vs_validation,toward_train,13,with the,-1.1792608477080067
+train_vs_validation,toward_train,14,external,-1.1734294346735539
+train_vs_validation,toward_train,15,are,-1.151652283768638
+train_vs_validation,toward_train,16,card,-1.136924277090556
+train_vs_validation,toward_train,17,path,-1.1276138960452706
+train_vs_validation,toward_train,18,case,-1.1027754654858761
+train_vs_validation,toward_train,19,injection,-1.075236511391607
+train_vs_validation,toward_train,20,from the,-1.0689032951406292
+train_vs_validation,toward_train,21,optical,-1.0578134860739743
+train_vs_validation,toward_train,22,and,-1.0573374549238292
+train_vs_validation,toward_train,23,to,-1.0325756241076152
+train_vs_validation,toward_train,24,into the,-1.0316891560060582
+train_vs_validation,toward_train,25,casing,-1.0268473438893415
+train_vs_validation,toward_train,26,the portable,-1.0244270684193726
+train_vs_validation,toward_train,27,by,-1.0135879797557397
+train_vs_validation,toward_train,28,control,-1.0003125058798
+train_vs_validation,toward_train,29,service,-0.9990794357057167
+train_vs_validation,toward_train,30,the connection,-0.9911668007278494
+train_vs_test,toward_test,1,system,1.621761832890837
+train_vs_test,toward_test,2,catalyst,1.4462269798979808
+train_vs_test,toward_test,3,engine,1.4290761036558028
+train_vs_test,toward_test,4,aircraft,1.3779008892544533
+train_vs_test,toward_test,5,cloud,1.268279798256104
+train_vs_test,toward_test,6,baggage,1.145968203807745
+train_vs_test,toward_test,7,one external,1.1384296338503086
+train_vs_test,toward_test,8,pump,1.1164205809826653
+train_vs_test,toward_test,9,article,1.1037706730064911
+train_vs_test,toward_test,10,the coated,1.0899713612226272
+train_vs_test,toward_test,11,wiring,1.0884356570586362
+train_vs_test,toward_test,12,context,1.0766870377554807
+train_vs_test,toward_test,13,shaft,1.0688161320440095
+train_vs_test,toward_test,14,coated,1.0588941961079685
+train_vs_test,toward_test,15,capturing,1.05106522372165
+train_vs_test,toward_test,16,14,1.031366058580118
+train_vs_test,toward_test,17,industrial,1.0289631752257835
+train_vs_test,toward_test,18,airfoil,1.0137957784990295
+train_vs_test,toward_test,19,energy management,1.006040282684813
+train_vs_test,toward_test,20,detector,0.9956119002056493
+train_vs_test,toward_test,21,26,0.9902762317718061
+train_vs_test,toward_test,22,image capturing,0.9834969315943273
+train_vs_test,toward_test,23,whereby said,0.9832249565478574
+train_vs_test,toward_test,24,22,0.9759346741297892
+train_vs_test,toward_test,25,cooling,0.972053461898185
+train_vs_test,toward_test,26,bsr,0.9657567976114415
+train_vs_test,toward_test,27,configured,0.9582539988431611
+train_vs_test,toward_test,28,mac,0.9497363620809113
+train_vs_test,toward_test,29,wing,0.9433423853234102
+train_vs_test,toward_test,30,the catalyst,0.9424463061830514
+train_vs_test,toward_train,1,mobile,-1.9255089547299877
+train_vs_test,toward_train,2,voltage,-1.7063981673672048
+train_vs_test,toward_train,3,circuit,-1.6531812405130355
+train_vs_test,toward_train,4,network,-1.5873886293377701
+train_vs_test,toward_train,5,information,-1.5574595199039676
+train_vs_test,toward_train,6,data,-1.5401553048269854
+train_vs_test,toward_train,7,device,-1.4950476286841066
+train_vs_test,toward_train,8,battery,-1.481668239649853
+train_vs_test,toward_train,9,current,-1.4400859826972232
+train_vs_test,toward_train,10,of the,-1.4385372899187994
+train_vs_test,toward_train,11,unit,-1.3812873513118389
+train_vs_test,toward_train,12,having,-1.332144561575916
+train_vs_test,toward_train,13,service,-1.3297174348249934
+train_vs_test,toward_train,14,electrode,-1.2983320890551848
+train_vs_test,toward_train,15,line,-1.266668901004031
+train_vs_test,toward_train,16,the mobile,-1.2618277796026751
+train_vs_test,toward_train,17,to,-1.2527042714550187
+train_vs_test,toward_train,18,terminal,-1.2476132410364835
+train_vs_test,toward_train,19,station,-1.241578206711213
+train_vs_test,toward_train,20,using,-1.2414516306007628
+train_vs_test,toward_train,21,in that,-1.2136873598254516
+train_vs_test,toward_train,22,wireless,-1.1979276061917514
+train_vs_test,toward_train,23,resin,-1.1801443745043716
+train_vs_test,toward_train,24,to the,-1.170081937578545
+train_vs_test,toward_train,25,by,-1.1547608798202065
+train_vs_test,toward_train,26,electronic device,-1.152148051752243
+train_vs_test,toward_train,27,body,-1.1437532875303673
+train_vs_test,toward_train,28,106,-1.1399025503426685
+train_vs_test,toward_train,29,mm,-1.1302391465411676
+train_vs_test,toward_train,30,value,-1.1240708260680121

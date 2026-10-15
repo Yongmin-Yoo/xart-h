@@ -1,0 +1,39 @@
+{
+  "model": "microsoft/deberta-v3-base",
+  "adaptation": "three-seed mean-probability ensemble",
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "candidate_condition": "Dense-Hard",
+  "dense_retriever": "AI-Growth-Lab/PatentSBERTa",
+  "dense_retriever_revision": "3ff1d553c861d8f5bfd902333d97fc95eb6b4c8f",
+  "primary_queries": 1642,
+  "sensitivity_queries": 1555,
+  "excluded_exact_random_passage_queries": 87,
+  "bootstrap_unit": "query",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "confidence_level": 0.95,
+  "confidence_interval": "percentile bootstrap",
+  "p_value": "two-sided bootstrap-tail p-value with +1 finite-sample correction",
+  "primary_holm_family": [
+    "Dense-Hard ROC-AUC: Mixed-U minus Hard-only",
+    "Dense-Hard P-C/U: Mixed-U minus Hard-only"
+  ],
+  "primary_holm_family_size": 2,
+  "sensitivity_interpretation": "Separate robustness analysis excluding the 87 Dense-Hard passages identical to Random-U passages",
+  "input_files": {
+    "ensemble_predictions": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/deberta_frozen_evaluation/deberta_dense_hard_ensemble_predictions.parquet",
+    "ensemble_metrics": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/deberta_frozen_evaluation/deberta_dense_hard_ensemble_metrics.csv",
+    "dense_hard": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_dense_hard_u.parquet",
+    "random_u": "${PATSCOUT_SOURCE_ROOT}/experiments/random_u_v1/test_random_u.parquet"
+  },
+  "input_sha256": {
+    "ensemble_predictions": "870a8d1496033fa6b9d762ad0d2fd7dff6a8f344b21e109034ca877df0513cf2",
+    "ensemble_metrics": "b26e2d8b87e996b2eb08d68282f0fc970880271ab5646ea3c178d3a4f2d01c9a",
+    "dense_hard": "96c8e2dc77cace366b694ba52f46805fb76ceb66c62d2e7020381e86469bb726",
+    "random_u": "ce35e36c0342091dd94ea3ef49f9f50a262428e1e45bc5f0b7e23c5857405d5b"
+  }
+}
