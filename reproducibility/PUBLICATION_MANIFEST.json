@@ -1,5 +1,5 @@
 {
-  "availability_statement": "Controlled pipeline code, frozen inputs, and execution commands are publicly available. The reported statistics were reproduced from the canonical released predictions.",
+  "availability_statement": "Controlled pipeline code, frozen inputs, and execution commands are publicly available. The controlled execution bridge was successfully validated on an NVIDIA L4 GPU, and the reported statistics were reproduced from the canonical released predictions.",
   "cache_files_included": false,
   "checkpoint_to_prediction_bridge": {
     "evaluation_manifest_rows": 9896,
@@ -28,22 +28,28 @@
     "status": "reconstructed_executable_from_frozen_public_artifacts",
     "training_runs": 18
   },
+  "execution_compatibility": {
+    "minilm_native_one_logit": true,
+    "prediction_layout_matches_statistical_reader": true,
+    "qwen_balanced_claim_passage_truncation": true,
+    "statistics_entry_point": "scripts/reproduce_table4.py"
+  },
   "file_count": 279,
   "files": [
     {
-      "bytes": 6627,
+      "bytes": 8771,
       "path": "CONTROLLED_TRAINING.md",
-      "sha256": "ae5b3488e24fec9d11063d7d19e7a4121c4251fa16631424a3fd960630855782"
+      "sha256": "da505a32f0535f63f7f42de746db5bf82cfe8e75187530e2016414edcf7c25f0"
     },
     {
-      "bytes": 5458,
+      "bytes": 7557,
       "path": "CONTROLLED_TRAINING_PROVENANCE.json",
-      "sha256": "73682e2b813ec75280db34cc55bf6a0e64a56e320ac92e2e097bb898424d44da"
+      "sha256": "b0643d7370c76deccb20bdc812b68b6f294e395cebd968620b155edaa711e6b1"
     },
     {
-      "bytes": 1734,
+      "bytes": 2289,
       "path": "README.md",
-      "sha256": "b2638b51d1f7a822b0a61389f9924060534982306e40b96c81d560e0e35267c7"
+      "sha256": "a454d056098ed4525e31789f698a4ee2eac9fb4fb908ab445e07a5673d08e006"
     },
     {
       "bytes": 820,
@@ -1391,9 +1397,9 @@
       "sha256": "772cfb1f53f40c219e49a922582d60f1f579b78afae1debd8083e3e0fee275f9"
     },
     {
-      "bytes": 13511,
+      "bytes": 16170,
       "path": "scripts/predict_table4_controlled.py",
-      "sha256": "5bd7fcc7234de219379a6d7e6e7e8ff39e9687d54fa88001dae670d51295d79d"
+      "sha256": "d94993d04da1db3ac6b8742b0ee8751ec58225dec17e4d2b5a9feff05bbbd631"
     },
     {
       "bytes": 18041,
@@ -1406,9 +1412,9 @@
       "sha256": "9769dc87f7a2b685485f5ac3ed11ff5a20e441d87cbb8d351a12a7effabfc436"
     },
     {
-      "bytes": 1636,
+      "bytes": 3201,
       "path": "scripts/run_table4_controlled_predictions.sh",
-      "sha256": "749033a0873e5e87d72b2bdfea7dc1aaca50c4b212c5d0068a2b94683f375bd4"
+      "sha256": "eb6a4d5d13375aca76041c5bd670aa0d100ae882a1e530badae55ae1c23991fb"
     },
     {
       "bytes": 1104,
@@ -1416,9 +1422,9 @@
       "sha256": "47137269118ec48cb6a82703886c0921a3c21ae4c6bec0ca9dc6f050930e8bbd"
     },
     {
-      "bytes": 18494,
+      "bytes": 21621,
       "path": "scripts/train_table4_controlled.py",
-      "sha256": "9a6b04c828f22b64ba80f0af0d2592c087715c0ce7a5e01246e2fb6a0934fae9"
+      "sha256": "a96fa077fa7bfcc5858ace7d12aa421be200185fea91483782c6d2c09617dc53"
     },
     {
       "bytes": 5383,
@@ -1426,6 +1432,15 @@
       "sha256": "e5886f1981887b0c84d5e9be9cdb7a53f5c327c9a4808ebfafe8640986140abd"
     }
   ],
+  "gpu_execution_validation": {
+    "canonical_statistics": "reproduced",
+    "gpu": "NVIDIA L4",
+    "minilm_one_logit_inference": "passed",
+    "prediction_to_statistics_integration": "passed",
+    "qwen_balanced_truncation": "passed",
+    "qwen_public_lora_inference": "passed",
+    "status": "validated"
+  },
   "paper_title": "PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search",
   "project": "PatScout",
   "publication_scope": {
@@ -1446,5 +1461,5 @@
     ],
     "multiple_comparison_correction": "Holm"
   },
-  "updated_at_utc": "2026-10-16T02:50:18.966130+00:00"
+  "updated_at_utc": "2026-10-16T03:23:06.510972+00:00"
 }

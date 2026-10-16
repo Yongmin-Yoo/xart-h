@@ -1,5 +1,5 @@
 {
-  "availability_statement": "Controlled pipeline code, frozen inputs, and execution commands are publicly available. The reported statistics were reproduced from the canonical released predictions.",
+  "availability_statement": "Controlled pipeline code, frozen inputs, and execution commands are publicly available. The controlled execution bridge was successfully validated on an NVIDIA L4 GPU, and the reported statistics were reproduced from the canonical released predictions.",
   "canonical_statistical_entry_point": "reproducibility/scripts/reproduce_table4.py",
   "checkpoint_to_prediction_bridge": {
     "all_run_launcher": "reproducibility/scripts/run_table4_controlled_predictions.sh",
@@ -18,6 +18,32 @@
     "mixed_u"
   ],
   "created_at_utc": "2026-10-16T02:40:56.805059+00:00",
+  "execution_compatibility": {
+    "deberta_head": {
+      "num_labels": 2,
+      "prediction_probability": "softmax_class_1"
+    },
+    "minilm_head": {
+      "num_labels": 1,
+      "prediction_probability": "sigmoid",
+      "training_loss": "binary_cross_entropy_with_logits"
+    },
+    "prediction_output_layout": {
+      "automatic_statistics_step": true,
+      "directly_consumable_by": "reproducibility/scripts/reproduce_table4.py",
+      "models": {
+        "deberta": "table4/deberta_control/ordered_evaluation/predictions/{condition}_seed{seed}_ordered_predictions.parquet",
+        "minilm": "table4/minilm_control/{condition}_seed{seed}_ordered_predictions.parquet",
+        "qwen": "table4/qwen_control/qwen3_reranker_{condition}_seed{seed}_ordered_predictions.parquet"
+      }
+    },
+    "qwen_truncation": {
+      "fixed_prompt_tokens_reserved_before_truncation": true,
+      "maximum_length": 384,
+      "method": "balanced_claim_passage",
+      "unused_budget_reallocated": true
+    }
+  },
   "frozen_design": {
     "cited_rows_per_condition": 16617,
     "mixed_hard_u_rows": 4123,
@@ -25,6 +51,37 @@
     "queries": 8246,
     "rows_per_condition": 24863,
     "u_rows_per_condition": 8246
+  },
+  "gpu_execution_validation": {
+    "hardware": {
+      "bf16_supported": true,
+      "compute_capability": "8.9",
+      "gpu": "NVIDIA L4"
+    },
+    "qwen_runtime": {
+      "adapter": "reproducibility/artifacts/table4/qwen_adapters/hard_only_seed13",
+      "base_model": "Qwen/Qwen3-Reranker-0.6B",
+      "base_model_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+      "lora_backend": "standard_pytorch",
+      "maximum_length": 384,
+      "precision": "bf16"
+    },
+    "software": {
+      "cuda": "13.0",
+      "peft": "0.21.1",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.18.0"
+    },
+    "status": "validated",
+    "validated_components": {
+      "canonical_prediction_statistical_reproduction": true,
+      "minilm_native_one_logit_loading": true,
+      "minilm_sigmoid_inference": true,
+      "prediction_to_statistics_integration": true,
+      "qwen_balanced_claim_passage_truncation": true,
+      "qwen_public_lora_loading": true,
+      "qwen_yes_no_inference": true
+    }
   },
   "inputs": {
     "common_queries": {
@@ -167,5 +224,5 @@
   ],
   "status": "reconstructed_executable_from_frozen_public_artifacts",
   "training_runs": 18,
-  "updated_at_utc": "2026-10-16T02:47:30.925444+00:00"
+  "updated_at_utc": "2026-10-16T03:23:06.509967+00:00"
 }

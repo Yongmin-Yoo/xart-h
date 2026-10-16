@@ -279,12 +279,58 @@ class EncoderPairDataset(Dataset):
         return encoded
 
 
+
+def balanced_truncate(query_ids, document_ids, available):
+    """Apply the balanced truncation used by the canonical Qwen run."""
+    query_ids = list(query_ids)
+    document_ids = list(document_ids)
+
+    if available < 0:
+        raise RuntimeError("Negative Qwen content-token budget.")
+
+    if len(query_ids) + len(document_ids) <= available:
+        return query_ids, document_ids
+
+    query_cap = min(len(query_ids), available // 2)
+    document_cap = min(
+        len(document_ids),
+        available - (available // 2),
+    )
+
+    remaining = available - query_cap - document_cap
+
+    if remaining > 0:
+        add_query = min(
+            remaining,
+            len(query_ids) - query_cap,
+        )
+        query_cap += add_query
+        remaining -= add_query
+
+    if remaining > 0:
+        add_document = min(
+            remaining,
+            len(document_ids) - document_cap,
+        )
+        document_cap += add_document
+
+    return (
+        query_ids[:query_cap],
+        document_ids[:document_cap],
+    )
+
+
 class QwenPairDataset(Dataset):
     def __init__(self, frame, schema, labels, tokenizer):
-        self.queries = frame[schema["query_text"]].astype(str).tolist()
-        self.passages = frame[schema["passage_text"]].astype(str).tolist()
+        self.queries = (
+            frame[schema["query_text"]].astype(str).tolist()
+        )
+        self.passages = (
+            frame[schema["passage_text"]].astype(str).tolist()
+        )
         self.labels = labels.astype(int).tolist()
         self.tokenizer = tokenizer
+
         self.prefix_tokens = tokenizer.encode(
             QWEN_PREFIX,
             add_special_tokens=False,
@@ -293,35 +339,60 @@ class QwenPairDataset(Dataset):
             QWEN_SUFFIX,
             add_special_tokens=False,
         )
+        self.fixed_1_tokens = tokenizer.encode(
+            f"<Instruct>: {QWEN_INSTRUCTION}\n<Query>: ",
+            add_special_tokens=False,
+        )
+        self.fixed_2_tokens = tokenizer.encode(
+            "\n<Document>: ",
+            add_special_tokens=False,
+        )
+
+        self.available = (
+            MAX_LENGTH
+            - len(self.prefix_tokens)
+            - len(self.fixed_1_tokens)
+            - len(self.fixed_2_tokens)
+            - len(self.suffix_tokens)
+        )
+
+        if self.available <= 0:
+            raise RuntimeError(
+                "Qwen prompt overhead exceeds maximum length."
+            )
 
     def __len__(self):
         return len(self.labels)
 
     def __getitem__(self, index):
-        body = (
-            f"<Instruct>: {QWEN_INSTRUCTION}\n"
-            f"<Query>: {self.queries[index]}\n"
-            f"<Document>: {self.passages[index]}"
-        )
-        available = (
-            MAX_LENGTH
-            - len(self.prefix_tokens)
-            - len(self.suffix_tokens)
-        )
-        if available <= 0:
-            raise RuntimeError("Qwen prompt overhead exceeds max length.")
-
-        body_tokens = self.tokenizer.encode(
-            body,
+        query_ids = self.tokenizer.encode(
+            self.queries[index],
             add_special_tokens=False,
-            truncation=True,
-            max_length=available,
         )
+        document_ids = self.tokenizer.encode(
+            self.passages[index],
+            add_special_tokens=False,
+        )
+
+        query_ids, document_ids = balanced_truncate(
+            query_ids,
+            document_ids,
+            self.available,
+        )
+
         input_ids = (
             self.prefix_tokens
-            + body_tokens
+            + self.fixed_1_tokens
+            + query_ids
+            + self.fixed_2_tokens
+            + document_ids
             + self.suffix_tokens
         )
+
+        if len(input_ids) > MAX_LENGTH:
+            raise RuntimeError(
+                f"Qwen sequence exceeds {MAX_LENGTH} tokens."
+            )
 
         return {
             "input_ids": input_ids,
@@ -329,6 +400,36 @@ class QwenPairDataset(Dataset):
             "labels": self.labels[index],
         }
 
+
+class MiniLMBinaryTrainer(Trainer):
+    """Train the native one-logit MiniLM cross-encoder with BCE."""
+
+    def compute_loss(
+        self,
+        model,
+        inputs,
+        return_outputs=False,
+        num_items_in_batch=None,
+        **kwargs,
+    ):
+        labels = inputs.pop("labels").float()
+        outputs = model(**inputs)
+        logits = outputs.logits
+
+        if logits.ndim != 2 or logits.shape[1] != 1:
+            raise RuntimeError(
+                "MiniLM must produce [batch,1] logits; "
+                f"found {tuple(logits.shape)}"
+            )
+
+        loss = torch.nn.functional.binary_cross_entropy_with_logits(
+            logits[:, 0].float(),
+            labels,
+        )
+
+        if return_outputs:
+            return loss, outputs
+        return loss
 
 class QwenBinaryTrainer(Trainer):
     def __init__(
@@ -562,6 +663,20 @@ def main():
             labels,
             tokenizer,
         )
+    elif args.model == "minilm":
+        # The released cross-encoder has a native one-logit head.
+        # Keep that architecture and train it with BCEWithLogitsLoss.
+        model = AutoModelForSequenceClassification.from_pretrained(
+            config["model_id"],
+            revision=config["revision"],
+            num_labels=1,
+        )
+        dataset = EncoderPairDataset(
+            frame,
+            schema,
+            labels,
+            tokenizer,
+        )
     else:
         id2label = {0: "U", 1: "CITED"}
         label2id = {"U": 0, "CITED": 1}
@@ -628,6 +743,8 @@ def main():
             false_token_id=false_token_id,
             true_token_id=true_token_id,
         )
+    elif args.model == "minilm":
+        trainer = MiniLMBinaryTrainer(**trainer_kwargs)
     else:
         trainer = Trainer(**trainer_kwargs)
 

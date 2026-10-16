@@ -2,7 +2,7 @@
 
 ## Availability statement
 
-Controlled pipeline code, frozen inputs, and execution commands are publicly available. The reported statistics were reproduced from the canonical released predictions.
+Controlled pipeline code, frozen inputs, and execution commands are publicly available. The controlled execution bridge was successfully validated on an NVIDIA L4 GPU, and the reported statistics were reproduced from the canonical released predictions.
 
 ## Scope
 
@@ -126,6 +126,31 @@ statistics. Reviewers can run:
 The canonical released predictions contain all combinations of three
 models, two training conditions, and three seeds.
 
+## End-to-end execution compatibility
+
+The public execution bridge handles the model-specific interfaces used
+by the controlled experiment:
+
+- MiniLM preserves the native one-logit
+  `cross-encoder/ms-marco-MiniLM-L6-v2` classification head and uses
+  binary cross-entropy during training and sigmoid probabilities during
+  prediction.
+- DeBERTa uses a two-logit classification head and obtains cited
+  probabilities with softmax.
+- Qwen applies balanced claim-passage truncation within the 384-token
+  limit after reserving the fixed instruction, chat-template, and
+  answer-prefix tokens.
+- The all-run prediction launcher writes each generated file directly
+  into the artifact directory structure expected by
+  `reproduce_table4.py`.
+- Unless disabled with `RUN_STATISTICS=0`, the launcher invokes
+  `reproduce_table4.py` after all 18 prediction files have been
+  generated.
+
+Generated predictions remain separate from the released canonical
+predictions by default. They can be evaluated directly without renaming
+or manually copying files.
+
 ## Important interpretation
 
 GPU nondeterminism, library changes, and the reconstructed status of the
@@ -178,12 +203,33 @@ Generate all 18 prediction files:
 
     REPO_ROOT="$(pwd)" \
     CHECKPOINT_ROOT="/path/to/table4_controlled_checkpoints" \
-    OUTPUT_ROOT="/path/to/table4_controlled_predictions" \
+    ARTIFACTS_ROOT="/path/to/table4_generated_artifacts" \
+    STATISTICS_OUTPUT="/path/to/table4_generated_statistics" \
     bash reproducibility/scripts/run_table4_controlled_predictions.sh
 
 Actual checkpoint inference requires a CUDA GPU. Manifest construction,
 schema validation, and predictor dry-run do not require a GPU.
 
-Freshly retrained predictions are written outside the canonical artifact
-directories by default. They should be compared with, rather than
-silently substituted for, the released canonical predictions.
+Freshly generated predictions are written outside the canonical artifact
+directories by default, using a parallel artifact layout directly
+accepted by `reproduce_table4.py`. They should be compared with, rather
+than silently substituted for, the released canonical predictions.
+
+## GPU execution validation
+
+The controlled execution bridge was successfully validated on an
+NVIDIA L4 GPU. MiniLM native one-logit loading and sigmoid inference,
+Qwen balanced claim-passage truncation and public LoRA inference, and
+the direct prediction-to-statistics workflow all completed
+successfully.
+
+The validated environment used PyTorch 2.11.0 with CUDA 13.0,
+Transformers 5.18.0, and PEFT 0.21.1. Qwen inference used standard
+PyTorch LoRA layers, BF16 precision, the released seed-13 adapter, and
+the frozen Qwen model revision recorded by the benchmark.
+
+The statistical entry point successfully discovered the released
+MiniLM, DeBERTa, and Qwen prediction artifacts and generated point
+estimates, bootstrap outputs, paired comparisons, and the combined
+Table 4 result files. The reported statistics remain reproducible from
+the canonical released predictions.

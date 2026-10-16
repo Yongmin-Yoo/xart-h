@@ -97,10 +97,52 @@ class EncoderDataset(Dataset):
         )
 
 
+
+def balanced_truncate(query_ids, document_ids, available):
+    """Apply the balanced truncation used by the canonical Qwen run."""
+    query_ids = list(query_ids)
+    document_ids = list(document_ids)
+
+    if available < 0:
+        raise RuntimeError("Negative Qwen content-token budget.")
+
+    if len(query_ids) + len(document_ids) <= available:
+        return query_ids, document_ids
+
+    query_cap = min(len(query_ids), available // 2)
+    document_cap = min(
+        len(document_ids),
+        available - (available // 2),
+    )
+
+    remaining = available - query_cap - document_cap
+
+    if remaining > 0:
+        add_query = min(
+            remaining,
+            len(query_ids) - query_cap,
+        )
+        query_cap += add_query
+        remaining -= add_query
+
+    if remaining > 0:
+        add_document = min(
+            remaining,
+            len(document_ids) - document_cap,
+        )
+        document_cap += add_document
+
+    return (
+        query_ids[:query_cap],
+        document_ids[:document_cap],
+    )
+
+
 class QwenDataset(Dataset):
     def __init__(self, frame, tokenizer):
         self.frame = frame.reset_index(drop=True)
         self.tokenizer = tokenizer
+
         self.prefix = tokenizer.encode(
             QWEN_PREFIX,
             add_special_tokens=False,
@@ -109,6 +151,27 @@ class QwenDataset(Dataset):
             QWEN_SUFFIX,
             add_special_tokens=False,
         )
+        self.fixed_1 = tokenizer.encode(
+            f"<Instruct>: {QWEN_INSTRUCTION}\n<Query>: ",
+            add_special_tokens=False,
+        )
+        self.fixed_2 = tokenizer.encode(
+            "\n<Document>: ",
+            add_special_tokens=False,
+        )
+
+        self.available = (
+            MAX_LENGTH
+            - len(self.prefix)
+            - len(self.fixed_1)
+            - len(self.fixed_2)
+            - len(self.suffix)
+        )
+
+        if self.available <= 0:
+            raise RuntimeError(
+                "Qwen prompt overhead exceeds maximum length."
+            )
 
     def __len__(self):
         return len(self.frame)
@@ -116,33 +179,39 @@ class QwenDataset(Dataset):
     def __getitem__(self, index):
         row = self.frame.iloc[index]
 
-        body = (
-            f"<Instruct>: {QWEN_INSTRUCTION}\n"
-            f"<Query>: {row['text']}\n"
-            f"<Document>: {row['text_b']}"
-        )
-
-        available = MAX_LENGTH - len(self.prefix) - len(self.suffix)
-
-        if available <= 0:
-            raise RuntimeError(
-                "Qwen prompt overhead exceeds maximum length."
-            )
-
-        body_tokens = self.tokenizer.encode(
-            body,
+        query_ids = self.tokenizer.encode(
+            str(row["text"]),
             add_special_tokens=False,
-            truncation=True,
-            max_length=available,
+        )
+        document_ids = self.tokenizer.encode(
+            str(row["text_b"]),
+            add_special_tokens=False,
         )
 
-        input_ids = self.prefix + body_tokens + self.suffix
+        query_ids, document_ids = balanced_truncate(
+            query_ids,
+            document_ids,
+            self.available,
+        )
+
+        input_ids = (
+            self.prefix
+            + self.fixed_1
+            + query_ids
+            + self.fixed_2
+            + document_ids
+            + self.suffix
+        )
+
+        if len(input_ids) > MAX_LENGTH:
+            raise RuntimeError(
+                f"Qwen sequence exceeds {MAX_LENGTH} tokens."
+            )
 
         return {
             "input_ids": input_ids,
             "attention_mask": [1] * len(input_ids),
         }
-
 
 def validate_evaluation_manifest(frame):
     required = {
@@ -209,6 +278,7 @@ def validate_evaluation_manifest(frame):
         raise RuntimeError("Null passage text.")
 
 
+
 def encoder_probabilities(
     frame,
     checkpoint,
@@ -220,6 +290,24 @@ def encoder_probabilities(
     model = AutoModelForSequenceClassification.from_pretrained(
         checkpoint
     )
+
+    output_dimension = int(model.config.num_labels)
+
+    if model_name == "minilm":
+        if output_dimension != 1:
+            raise RuntimeError(
+                "MiniLM checkpoint must expose one logit; "
+                f"found num_labels={output_dimension}."
+            )
+    elif model_name == "deberta":
+        if output_dimension != 2:
+            raise RuntimeError(
+                "DeBERTa checkpoint must expose two logits; "
+                f"found num_labels={output_dimension}."
+            )
+    else:
+        raise RuntimeError(f"Unexpected encoder model: {model_name}")
+
     model.to(device)
     model.eval()
 
@@ -245,25 +333,28 @@ def encoder_probabilities(
                 for key, value in batch.items()
             }
             outputs = model(**batch)
-            logits = outputs.logits
+            logits = outputs.logits.float()
 
-            if logits.ndim != 2 or logits.shape[1] != 2:
-                raise RuntimeError(
-                    f"{model_name}: expected [batch,2] logits, "
-                    f"found {tuple(logits.shape)}"
-                )
-
-            cited = torch.softmax(
-                logits.float(),
-                dim=1,
-            )[:, 1]
+            if model_name == "minilm":
+                if logits.ndim != 2 or logits.shape[1] != 1:
+                    raise RuntimeError(
+                        "MiniLM expected [batch,1] logits, "
+                        f"found {tuple(logits.shape)}"
+                    )
+                cited = torch.sigmoid(logits[:, 0])
+            else:
+                if logits.ndim != 2 or logits.shape[1] != 2:
+                    raise RuntimeError(
+                        "DeBERTa expected [batch,2] logits, "
+                        f"found {tuple(logits.shape)}"
+                    )
+                cited = torch.softmax(logits, dim=1)[:, 1]
 
             probabilities.extend(
                 cited.cpu().numpy().astype(float).tolist()
             )
 
     return probabilities
-
 
 def qwen_probabilities(
     frame,

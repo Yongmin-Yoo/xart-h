@@ -63,3 +63,15 @@ python reproducibility/scripts/reproduce_table5.py   --artifacts reproducibility
 
 The repository directory name and dataset identifier are retained as
 technical identifiers. The benchmark name is PatScout.
+
+## Validated controlled execution bridge
+
+The Table 4 controlled execution bridge has been successfully validated
+on an NVIDIA L4 GPU. The validation covered MiniLM native one-logit
+loading and sigmoid inference, Qwen balanced claim-passage truncation
+and public LoRA inference, and direct integration with the statistical
+reproduction entry point.
+
+The reported Table 4 statistics are reproducible from the canonical
+released predictions. Full configuration and execution instructions are
+provided in [`CONTROLLED_TRAINING.md`](CONTROLLED_TRAINING.md).
