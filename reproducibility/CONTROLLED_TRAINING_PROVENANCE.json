@@ -1,0 +1,171 @@
+{
+  "availability_statement": "Controlled pipeline code, frozen inputs, and execution commands are publicly available. The reported statistics were reproduced from the canonical released predictions.",
+  "canonical_statistical_entry_point": "reproducibility/scripts/reproduce_table4.py",
+  "checkpoint_to_prediction_bridge": {
+    "all_run_launcher": "reproducibility/scripts/run_table4_controlled_predictions.sh",
+    "canonical_probabilities_copied": false,
+    "evaluation_manifest_builder": "reproducibility/scripts/build_table4_evaluation_manifest.py",
+    "prediction_entry_point": "reproducibility/scripts/predict_table4_controlled.py",
+    "public_sources": [
+      "yongminyoo91/xart-h@v1.0.1:parquet/test.parquet",
+      "results/random_u/generated/test_random_u.parquet",
+      "reproducibility/artifacts/table4/minilm_control/hard_only_seed13_ordered_predictions.parquet"
+    ],
+    "status": "public_executable"
+  },
+  "conditions": [
+    "hard_only",
+    "mixed_u"
+  ],
+  "created_at_utc": "2026-10-16T02:40:56.805059+00:00",
+  "frozen_design": {
+    "cited_rows_per_condition": 16617,
+    "mixed_hard_u_rows": 4123,
+    "mixed_random_u_rows": 4123,
+    "queries": 8246,
+    "rows_per_condition": 24863,
+    "u_rows_per_condition": 8246
+  },
+  "inputs": {
+    "common_queries": {
+      "bytes": 222651,
+      "path": "reproducibility/artifacts/table4/deberta_control/manifests/common_train_queries.csv",
+      "rows": 8246,
+      "sha256": "8b7d0cd7508533ddd6d041e38cc4aaa2a815aa4b2577f5ca09f9712de807c932"
+    },
+    "hard_only": {
+      "bytes": 9178940,
+      "cited_rows": 16617,
+      "file": "reproducibility/artifacts/table4/deberta_control/manifests/hard_only_train_manifest.parquet",
+      "queries": 8246,
+      "resolved_schema": {
+        "candidate_type": "source_type",
+        "columns": [
+          "training_row_id",
+          "training_condition",
+          "query_id",
+          "query_key",
+          "source_type",
+          "u_construction",
+          "source_row_id",
+          "pair_content_hash",
+          "text",
+          "text_b",
+          "task_label",
+          "label",
+          "claim_id",
+          "patent_application_id",
+          "cited_document_id",
+          "date",
+          "_source_split",
+          "_parsed_date",
+          "_component_id",
+          "_date",
+          "_supercomponent_id",
+          "_benchmark_split",
+          "_old_split",
+          "_priority_component_id",
+          "_u_method",
+          "_u_candidate_base",
+          "_u_candidate_publication_date",
+          "_u_target_component",
+          "_u_candidate_component",
+          "_hard_u_candidate_base",
+          "_hard_u_passage_hash",
+          "_random_seed",
+          "_random_pool_size",
+          "_target_date_source"
+        ],
+        "label": "label",
+        "passage_text": "text_b",
+        "query_id": "query_id",
+        "query_text": "text"
+      },
+      "rows": 24863,
+      "sha256": "a7c9c0bdd6229f0330f6860dc4253ce18b34f06d97a6a2c6b8b3642321d63a04",
+      "u_rows": 8246
+    },
+    "mixed_u": {
+      "bytes": 9176519,
+      "cited_rows": 16617,
+      "file": "reproducibility/artifacts/table4/deberta_control/manifests/mixed_u_train_manifest.parquet",
+      "queries": 8246,
+      "resolved_schema": {
+        "candidate_type": "source_type",
+        "columns": [
+          "training_row_id",
+          "training_condition",
+          "query_id",
+          "query_key",
+          "source_type",
+          "u_construction",
+          "source_row_id",
+          "pair_content_hash",
+          "text",
+          "text_b",
+          "task_label",
+          "label",
+          "claim_id",
+          "patent_application_id",
+          "cited_document_id",
+          "date",
+          "_source_split",
+          "_parsed_date",
+          "_component_id",
+          "_date",
+          "_supercomponent_id",
+          "_benchmark_split",
+          "_old_split",
+          "_priority_component_id",
+          "_u_method",
+          "_u_candidate_base",
+          "_u_candidate_publication_date",
+          "_u_target_component",
+          "_u_candidate_component",
+          "_hard_u_candidate_base",
+          "_hard_u_passage_hash",
+          "_random_seed",
+          "_random_pool_size",
+          "_target_date_source"
+        ],
+        "label": "label",
+        "passage_text": "text_b",
+        "query_id": "query_id",
+        "query_text": "text"
+      },
+      "rows": 24863,
+      "sha256": "dddf0d89ec4ee5024742de315427061d92e22b3d3b1e141dcd7f90de354c8006",
+      "u_rows": 8246
+    },
+    "mixed_u_assignment": {
+      "bytes": 3558739,
+      "path": "reproducibility/artifacts/table4/deberta_control/manifests/mixed_u_query_assignment.csv",
+      "rows": 8246,
+      "sha256": "48709f391167fd2956685b8ccaced0b78917c7cc3d77fabe3e5d68a250c9eb09"
+    }
+  },
+  "models": [
+    "minilm",
+    "deberta",
+    "qwen"
+  ],
+  "new_training_entry_point": "reproducibility/scripts/train_table4_controlled.py",
+  "original_script_claimed": false,
+  "paper_table": 4,
+  "project": "PatScout",
+  "publication_scope": {
+    "canonical_prediction_statistics": "reproduced",
+    "controlled_code": "public",
+    "execution_commands": "public",
+    "frozen_training_inputs": "public"
+  },
+  "results_changed": false,
+  "seeds": [
+    13,
+    42,
+    77
+  ],
+  "status": "reconstructed_executable_from_frozen_public_artifacts",
+  "training_runs": 18,
+  "updated_at_utc": "2026-10-16T02:47:30.925444+00:00"
+}

@@ -1,0 +1,10 @@
+# PatScout Table 4 Qwen3-Reranker controlled LoRA training
+# Environment separated from the repository-level transformers<5 file.
+numpy>=1.26,<3
+pandas>=2.2,<3
+pyarrow>=18,<23
+torch>=2.11,<2.12
+transformers==5.18.0
+peft==0.21.1
+accelerate>=1.12,<2
+safetensors>=0.5

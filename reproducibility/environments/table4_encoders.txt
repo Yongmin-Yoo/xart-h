@@ -1,0 +1,10 @@
+# PatScout Table 4 MiniLM and DeBERTa controlled training
+# Recorded DeBERTa environment used transformers 4.57.3.
+numpy>=1.26,<3
+pandas>=2.2,<3
+pyarrow>=18,<23
+torch>=2.11,<2.12
+transformers==4.57.3
+accelerate>=1.12,<2
+sentencepiece>=0.2
+safetensors>=0.5
