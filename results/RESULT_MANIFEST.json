@@ -88,8 +88,8 @@
       "sha256": "5b394182d2dc09c0c545859528c9eaa75f19c2179f04958ddb9adda3ea61b7e6"
     },
     "docs/RESULTS.md": {
-      "bytes": 9195,
-      "sha256": "734fb0c25b1ab8f21fac2345a9d20b951c18dce6cdd51f0dc49418135cd803c5"
+      "bytes": 9690,
+      "sha256": "0a36ce7b380e8042b75156440c1177914d862763780baa5845672f256477e30d"
     },
     "evaluation/evaluate_random_vs_hard_u.py": {
       "bytes": 33511,
@@ -252,7 +252,7 @@
       "sha256": "f43a142167e8ed77459c8b17f260fe048fb3db72d565dd2b974ed76cb4ec931d"
     }
   },
-  "paper_title": "PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search",
+  "paper_title": "PatScout: A Benchmark for Patent Prior-Art Candidate Assessment",
   "pending_analyses": [
     "CPC subgroup analysis",
     "length and lexical-overlap analysis",
@@ -408,5 +408,5 @@
     "updated_at_utc": "2026-09-20T08:05:44.225725+00:00",
     "updated_utc": "2026-09-20T23:08:16.108358+00:00"
   },
-  "updated_utc": "2026-10-15T07:06:42.097426+00:00"
+  "updated_utc": "2026-10-17T20:53:15.119394+00:00"
 }
