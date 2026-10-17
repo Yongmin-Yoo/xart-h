@@ -185,3 +185,14 @@ predictions reproduced the released predictions exactly: all six MAE
 values were 0.0, all maximum absolute differences were 0.0, all
 correlations were 1.0, and no probability was missing.
 <!-- TABLE5_QWEN_PUBLIC_EXECUTION_END -->
+
+<!-- TABLE4_BOOTSTRAP_SEED_EXCEPTION_START -->
+### Table 4 bootstrap seed exception
+
+Bootstrap resampling uses seed 42, except for the Table 4 DeBERTa analysis, which uses seed 20260922. These bootstrap seeds are separate from the model-training seeds 13, 42, and 77.
+
+This model-specific bootstrap seed affects statistical resampling only.
+It does not replace or modify the model-training seeds 13, 42, and 77.
+
+한국어: Bootstrap 재표집은 seed 42를 사용하되, Table 4의 DeBERTa 분석은 seed 20260922를 사용한다. 이 bootstrap seed는 모델 학습 seed 13, 42, 77과 별개이다.
+<!-- TABLE4_BOOTSTRAP_SEED_EXCEPTION_END -->

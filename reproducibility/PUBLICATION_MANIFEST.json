@@ -38,8 +38,8 @@
   "files": [
     {
       "path": "CONTROLLED_TRAINING.md",
-      "bytes": 8771,
-      "sha256": "da505a32f0535f63f7f42de746db5bf82cfe8e75187530e2016414edcf7c25f0"
+      "bytes": 9585,
+      "sha256": "de70cfd83c38a8d1f9b76b163f2caadfb3560c0cb47390d5f132e4c867bb5c8a"
     },
     {
       "path": "CONTROLLED_TRAINING_PROVENANCE.json",
@@ -58,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6645,
-      "sha256": "aefe9b786d42c2c91bd73e8bda49ad16d25ffaba95a22add19ef68a2a5a75d86"
+      "bytes": 7292,
+      "sha256": "0f51e1252aef46c710cdc98d00010dbf89d64e8c69c70d5a444f507445701782"
     },
     {
       "path": "artifacts/lexical_length/length_diagnostic/error_group_diagnostic_summary.csv",
@@ -1491,7 +1491,7 @@
     ],
     "multiple_comparison_correction": "Holm"
   },
-  "updated_at_utc": "2026-10-17T07:00:11.245717+00:00",
+  "updated_at_utc": "2026-10-17T07:04:45.387348+00:00",
   "dense_hard_generation": {
     "status": "public_executable_and_gpu_validated",
     "entry_point": "scripts/generate_dense_hard_candidates.py",
@@ -1572,5 +1572,27 @@
     },
     "path_bridge_check": true,
     "full_gpu_inference": true
+  },
+  "table4_bootstrap_seeds": {
+    "status": "documented",
+    "bootstrap_repetitions": 2000,
+    "default_bootstrap_seed": 42,
+    "model_specific_seeds": {
+      "minilm": 42,
+      "deberta": 20260922,
+      "qwen": 42
+    },
+    "model_training_seeds": [
+      13,
+      42,
+      77
+    ],
+    "training_and_bootstrap_seeds_are_separate": true,
+    "implementation": "scripts/reproduce_table4.py",
+    "documentation": [
+      "README.md",
+      "CONTROLLED_TRAINING.md"
+    ],
+    "public_statement": "Bootstrap resampling uses seed 42, except for the Table 4 DeBERTa analysis, which uses seed 20260922. These bootstrap seeds are separate from the model-training seeds 13, 42, and 77."
   }
 }
