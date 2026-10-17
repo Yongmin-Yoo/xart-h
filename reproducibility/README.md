@@ -75,3 +75,24 @@ reproduction entry point.
 The reported Table 4 statistics are reproducible from the canonical
 released predictions. Full configuration and execution instructions are
 provided in [`CONTROLLED_TRAINING.md`](CONTROLLED_TRAINING.md).
+
+## Dense-Hard candidate generation
+
+The complete Dense-Hard candidate-generation workflow is provided in
+[`scripts/generate_dense_hard_candidates.py`](scripts/generate_dense_hard_candidates.py).
+It reconstructs the released eligibility pool, applies the documented
+date, citation, CPC, component, document, and passage exclusions,
+computes PatentSBERTa CLS embeddings, performs L2-normalized cosine
+top-1 selection, and saves the generated Dense-Hard files.
+
+Input paths, environment requirements, execution commands, and audit
+criteria are documented in
+[`DENSE_HARD_GENERATION.md`](DENSE_HARD_GENERATION.md).
+
+## Validated Dense-Hard generation
+
+The reconstructed Dense-Hard generation pipeline was successfully
+validated on an NVIDIA L4 GPU. Candidate-pool reconstruction,
+PatentSBERTa CLS embedding, L2-normalized cosine top-1 selection, output
+serialization, and canonical near-tie auditing completed successfully.
+The run generated 1,642 Dense-Hard rows from 208,123 eligible pairs.

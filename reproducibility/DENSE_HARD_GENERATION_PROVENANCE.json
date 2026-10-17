@@ -1,0 +1,156 @@
+{
+  "project": "PatScout",
+  "table": 5,
+  "status": "public_executable_and_gpu_validated",
+  "implementation_status": "validated reconstruction from released public inputs, eligibility rules, generation report, and canonical outputs",
+  "entry_point": "scripts/generate_dense_hard_candidates.py",
+  "public_inputs": {
+    "dataset": "yongminyoo91/xart-h",
+    "dataset_revision": "v1.0.1",
+    "metadata": "../data/random_u/patent_metadata.csv",
+    "random_u_targets": "../results/random_u/generated/test_random_u.parquet",
+    "canonical_audit": "artifacts/table5/common/test_dense_hard_u.parquet"
+  },
+  "eligibility": {
+    "date_criterion": "candidate_publication_date < target_date",
+    "target_date_resolution": [
+      "_date",
+      "_parsed_date",
+      "date"
+    ],
+    "exclude_same_application": true,
+    "exclude_existing_citation_or_reference": true,
+    "exclude_hard_u_document": true,
+    "exclude_hard_u_passage": true,
+    "require_cpc_overlap": true,
+    "exclude_same_priority_component": true,
+    "exclude_existing_or_duplicate_passage": true
+  },
+  "retriever": {
+    "name": "AI-Growth-Lab/PatentSBERTa",
+    "revision": "3ff1d553c861d8f5bfd902333d97fc95eb6b4c8f",
+    "pooling": "CLS token",
+    "normalization": "L2",
+    "similarity": "cosine",
+    "maximum_length": 384,
+    "inference_precision": "BF16 with float32 normalized output"
+  },
+  "expected_pool_audit": {
+    "target_queries": 1642,
+    "candidate_passages": 2079,
+    "eligible_pairs": 208123,
+    "minimum_pool_size": 1,
+    "median_pool_size": 107.0,
+    "maximum_pool_size": 393
+  },
+  "canonical_near_tie_policy": {
+    "canonical_controls_selection": false,
+    "maximum_accepted_rank": 3,
+    "maximum_accepted_cosine_gap": 0.002
+  },
+  "released_generation_report": {
+    "created_utc": "2026-09-24T04:34:12.225261+00:00",
+    "method": "Top-1 cosine similarity under the released Random-U eligibility constraints, excluding the selected BM25 Hard-U document and passage",
+    "split": "test",
+    "retriever": "AI-Growth-Lab/PatentSBERTa",
+    "retriever_revision": "3ff1d553c861d8f5bfd902333d97fc95eb6b4c8f",
+    "pooling": "CLS token",
+    "embedding_normalization": "L2",
+    "similarity": "cosine",
+    "embedding_precision": "BF16 model inference with float32 normalized output",
+    "maximum_length": 384,
+    "target_queries": 1642,
+    "dense_hard_generated": 1642,
+    "coverage": 1.0,
+    "candidate_passages": 2079,
+    "eligibility_pool_parity": {
+      "mismatch_queries": 0,
+      "maximum_absolute_difference": 0
+    },
+    "mean_eligible_pool_size": 126.74969549330085,
+    "median_eligible_pool_size": 107.0,
+    "minimum_eligible_pool_size": 1,
+    "maximum_eligible_pool_size": 393,
+    "mean_selected_cosine": 0.5378725470999998,
+    "median_selected_cosine": 0.5449425876140594,
+    "minimum_selected_cosine": 0.25365012884140015,
+    "maximum_selected_cosine": 0.7470442056655884,
+    "queries_with_similarity_tie": 0,
+    "maximum_tie_count": 1,
+    "eligibility_violations": {
+      "duplicate_queries": 0,
+      "duplicate_query_passage_pairs": 0,
+      "same_as_hard_u_passage": 0,
+      "same_as_hard_u_document": 0,
+      "existing_citation_or_reference": 0,
+      "time_violation": 0,
+      "cpc_violation": 0,
+      "same_component_violation": 0
+    },
+    "dense_random_same_passage": 87,
+    "dense_random_same_document": 253,
+    "candidate_embedding_batch_size": 256,
+    "query_embedding_batch_size": 256,
+    "embedding_dimension": 768,
+    "source_paths": {
+      "source_test": "${PATSCOUT_SOURCE_ROOT}/external/PatentMatch/priority_augmented_temporal_split/test.csv",
+      "hard_u_test": "${PATSCOUT_SOURCE_ROOT}/external/PatentMatch/xart_hard_u_v1/test_hard_u.csv",
+      "random_u_test": "${PATSCOUT_SOURCE_ROOT}/experiments/random_u_v1/test_random_u.parquet",
+      "metadata": "${PATSCOUT_SOURCE_ROOT}/external/PatentMatch/hard_u_metadata/patent_metadata.csv"
+    },
+    "output_files": {
+      "dense_hard_parquet": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_dense_hard_u.parquet",
+      "dense_hard_csv": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_dense_hard_u.csv",
+      "pool_parity": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/eligibility_pool_parity.csv",
+      "candidate_embeddings": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_candidate_embeddings.npy",
+      "query_embeddings": "${PATSCOUT_SOURCE_ROOT}/experiments/dense_hard_v1/test_query_embeddings.npy"
+    }
+  },
+  "created_utc": "2026-10-17T06:17:10.138639+00:00",
+  "cpu_pool_audit": {
+    "passed": true,
+    "target_queries": 1642,
+    "candidate_passages": 2079,
+    "eligible_pairs": 208123,
+    "minimum_pool_size": 1,
+    "median_pool_size": 107.0,
+    "maximum_pool_size": 393,
+    "report_path": "${PATSCOUT_VALIDATION_ROOT}/pool_audit/dense_hard_pool_audit.json"
+  },
+  "updated_utc": "2026-10-17T06:23:57.729162+00:00",
+  "gpu_validation": {
+    "passed": true,
+    "validated_utc": "2026-10-17T06:21:38.422730+00:00",
+    "hardware": {
+      "gpu": "NVIDIA L4",
+      "compute_capability": "8.9",
+      "bf16_supported": true
+    },
+    "software": {
+      "torch": "2.11.0+cu130",
+      "cuda": "13.0",
+      "transformers": "5.18.0",
+      "datasets": "4.8.5",
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "pyarrow": "22.0.0"
+    },
+    "target_queries": 1642,
+    "candidate_passages": 2079,
+    "eligible_pairs": 208123,
+    "generated_rows": 1642,
+    "exact_passage_matches": 1618,
+    "passage_mismatches": 24,
+    "exact_document_matches": 1624,
+    "document_mismatches": 18,
+    "canonical_candidate_missing": 0,
+    "canonical_candidate_ineligible": 0,
+    "maximum_canonical_rank": 3,
+    "maximum_cosine_gap": 0.0014681220054626465,
+    "near_tie_validation_passed": true,
+    "canonical_controls_selection": false,
+    "generation_report": "${PATSCOUT_VALIDATION_ROOT}/full_generation/dense_hard_generation_report.json",
+    "near_tie_audit": "${PATSCOUT_VALIDATION_ROOT}/full_generation/canonical_near_tie_audit.csv",
+    "gpu_log": "${PATSCOUT_VALIDATION_ROOT}/full_generation_gpu.log"
+  }
+}

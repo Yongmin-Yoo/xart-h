@@ -1,0 +1,7 @@
+numpy>=1.26,<3
+pandas>=2.2,<3
+pyarrow>=18,<23
+datasets>=3,<5
+torch>=2.11,<2.12
+transformers==5.18.0
+safetensors>=0.5
