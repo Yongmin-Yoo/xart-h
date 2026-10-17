@@ -1,0 +1,26 @@
+# PatScout Table 5 canonical Qwen Dense-Hard inference
+#
+# This environment is intentionally separate from the repository-level
+# requirements.txt, which constrains transformers to versions below 5.
+#
+# Canonical runtime:
+#   NVIDIA L4
+#   torch 2.11.0+cu128
+#   CUDA 12.8
+#   transformers 5.18.0
+#   peft 0.21.1
+#
+# The PyTorch CUDA 12.8 wheel index is required for the exact torch build.
+
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+numpy>=1.26,<3
+pandas>=2.2,<3
+pyarrow>=18,<23
+datasets>=3,<5
+torch==2.11.0+cu128
+transformers==5.18.0
+peft==0.21.1
+accelerate>=1.12,<2
+safetensors>=0.5
+sentencepiece>=0.2

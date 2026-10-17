@@ -34,7 +34,7 @@
     "qwen_balanced_claim_passage_truncation": true,
     "statistics_entry_point": "scripts/reproduce_table4.py"
   },
-  "file_count": 283,
+  "file_count": 285,
   "files": [
     {
       "path": "CONTROLLED_TRAINING.md",
@@ -58,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3279,
-      "sha256": "58e48b02cee8d5e3e9a4d97233664e3b3e54bd9240914677d4922189555ef27e"
+      "bytes": 6645,
+      "sha256": "aefe9b786d42c2c91bd73e8bda49ad16d25ffaba95a22add19ef68a2a5a75d86"
     },
     {
       "path": "artifacts/lexical_length/length_diagnostic/error_group_diagnostic_summary.csv",
@@ -1068,8 +1068,8 @@
     },
     {
       "path": "artifacts/table5/qwen/README.md",
-      "bytes": 3227,
-      "sha256": "38c5183769f79f72ab736734a03d218192ffa3009ee41c8a312c772fa6c955a8"
+      "bytes": 5364,
+      "sha256": "b47518a14164075721db57f6da996a323d3edfe803232e571d4f7f54d6f6af33"
     },
     {
       "path": "artifacts/table5/qwen/artifact_manifest.json",
@@ -1245,6 +1245,11 @@
       "path": "environments/table4_qwen.txt",
       "bytes": 265,
       "sha256": "1ddd4c8bdee95df922d2f4288c49fc3af53e283e62441083f251e1bc9001991a"
+    },
+    {
+      "path": "environments/table5_qwen_cu128.txt",
+      "bytes": 620,
+      "sha256": "9ea997df24a6790114dc974750ccbfa6e7e7ddc4ec10653914e2de9d99f473a1"
     },
     {
       "path": "reproduced/table4/deberta/bootstrap_intervals.csv",
@@ -1442,6 +1447,11 @@
       "sha256": "47137269118ec48cb6a82703886c0921a3c21ae4c6bec0ca9dc6f050930e8bbd"
     },
     {
+      "path": "scripts/run_table5_qwen_public.py",
+      "bytes": 8641,
+      "sha256": "4940fa1265140fddf4ff5173af67fe297d832b6c33e6437128a04bfe94a1b6de"
+    },
+    {
       "path": "scripts/train_table4_controlled.py",
       "bytes": 21621,
       "sha256": "a96fa077fa7bfcc5858ace7d12aa421be200185fea91483782c6d2c09617dc53"
@@ -1481,7 +1491,7 @@
     ],
     "multiple_comparison_correction": "Holm"
   },
-  "updated_at_utc": "2026-10-17T06:23:58.313137+00:00",
+  "updated_at_utc": "2026-10-17T07:00:11.245717+00:00",
   "dense_hard_generation": {
     "status": "public_executable_and_gpu_validated",
     "entry_point": "scripts/generate_dense_hard_candidates.py",
@@ -1516,5 +1526,51 @@
     "passage_mismatches": 24,
     "document_mismatches": 18,
     "canonical_controls_selection": false
+  },
+  "table5_qwen_execution": {
+    "status": "public_environment_path_bridge_and_exact_gpu_reproduction_validated",
+    "environment_file": "environments/table5_qwen_cu128.txt",
+    "launcher": "scripts/run_table5_qwen_public.py",
+    "canonical_inference_script": "../experiments/run_qwen_dense_hard_recomputed.py",
+    "runtime": {
+      "torch": "2.11.0+cu128",
+      "cuda": "12.8",
+      "transformers": "5.18.0",
+      "peft": "0.21.1",
+      "gpu": "NVIDIA L4",
+      "bf16": true
+    },
+    "configuration": {
+      "maximum_length": 384,
+      "evaluation_batch_size": 36,
+      "precision": "bfloat16",
+      "attention": "sdpa"
+    },
+    "public_paths": {
+      "adapters": "artifacts/table4/qwen_adapters",
+      "dense_hard": "artifacts/table5/common/test_dense_hard_u.parquet",
+      "prediction_templates": "artifacts/table5/qwen"
+    },
+    "conditions": [
+      "hard_only",
+      "mixed_u"
+    ],
+    "seeds": [
+      13,
+      42,
+      77
+    ],
+    "adapter_runs": 6,
+    "rows_per_run": 1642,
+    "combined_rows": 9852,
+    "nan_probabilities": 0,
+    "exact_prediction_agreement": {
+      "all_runs_mae": 0.0,
+      "all_runs_maximum_absolute_difference": 0.0,
+      "all_runs_correlation": 1.0,
+      "passed": true
+    },
+    "path_bridge_check": true,
+    "full_gpu_inference": true
   }
 }

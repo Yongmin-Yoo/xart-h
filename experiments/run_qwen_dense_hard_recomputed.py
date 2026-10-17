@@ -115,6 +115,28 @@ MODEL_NAME = "Qwen/Qwen3-Reranker-0.6B"
 MODEL_REVISION = "e61197ed45024b0ed8a2d74b80b4d909f1255473"
 DATASET_REVISION = "4a3ad685a395252c66932c49e98a00728089b614"
 
+
+# Public tokenizer resolution. The historical script used
+# LOCAL_TOKENIZER but did not define it in the released file.
+# An explicit local path can be supplied through the environment;
+# otherwise the pinned public Qwen model identifier is used.
+LOCAL_TOKENIZER = os.environ.get(
+    "XARTH_QWEN_TOKENIZER",
+    MODEL_NAME,
+)
+
+
+
+# Public model/tokenizer download policy. Online access is the
+# default because a fresh runtime has no Hugging Face cache.
+# Set XARTH_HF_LOCAL_FILES_ONLY=1 for an explicitly offline run.
+LOCAL_FILES_ONLY = (
+    os.environ.get(
+        "XARTH_HF_LOCAL_FILES_ONLY",
+        "0",
+    ).strip().lower()
+    in {"1", "true", "yes", "on"}
+)
 PATENT_INSTRUCTION = (
     "Given a patent claim, determine whether the prior-art passage "
     "is examiner-cited evidence for that claim"
@@ -220,7 +242,7 @@ print("Manifest SHA256:", sha256_file(DENSE_MANIFEST))
 # ------------------------------------------------------------
 tokenizer = AutoTokenizer.from_pretrained(
     str(LOCAL_TOKENIZER),
-    local_files_only=True,
+    local_files_only=LOCAL_FILES_ONLY,
     trust_remote_code=True,
 )
 
@@ -322,8 +344,11 @@ def build_sequence(query, document):
     assert len(ids) <= MAX_LENGTH
     return ids
 
-# All adapters use the same 87 raw inputs.
-canonical = reference_frames[("hard_only", 13)]
+# All adapters use the same released Dense-Hard inputs.
+# The canonical model input is the validated 1,642-row Dense-Hard
+# manifest loaded above. Old prediction files are used later only
+# for row identity/order validation and do not define model inputs.
+canonical = dense.copy()
 
 sequences = [
     build_sequence(query, document)
@@ -404,9 +429,11 @@ print("Loaded adapters:", sorted(model.peft_config.keys()))
 # ------------------------------------------------------------
 # 5. Load old prediction templates only for row identity/order
 # ------------------------------------------------------------
-# source_row_id identifies the reused Dense-Hard passage and is therefore
+# source_row_id identifies the reused Dense-Hard source passage and is
 # intentionally non-unique: 1,642 queries share 541 source passages.
-# The one-to-one query alignment key is legacy query_id <-> manifest claim_id.
+# In the released prediction templates, query_id stores the normalized claim
+# text rather than the manifest claim_id field.  The verified one-to-one
+# alignment is therefore legacy query_id <-> normalized manifest text.
 
 def normalize_query_key_canonical(value):
     if pd.isna(value):
@@ -420,7 +447,7 @@ def normalize_query_key_canonical(value):
 dense = dense.copy()
 
 dense["_query_key"] = dense[
-    "claim_id"
+    "text"
 ].map(normalize_query_key_canonical)
 
 assert len(dense) == EXPECTED_ROWS
@@ -563,7 +590,7 @@ assert len(templates) == 6
 
 print(
     "\nAll six templates aligned by "
-    "query_id ↔ claim_id."
+    "query_id ↔ normalized claim text."
 )
 
 # Verify that all six files use the same source order.
@@ -833,7 +860,7 @@ for condition in CONDITIONS:
         })
 
         assert len(output) == EXPECTED_ROWS
-        assert output["source_row_id"].astype(str).is_unique
+        assert output["query_id"].astype(str).is_unique
         assert output["probability"].notna().all()
 
         # Atomic-style write.
