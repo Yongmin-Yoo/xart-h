@@ -434,3 +434,15 @@ results based on this benchmark.
 [CC BY 4.0](LICENSE)
 
 </div>
+
+<!-- SOURCE_ROW_MANIFEST_BEGIN -->
+## Source-row inclusion and exclusion manifest
+
+The complete source-row audit is publicly available at
+[`data/source_audit/patentmatch_source_row_manifest.csv`](data/source_audit/patentmatch_source_row_manifest.csv).
+It accounts for all 25,340 source PatentMatch rows: 24,176 released rows,
+1,100 dependency-quarantine rows, and 64 pre-partition exclusions. The
+exclusions comprise 22 rows from conflicting-label pair groups and 42 non-conflicting duplicate rows after the retained first occurrence. Full
+cleaning rules and input hashes are provided in
+[`data/source_audit/source_row_manifest_report.json`](data/source_audit/source_row_manifest_report.json).
+<!-- SOURCE_ROW_MANIFEST_END -->

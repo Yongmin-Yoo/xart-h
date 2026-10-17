@@ -1,0 +1,70 @@
+{
+  "project": "PatScout",
+  "artifact": "PatentMatch source-row inclusion and exclusion manifest",
+  "created_utc": "2026-10-17T20:33:54.034301+00:00",
+  "repository_parent_commit": "d9f33e610eb32ef5a6b85280e41b2ab590c51a0c",
+  "public_manifest_path": "data/source_audit/patentmatch_source_row_manifest.csv",
+  "raw_inputs": {
+    "train": {
+      "file": "patentmatch_train_ultrabalanced.tsv",
+      "rows": 20272,
+      "sha256": "45d0fde26a13bef820b0de07b3724904c1ccc7da5a23a1675d3e4c3080713290"
+    },
+    "test": {
+      "file": "patentmatch_test_ultrabalanced.tsv",
+      "rows": 5068,
+      "sha256": "9ea9d6397fe7a6bad5ca76dce3d92fb47583a3c97e3c6b363439426e9db73165"
+    },
+    "combined_rows": 25340,
+    "concatenation_order": [
+      "original_train",
+      "original_test"
+    ]
+  },
+  "cleaning_policy": {
+    "id_normalization": "strip whitespace, remove internal whitespace, uppercase",
+    "text_normalization": "collapse whitespace, strip, lowercase",
+    "claim_text_hash": "SHA-1 of normalized claim text",
+    "passage_text_hash": "SHA-1 of normalized passage text",
+    "pair_hash": "SHA-1 of claim_text_sha1 + '|' + passage_text_sha1",
+    "duplicate_policy": "For non-conflicting pair hashes, retain the first row in original_train then original_test source order.",
+    "conflict_policy": "Exclude every row belonging to a pair hash with more than one distinct label.",
+    "reason_precedence": [
+      "conflicting_label_pair",
+      "duplicate_pair_after_first"
+    ]
+  },
+  "audit_counts": {
+    "raw_rows": 25340,
+    "duplicate_after_first_flags": 53,
+    "conflicting_label_rows": 22,
+    "duplicate_conflict_overlap_rows": 11,
+    "excluded_unique_rows": 64,
+    "clean_rows": 25276,
+    "exclusion_reasons": {
+      "conflicting_label_pair": 22,
+      "duplicate_pair_after_first": 42
+    }
+  },
+  "final_partition": {
+    "source_directory_name": "priority_augmented_temporal_split",
+    "counts": {
+      "train": 16912,
+      "validation": 3626,
+      "test": 3638,
+      "quarantine": 1100
+    },
+    "released_rows": 24176,
+    "quarantine_rows": 1100
+  },
+  "source_status_counts": {
+    "included_released": 24176,
+    "included_quarantine": 1100,
+    "excluded_pre_partition": 64
+  },
+  "privacy_and_distribution": {
+    "claim_text_included": false,
+    "passage_text_included": false,
+    "text_hashes_included": true
+  }
+}
