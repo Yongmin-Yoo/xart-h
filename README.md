@@ -1,6 +1,6 @@
 <div align="center">
 
-# PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search
+# PatScout: A Benchmark for Patent Prior-Art Candidate Assessment
 [![Dataset](https://img.shields.io/badge/Dataset-PatScout-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/yongminyoo91/xart-h)
 [![Release](https://img.shields.io/badge/Release-v1.0.1-2EA44F?style=for-the-badge)](https://huggingface.co/datasets/yongminyoo91/xart-h/tree/v1.0.1)
 [![Results](https://img.shields.io/badge/Results-Reproducible-6F42C1?style=for-the-badge)](docs/RESULTS.md)
@@ -153,7 +153,7 @@ Supervised values are means over seeds **13, 42, and 77**.
 </td>
 <td width="25%" align="center">
 <strong>Dense-Hard AUC</strong><br>
-<code>0.608 → 0.736</code><br>
+<code>0.609 → 0.737</code><br>
 <sub>Qwen3-Reranker Mixed-U</sub>
 </td>
 </tr>
@@ -290,7 +290,8 @@ Unless an artifact states otherwise:
 
 - supervised models use seeds **13, 42, and 77**;
 - uncertainty estimates use **2,000 bootstrap replicates**;
-- bootstrap sampling uses seed **42**;
+- bootstrap sampling uses seed **42**, except for the Table 4 DeBERTa analysis, which uses seed **20260922**;
+- bootstrap seeds are separate from the model-training seeds **13, 42, and 77**;
 - reported intervals are **95% percentile intervals**;
 - resampling is performed at the normalized-query level;
 - paired comparisons use two-sided bootstrap tests;
@@ -404,7 +405,7 @@ U candidates, controlled evaluation tasks, and leakage audits.
 This repository hosts the dataset release, evaluation code, and experimental
 artifacts for:
 
-> **PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search**
+> **PatScout: A Benchmark for Patent Prior-Art Candidate Assessment**
 
 Final citation metadata will be added after publication.
 

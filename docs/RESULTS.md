@@ -78,12 +78,14 @@ Dense-Hard uses one independently selected U candidate per query. The primary ev
 
 | Subset | Metric | Hard-only | Mixed-U | Difference |
 |:--|:--|--:|--:|--:|
-| All 1,642 queries | ROC-AUC | 0.608 | 0.736 | +0.128 |
+| All 1,642 queries | ROC-AUC | 0.609 | 0.737 | +0.128 |
 | All 1,642 queries | P-C/U | 0.608 | 0.732 | +0.124 |
 | Passage-disjoint, 1,555 | ROC-AUC | 0.618 | 0.735 | +0.117 |
 | Passage-disjoint, 1,555 | P-C/U | 0.619 | 0.730 | +0.112 |
 | Document-disjoint, 1,389 | ROC-AUC | 0.625 | 0.727 | +0.102 |
 | Document-disjoint, 1,389 | P-C/U | 0.625 | 0.723 | +0.097 |
+
+Headline Dense-Hard values follow the integrated Table 5 reproduction outputs under `reproducibility/reproduced/table5/`. Earlier standalone Qwen statistics differ slightly in the fourth decimal place because they were produced through a separate aggregation path; the direction, reported differences, and significance conclusions are unchanged.
 
 The canonical Qwen3-Reranker inference reverses the earlier provisional conclusion. Mixed-U improves both ROC-AUC and P-C/U on Dense-Hard candidates. Every confidence interval for the Mixed-U minus Hard-only difference excludes zero. The global Holm-adjusted p-value across 12 Dense-Hard comparisons is 0.011994.
 
@@ -157,7 +159,7 @@ Machine-readable sources:
 
 ## Statistical Protocol
 
-Confidence intervals and paired comparisons use 2,000 bootstrap replicates with seed 42. The resampling unit is the lowercased and whitespace-normalized claim query. Reported intervals are 95% percentile intervals. Two-sided bootstrap p-values use finite-sample correction. Holm correction is applied within each stated comparison family. The Dense-Hard global family contains 12 model, metric, and subset comparisons.
+Confidence intervals and paired comparisons use 2,000 bootstrap replicates with seed 42, except for the Table 4 DeBERTa analysis, which uses seed 20260922. These bootstrap seeds are separate from the model-training seeds 13, 42, and 77. The resampling unit is the lowercased and whitespace-normalized claim query. Reported intervals are 95% percentile intervals. Two-sided bootstrap p-values use finite-sample correction. Holm correction is applied within each stated comparison family. The Dense-Hard global family contains 12 model, metric, and subset comparisons.
 
 ## Versioning
 
