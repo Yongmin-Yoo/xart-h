@@ -82,10 +82,10 @@ Dense-Hard uses one independently selected U candidate per query. The primary ev
 | All 1,642 queries | P-C/U | 0.608 | 0.732 | +0.124 |
 | Passage-disjoint, 1,555 | ROC-AUC | 0.618 | 0.735 | +0.117 |
 | Passage-disjoint, 1,555 | P-C/U | 0.619 | 0.730 | +0.112 |
-| Document-disjoint, 1,389 | ROC-AUC | 0.625 | 0.727 | +0.102 |
+| Document-disjoint, 1,389 | ROC-AUC | 0.625 | 0.728 | +0.102 |
 | Document-disjoint, 1,389 | P-C/U | 0.625 | 0.723 | +0.097 |
 
-Headline Dense-Hard values follow the integrated Table 5 reproduction outputs under `reproducibility/reproduced/table5/`. Earlier standalone Qwen statistics differ slightly in the fourth decimal place because they were produced through a separate aggregation path; the direction, reported differences, and significance conclusions are unchanged.
+Headline Dense-Hard values follow the integrated Table 5 reproduction outputs under `reproducibility/reproduced/table5/`. Earlier standalone Qwen statistics were produced through a separate aggregation path and differ from the integrated Table 5 estimates by less than 0.0006. For some rows, this changes the three-decimal rounded value by 0.001. The paper and this page follow the integrated Table 5 reproduction outputs; the direction, reported differences, and significance conclusions are unchanged.
 
 The canonical Qwen3-Reranker inference reverses the earlier provisional conclusion. Mixed-U improves both ROC-AUC and P-C/U on Dense-Hard candidates. Every confidence interval for the Mixed-U minus Hard-only difference excludes zero. The global Holm-adjusted p-value across 12 Dense-Hard comparisons is 0.011994.
 

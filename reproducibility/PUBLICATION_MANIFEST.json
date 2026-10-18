@@ -1471,7 +1471,7 @@
     "qwen_public_lora_inference": "passed",
     "status": "validated"
   },
-  "paper_title": "PatScout: A Temporal and Dependency-Controlled Benchmark for Patent Prior Art Search",
+  "paper_title": "PatScout: A Benchmark for Patent Prior-Art Candidate Assessment",
   "project": "PatScout",
   "publication_scope": {
     "canonical_prediction_statistics": "reproduced",
@@ -1491,7 +1491,7 @@
     ],
     "multiple_comparison_correction": "Holm"
   },
-  "updated_at_utc": "2026-10-17T07:04:45.387348+00:00",
+  "updated_at_utc": "2026-10-18T02:51:16.983475+00:00",
   "dense_hard_generation": {
     "status": "public_executable_and_gpu_validated",
     "entry_point": "scripts/generate_dense_hard_candidates.py",
