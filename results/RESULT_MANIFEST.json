@@ -88,8 +88,8 @@
       "sha256": "5b394182d2dc09c0c545859528c9eaa75f19c2179f04958ddb9adda3ea61b7e6"
     },
     "docs/RESULTS.md": {
-      "bytes": 9848,
-      "sha256": "28f1e88fa86c9eb08c25a3c902a0fde1cc1edc3c418fa27be1742b888c853105"
+      "bytes": 9795,
+      "sha256": "0a0d74318f9fb1104e1046849594f328a03b23cc95116bb8bdfbe9a90dd67c24"
     },
     "evaluation/evaluate_random_vs_hard_u.py": {
       "bytes": 33511,
@@ -408,5 +408,5 @@
     "updated_at_utc": "2026-09-20T08:05:44.225725+00:00",
     "updated_utc": "2026-09-20T23:08:16.108358+00:00"
   },
-  "updated_utc": "2026-10-18T02:51:16.983475+00:00"
+  "updated_utc": "2026-10-18T02:58:20.813819+00:00"
 }
